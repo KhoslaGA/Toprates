@@ -1,22 +1,7 @@
 import type { Metadata } from 'next'
-import { Outfit, DM_Sans } from 'next/font/google'
 import '../styles/globals.css'
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
-
-const outfit = Outfit({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-outfit',
-  display: 'swap',
-})
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-dm-sans',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://toprates.ca'),
@@ -44,10 +29,19 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className={`${outfit.variable} ${dmSans.variable}`}
-    >
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow">{children}</main>

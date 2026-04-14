@@ -36,8 +36,8 @@ export default function HomeClient() {
         <div style={{ position: 'absolute', top: '20%', right: '15%', width: 200, height: 200, borderRadius: '50%', background: 'rgba(10,126,140,0.05)' }} />
 
         <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 60, flexWrap: 'wrap' }}>
-            <div style={{ flex: '1 1 55%', minWidth: 320 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 60 }}>
+            <div style={{ flex: '1 1 55%' }}>
               <div
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: 8,
@@ -113,7 +113,7 @@ export default function HomeClient() {
               </div>
             </div>
 
-            <div style={{ flex: '1 1 45%', display: 'flex', justifyContent: 'center', minWidth: 320 }}>
+            <div style={{ flex: '1 1 45%', display: 'flex', justifyContent: 'center' }}>
               <div
                 style={{
                   background: 'rgba(255,255,255,0.04)', borderRadius: 24,
