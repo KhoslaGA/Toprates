@@ -1,0 +1,177 @@
+import PageWrapper from '@/components/layout/PageWrapper';
+import { Button } from '@/components/ui/Button';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/Card';
+import ContactForm from '@/components/shared/ContactForm';
+import FaqAccordion from '@/components/shared/FaqAccordion';
+
+export const metadata = {
+  title: 'Health Insurance | Toprates.ca - Extended Health & Dental Coverage',
+  description: 'Compare health insurance plans in Canada. Get coverage for extended health, dental, vision, prescription drugs, and travel medical. Affordable rates for families and individuals.',
+  keywords: 'health insurance, extended health, dental insurance, vision coverage, prescription drugs, travel medical, Canada',
+  openGraph: {
+    title: 'Health Insurance | Toprates.ca',
+    description: 'Compare health insurance rates across Canada',
+  },
+};
+
+const coverageFeatures = [
+  {
+    title: 'Extended Health Coverage',
+    description: 'Covers services not included in provincial plans like physiotherapy, chiropractic, massage therapy, mental health counseling, and prescription drugs.',
+    icon: '🏥',
+  },
+  {
+    title: 'Dental Insurance',
+    description: 'Comprehensive coverage for preventive care (cleanings, exams), basic procedures (fillings), and major work (crowns, implants). Typically covers 70-80% of costs.',
+    icon: '🦷',
+  },
+  {
+    title: 'Vision Coverage',
+    description: 'Covers eye exams and prescription eyeglasses or contact lenses. Many plans reimburse $150-$300 annually for vision care.',
+    icon: '👁️',
+  },
+  {
+    title: 'Travel Medical Insurance',
+    description: 'Emergency medical coverage when traveling outside Canada. Includes hospital stays, emergency medications, and medical evacuation.',
+    icon: '✈️',
+  },
+];
+
+const whyChooseToprates = [
+  'Personalized plans that complement your provincial health coverage',
+  'Options for individuals, families, and small business groups',
+  'Access to top Canadian health insurers with quick approval',
+  'Expert guidance on maximizing your health benefits',
+];
+
+const faqItems = [
+  {
+    question: 'What\'s the difference between provincial and private health insurance?',
+    answer: 'Provincial health plans (OHIP, MSP, etc.) cover basic doctor visits and hospital care. Private health insurance complements this by covering services like dental, vision, prescription drugs, and therapy. Many employers offer private plans to fill these gaps.',
+  },
+  {
+    question: 'Are prescription drugs covered by health insurance?',
+    answer: 'Yes, extended health plans typically cover prescription medications at 70-90% (depending on your deductible and plan). Some drugs may require prior authorization. Coverage limits and formularies vary by plan.',
+  },
+  {
+    question: 'Do I need separate travel medical insurance?',
+    answer: 'Yes. Provincial health insurance doesn\'t cover medical emergencies outside Canada. Travel medical insurance is essential - it\'s affordable and covers emergency hospital costs, which can be tens of thousands of dollars.',
+  },
+  {
+    question: 'What\'s covered under dental insurance?',
+    answer: 'Most plans cover preventive care (exams, cleanings, X-rays) at 100%, basic procedures (fillings) at 80%, and major work (crowns, root canals) at 50-70%. Annual maximums typically range from $1,000-$2,500.',
+  },
+];
+
+export default function HealthInsurancePage() {
+
+  return (
+    <main className="w-full">
+      {/* Hero Banner */}
+      <section className="bg-gradient-to-r from-[#1a365d] to-[#0f1f3a] text-white py-16 md:py-24">
+        <PageWrapper>
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Complete Health Insurance Coverage for You and Your Family
+            </h1>
+            <p className="text-xl text-gray-100 mb-8">
+              Supplement provincial coverage with extended health, dental, vision, and travel medical insurance. Compare plans across Canada.
+            </p>
+            <Button variant="accent" size="lg" href="#get-quote">
+              Get Your Free Quote
+            </Button>
+          </div>
+        </PageWrapper>
+      </section>
+
+      {/* Coverage Features */}
+      <section className="py-16 md:py-20">
+        <PageWrapper>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mb-12 text-center">
+            Health Insurance Coverage Options
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {coverageFeatures.map((feature, index) => (
+              <Card key={index}>
+                <CardHeader>
+                  <div className="text-4xl mb-3">{feature.icon}</div>
+                  <CardTitle>{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>{feature.description}</CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </PageWrapper>
+      </section>
+
+      {/* Why Choose Toprates */}
+      <section className="py-16 md:py-20 bg-gray-50">
+        <PageWrapper>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mb-8">
+                Why Choose Toprates for Health Insurance?
+              </h2>
+              <ul className="space-y-4">
+                {whyChooseToprates.map((reason, index) => (
+                  <li key={index} className="flex items-start gap-4">
+                    <span className="text-[#0d9488] text-2xl font-bold flex-shrink-0">✓</span>
+                    <span className="text-gray-700 text-lg">{reason}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-[#0d9488]">
+              <h3 className="text-2xl font-bold text-[#1a365d] mb-6">
+                Plan Categories
+              </h3>
+              <div className="space-y-4">
+                <div className="pb-4 border-b border-gray-200">
+                  <p className="text-sm text-gray-600 font-medium">Individual Plans</p>
+                  <p className="text-lg font-bold text-[#1a365d]">For self-employed or employees without group coverage</p>
+                </div>
+                <div className="pb-4 border-b border-gray-200">
+                  <p className="text-sm text-gray-600 font-medium">Family Plans</p>
+                  <p className="text-lg font-bold text-[#1a365d]">Comprehensive coverage for multiple family members</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-600 font-medium">Group Plans</p>
+                  <p className="text-lg font-bold text-[#0d9488]">For small to large businesses and organizations</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </PageWrapper>
+      </section>
+
+      {/* FAQ Accordion */}
+      <section className="py-16 md:py-20">
+        <PageWrapper>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="max-w-3xl mx-auto">
+            <FaqAccordion items={faqItems} />
+          </div>
+        </PageWrapper>
+      </section>
+
+      {/* CTA Section */}
+      <section id="get-quote" className="py-16 md:py-20 bg-gradient-to-r from-[#1a365d] to-[#0f1f3a] text-white">
+        <PageWrapper>
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+              Get Comprehensive Health Coverage Today
+            </h2>
+            <p className="text-lg text-gray-100 mb-10 text-center">
+              Get personalized health insurance quotes in minutes. We\'ll help find the best coverage for your needs and budget.
+            </p>
+            <ContactForm className="bg-white rounded-lg p-8" />
+          </div>
+        </PageWrapper>
+      </section>
+    </main>
+  );
+}

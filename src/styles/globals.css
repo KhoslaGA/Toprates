@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@source "../../src";
+
+/* ── Theme: brand colors, fonts, shadows, animations ── */
+@theme {
+  --color-primary-50: #f0fdfb;
+  --color-primary-100: #ccf9f5;
+  --color-primary-200: #99f1ed;
+  --color-primary-300: #5ce8e3;
+  --color-primary-400: #2dd9d5;
+  --color-primary-500: #0A7E8C;
+  --color-primary-600: #087a87;
+  --color-primary-700: #066670;
+  --color-primary-800: #055359;
+  --color-primary-900: #034042;
+
+  --color-secondary-50: #f0f2f7;
+  --color-secondary-100: #d4dce8;
+  --color-secondary-200: #a9b9d3;
+  --color-secondary-300: #7e96be;
+  --color-secondary-400: #5373a7;
+  --color-secondary-500: #2d4670;
+  --color-secondary-600: #1B2A4A;
+  --color-secondary-700: #141f38;
+  --color-secondary-800: #0f1729;
+  --color-secondary-900: #0a101a;
+
+  --color-accent-50: #fffbeb;
+  --color-accent-100: #fef3c7;
+  --color-accent-200: #fde68a;
+  --color-accent-300: #fcd34d;
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+  --color-accent-700: #b45309;
+  --color-accent-800: #92400e;
+  --color-accent-900: #78350f;
+
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.10);
+
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-slide-up: slideUp 0.6s ease-out;
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* ── Base styles ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Custom scrollbar - Teal theme ── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0A7E8C;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #087a87;
+}
+
+/* ── Selection color ── */
+::selection {
+  background-color: #0A7E8C;
+  color: white;
+}
+
+/* ── Responsive nav ── */
+.desktop-nav {
+  display: none;
+}
+.mobile-nav {
+  display: block;
+}
+@media (min-width: 1024px) {
+  .desktop-nav {
+    display: block;
+  }
+  .mobile-nav {
+    display: none;
+  }
+}
+
+/* ── TrustBar responsive grid ── */
+.trust-bar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .trust-bar-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
