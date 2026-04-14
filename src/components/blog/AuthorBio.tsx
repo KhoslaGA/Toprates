@@ -1,11 +1,21 @@
 import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Author } from '@/types/blog';
 import { cn } from '@/lib/utils';
 
+/**
+ * Shape this component consumes — what a GROQ query projects, not raw Sanity.
+ * The wire-level Author type lives in @/types/blog.
+ */
+export interface AuthorView {
+  name: string;
+  bio?: string;
+  url?: string;
+  image?: { url: string };
+}
+
 interface AuthorBioProps {
-  author: Author;
+  author: AuthorView;
   className?: string;
 }
 
