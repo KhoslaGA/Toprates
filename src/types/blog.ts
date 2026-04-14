@@ -118,17 +118,21 @@ export interface NewsletterSubscription extends Document {
   unsubscribeToken: string;
 }
 
-/* Aggregated post data for homepage/listing */
+/* Aggregated post data for homepage/listing.
+ * This is a VIEW shape — the result of a GROQ projection (e.g. `"url": asset->url`),
+ * not the raw wire shape of a Sanity document. Wire types (SanityImage, Author)
+ * live elsewhere in this file; this interface is what list views consume.
+ */
 export interface PostCardData {
   _id: string;
   title: string;
   slug: string;
   excerpt: string;
-  featuredImage: SanityImage;
+  featuredImage: { url: string };
   author: {
     name: string;
     slug: string;
-    image?: SanityImage;
+    image?: { url: string };
   };
   category: {
     name: string;
