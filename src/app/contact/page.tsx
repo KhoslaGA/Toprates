@@ -117,7 +117,7 @@ export default function ContactPage() {
             </Card>
 
             {/* Business Hours */}
-            <Card hover:shadow-lg transition-shadow>
+            <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <svg className="w-5 h-5 text-[#0d9488]" fill="currentColor" viewBox="0 0 20 20">
