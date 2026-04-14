@@ -142,12 +142,12 @@ const MOCK_POSTS = [
 
 interface BlogPostPageProps {
   params: {
-    id: string;
+    slug: string;
   };
 }
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = MOCK_POSTS.find((p) => p.slug === params.id);
+  const post = MOCK_POSTS.find((p) => p.slug === params.slug);
 
   if (!post) {
     return (
@@ -175,7 +175,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
   // Get related posts (excluding current)
   const relatedPosts = MOCK_POSTS.filter(
-    (p) => p.slug !== params.id && p.category?.slug === post.category?.slug
+    (p) => p.slug !== params.slug && p.category?.slug === post.category?.slug
   ).slice(0, 3);
 
   return (
