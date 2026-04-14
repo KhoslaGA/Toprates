@@ -1,8 +1,13 @@
-import imageUrlBuilder from '@sanity/image-url';
+import imageUrlBuilder, { type SanityImageSource } from '@sanity/image-url';
 import { client } from './client';
-import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
 
-const builder = imageUrlBuilder(client);
+// Lazy builder: client() throws if Sanity env is unset. We only construct the
+// builder on first use so the module is build-safe pre-Studio-setup.
+let _builder: ReturnType<typeof imageUrlBuilder> | null = null;
+function builder() {
+  if (!_builder) _builder = imageUrlBuilder(client());
+  return _builder;
+}
 
 /**
  * Generate optimized Sanity image URL with dimensions
