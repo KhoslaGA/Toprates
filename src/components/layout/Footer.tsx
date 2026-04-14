@@ -1,329 +1,143 @@
-'use client'
+'use client';
 
-import Link from 'next/link'
+import Link from 'next/link';
 
-const TEAL = '#0A7E8C'
-const NAVY = '#1B2A4A'
+/**
+ * Footer — ported from design/mockups/toprates-homepage.jsx (lines 941-975)
+ */
+const columns: { title: string; links: { label: string; href: string }[] }[] = [
+  {
+    title: 'Insurance',
+    links: [
+      { label: 'Car Insurance Ontario', href: '/auto-insurance' },
+      { label: 'Home Insurance Ontario', href: '/home-insurance' },
+      { label: 'Business Insurance', href: '/business-insurance' },
+      { label: 'Travel Insurance', href: '/travel-insurance' },
+      { label: 'Compare All Rates', href: '/get-quotes' },
+    ],
+  },
+  {
+    title: 'Financial',
+    links: [
+      { label: 'Mortgage Rates', href: '/mortgages' },
+      { label: 'Credit Cards', href: '/credit-cards' },
+      { label: 'Cashback Cards', href: '/credit-cards' },
+      { label: 'Travel Rewards Cards', href: '/credit-cards' },
+      { label: 'No-Fee Cards', href: '/credit-cards' },
+    ],
+  },
+  {
+    title: 'Resources',
+    links: [
+      { label: 'Guides & Articles', href: '/blog' },
+      { label: '2026 Reform Guide', href: '/blog' },
+      { label: 'Coverage Calculator', href: '/blog' },
+      { label: 'Self-Assessment Tool', href: '/blog' },
+      { label: 'About TopRates.ca', href: '/about' },
+    ],
+  },
+  {
+    title: 'Legal',
+    links: [
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Terms of Service', href: '/terms' },
+      { label: 'RIBO Disclosure', href: '/about' },
+      { label: 'Accessibility', href: '/about' },
+      { label: 'Contact Us', href: '/contact' },
+    ],
+  },
+];
 
 export default function Footer() {
   return (
     <footer
       style={{
-        background: '#f8fafb',
-        borderTop: '1px solid #e8ecf0',
-        padding: '36px 32px 24px'
+        background: '#0a0f16',
+        padding: '48px 32px 32px',
+        borderTop: '1px solid #1e2d3d',
       }}
     >
-      {/* Main footer content */}
-      <div style={{ maxWidth: 1080, margin: '0 auto' }}>
-        {/* Logo + description + 4 columns */}
-        <div
-          style={{
-            display: 'flex',
-            gap: 40,
-            marginBottom: 24
-          }}
-        >
-          {/* Column 1: Logo + Description */}
-          <div style={{ flex: '1 1 28%' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+        <div style={{ display: 'flex', gap: 40, marginBottom: 40, flexWrap: 'wrap' }}>
+          <div style={{ flex: '1 1 24%', minWidth: 240 }}>
             <div
               style={{
-                fontFamily: 'Outfit',
+                fontFamily: "'Outfit'",
                 fontWeight: 900,
-                fontSize: 18,
-                marginBottom: 8
+                fontSize: 22,
+                color: '#0A7E8C',
+                marginBottom: 12,
               }}
             >
-              <span style={{ color: TEAL }}>TopRates</span>
-              <span style={{ color: NAVY }}>.ca</span>
+              TopRates<span style={{ color: 'rgba(255,255,255,0.5)' }}>.ca</span>
             </div>
             <p
               style={{
-                fontSize: 12,
-                color: '#98a2b3',
-                margin: 0
+                fontSize: 13,
+                color: 'rgba(255,255,255,0.35)',
+                lineHeight: 1.6,
+                margin: 0,
               }}
             >
-              AI-powered insurance comparison. Powered by Insurimple (RIBO Licensed).
+              AI-powered insurance comparison for Canadians. Powered by Insurimple,
+              a RIBO-licensed brokerage.
             </p>
           </div>
 
-          {/* Column 2: Insurance */}
-          <div style={{ flex: '1 1 17%' }}>
-            <h3
-              style={{
-                fontSize: 10,
-                fontWeight: 700,
-                color: '#b0b8c4',
-                letterSpacing: 1.2,
-                textTransform: 'uppercase',
-                marginBottom: 8,
-                margin: '0 0 8px 0'
-              }}
-            >
-              Insurance
-            </h3>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: 5 }}>
-                <Link
-                  href="/car-insurance"
-                  style={{
-                    fontSize: 12,
-                    color: '#98a2b3',
-                    cursor: 'pointer',
-                    textDecoration: 'none'
-                  }}
-                >
-                  Car Insurance
-                </Link>
-              </li>
-              <li style={{ marginBottom: 5 }}>
-                <Link
-                  href="/home-insurance"
-                  style={{
-                    fontSize: 12,
-                    color: '#98a2b3',
-                    cursor: 'pointer',
-                    textDecoration: 'none'
-                  }}
-                >
-                  Home Insurance
-                </Link>
-              </li>
-              <li style={{ marginBottom: 5 }}>
-                <Link
-                  href="/business-insurance"
-                  style={{
-                    fontSize: 12,
-                    color: '#98a2b3',
-                    cursor: 'pointer',
-                    textDecoration: 'none'
-                  }}
-                >
-                  Business
-                </Link>
-              </li>
-              <li style={{ marginBottom: 5 }}>
-                <Link
-                  href="/travel-insurance"
-                  style={{
-                    fontSize: 12,
-                    color: '#98a2b3',
-                    cursor: 'pointer',
-                    textDecoration: 'none'
-                  }}
-                >
-                  Travel
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 3: Financial */}
-          <div style={{ flex: '1 1 17%' }}>
-            <h3
-              style={{
-                fontSize: 10,
-                fontWeight: 700,
-                color: '#b0b8c4',
-                letterSpacing: 1.2,
-                textTransform: 'uppercase',
-                marginBottom: 8,
-                margin: '0 0 8px 0'
-              }}
-            >
-              Financial
-            </h3>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: 5 }}>
-                <Link
-                  href="/mortgage-rates"
-                  style={{
-                    fontSize: 12,
-                    color: '#98a2b3',
-                    cursor: 'pointer',
-                    textDecoration: 'none'
-                  }}
-                >
-                  Mortgage Rates
-                </Link>
-              </li>
-              <li style={{ marginBottom: 5 }}>
-                <Link
-                  href="/credit-cards"
-                  style={{
-                    fontSize: 12,
-                    color: '#98a2b3',
-                    cursor: 'pointer',
-                    textDecoration: 'none'
-                  }}
-                >
-                  Credit Cards
-                </Link>
-              </li>
-              <li style={{ marginBottom: 5 }}>
-                <Link
-                  href="/investing"
-                  style={{
-                    fontSize: 12,
-                    color: '#98a2b3',
-                    cursor: 'pointer',
-                    textDecoration: 'none'
-                  }}
-                >
-                  Investing
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 4: Resources */}
-          <div style={{ flex: '1 1 17%' }}>
-            <h3
-              style={{
-                fontSize: 10,
-                fontWeight: 700,
-                color: '#b0b8c4',
-                letterSpacing: 1.2,
-                textTransform: 'uppercase',
-                marginBottom: 8,
-                margin: '0 0 8px 0'
-              }}
-            >
-              Resources
-            </h3>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: 5 }}>
-                <Link
-                  href="/guides"
-                  style={{
-                    fontSize: 12,
-                    color: '#98a2b3',
-                    cursor: 'pointer',
-                    textDecoration: 'none'
-                  }}
-                >
-                  Guides
-                </Link>
-              </li>
-              <li style={{ marginBottom: 5 }}>
-                <Link
-                  href="/blog"
-                  style={{
-                    fontSize: 12,
-                    color: '#98a2b3',
-                    cursor: 'pointer',
-                    textDecoration: 'none'
-                  }}
-                >
-                  Blog
-                </Link>
-              </li>
-              <li style={{ marginBottom: 5 }}>
-                <Link
-                  href="/about"
-                  style={{
-                    fontSize: 12,
-                    color: '#98a2b3',
-                    cursor: 'pointer',
-                    textDecoration: 'none'
-                  }}
-                >
-                  About
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 5: Legal */}
-          <div style={{ flex: '1 1 17%' }}>
-            <h3
-              style={{
-                fontSize: 10,
-                fontWeight: 700,
-                color: '#b0b8c4',
-                letterSpacing: 1.2,
-                textTransform: 'uppercase',
-                marginBottom: 8,
-                margin: '0 0 8px 0'
-              }}
-            >
-              Legal
-            </h3>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: 5 }}>
-                <Link
-                  href="/privacy"
-                  style={{
-                    fontSize: 12,
-                    color: '#98a2b3',
-                    cursor: 'pointer',
-                    textDecoration: 'none'
-                  }}
-                >
-                  Privacy
-                </Link>
-              </li>
-              <li style={{ marginBottom: 5 }}>
-                <Link
-                  href="/terms"
-                  style={{
-                    fontSize: 12,
-                    color: '#98a2b3',
-                    cursor: 'pointer',
-                    textDecoration: 'none'
-                  }}
-                >
-                  Terms
-                </Link>
-              </li>
-              <li style={{ marginBottom: 5 }}>
-                <a
-                  href="/ribo-disclosure"
-                  style={{
-                    fontSize: 12,
-                    color: '#98a2b3',
-                    cursor: 'pointer',
-                    textDecoration: 'none'
-                  }}
-                >
-                  RIBO Disclosure
-                </a>
-              </li>
-            </ul>
-          </div>
+          {columns.map((col) => (
+            <div key={col.title} style={{ flex: '1 1 17%', minWidth: 160 }}>
+              <div
+                style={{
+                  fontSize: 12,
+                  fontWeight: 700,
+                  color: 'rgba(255,255,255,0.5)',
+                  letterSpacing: 1.5,
+                  textTransform: 'uppercase',
+                  marginBottom: 16,
+                }}
+              >
+                {col.title}
+              </div>
+              {col.links.map((l) => (
+                <div key={l.label} style={{ marginBottom: 10 }}>
+                  <Link
+                    href={l.href}
+                    style={{
+                      fontSize: 13,
+                      color: 'rgba(255,255,255,0.3)',
+                      textDecoration: 'none',
+                      transition: 'color 0.2s',
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#0A7E8C')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.3)')}
+                  >
+                    {l.label}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
 
-        {/* Bottom bar */}
         <div
           style={{
-            borderTop: '1px solid #e8ecf0',
-            paddingTop: 14,
+            borderTop: '1px solid rgba(255,255,255,0.06)',
+            paddingTop: 20,
             display: 'flex',
             justifyContent: 'space-between',
-            alignItems: 'center'
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: 8,
           }}
         >
-          <p
-            style={{
-              fontSize: 11,
-              color: '#b0b8c4',
-              margin: 0
-            }}
-          >
-            2026 TopRates.ca. Powered by Insurimple (RIBO Licensed).
-          </p>
-          <p
-            style={{
-              fontSize: 11,
-              color: '#d0d5db',
-              margin: 0
-            }}
-          >
-            Made in Canada
-          </p>
+          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)' }}>
+            © 2026 TopRates.ca. All rights reserved. Powered by Insurimple (RIBO Licensed).
+          </span>
+          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.15)' }}>
+            Made in Canada 🇨🇦
+          </span>
         </div>
       </div>
     </footer>
-  )
+  );
 }
