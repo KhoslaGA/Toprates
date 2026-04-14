@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Outfit, DM_Sans, Newsreader } from 'next/font/google'
+import { Outfit, DM_Sans } from 'next/font/google'
 import '../styles/globals.css'
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
@@ -15,14 +15,6 @@ const dmSans = DM_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-dm-sans',
-  display: 'swap',
-})
-
-const newsreader = Newsreader({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  style: ['normal', 'italic'],
-  variable: '--font-newsreader',
   display: 'swap',
 })
 
@@ -54,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${dmSans.variable} ${newsreader.variable}`}
+      className={`${outfit.variable} ${dmSans.variable}`}
     >
       <body className="flex flex-col min-h-screen">
         <Header />

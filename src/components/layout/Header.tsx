@@ -10,10 +10,10 @@ const NAVY = '#1B2A4A'
 const navItems = [
   { label: 'Car Insurance', href: '/auto-insurance' },
   { label: 'Home Insurance', href: '/home-insurance' },
-  { label: 'Mortgage Rates', href: '/mortgage-rates' },
+  { label: 'Mortgages', href: '/mortgages' },
   { label: 'Credit Cards', href: '/credit-cards' },
   { label: 'Investing', href: '/investing' },
-  { label: 'Guides', href: '/guides' },
+  { label: 'Guides', href: '/blog' },
 ]
 
 export default function Header() {
