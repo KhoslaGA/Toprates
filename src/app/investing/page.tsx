@@ -219,7 +219,7 @@ export default function InvestingPage() {
                       <div className="text-sm text-gray-600">Min Investment</div>
                       <p className="font-bold text-[#1B2A4A]">{robo.minInvestment}</p>
                     </div>
-                    <div colSpan={2} className="col-span-2">
+                    <div className="col-span-2">
                       <div className="text-sm text-gray-600">Assets Under Management</div>
                       <p className="font-bold text-[#1B2A4A]">{robo.assets}</p>
                     </div>
