@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo } from 'react';
+import React, { Suspense, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import PageWrapper from '@/components/layout/PageWrapper';
@@ -116,7 +116,7 @@ interface CategoryPageProps {
   };
 }
 
-export default function CategoryPage({ params }: CategoryPageProps) {
+function CategoryPageInner({ params }: CategoryPageProps) {
   const searchParams = useSearchParams();
   const pageParam = searchParams.get('page');
   const currentPage = pageParam ? Math.max(1, parseInt(pageParam)) : 1;
@@ -217,5 +217,13 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         </Button>
       </div>
     </PageWrapper>
+  );
+}
+
+export default function CategoryPage(props: CategoryPageProps) {
+  return (
+    <Suspense fallback={null}>
+      <CategoryPageInner {...props} />
+    </Suspense>
   );
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
+import React, { Suspense, useMemo, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import PageWrapper from '@/components/layout/PageWrapper';
 import PostCard from '@/components/blog/PostCard';
@@ -163,7 +163,7 @@ const MOCK_CATEGORIES: Category[] = [
 
 const POSTS_PER_PAGE = 6;
 
-export default function BlogPage() {
+function BlogPageInner() {
   const searchParams = useSearchParams();
   const categorySlug = searchParams.get('category');
   const pageParam = searchParams.get('page');
@@ -329,5 +329,13 @@ export default function BlogPage() {
         )}
       </section>
     </PageWrapper>
+  );
+}
+
+export default function BlogPage() {
+  return (
+    <Suspense fallback={null}>
+      <BlogPageInner />
+    </Suspense>
   );
 }
