@@ -58,8 +58,15 @@ export default function Footer() {
       }}
     >
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-        <div style={{ display: 'flex', gap: 40, marginBottom: 40, flexWrap: 'wrap' }}>
-          <div style={{ flex: '1 1 24%', minWidth: 240 }}>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'minmax(220px, 1.6fr) repeat(4, minmax(150px, 1fr))',
+            gap: 40,
+            marginBottom: 40,
+          }}
+        >
+          <div>
             <div
               style={{
                 fontFamily: "'Outfit'",
@@ -85,7 +92,7 @@ export default function Footer() {
           </div>
 
           {columns.map((col) => (
-            <div key={col.title} style={{ flex: '1 1 17%', minWidth: 160 }}>
+            <div key={col.title}>
               <div
                 style={{
                   fontSize: 12,
