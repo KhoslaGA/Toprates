@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 /**
  * Footer — ported from design/mockups/toprates-homepage.jsx (lines 941-975)
@@ -49,6 +50,8 @@ const columns: { title: string; links: { label: string; href: string }[] }[] = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+  if (pathname?.startsWith('/studio')) return null;
   return (
     <footer
       style={{

@@ -26,6 +26,8 @@ export default function Header() {
     setActiveLink(active?.href || null)
   }, [pathname])
 
+  if (pathname?.startsWith('/studio')) return null
+
   return (
     <>
       <header
