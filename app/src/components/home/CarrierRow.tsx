@@ -141,14 +141,7 @@ export default function CarrierRow() {
             'linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%)',
         }}
       >
-        <div
-          style={{
-            display: 'flex',
-            gap: 18,
-            width: 'max-content',
-            animation: 'carrierMarquee 50s linear infinite',
-          }}
-        >
+        <div className="carrier-row-track">
           {loop.map((c, i) => (
             <CarrierBadge key={`${c.name}-${i}`} carrier={c} />
           ))}

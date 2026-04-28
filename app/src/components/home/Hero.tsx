@@ -225,15 +225,7 @@ export default function Hero() {
           position: 'relative',
         }}
       >
-        <div
-          className="hero-grid-v2"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1.2fr 1fr',
-            gap: 60,
-            alignItems: 'center',
-          }}
-        >
+        <div className="hero-grid-v2">
           <div>
             <div
               style={{
@@ -263,18 +255,7 @@ export default function Hero() {
               />
               Ontario auto reform · July 2026
             </div>
-            <h1
-              className="hero-h1-v2"
-              style={{
-                fontFamily: fonts.heading,
-                fontWeight: 900,
-                fontSize: 64,
-                letterSpacing: '-2.2px',
-                lineHeight: 1.02,
-                color: '#fff',
-                margin: 0,
-              }}
-            >
+            <h1 className="hero-h1-v2">
               Stop overpaying for
               <br />
               <span style={{ color: '#0fbdc9' }}>auto &amp; home</span> insurance.
@@ -295,10 +276,7 @@ export default function Hero() {
             </p>
 
             {!done ? (
-              <div
-                className="hero-form-v2"
-                style={{ display: 'flex', gap: 10, maxWidth: 460 }}
-              >
+              <div className="hero-form-v2">
                 <input
                   type="email"
                   value={email}

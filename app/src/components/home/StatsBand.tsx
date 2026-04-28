@@ -28,14 +28,7 @@ export default function StatsBand() {
         }}
       />
       <div style={{ maxWidth: 1240, margin: '0 auto', padding: '0 32px' }}>
-        <div
-          className="stats-grid-v2"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
-            position: 'relative',
-          }}
-        >
+        <div className="stats-grid-v2">
           {STATS.map((s, i) => (
             <div
               key={s.l}
@@ -60,6 +53,7 @@ export default function StatsBand() {
                 <Icon name={s.icon} size={22} color={colors.gold} />
               </div>
               <div
+                className="stats-num"
                 style={{
                   fontFamily: fonts.heading,
                   fontWeight: 900,

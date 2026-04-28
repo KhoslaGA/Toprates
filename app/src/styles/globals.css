@@ -63,36 +63,69 @@
   100% { transform: translateX(-50%); }
 }
 
+/* ── Homepage v2 layout (CSS-controlled so media queries can override) ── */
+.hero-grid-v2 {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.hero-h1-v2 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  letter-spacing: -2.2px;
+  line-height: 1.02;
+  color: #fff;
+  margin: 0;
+}
+.hero-form-v2 {
+  display: flex;
+  gap: 10px;
+  max-width: 460px;
+}
+.stats-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+}
+.carrier-row-track {
+  display: flex;
+  gap: 18px;
+  width: max-content;
+  animation: carrierMarquee 50s linear infinite;
+}
+
 /* ── Homepage v2 responsive — tablet ≤1024px ── */
 @media (max-width: 1024px) {
   .hero-grid-v2 {
-    grid-template-columns: 1fr !important;
-    gap: 48px !important;
+    grid-template-columns: 1fr;
+    gap: 48px;
   }
   .hero-h1-v2 {
-    font-size: 48px !important;
-    letter-spacing: -1.6px !important;
+    font-size: 48px;
+    letter-spacing: -1.6px;
   }
   .stats-grid-v2 {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr);
   }
   .stats-grid-v2 > div:nth-child(2) {
     border-right: none !important;
   }
   .stats-grid-v2 > div:nth-child(1),
   .stats-grid-v2 > div:nth-child(2) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
 }
 
 /* ── Homepage v2 responsive — mobile ≤640px ── */
 @media (max-width: 640px) {
   .hero-h1-v2 {
-    font-size: 36px !important;
-    letter-spacing: -1.1px !important;
+    font-size: 36px;
+    letter-spacing: -1.1px;
   }
   .hero-form-v2 {
-    flex-direction: column !important;
+    flex-direction: column;
   }
   .hero-form-v2 input,
   .hero-form-v2 button {
@@ -102,8 +135,12 @@
   .stats-grid-v2 > div {
     padding: 36px 14px !important;
   }
-  .stats-grid-v2 > div > div:nth-child(2) {
+  .stats-grid-v2 > div > div.stats-num {
     font-size: 32px !important;
+  }
+  .carrier-row-track {
+    gap: 12px;
+    animation-duration: 35s;
   }
 }
 
