@@ -58,6 +58,11 @@
   }
 }
 
+@keyframes carrierMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* ── Base styles ── */
 html {
   scroll-behavior: smooth;
