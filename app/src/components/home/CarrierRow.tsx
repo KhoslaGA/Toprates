@@ -1,27 +1,30 @@
 'use client';
 
-import { useState } from 'react';
 import { colors, fonts } from '@/styles/tokens';
 
-type Carrier = { name: string; domain: string };
+type Carrier = { name: string; tone: string };
 
+// Each carrier gets a brand-adjacent tone for its monogram.
+// Real SVG logos can replace these later.
 const CARRIERS: Carrier[] = [
-  { name: 'INTACT', domain: 'intact.ca' },
-  { name: 'WAWANESA', domain: 'wawanesa.com' },
-  { name: 'AVIVA', domain: 'aviva.ca' },
-  { name: 'ECONOMICAL', domain: 'economical.com' },
-  { name: 'BELAIRDIRECT', domain: 'belairdirect.com' },
-  { name: 'DESJARDINS', domain: 'desjardins.com' },
-  { name: 'TRAVELERS', domain: 'travelers.com' },
-  { name: 'ALLSTATE', domain: 'allstate.ca' },
-  { name: 'CAA', domain: 'caa.ca' },
-  { name: 'GORE MUTUAL', domain: 'goremutual.com' },
-  { name: 'PEMBRIDGE', domain: 'pembridge.com' },
-  { name: 'COACHMAN', domain: 'coachmaninsurance.ca' },
+  { name: 'INTACT', tone: '#E2231A' },
+  { name: 'WAWANESA', tone: '#1F4E8C' },
+  { name: 'AVIVA', tone: '#FFD500' },
+  { name: 'ECONOMICAL', tone: '#0066B3' },
+  { name: 'BELAIRDIRECT', tone: '#FFB81C' },
+  { name: 'DESJARDINS', tone: '#00874E' },
+  { name: 'TRAVELERS', tone: '#E4002B' },
+  { name: 'ALLSTATE', tone: '#0072CE' },
+  { name: 'CAA', tone: '#003478' },
+  { name: 'GORE MUTUAL', tone: '#0A7E8C' },
+  { name: 'PEMBRIDGE', tone: '#5A2D82' },
+  { name: 'COACHMAN', tone: '#1B2A4A' },
 ];
 
 function CarrierBadge({ carrier }: { carrier: Carrier }) {
-  const [imgError, setImgError] = useState(false);
+  // Pick contrasting text color for the monogram circle
+  const textColor =
+    carrier.tone === '#FFD500' || carrier.tone === '#FFB81C' ? colors.navy : '#fff';
 
   return (
     <div
@@ -29,7 +32,7 @@ function CarrierBadge({ carrier }: { carrier: Carrier }) {
         display: 'inline-flex',
         alignItems: 'center',
         gap: 12,
-        padding: '10px 22px',
+        padding: '10px 22px 10px 12px',
         borderRadius: 14,
         background: '#fff',
         border: `1px solid ${colors.border}`,
@@ -48,40 +51,27 @@ function CarrierBadge({ carrier }: { carrier: Carrier }) {
     >
       <div
         style={{
-          width: 32,
-          height: 32,
-          borderRadius: 8,
-          background: imgError ? colors.teal : '#f4f6f8',
+          width: 36,
+          height: 36,
+          borderRadius: 10,
+          background: carrier.tone,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           flexShrink: 0,
-          overflow: 'hidden',
         }}
       >
-        {!imgError ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={`https://logo.clearbit.com/${carrier.domain}`}
-            alt={`${carrier.name} logo`}
-            width={32}
-            height={32}
-            style={{ width: 32, height: 32, objectFit: 'contain' }}
-            onError={() => setImgError(true)}
-          />
-        ) : (
-          <span
-            style={{
-              fontFamily: fonts.heading,
-              fontWeight: 900,
-              fontSize: 14,
-              color: '#fff',
-              letterSpacing: '-0.5px',
-            }}
-          >
-            {carrier.name.charAt(0)}
-          </span>
-        )}
+        <span
+          style={{
+            fontFamily: fonts.heading,
+            fontWeight: 900,
+            fontSize: 16,
+            color: textColor,
+            letterSpacing: '-0.5px',
+          }}
+        >
+          {carrier.name.charAt(0)}
+        </span>
       </div>
       <span
         style={{
