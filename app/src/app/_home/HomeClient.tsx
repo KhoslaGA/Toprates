@@ -2,13 +2,11 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import ReformAlertStrip from '@/components/home/ReformAlertStrip';
+import Hero from '@/components/home/Hero';
+import StatsBand from '@/components/home/StatsBand';
+import CarrierRow from '@/components/home/CarrierRow';
 
-/**
- * Homepage — ported from design/mockups/toprates-homepage.jsx
- *
- * Sections below match the mockup 1:1. Shared Header/Footer are provided by
- * src/app/layout.tsx so we omit the mockup's nav + footer blocks.
- */
 export default function HomeClient() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
@@ -22,195 +20,10 @@ export default function HomeClient() {
 
   return (
     <>
-      {/* ===== HERO ===== */}
-      <section
-        style={{
-          background: 'linear-gradient(135deg, #1B2A4A 0%, #0f1e38 40%, #162844 100%)',
-          padding: '80px 32px 100px',
-          position: 'relative',
-          overflow: 'hidden',
-        }}
-      >
-        <div style={{ position: 'absolute', top: -100, right: -100, width: 400, height: 400, borderRadius: '50%', background: 'rgba(10,126,140,0.08)' }} />
-        <div style={{ position: 'absolute', bottom: -150, left: -50, width: 350, height: 350, borderRadius: '50%', background: 'rgba(184,150,12,0.04)' }} />
-        <div style={{ position: 'absolute', top: '20%', right: '15%', width: 200, height: 200, borderRadius: '50%', background: 'rgba(10,126,140,0.05)' }} />
-
-        <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 60 }}>
-            <div style={{ flex: '1 1 55%' }}>
-              <div
-                style={{
-                  display: 'inline-flex', alignItems: 'center', gap: 8,
-                  background: 'rgba(184,150,12,0.15)', border: '1px solid rgba(184,150,12,0.3)',
-                  borderRadius: 20, padding: '6px 16px', marginBottom: 24,
-                }}
-              >
-                <span style={{ fontSize: 12 }}>⚡</span>
-                <span style={{ fontSize: 12, fontWeight: 700, color: '#d4ad0e', letterSpacing: 0.5 }}>
-                  Ontario Auto Insurance Is Changing July 2026
-                </span>
-              </div>
-
-              <h1 style={{ fontFamily: "'Outfit'", fontWeight: 900, fontSize: 48, lineHeight: 1.1, color: '#fff', margin: '0 0 20px' }}>
-                Stop overpaying for
-                <br />
-                <span style={{ background: 'linear-gradient(135deg, #0A7E8C, #12b8ca)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                  auto & home insurance
-                </span>
-              </h1>
-              <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, margin: '0 0 32px', maxWidth: 480 }}>
-                Snap your pink slip. Get quotes from 30+ carriers in under 2 minutes. AI-powered comparison that finds you the best rate — not just the cheapest.
-              </p>
-
-              {!submitted ? (
-                <div style={{ display: 'flex', gap: 10, maxWidth: 440 }}>
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email"
-                    onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
-                    style={{
-                      flex: 1, padding: '14px 18px', borderRadius: 12,
-                      border: '2px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.07)',
-                      color: '#fff', fontSize: 15, fontFamily: "'DM Sans'", outline: 'none',
-                    }}
-                  />
-                  <button
-                    onClick={handleSubmit}
-                    style={{
-                      background: 'linear-gradient(135deg, #0A7E8C, #0d9aa8)',
-                      color: '#fff', border: 'none', borderRadius: 12,
-                      padding: '14px 28px', fontSize: 15, fontWeight: 700,
-                      cursor: 'pointer', fontFamily: "'DM Sans'",
-                      boxShadow: '0 4px 20px rgba(10,126,140,0.35)', whiteSpace: 'nowrap',
-                    }}
-                  >
-                    Join Waitlist
-                  </button>
-                </div>
-              ) : (
-                <div
-                  style={{
-                    background: 'rgba(10,126,140,0.15)', border: '1px solid rgba(10,126,140,0.3)',
-                    borderRadius: 12, padding: '14px 20px',
-                    display: 'flex', alignItems: 'center', gap: 10, maxWidth: 440,
-                  }}
-                >
-                  <span style={{ fontSize: 20 }}>✅</span>
-                  <span style={{ color: '#12b8ca', fontWeight: 600, fontSize: 14 }}>
-                    You&rsquo;re on the list! We&rsquo;ll notify you when TopRates.ca goes live.
-                  </span>
-                </div>
-              )}
-
-              <div style={{ display: 'flex', gap: 24, marginTop: 20, flexWrap: 'wrap' }}>
-                {['No spam, ever', 'Free to compare', 'RIBO licensed'].map((t) => (
-                  <span key={t} style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)', display: 'flex', alignItems: 'center', gap: 4 }}>
-                    <span style={{ color: '#0A7E8C' }}>✓</span> {t}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div style={{ flex: '1 1 45%', display: 'flex', justifyContent: 'center' }}>
-              <div
-                style={{
-                  background: 'rgba(255,255,255,0.04)', borderRadius: 24,
-                  border: '1px solid rgba(255,255,255,0.08)', padding: 28,
-                  width: 340, position: 'relative',
-                }}
-              >
-                <div
-                  style={{
-                    position: 'absolute', top: -12, left: 24,
-                    background: '#B8960C', color: '#fff', fontSize: 10, fontWeight: 700,
-                    padding: '4px 12px', borderRadius: 20, letterSpacing: 0.8,
-                  }}
-                >
-                  SAMPLE SAVINGS
-                </div>
-                <div style={{ textAlign: 'center', marginBottom: 20, paddingTop: 8 }}>
-                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', fontWeight: 500, marginBottom: 4 }}>Current premium</div>
-                  <div style={{ fontSize: 28, fontWeight: 700, color: 'rgba(255,255,255,0.3)', textDecoration: 'line-through', fontFamily: "'Outfit'" }}>$2,450/yr</div>
-                </div>
-                {[
-                  { carrier: 'Wawanesa', rate: '$1,838', save: '$612', best: true },
-                  { carrier: 'Intact', rate: '$1,956', save: '$494', best: false },
-                  { carrier: 'Aviva', rate: '$2,104', save: '$346', best: false },
-                ].map((q) => (
-                  <div
-                    key={q.carrier}
-                    style={{
-                      background: q.best ? 'rgba(10,126,140,0.12)' : 'rgba(255,255,255,0.03)',
-                      border: q.best ? '1px solid rgba(10,126,140,0.3)' : '1px solid rgba(255,255,255,0.06)',
-                      borderRadius: 12, padding: '14px 16px', marginBottom: 8,
-                      display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                    }}
-                  >
-                    <div>
-                      <div style={{ fontSize: 14, fontWeight: 600, color: '#fff' }}>{q.carrier}</div>
-                      <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)' }}>Save {q.save}/yr</div>
-                    </div>
-                    <div
-                      style={{
-                        fontSize: 22, fontWeight: 800,
-                        color: q.best ? '#12b8ca' : 'rgba(255,255,255,0.7)',
-                        fontFamily: "'Outfit'",
-                      }}
-                    >
-                      {q.rate}
-                    </div>
-                  </div>
-                ))}
-                <div style={{ textAlign: 'center', marginTop: 12 }}>
-                  <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.25)' }}>Illustrative rates. Actual quotes vary.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== REFORM ALERT BANNER ===== */}
-      <section
-        style={{
-          background: 'linear-gradient(135deg, #FDF6E3 0%, #fef9ed 100%)',
-          borderBottom: '1px solid rgba(184,150,12,0.15)',
-          padding: '24px 32px',
-        }}
-      >
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' }}>
-          <div
-            style={{
-              width: 48, height: 48, borderRadius: 12, flexShrink: 0,
-              background: 'linear-gradient(135deg, #B8960C, #d4ad0e)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 22, boxShadow: '0 4px 12px rgba(184,150,12,0.2)',
-            }}
-          >
-            ⚠️
-          </div>
-          <div style={{ flex: 1, minWidth: 240 }}>
-            <div style={{ fontSize: 15, fontWeight: 700, color: '#1B2A4A', marginBottom: 2 }}>
-              Ontario Auto Insurance Reform Takes Effect July 1, 2026
-            </div>
-            <div style={{ fontSize: 13, color: '#7a6d4a' }}>
-              Most accident benefits are becoming optional. Millions of drivers need to make new coverage decisions. Learn what&rsquo;s changing and how to protect yourself.
-            </div>
-          </div>
-          <Link
-            href="/blog"
-            style={{
-              background: '#1B2A4A', color: '#fff', borderRadius: 10,
-              padding: '10px 20px', fontSize: 13, fontWeight: 700,
-              whiteSpace: 'nowrap', fontFamily: "'DM Sans'", textDecoration: 'none',
-            }}
-          >
-            Read Our Guide →
-          </Link>
-        </div>
-      </section>
+      <ReformAlertStrip />
+      <Hero />
+      <StatsBand />
+      <CarrierRow />
 
       {/* ===== PRODUCT SELECTOR ===== */}
       <section style={{ padding: '60px 32px 64px', background: '#fff' }}>
@@ -608,32 +421,6 @@ export default function HomeClient() {
                 </Link>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== TRUST / STATS ===== */}
-      <section style={{ padding: '64px 32px', background: '#fff' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ display: 'flex', gap: 0, flexWrap: 'wrap' }}>
-            {[
-              { number: '30+', label: 'Insurance carriers compared', icon: '🏢' },
-              { number: '<2 min', label: 'Average time to get quotes', icon: '⚡' },
-              { number: '$612', label: 'Average annual savings', icon: '💰' },
-              { number: '100%', label: 'Free, no obligation', icon: '🔒' },
-            ].map((s, i) => (
-              <div
-                key={s.label}
-                style={{
-                  flex: '1 1 180px', textAlign: 'center', padding: '24px 20px',
-                  borderRight: i < 3 ? '1px solid #f0f2f5' : 'none',
-                }}
-              >
-                <div style={{ fontSize: 24, marginBottom: 8 }}>{s.icon}</div>
-                <div style={{ fontFamily: "'Outfit'", fontWeight: 800, fontSize: 32, color: '#0A7E8C', marginBottom: 4 }}>{s.number}</div>
-                <div style={{ fontSize: 13, color: '#98a2b3', fontWeight: 500 }}>{s.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

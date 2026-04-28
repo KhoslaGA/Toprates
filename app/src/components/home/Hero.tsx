@@ -1,0 +1,388 @@
+'use client';
+
+import { useState } from 'react';
+import { Icon } from '../brand/Icon';
+import { colors, fonts } from '@/styles/tokens';
+
+function SampleSavingsCard() {
+  const quotes = [
+    { name: 'Wawanesa', rate: '$1,838', save: 'Save $612/yr', best: true },
+    { name: 'Intact', rate: '$1,956', save: 'Save $494/yr', best: false },
+    { name: 'Aviva', rate: '$2,104', save: 'Save $346/yr', best: false },
+  ];
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div
+        style={{
+          background: 'rgba(255,255,255,0.04)',
+          backdropFilter: 'blur(18px)',
+          borderRadius: 22,
+          border: '1px solid rgba(255,255,255,0.1)',
+          padding: '32px 28px 26px',
+          width: 380,
+          maxWidth: '100%',
+          boxShadow: '0 40px 80px -30px rgba(0,0,0,0.5)',
+          position: 'relative',
+        }}
+      >
+        <div
+          style={{
+            position: 'absolute',
+            top: -12,
+            left: 24,
+            background: colors.gold,
+            color: colors.navy,
+            fontFamily: fonts.mono,
+            fontSize: 9,
+            fontWeight: 800,
+            letterSpacing: 1.5,
+            padding: '5px 11px',
+            borderRadius: 999,
+          }}
+        >
+          SAMPLE SAVINGS
+        </div>
+
+        <div style={{ textAlign: 'center', marginBottom: 20, paddingTop: 6 }}>
+          <div
+            style={{
+              fontFamily: fonts.mono,
+              fontSize: 10,
+              letterSpacing: 1.5,
+              color: 'rgba(255,255,255,0.4)',
+              textTransform: 'uppercase',
+              fontWeight: 700,
+              marginBottom: 4,
+            }}
+          >
+            Current premium
+          </div>
+          <div
+            style={{
+              fontFamily: fonts.heading,
+              fontWeight: 800,
+              fontSize: 28,
+              color: 'rgba(255,255,255,0.3)',
+              textDecoration: 'line-through',
+              textDecorationColor: 'rgba(225,93,93,0.5)',
+              letterSpacing: '-0.8px',
+            }}
+          >
+            $2,450
+            <span style={{ fontSize: 15 }}>/yr</span>
+          </div>
+        </div>
+
+        {quotes.map((q) => (
+          <div
+            key={q.name}
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              padding: '14px 16px',
+              marginBottom: 8,
+              background: q.best
+                ? 'linear-gradient(135deg, rgba(15,189,201,0.16), rgba(10,126,140,0.08))'
+                : 'rgba(255,255,255,0.03)',
+              border: q.best
+                ? '1px solid rgba(15,189,201,0.4)'
+                : '1px solid rgba(255,255,255,0.06)',
+              borderRadius: 12,
+            }}
+          >
+            <div>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  fontFamily: fonts.heading,
+                  fontWeight: 800,
+                  fontSize: 14,
+                  color: '#fff',
+                }}
+              >
+                {q.name}
+                {q.best && (
+                  <span
+                    style={{
+                      fontFamily: fonts.mono,
+                      fontSize: 8,
+                      background: 'rgba(15,189,201,0.25)',
+                      color: '#0fbdc9',
+                      padding: '2px 6px',
+                      borderRadius: 3,
+                      fontWeight: 800,
+                      letterSpacing: 1,
+                    }}
+                  >
+                    BEST
+                  </span>
+                )}
+              </div>
+              <div
+                style={{
+                  fontFamily: fonts.mono,
+                  fontSize: 10,
+                  color: 'rgba(255,255,255,0.35)',
+                  marginTop: 3,
+                }}
+              >
+                {q.save}
+              </div>
+            </div>
+            <div
+              style={{
+                fontFamily: fonts.heading,
+                fontWeight: 900,
+                fontSize: 22,
+                color: q.best ? '#0fbdc9' : 'rgba(255,255,255,0.7)',
+                letterSpacing: '-0.8px',
+              }}
+            >
+              {q.rate}
+            </div>
+          </div>
+        ))}
+
+        <div
+          style={{
+            textAlign: 'center',
+            marginTop: 10,
+            fontFamily: fonts.mono,
+            fontSize: 10,
+            color: 'rgba(255,255,255,0.3)',
+            letterSpacing: 0.5,
+          }}
+        >
+          ILLUSTRATIVE RATES · ACTUAL VARY
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function Hero() {
+  const [email, setEmail] = useState('');
+  const [done, setDone] = useState(false);
+  const submit = () => {
+    if (email.includes('@')) setDone(true);
+  };
+
+  return (
+    <section
+      style={{
+        background:
+          'linear-gradient(160deg, #1B2A4A 0%, #0f1e38 40%, #132340 70%, #1B2A4A 100%)',
+        padding: '88px 0 108px',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          opacity: 0.05,
+          backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
+          backgroundSize: '32px 32px',
+        }}
+      />
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          top: -100,
+          right: -120,
+          width: 520,
+          height: 520,
+          borderRadius: '50%',
+          background:
+            'radial-gradient(circle, rgba(10,126,140,0.2) 0%, transparent 70%)',
+        }}
+      />
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          bottom: -140,
+          left: -120,
+          width: 440,
+          height: 440,
+          borderRadius: '50%',
+          background:
+            'radial-gradient(circle, rgba(184,150,12,0.1) 0%, transparent 70%)',
+        }}
+      />
+
+      <div
+        style={{
+          maxWidth: 1240,
+          margin: '0 auto',
+          padding: '0 32px',
+          position: 'relative',
+        }}
+      >
+        <div
+          className="hero-grid-v2"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1.2fr 1fr',
+            gap: 60,
+            alignItems: 'center',
+          }}
+        >
+          <div>
+            <div
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 10,
+                background: 'rgba(184,150,12,0.15)',
+                border: '1px solid rgba(184,150,12,0.35)',
+                borderRadius: 999,
+                padding: '6px 14px',
+                marginBottom: 26,
+                fontFamily: fonts.mono,
+                fontSize: 10,
+                letterSpacing: 1.5,
+                fontWeight: 700,
+                color: colors.gold,
+                textTransform: 'uppercase',
+              }}
+            >
+              <span
+                style={{
+                  width: 6,
+                  height: 6,
+                  borderRadius: '50%',
+                  background: colors.gold,
+                }}
+              />
+              Ontario auto reform · July 2026
+            </div>
+            <h1
+              className="hero-h1-v2"
+              style={{
+                fontFamily: fonts.heading,
+                fontWeight: 900,
+                fontSize: 64,
+                letterSpacing: '-2.2px',
+                lineHeight: 1.02,
+                color: '#fff',
+                margin: 0,
+              }}
+            >
+              Stop overpaying for
+              <br />
+              <span style={{ color: '#0fbdc9' }}>auto &amp; home</span> insurance.
+            </h1>
+            <p
+              style={{
+                fontFamily: fonts.heading,
+                fontSize: 18,
+                color: 'rgba(246,239,224,0.68)',
+                maxWidth: 520,
+                margin: '24px 0 32px',
+                lineHeight: 1.55,
+              }}
+            >
+              Snap your pink slip or home dec page and get real quotes from 30+
+              carriers in under 90 seconds. Skip the long forms — talk to a broker
+              only when you want to.
+            </p>
+
+            {!done ? (
+              <div
+                className="hero-form-v2"
+                style={{ display: 'flex', gap: 10, maxWidth: 460 }}
+              >
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  onKeyDown={(e) => e.key === 'Enter' && submit()}
+                  style={{
+                    flex: 1,
+                    padding: '14px 18px',
+                    borderRadius: 12,
+                    border: '1.5px solid rgba(255,255,255,0.12)',
+                    background: 'rgba(255,255,255,0.05)',
+                    color: '#fff',
+                    fontFamily: fonts.heading,
+                    fontSize: 14,
+                    outline: 'none',
+                  }}
+                />
+                <button
+                  onClick={submit}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 8,
+                    padding: '14px 26px',
+                    borderRadius: 999,
+                    fontFamily: fonts.heading,
+                    fontWeight: 800,
+                    fontSize: 15,
+                    letterSpacing: '-0.2px',
+                    cursor: 'pointer',
+                    border: '1px solid transparent',
+                    whiteSpace: 'nowrap',
+                    background: colors.teal,
+                    color: '#fff',
+                  }}
+                >
+                  Join waitlist <Icon name="arrow" size={14} />
+                </button>
+              </div>
+            ) : (
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 10,
+                  background: 'rgba(15,189,201,0.12)',
+                  border: '1px solid rgba(15,189,201,0.3)',
+                  borderRadius: 12,
+                  padding: '14px 20px',
+                  fontFamily: fonts.heading,
+                  fontWeight: 700,
+                  fontSize: 14,
+                  color: '#0fbdc9',
+                }}
+              >
+                <Icon name="check" size={16} color="#0fbdc9" />
+                You&rsquo;re on the list! We&rsquo;ll be in touch.
+              </div>
+            )}
+
+            <div style={{ display: 'flex', gap: 22, marginTop: 22, flexWrap: 'wrap' }}>
+              {['No spam, ever', 'Free to compare', '100% Canadian'].map((t) => (
+                <span
+                  key={t}
+                  style={{
+                    fontFamily: fonts.mono,
+                    fontSize: 10,
+                    letterSpacing: 0.5,
+                    color: 'rgba(246,239,224,0.4)',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 6,
+                  }}
+                >
+                  <span style={{ color: '#0fbdc9' }}>✓</span> {t}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <SampleSavingsCard />
+        </div>
+      </div>
+    </section>
+  );
+}
