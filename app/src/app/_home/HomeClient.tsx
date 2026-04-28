@@ -26,8 +26,8 @@ export default function HomeClient() {
       <CarrierRow />
 
       {/* ===== PRODUCT SELECTOR ===== */}
-      <section style={{ padding: '60px 32px 64px', background: '#fff' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto' }}>
+      <section style={{ padding: '80px 32px 88px', background: '#fff' }}>
+        <div style={{ maxWidth: 1080, margin: '0 auto' }}>
           <div style={{ display: 'flex', justifyContent: 'center', gap: 6, marginBottom: 0, position: 'relative', flexWrap: 'wrap' }}>
             {(
               [
@@ -45,19 +45,19 @@ export default function HomeClient() {
                   key={prod.id}
                   onClick={() => setActiveProduct(prod.id)}
                   style={{
-                    flex: '1 1 0', maxWidth: 130, padding: '14px 8px 12px',
+                    flex: '1 1 0', maxWidth: 175, padding: '20px 14px 18px',
                     background: on ? 'linear-gradient(135deg, #0A7E8C, #0d8f9e)' : 'transparent',
                     border: on ? '2px solid #0A7E8C' : '2px solid transparent',
                     borderBottom: on ? '2px solid #0A7E8C' : '2px solid transparent',
                     borderRadius: '14px 14px 0 0', cursor: 'pointer',
-                    display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6,
+                    display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8,
                     transition: 'all 0.25s ease', position: 'relative',
                   }}
                 >
-                  <div style={{ fontSize: 24, filter: on ? 'none' : 'grayscale(0.5)', opacity: on ? 1 : 0.6, transition: 'all 0.25s' }}>{prod.icon}</div>
+                  <div style={{ fontSize: 32, filter: on ? 'none' : 'grayscale(0.5)', opacity: on ? 1 : 0.6, transition: 'all 0.25s' }}>{prod.icon}</div>
                   <span
                     style={{
-                      fontSize: 11, fontWeight: on ? 700 : 500,
+                      fontSize: 14, fontWeight: on ? 700 : 600,
                       color: on ? '#fff' : '#98a2b3',
                       letterSpacing: 0.2, transition: 'all 0.25s', whiteSpace: 'nowrap',
                     }}
@@ -65,7 +65,7 @@ export default function HomeClient() {
                     {prod.label}
                   </span>
                   {!prod.live && (
-                    <span style={{ position: 'absolute', top: 4, right: 4, width: 6, height: 6, borderRadius: '50%', background: '#B8960C' }} />
+                    <span style={{ position: 'absolute', top: 6, right: 6, width: 7, height: 7, borderRadius: '50%', background: '#B8960C' }} />
                   )}
                 </button>
               );
@@ -77,16 +77,16 @@ export default function HomeClient() {
               background: 'linear-gradient(135deg, #f0fafb, #f6f8fa)',
               borderRadius: '0 0 20px 20px',
               border: '2px solid #e8ecf0', borderTop: '2px solid #0A7E8C',
-              padding: '32px 36px', minHeight: 140,
+              padding: '44px 52px', minHeight: 200,
             }}
           >
             {activeProduct === 'auto' && (
-              <div style={{ display: 'flex', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 32, flexWrap: 'wrap' }}>
                 <div style={{ flex: 1, minWidth: 280 }}>
-                  <div style={{ fontSize: 18, fontWeight: 700, color: '#1B2A4A', fontFamily: "'Outfit'", marginBottom: 6 }}>
+                  <div style={{ fontSize: 24, fontWeight: 700, color: '#1B2A4A', fontFamily: "'Outfit'", marginBottom: 10 }}>
                     Compare car insurance from 30+ Ontario carriers
                   </div>
-                  <p style={{ fontSize: 13, color: '#6b7b8d', margin: '0 0 16px', lineHeight: 1.5 }}>
+                  <p style={{ fontSize: 16, color: '#6b7b8d', margin: '0 0 20px', lineHeight: 1.55 }}>
                     Snap your pink slip or enter your postal code. AI-powered quotes in under 2 minutes.
                   </p>
                   <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
@@ -125,21 +125,21 @@ export default function HomeClient() {
                     </button>
                   </div>
                 </div>
-                <div style={{ background: 'rgba(10,126,140,0.08)', borderRadius: 12, padding: '10px 16px', textAlign: 'center', flexShrink: 0 }}>
-                  <div style={{ fontSize: 10, color: '#0A7E8C', fontWeight: 600, letterSpacing: 0.5, marginBottom: 2 }}>AVG SAVINGS</div>
-                  <div style={{ fontSize: 28, fontWeight: 800, color: '#0A7E8C', fontFamily: "'Outfit'" }}>$612</div>
-                  <div style={{ fontSize: 10, color: '#6b7b8d' }}>/year</div>
+                <div style={{ background: 'rgba(10,126,140,0.08)', borderRadius: 14, padding: '16px 22px', textAlign: 'center', flexShrink: 0 }}>
+                  <div style={{ fontSize: 12, color: '#0A7E8C', fontWeight: 700, letterSpacing: 0.6, marginBottom: 4 }}>AVG SAVINGS</div>
+                  <div style={{ fontSize: 36, fontWeight: 800, color: '#0A7E8C', fontFamily: "'Outfit'", lineHeight: 1 }}>$612</div>
+                  <div style={{ fontSize: 12, color: '#6b7b8d', marginTop: 4 }}>/year</div>
                 </div>
               </div>
             )}
 
             {activeProduct === 'home' && (
-              <div style={{ display: 'flex', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 32, flexWrap: 'wrap' }}>
                 <div style={{ flex: 1, minWidth: 280 }}>
-                  <div style={{ fontSize: 18, fontWeight: 700, color: '#1B2A4A', fontFamily: "'Outfit'", marginBottom: 6 }}>
+                  <div style={{ fontSize: 24, fontWeight: 700, color: '#1B2A4A', fontFamily: "'Outfit'", marginBottom: 10 }}>
                     Protect your home at the best rate in Ontario
                   </div>
-                  <p style={{ fontSize: 13, color: '#6b7b8d', margin: '0 0 16px', lineHeight: 1.5 }}>
+                  <p style={{ fontSize: 16, color: '#6b7b8d', margin: '0 0 20px', lineHeight: 1.55 }}>
                     Homeowner, condo, or tenant — compare coverage and pricing from top carriers.
                   </p>
                   <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
@@ -182,21 +182,21 @@ export default function HomeClient() {
                     </Link>
                   </div>
                 </div>
-                <div style={{ background: 'rgba(10,126,140,0.08)', borderRadius: 12, padding: '10px 16px', textAlign: 'center', flexShrink: 0 }}>
-                  <div style={{ fontSize: 10, color: '#0A7E8C', fontWeight: 600, letterSpacing: 0.5, marginBottom: 2 }}>BUNDLE & SAVE</div>
-                  <div style={{ fontSize: 28, fontWeight: 800, color: '#0A7E8C', fontFamily: "'Outfit'" }}>20%</div>
-                  <div style={{ fontSize: 10, color: '#6b7b8d' }}>home + auto</div>
+                <div style={{ background: 'rgba(10,126,140,0.08)', borderRadius: 14, padding: '16px 22px', textAlign: 'center', flexShrink: 0 }}>
+                  <div style={{ fontSize: 12, color: '#0A7E8C', fontWeight: 700, letterSpacing: 0.6, marginBottom: 4 }}>BUNDLE & SAVE</div>
+                  <div style={{ fontSize: 36, fontWeight: 800, color: '#0A7E8C', fontFamily: "'Outfit'", lineHeight: 1 }}>20%</div>
+                  <div style={{ fontSize: 12, color: '#6b7b8d', marginTop: 4 }}>home + auto</div>
                 </div>
               </div>
             )}
 
             {activeProduct === 'cards' && (
-              <div style={{ display: 'flex', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 32, flexWrap: 'wrap' }}>
                 <div style={{ flex: 1, minWidth: 280 }}>
-                  <div style={{ fontSize: 18, fontWeight: 700, color: '#1B2A4A', fontFamily: "'Outfit'", marginBottom: 6 }}>
+                  <div style={{ fontSize: 24, fontWeight: 700, color: '#1B2A4A', fontFamily: "'Outfit'", marginBottom: 10 }}>
                     Find the best credit card for your spending habits
                   </div>
-                  <p style={{ fontSize: 13, color: '#6b7b8d', margin: '0 0 16px', lineHeight: 1.5 }}>
+                  <p style={{ fontSize: 16, color: '#6b7b8d', margin: '0 0 20px', lineHeight: 1.55 }}>
                     Cashback, travel rewards, no-fee, low interest — compare Canada&rsquo;s top cards side by side.
                   </p>
                   <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
@@ -214,23 +214,23 @@ export default function HomeClient() {
                     ))}
                   </div>
                 </div>
-                <div style={{ background: 'rgba(13,128,80,0.08)', borderRadius: 12, padding: '10px 16px', textAlign: 'center', flexShrink: 0 }}>
-                  <div style={{ fontSize: 10, color: '#0D8050', fontWeight: 600, letterSpacing: 0.5, marginBottom: 2 }}>STATUS</div>
-                  <div style={{ fontSize: 16, fontWeight: 800, color: '#0D8050', fontFamily: "'Outfit'" }}>Live Now</div>
-                  <div style={{ fontSize: 10, color: '#6b7b8d' }}>50+ cards</div>
+                <div style={{ background: 'rgba(13,128,80,0.08)', borderRadius: 14, padding: '16px 22px', textAlign: 'center', flexShrink: 0 }}>
+                  <div style={{ fontSize: 12, color: '#0D8050', fontWeight: 700, letterSpacing: 0.6, marginBottom: 4 }}>STATUS</div>
+                  <div style={{ fontSize: 22, fontWeight: 800, color: '#0D8050', fontFamily: "'Outfit'", lineHeight: 1 }}>Live Now</div>
+                  <div style={{ fontSize: 12, color: '#6b7b8d', marginTop: 4 }}>50+ cards</div>
                 </div>
               </div>
             )}
 
             {(activeProduct === 'travel' || activeProduct === 'business' || activeProduct === 'mortgage') && (
-              <div style={{ display: 'flex', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 32, flexWrap: 'wrap' }}>
                 <div style={{ flex: 1, minWidth: 280 }}>
-                  <div style={{ fontSize: 18, fontWeight: 700, color: '#1B2A4A', fontFamily: "'Outfit'", marginBottom: 6 }}>
+                  <div style={{ fontSize: 24, fontWeight: 700, color: '#1B2A4A', fontFamily: "'Outfit'", marginBottom: 10 }}>
                     {activeProduct === 'travel' && 'Compare travel insurance for your next trip'}
                     {activeProduct === 'business' && 'Protect your business with the right coverage'}
                     {activeProduct === 'mortgage' && 'Compare mortgage rates from top Canadian lenders'}
                   </div>
-                  <p style={{ fontSize: 13, color: '#6b7b8d', margin: '0 0 16px', lineHeight: 1.5 }}>
+                  <p style={{ fontSize: 16, color: '#6b7b8d', margin: '0 0 20px', lineHeight: 1.55 }}>
                     {activeProduct === 'travel' && 'Single-trip, multi-trip, or snowbird coverage. Medical, cancellation, and baggage protection.'}
                     {activeProduct === 'business' && 'Commercial property, liability, professional, and cyber insurance for Canadian businesses.'}
                     {activeProduct === 'mortgage' && 'Fixed, variable, and HELOC rates from banks, credit unions, and mortgage brokers across Canada.'}
@@ -259,29 +259,29 @@ export default function HomeClient() {
                     </button>
                   </div>
                 </div>
-                <div style={{ background: 'rgba(184,150,12,0.08)', borderRadius: 12, padding: '10px 16px', textAlign: 'center', flexShrink: 0 }}>
-                  <div style={{ fontSize: 10, color: '#B8960C', fontWeight: 600, letterSpacing: 0.5, marginBottom: 2 }}>COMING SOON</div>
-                  <div style={{ fontSize: 24, fontWeight: 800, color: '#B8960C', fontFamily: "'Outfit'" }}>
+                <div style={{ background: 'rgba(184,150,12,0.08)', borderRadius: 14, padding: '16px 22px', textAlign: 'center', flexShrink: 0 }}>
+                  <div style={{ fontSize: 12, color: '#B8960C', fontWeight: 700, letterSpacing: 0.6, marginBottom: 4 }}>COMING SOON</div>
+                  <div style={{ fontSize: 32, fontWeight: 800, color: '#B8960C', fontFamily: "'Outfit'", lineHeight: 1 }}>
                     {activeProduct === 'mortgage' ? '2029' : '2028'}
                   </div>
-                  <div style={{ fontSize: 10, color: '#6b7b8d' }}>join waitlist</div>
+                  <div style={{ fontSize: 12, color: '#6b7b8d', marginTop: 4 }}>join waitlist</div>
                 </div>
               </div>
             )}
           </div>
 
           {/* Trust bar below selector */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: 32, padding: '20px 0 0', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: 40, padding: '32px 0 0', flexWrap: 'wrap' }}>
             {[
               { icon: '⭐', text: '4.9/5 on Google', sub: 'Join thousands of happy customers' },
               { icon: '🍁', text: '1M+ Canadians helped', sub: 'Finding better rates since 2026' },
               { icon: '🤝', text: 'Trusted carrier partners', sub: 'Intact · Wawanesa · Aviva · 30+ more' },
             ].map((t) => (
-              <div key={t.text} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                <span style={{ fontSize: 20 }}>{t.icon}</span>
+              <div key={t.text} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <span style={{ fontSize: 26 }}>{t.icon}</span>
                 <div>
-                  <div style={{ fontSize: 13, fontWeight: 700, color: '#1B2A4A' }}>{t.text}</div>
-                  <div style={{ fontSize: 11, color: '#98a2b3' }}>{t.sub}</div>
+                  <div style={{ fontSize: 15, fontWeight: 700, color: '#1B2A4A' }}>{t.text}</div>
+                  <div style={{ fontSize: 13, color: '#98a2b3' }}>{t.sub}</div>
                 </div>
               </div>
             ))}
