@@ -166,8 +166,30 @@ function SampleSavingsCard() {
 export default function Hero() {
   const [email, setEmail] = useState('');
   const [done, setDone] = useState(false);
-  const submit = () => {
-    if (email.includes('@')) setDone(true);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const submit = async () => {
+    if (!email.includes('@') || submitting) return;
+    setSubmitting(true);
+    setError(null);
+    try {
+      const res = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ email, source: 'home_hero' }),
+      });
+      const data = (await res.json().catch(() => ({}))) as { ok?: boolean };
+      if (!res.ok || !data.ok) {
+        setError("Couldn't save your spot. Please try again.");
+      } else {
+        setDone(true);
+      }
+    } catch {
+      setError("Couldn't reach the server. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -297,6 +319,7 @@ export default function Hero() {
                 />
                 <button
                   onClick={submit}
+                  disabled={submitting}
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -307,14 +330,15 @@ export default function Hero() {
                     fontWeight: 800,
                     fontSize: 15,
                     letterSpacing: '-0.2px',
-                    cursor: 'pointer',
+                    cursor: submitting ? 'wait' : 'pointer',
                     border: '1px solid transparent',
                     whiteSpace: 'nowrap',
                     background: colors.teal,
                     color: '#fff',
+                    opacity: submitting ? 0.7 : 1,
                   }}
                 >
-                  Join waitlist <Icon name="arrow" size={14} />
+                  {submitting ? 'Saving…' : 'Join waitlist'} <Icon name="arrow" size={14} />
                 </button>
               </div>
             ) : (
@@ -335,6 +359,18 @@ export default function Hero() {
               >
                 <Icon name="check" size={16} color="#0fbdc9" />
                 You&rsquo;re on the list! We&rsquo;ll be in touch.
+              </div>
+            )}
+            {error && !done && (
+              <div
+                style={{
+                  marginTop: 12,
+                  fontFamily: fonts.heading,
+                  fontSize: 13,
+                  color: '#f59e0b',
+                }}
+              >
+                {error}
               </div>
             )}
 

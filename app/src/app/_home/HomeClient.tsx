@@ -10,12 +10,33 @@ import CarrierRow from '@/components/home/CarrierRow';
 export default function HomeClient() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [activeProduct, setActiveProduct] = useState<
     'auto' | 'home' | 'travel' | 'business' | 'mortgage' | 'cards'
   >('auto');
 
-  const handleSubmit = () => {
-    if (email.includes('@')) setSubmitted(true);
+  const handleSubmit = async () => {
+    if (!email.includes('@') || submitting) return;
+    setSubmitting(true);
+    setSubmitError(null);
+    try {
+      const res = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ email, source: 'home_bottom_cta' }),
+      });
+      const data = (await res.json().catch(() => ({}))) as { ok?: boolean };
+      if (!res.ok || !data.ok) {
+        setSubmitError("Couldn't save your spot. Please try again.");
+      } else {
+        setSubmitted(true);
+      }
+    } catch {
+      setSubmitError("Couldn't reach the server. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -582,15 +603,17 @@ export default function HomeClient() {
               />
               <button
                 onClick={handleSubmit}
+                disabled={submitting}
                 style={{
                   background: 'linear-gradient(135deg, #0A7E8C, #0d9aa8)',
                   color: '#fff', border: 'none', borderRadius: 12,
                   padding: '14px 28px', fontSize: 15, fontWeight: 700,
-                  cursor: 'pointer', fontFamily: "'DM Sans'",
+                  cursor: submitting ? 'wait' : 'pointer', fontFamily: "'DM Sans'",
                   boxShadow: '0 4px 20px rgba(10,126,140,0.35)', whiteSpace: 'nowrap',
+                  opacity: submitting ? 0.7 : 1,
                 }}
               >
-                Join Waitlist
+                {submitting ? 'Saving…' : 'Join Waitlist'}
               </button>
             </div>
           ) : (
@@ -604,6 +627,9 @@ export default function HomeClient() {
               <span style={{ fontSize: 20 }}>✅</span>
               <span style={{ color: '#12b8ca', fontWeight: 600, fontSize: 14 }}>You&rsquo;re on the list!</span>
             </div>
+          )}
+          {submitError && !submitted && (
+            <div style={{ marginTop: 12, fontSize: 13, color: '#f59e0b' }}>{submitError}</div>
           )}
         </div>
       </section>
