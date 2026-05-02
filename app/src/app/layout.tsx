@@ -1,7 +1,13 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import '../styles/globals.css'
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
+
+const GOOGLE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+const PLAUSIBLE_DOMAIN = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN
+const PLAUSIBLE_SRC =
+  process.env.NEXT_PUBLIC_PLAUSIBLE_SRC ?? 'https://plausible.io/js/script.js'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://toprates.ca'),
@@ -21,6 +27,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  ...(GOOGLE_VERIFICATION && {
+    verification: { google: GOOGLE_VERIFICATION },
+  }),
 }
 
 export default function RootLayout({
@@ -42,6 +51,14 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
+        {PLAUSIBLE_DOMAIN && (
+          <Script
+            defer
+            data-domain={PLAUSIBLE_DOMAIN}
+            src={PLAUSIBLE_SRC}
+            strategy="afterInteractive"
+          />
+        )}
       </head>
       <body className="flex flex-col min-h-screen">
         <Header />
