@@ -213,6 +213,29 @@ export default function ComingSoonPage() {
           </div>
         )}
 
+        {!done && (
+          <p
+            style={{
+              fontFamily: fonts.heading,
+              fontSize: 11,
+              color: 'rgba(246,239,224,0.5)',
+              marginTop: 14,
+              marginBottom: 0,
+              maxWidth: 460,
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              lineHeight: 1.5,
+            }}
+          >
+            By joining, you agree to receive launch updates and pre-launch insurance content from
+            Webhub4u Inc. (operator of TopRates.ca). Unsubscribe anytime. See our{' '}
+            <a href="/privacy" style={{ color: '#0fbdc9' }}>
+              Privacy Policy
+            </a>
+            .
+          </p>
+        )}
+
         <div style={{ marginTop: 40 }}>
           <Link
             href="/"

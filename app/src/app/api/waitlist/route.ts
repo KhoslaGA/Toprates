@@ -3,12 +3,33 @@ import { writeClient } from '@/lib/sanity/writeClient';
 
 export const runtime = 'nodejs';
 
-const ALLOWED_SOURCES = new Set(['home_hero', 'home_bottom_cta', 'other']);
+const ALLOWED_SOURCES = new Set([
+  'home_hero',
+  'home_bottom_cta',
+  'coming_soon',
+  'other',
+]);
+const ALLOWED_SCOPES = new Set([
+  'waitlist',
+  'waitlist_insurance',
+  'waitlist_full',
+]);
+
+const CURRENT_CONSENT_TEXT =
+  'I am joining the TopRates.ca waitlist. Webhub4u Inc. will email me when the platform launches and may send pre-launch updates about Canadian insurance reform and the platform itself. I can unsubscribe at any time.';
+
+/** Default retention: 24 months from signup (PIPEDA principle 5). */
+const RETENTION_MONTHS = 24;
 
 function isValidEmail(email: string): boolean {
   if (typeof email !== 'string' || email.length > 254) return false;
-  // Pragmatic regex — full RFC 5322 is overkill for a waitlist gate
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function addMonths(d: Date, months: number): Date {
+  const r = new Date(d);
+  r.setMonth(r.getMonth() + months);
+  return r;
 }
 
 export async function POST(request: Request) {
@@ -26,7 +47,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: 'Invalid JSON' }, { status: 400 });
   }
 
-  const { email, source } = (body ?? {}) as { email?: string; source?: string };
+  const { email, source, scope } = (body ?? {}) as {
+    email?: string;
+    source?: string;
+    scope?: string;
+  };
 
   if (!email || !isValidEmail(email)) {
     return NextResponse.json(
@@ -37,15 +62,28 @@ export async function POST(request: Request) {
 
   const normalizedEmail = email.trim().toLowerCase();
   const normalizedSource = ALLOWED_SOURCES.has(source ?? '') ? source : 'other';
+  const normalizedScope = ALLOWED_SCOPES.has(scope ?? '') ? scope : 'waitlist';
+
+  // Capture IP for consent record (PIPEDA + CASL audit trail).
+  const forwardedFor = request.headers.get('x-forwarded-for');
+  const ipAddress = forwardedFor?.split(',')[0]?.trim() ?? 'unknown';
+
+  const submittedAt = new Date();
+  const retentionUntil = addMonths(submittedAt, RETENTION_MONTHS);
 
   try {
     await writeClient.create({
       _type: 'waitlistEntry',
       email: normalizedEmail,
       source: normalizedSource,
+      consentText: CURRENT_CONSENT_TEXT,
+      consentScope: normalizedScope,
+      consentMethod: 'express_opt_in',
+      ipAddress,
       userAgent: request.headers.get('user-agent') ?? undefined,
       referer: request.headers.get('referer') ?? undefined,
-      submittedAt: new Date().toISOString(),
+      submittedAt: submittedAt.toISOString(),
+      retentionUntil: retentionUntil.toISOString(),
     });
 
     return NextResponse.json({ ok: true });

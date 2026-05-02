@@ -374,6 +374,27 @@ export default function Hero() {
               </div>
             )}
 
+            {!done && (
+              <p
+                style={{
+                  fontFamily: fonts.heading,
+                  fontSize: 11,
+                  color: 'rgba(246,239,224,0.5)',
+                  marginTop: 12,
+                  marginBottom: 0,
+                  lineHeight: 1.5,
+                  maxWidth: 460,
+                }}
+              >
+                By joining, you agree to receive launch updates and pre-launch insurance content
+                from Webhub4u Inc. (operator of TopRates.ca). Unsubscribe anytime. See our{' '}
+                <a href="/privacy" style={{ color: '#0fbdc9' }}>
+                  Privacy Policy
+                </a>
+                .
+              </p>
+            )}
+
             <div style={{ display: 'flex', gap: 22, marginTop: 22, flexWrap: 'wrap' }}>
               {['No spam, ever', 'Free to compare', '100% Canadian'].map((t) => (
                 <span

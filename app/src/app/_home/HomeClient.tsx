@@ -307,6 +307,21 @@ export default function HomeClient() {
           {submitError && !submitted && (
             <div style={{ marginTop: 12, fontSize: 13, color: '#f59e0b' }}>{submitError}</div>
           )}
+          {!submitted && (
+            <p style={{
+              fontSize: 11,
+              color: 'rgba(255,255,255,0.4)',
+              marginTop: 14,
+              maxWidth: 420,
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              lineHeight: 1.5,
+            }}>
+              By joining, you agree to receive launch updates and pre-launch insurance content
+              from Webhub4u Inc. (operator of TopRates.ca). Unsubscribe anytime. See our{' '}
+              <a href="/privacy" style={{ color: '#0fbdc9' }}>Privacy Policy</a>.
+            </p>
+          )}
         </div>
       </section>
     </>
