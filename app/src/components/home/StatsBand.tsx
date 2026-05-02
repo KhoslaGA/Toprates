@@ -2,9 +2,9 @@ import { Icon, type IconName } from '../brand/Icon';
 import { colors, fonts } from '@/styles/tokens';
 
 const STATS: { n: string; l: string; icon: IconName }[] = [
-  { n: '30+', l: 'Insurance carriers', icon: 'chart' },
-  { n: '<2 min', l: 'Time to get quotes', icon: 'clock' },
-  { n: '$612', l: 'Avg savings per year', icon: 'sparkle' },
+  { n: '30+', l: 'Carriers at launch', icon: 'chart' },
+  { n: '<2 min', l: 'Quote target time', icon: 'clock' },
+  { n: '2027', l: 'Platform launch', icon: 'sparkle' },
   { n: '100%', l: 'Free, no obligation', icon: 'lock' },
 ];
 

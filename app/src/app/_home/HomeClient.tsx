@@ -214,7 +214,7 @@ export default function HomeClient() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}>
             {[
               { icon: '🚗', title: 'Auto Insurance', desc: 'Compare quotes from 30+ Ontario carriers', status: 'Coming May 2027', live: false, href: '/auto-insurance' },
-              { icon: '🏠', title: 'Home Insurance', desc: 'Protect your home at the best rate', status: 'Coming May 2027', live: false, href: '/home-insurance' },
+              { icon: '🏠', title: 'Home Insurance', desc: 'Compare home insurance from multiple carriers at launch', status: 'Coming May 2027', live: false, href: '/home-insurance' },
               { icon: '💳', title: 'Credit Cards', desc: 'Find the best rewards, cashback & travel cards', status: 'Live Now', live: true, href: '/credit-cards' },
               { icon: '📊', title: 'Mortgage Rates', desc: 'Compare rates from top Canadian lenders', status: 'Coming 2028', live: false, href: '/mortgages' },
             ].map((prod) => (

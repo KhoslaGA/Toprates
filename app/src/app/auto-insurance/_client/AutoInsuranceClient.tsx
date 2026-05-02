@@ -56,7 +56,7 @@ export default function AutoInsuranceClient() {
                 Compare Car Insurance<br />in Ontario
               </h1>
               <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: '0 0 28px', maxWidth: 460 }}>
-                Get quotes from 30+ carriers in under 2 minutes. AI-powered comparison finds you the best rate and the right coverage.
+                At launch (2027): compare quotes from 30+ Ontario carriers in under 2 minutes. Today: educational content and waitlist signup.
               </p>
 
               {!submitted ? (
@@ -198,7 +198,7 @@ export default function AutoInsuranceClient() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
             {[
-              { factor: 'Driving record', detail: 'Tickets, accidents, and convictions from the past 6 years. Clean records get the best rates.' },
+              { factor: 'Driving record', detail: 'Tickets, accidents, and convictions from the past 6 years. Clean records get more competitive pricing.' },
               { factor: 'Location', detail: 'Your postal code matters. Urban areas like Brampton and Toronto have higher rates than rural Ontario.' },
               { factor: 'Vehicle', detail: 'Make, model, year, and safety features. Cars that are expensive to repair or commonly stolen cost more to insure.' },
               { factor: 'Age & experience', detail: 'Young drivers (under 25) and new drivers pay more. Rates typically drop after 6+ years of experience.' },

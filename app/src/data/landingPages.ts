@@ -154,7 +154,7 @@ const provinces: LandingData[] = [
       "New Brunswick, Nova Scotia, PEI, and Newfoundland & Labrador each run their own auto-insurance market. We compare carriers across all four provinces and explain the rules that actually affect your premium.",
     metaTitle: 'Atlantic Canada Car Insurance — NB, NS, PEI, NL Rates | TopRates.ca',
     metaDescription:
-      "Compare car insurance in New Brunswick, Nova Scotia, PEI, and Newfoundland. Different rules per province; we break down each market and find the best rate.",
+      "Compare car insurance in New Brunswick, Nova Scotia, PEI, and Newfoundland. Different rules per province; we break down each market.",
     primaryStat: { label: 'Avg ATL premium', value: '$891/yr', hint: 'Across 4 provinces' },
     secondaryStats: [
       { label: 'Carriers compared', value: '12+' },
@@ -554,7 +554,7 @@ const drivers: LandingData[] = [
       },
       {
         q: 'How long until I price like a Canadian driver?',
-        a: "About 3 years if you start from zero. After 12 months clean you're treated as 'experienced'; after 24-36 months you'll qualify for the best rates. Each accident-free year is worth 5-10% off your premium.",
+        a: "About 3 years if you start from zero. After 12 months clean you're treated as 'experienced'; after 24-36 months you'll qualify for more competitive pricing. Each accident-free year is worth 5-10% off your premium.",
       },
       {
         q: 'Is there a special insurance product for new Canadians?',

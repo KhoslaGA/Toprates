@@ -6,9 +6,9 @@ import { colors, fonts } from '@/styles/tokens';
 
 function SampleSavingsCard() {
   const quotes = [
-    { name: 'Wawanesa', rate: '$1,838', save: 'Save $612/yr', best: true },
-    { name: 'Intact', rate: '$1,956', save: 'Save $494/yr', best: false },
-    { name: 'Aviva', rate: '$2,104', save: 'Save $346/yr', best: false },
+    { name: 'Carrier A', rate: '$1,838', save: 'Lower-tier example', best: true },
+    { name: 'Carrier B', rate: '$1,956', save: 'Mid-tier example', best: false },
+    { name: 'Carrier C', rate: '$2,104', save: 'Higher-tier example', best: false },
   ];
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -156,7 +156,7 @@ function SampleSavingsCard() {
             letterSpacing: 0.5,
           }}
         >
-          ILLUSTRATIVE RATES · ACTUAL VARY
+          ILLUSTRATIVE EXAMPLE · NOT REAL QUOTES · ACTUAL RATES VARY
         </div>
       </div>
     </div>

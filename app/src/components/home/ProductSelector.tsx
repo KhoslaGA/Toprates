@@ -180,7 +180,7 @@ function AutoPanel() {
           Encrypted upload · deleted within 15 min · never shared with carriers
         </div>
       </div>
-      <SavingsCoin label="SAVE UP TO" value="$612" sub="/year" />
+      <SavingsCoin label="LAUNCHING" value="2027" sub="" />
     </div>
   );
 }
@@ -190,7 +190,7 @@ function HomePanel() {
     <div className="ps-panel-v2" style={{ display: 'flex', alignItems: 'center', gap: 40 }}>
       <div style={{ flex: 1 }}>
         <h3 style={{ fontFamily: fonts.heading, fontWeight: 900, fontSize: 30, color: colors.navy, margin: '0 0 12px', letterSpacing: '-0.8px', lineHeight: 1.15 }}>
-          Protect your home at the best rate in Ontario
+          Compare home insurance from multiple Ontario carriers at launch
         </h3>
         <p style={{ fontFamily: fonts.heading, fontSize: 16, color: colors.muted, margin: '0 0 24px', lineHeight: 1.55 }}>
           Homeowner, condo, or tenant — snap your declaration page to skip the typing, or enter details manually.

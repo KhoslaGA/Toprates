@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Compare Canada\'s Best Mortgage Rates | TopRates',
+  title: 'Compare Canadian Mortgage Rates | TopRates.ca',
   description: 'Find and compare the best mortgage rates across Canada. Get instant quotes, use our mortgage calculators, and connect with trusted brokers.',
   keywords: 'mortgage rates Canada, best mortgage rates, mortgage comparison, mortgage calculator, home loan rates',
 };
@@ -30,10 +30,10 @@ export default function MortgagesPage() {
       <section className="bg-gradient-to-r from-[#1B2A4A] to-[#2d3f5a] text-white py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Compare Canada's Best Mortgage Rates
+            Compare Canadian Mortgage Rates
           </h1>
           <p className="text-xl text-gray-200 mb-8 max-w-2xl">
-            Find the lowest mortgage rates from Canada's top lenders. Get multiple quotes, compare terms, and save thousands on your next home.
+            Compare mortgage rates from multiple Canadian lenders. Get multiple quotes and compare terms before you commit.
           </p>
           <button className="bg-[#00B482] hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition">
             Get Your Quote
@@ -117,7 +117,7 @@ export default function MortgagesPage() {
               { step: '1', title: 'Tell Us Your Details', desc: 'Share your home price, down payment, and location.' },
               { step: '2', title: 'We Get Quotes', desc: 'We connect you with top Canadian lenders instantly.' },
               { step: '3', title: 'Compare Rates', desc: 'See side-by-side comparison of all available offers.' },
-              { step: '4', title: 'Save Money', desc: 'Lock in the best rate and close faster.' },
+              { step: '4', title: 'Compare and Choose', desc: 'Compare rates from multiple lenders through your broker.' },
             ].map((item, index) => (
               <div key={index} className="text-center">
                 <div className="w-12 h-12 bg-[#00B482] text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 mx-auto">
@@ -135,10 +135,10 @@ export default function MortgagesPage() {
       <section className="py-16 bg-[#1B2A4A] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Get Your Best Mortgage Rate?
+            Ready to compare mortgage rates?
           </h2>
           <p className="text-xl text-gray-200 mb-8">
-            Connect with a trusted mortgage broker who'll guide you through the process and help you save thousands.
+            Connect with a licensed mortgage broker who'll guide you through the process and help you compare options.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-[#00B482] hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition">

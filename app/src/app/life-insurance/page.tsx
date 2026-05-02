@@ -40,7 +40,7 @@ const coverageFeatures = [
 const whyChooseToprates = [
   'Expert advisors help determine the right coverage amount for your family\'s needs',
   'Quick underwriting process - get approved faster than ever',
-  'Access to the best rates from Canada\'s top life insurance providers',
+  'Access to rates from multiple Canadian life insurance providers',
   'Guidance on beneficiary designation and policy reviews',
 ];
 
