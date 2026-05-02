@@ -63,6 +63,14 @@
   100% { transform: translateX(-50%); }
 }
 
+/* ── MegaNav desktop/mobile responsive switch ── */
+.meganav-desktop { display: block; }
+.meganav-mobile { display: none; }
+@media (max-width: 1024px) {
+  .meganav-desktop { display: none; }
+  .meganav-mobile { display: block; }
+}
+
 /* ── Homepage v2 layout (CSS-controlled so media queries can override) ── */
 .hero-grid-v2 {
   display: grid;

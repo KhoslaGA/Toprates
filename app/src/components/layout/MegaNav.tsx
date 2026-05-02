@@ -141,7 +141,6 @@ function DesktopNav({
               }}
             >
               {item.label}
-              {item.tag && <StatusPill tone={item.tag === 'LIVE' ? 'live' : 'soon'}>{item.tag}</StatusPill>}
               <Icon name="arrowDown" size={10} color="currentColor" strokeWidth={2.2} />
             </button>
           </div>
@@ -399,9 +398,6 @@ function MobileNav({ open, setOpen }: { open: boolean; setOpen: (b: boolean) => 
                 >
                   <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
                     {item.label}
-                    {item.tag && (
-                      <StatusPill tone={item.tag === 'LIVE' ? 'live' : 'soon'}>{item.tag}</StatusPill>
-                    )}
                   </span>
                   <Icon
                     name="arrowDown"
