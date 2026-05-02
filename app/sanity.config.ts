@@ -6,6 +6,7 @@ import author from './sanity/schemas/author';
 import category from './sanity/schemas/category';
 import blockContent from './sanity/schemas/blockContent';
 import waitlistEntry from './sanity/schemas/waitlistEntry';
+import newsletterSubscriber from './sanity/schemas/newsletterSubscriber';
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
@@ -20,6 +21,6 @@ export default defineConfig({
   apiVersion,
   plugins: [structureTool(), visionTool()],
   schema: {
-    types: [blockContent, post, author, category, waitlistEntry],
+    types: [blockContent, post, author, category, newsletterSubscriber, waitlistEntry],
   },
 });
