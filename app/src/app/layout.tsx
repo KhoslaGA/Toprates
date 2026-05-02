@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import '../styles/globals.css'
-import MegaNav from '../components/layout/MegaNav'
+import SiteHeader from '../components/layout/SiteHeader'
 import Footer from '../components/layout/Footer'
 
 const GOOGLE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
@@ -11,16 +11,16 @@ const PLAUSIBLE_SRC =
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://toprates.ca'),
-  title: 'TopRates.ca — Canadian Insurance & Rate Comparison',
+  title: 'TopRates.ca — Insurance, in plain English',
   description:
-    'Independent insurance education platform for Canadians. Operated by Webhub4u Inc. Educational content on auto, home, life insurance, mortgages, and credit cards. Comparison engine launching summer 2027.',
+    'Independent insurance education for Canadians. Plain-English guides on auto, home, life, business, and travel insurance. Education today. Quotes summer 2027. Operated by Webhub4u Inc.',
   keywords:
     'insurance, auto insurance, home insurance, life insurance, mortgage rates, credit cards, Canadian insurance broker, Ontario auto reform',
   authors: [{ name: 'TopRates.ca' }],
   creator: 'TopRates.ca',
   openGraph: {
-    title: 'TopRates.ca — Canadian Insurance & Rate Comparison',
-    description: 'Compare rates on insurance, mortgages, and cards across Canada.',
+    title: 'TopRates.ca — Insurance, in plain English',
+    description: 'Independent insurance education for Canadians. Education today. Quotes summer 2027.',
     type: 'website',
   },
   robots: 'index, follow',
@@ -61,7 +61,7 @@ export default function RootLayout({
         )}
       </head>
       <body className="flex flex-col min-h-screen">
-        <MegaNav />
+        <SiteHeader />
         <main className="flex-grow">{children}</main>
         <Footer />
       </body>
