@@ -139,6 +139,55 @@ export const NAV_DATA: NavCategory[] = [
     },
   },
 
+  /* ──────────────────── Life Insurance ──────────────────── */
+  {
+    id: 'life',
+    label: 'Life Insurance',
+    sections: [
+      {
+        title: 'Life Insurance Types',
+        items: [
+          { name: 'Term Life Insurance', desc: '10, 20, 30-year coverage', href: '/life-insurance', live: true },
+          { name: 'Whole Life Insurance', desc: 'Permanent coverage', href: '/life-insurance' },
+          { name: 'Universal Life', desc: 'Flexible premium + investment', href: SOON },
+          { name: 'Final Expense', desc: 'Funeral & burial coverage', href: SOON },
+          { name: 'No Medical Life', desc: 'Guaranteed issue, no exam', href: SOON },
+          { name: 'Mortgage Life', desc: 'Pays off mortgage on death', href: SOON },
+        ],
+      },
+      {
+        title: 'Health & Protection',
+        items: [
+          { name: 'Critical Illness', desc: 'Lump-sum on diagnosis', href: SOON, soon: true },
+          { name: 'Disability Insurance', desc: 'Income protection', href: SOON, soon: true },
+          { name: 'Health & Dental', desc: 'Supplemental coverage', href: '/health-insurance', live: true },
+          { name: 'Long-Term Care', desc: 'Senior care planning', href: SOON, soon: true },
+          { name: 'Group Benefits', desc: 'Employer-sponsored plans', href: SOON, soon: true },
+          { name: 'Pet Insurance', desc: 'Cat, dog & exotic', href: SOON, soon: true },
+        ],
+      },
+      {
+        title: 'Resources & Guides',
+        items: [
+          { name: 'Life Insurance 101', desc: 'Beginner-friendly guide', href: '/blog' },
+          { name: 'How much do I need?', desc: 'Coverage calculator', href: SOON },
+          { name: 'Term vs. Whole', desc: 'Which is right for you?', href: '/blog' },
+          { name: 'Application Help', desc: 'What to expect', href: SOON },
+          { name: 'Medical Exam Tips', desc: 'Pass the underwriting', href: SOON },
+          { name: 'Glossary of Terms', desc: 'Demystify the jargon', href: SOON },
+        ],
+      },
+    ],
+    promo: {
+      tag: 'PROTECT YOUR FAMILY',
+      title: 'Term life from $14/month',
+      desc: 'A healthy 30-year-old can lock in $500K of 20-year term coverage for the price of a Netflix subscription.',
+      cta: 'Compare term life →',
+      href: '/life-insurance',
+      accent: 'teal',
+    },
+  },
+
   /* ──────────────────── Business Insurance ──────────────────── */
   {
     id: 'business',
@@ -304,14 +353,14 @@ export const NAV_DATA: NavCategory[] = [
         ],
       },
       {
-        title: 'Life & Other Products',
+        title: 'Other Products',
         items: [
-          { name: 'Life Insurance', desc: 'Term, whole, universal', href: '/life-insurance', live: true },
-          { name: 'Health & Dental', desc: 'Supplemental coverage', href: '/health-insurance', live: true },
-          { name: 'Critical Illness', desc: 'Lump-sum on diagnosis', href: SOON, soon: true },
-          { name: 'Disability Insurance', desc: 'Income protection', href: SOON, soon: true },
           { name: 'Motorcycle Insurance', desc: 'Bike & scooter coverage', href: SOON, soon: true },
-          { name: 'Pet Insurance', desc: 'Cat, dog & exotic', href: SOON, soon: true },
+          { name: 'RV & Trailer Insurance', desc: 'Recreational vehicles', href: SOON, soon: true },
+          { name: 'Boat Insurance', desc: 'Watercraft coverage', href: SOON, soon: true },
+          { name: 'ATV & Snowmobile', desc: 'Off-road vehicles', href: SOON, soon: true },
+          { name: 'Personal Loans', desc: 'Compare loan rates', href: SOON, soon: true },
+          { name: 'Lines of Credit', desc: 'Personal LOCs', href: SOON, soon: true },
         ],
       },
       {
