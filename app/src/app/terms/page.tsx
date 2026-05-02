@@ -121,10 +121,13 @@ export default function TermsPage() {
               <strong>No Direct Quotes:</strong> We do not charge customers a fee for quotes. Our services are provided at no cost to you.
             </p>
             <p className="mt-4">
-              <strong>Broker Compensation:</strong> Toprates.ca is compensated through commissions paid by insurance providers. These commissions do not increase the price you pay for insurance.
+              <strong>Compensation (current):</strong> Today, TopRates.ca (Webhub4u Inc.) does not earn insurance commissions because the platform is not yet operating insurance transactions.
             </p>
             <p className="mt-4">
-              <strong>Service Fees:</strong> In some cases, we may charge service fees for policy administration, changes, or other services. We will inform you of any applicable fees before proceeding.
+              <strong>Compensation (at launch):</strong> When the platform launches in 2027 with a licensed brokerage partner, the partner brokerage will be compensated through commissions paid by insurance providers. Those commissions do not increase the price you pay. TopRates.ca (Webhub4u Inc.) will receive a per-lead or per-referral fee from the licensed brokerage, separate from insurance commission. We will update these Terms before launch to reflect the operating arrangement.
+            </p>
+            <p className="mt-4">
+              <strong>Service Fees:</strong> In some cases, after launch, we may charge service fees for policy administration, changes, or other services. We will inform you of any applicable fees before proceeding.
             </p>
           </section>
 
