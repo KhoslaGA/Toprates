@@ -3,7 +3,7 @@ import PageWrapper from '@/components/layout/PageWrapper';
 
 export const metadata = {
   title: 'Terms of Service | Toprates.ca',
-  description: 'Toprates.ca Terms of Service — Pre-launch comparison platform operated by Webhub4u Inc. Comparison engine launching 2027.',
+  description: 'Toprates.ca Terms of Service — Pre-launch comparison platform operated by Webhub4u Inc. Comparison engine launching summer 2027.',
 };
 
 export default function TermsPage() {
@@ -39,10 +39,10 @@ export default function TermsPage() {
               1. Service Definition
             </h2>
             <p>
-              Toprates.ca is operated by Webhub4u Inc. as a pre-launch insurance comparison platform. Today, the site provides educational content and accepts waitlist signups for our 2027 launch. TopRates.ca is not currently a registered insurance broker and does not currently sell insurance, take applications, or place policies.
+              Toprates.ca is operated by Webhub4u Inc. as an independent insurance education platform. Today, the site provides educational content and accepts waitlist signups for our summer 2027 launch. TopRates.ca is not currently a registered insurance broker and does not currently sell insurance, take applications, or place policies.
             </p>
             <p className="mt-4">
-              TopRates.ca is not currently licensed as an insurance broker in any Canadian province. At our planned 2027 launch, the regulated brokerage activities (quoting, application, policy placement) will be performed by a partner brokerage registered with the Registered Insurance Brokers of Ontario (RIBO). These Terms will be updated to reflect the licensed brokerage relationship at that time.
+              TopRates.ca is not currently licensed as an insurance broker in any Canadian province. At our planned summer 2027 launch, the regulated brokerage activities (quoting, application, policy placement) will be performed by a partner brokerage registered with the Registered Insurance Brokers of Ontario (RIBO). These Terms will be updated to reflect the licensed brokerage relationship at that time.
             </p>
           </section>
 
@@ -124,7 +124,7 @@ export default function TermsPage() {
               <strong>Compensation (current):</strong> Today, TopRates.ca (Webhub4u Inc.) does not earn insurance commissions because the platform is not yet operating insurance transactions.
             </p>
             <p className="mt-4">
-              <strong>Compensation (at launch):</strong> When the platform launches in 2027 with a licensed brokerage partner, the partner brokerage will be compensated through commissions paid by insurance providers. Those commissions do not increase the price you pay. TopRates.ca (Webhub4u Inc.) will receive a per-lead or per-referral fee from the licensed brokerage, separate from insurance commission. We will update these Terms before launch to reflect the operating arrangement.
+              <strong>Compensation (at launch):</strong> When the platform launches in 2027 with a licensed brokerage partner, the partner brokerage will be compensated through commissions paid by insurance providers. Those commissions do not increase the price you pay. TopRates.ca (Webhub4u Inc.) will receive a per-lead or per-referral fee from the licensed brokerage, separate from insurance commission. We will update these Terms before summer 2027 launch to reflect the operating arrangement.
             </p>
             <p className="mt-4">
               <strong>Service Fees:</strong> In some cases, after launch, we may charge service fees for policy administration, changes, or other services. We will inform you of any applicable fees before proceeding.

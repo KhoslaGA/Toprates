@@ -88,8 +88,8 @@ export default function Footer() {
                 margin: 0,
               }}
             >
-              Pre-launch insurance comparison platform for Canadians.
-              Operated by Webhub4u Inc. Comparison engine launching 2027.
+              Independent insurance education platform for Canadians.
+              Operated by Webhub4u Inc. Comparison engine launching summer 2027.
             </p>
           </div>
 
@@ -140,7 +140,7 @@ export default function Footer() {
           }}
         >
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)' }}>
-            © 2026 TopRates.ca, a brand of Webhub4u Inc. Pre-launch — not yet a registered insurance broker.
+            © 2026 TopRates.ca, a brand of Webhub4u Inc. Education today · Quotes summer 2027 — not yet a registered insurance broker.
           </span>
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.15)' }}>
             Made in Canada 🇨🇦

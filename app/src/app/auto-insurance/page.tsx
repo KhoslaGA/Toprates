@@ -4,7 +4,7 @@ import AutoInsuranceClient from './_client/AutoInsuranceClient';
 export const metadata: Metadata = {
   title: 'Compare Car Insurance in Ontario — TopRates.ca',
   description:
-    'Compare Ontario auto insurance from 30+ carriers at launch (2027). Pre-launch insurance comparison platform with educational content on the July 2026 Ontario auto reform.',
+    'Compare Ontario auto insurance from 30+ carriers at launch (2027). Independent insurance education platform with educational content on the July 2026 Ontario auto reform.',
   keywords:
     'car insurance Ontario, auto insurance Ontario, compare car insurance, Ontario auto reform 2026, pink slip, cheapest car insurance Ontario',
   openGraph: {

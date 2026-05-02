@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://toprates.ca'),
   title: 'TopRates.ca — Canadian Insurance & Rate Comparison',
   description:
-    'Pre-launch insurance comparison platform for Canadians. Operated by Webhub4u Inc. Educational content on auto, home, life insurance, mortgages, and credit cards. Comparison engine launching 2027.',
+    'Independent insurance education platform for Canadians. Operated by Webhub4u Inc. Educational content on auto, home, life insurance, mortgages, and credit cards. Comparison engine launching summer 2027.',
   keywords:
     'insurance, auto insurance, home insurance, life insurance, mortgage rates, credit cards, Canadian insurance broker, Ontario auto reform',
   authors: [{ name: 'TopRates.ca' }],

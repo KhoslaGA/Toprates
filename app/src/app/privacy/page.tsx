@@ -35,7 +35,7 @@ export default function PrivacyPage() {
               personal information today, in compliance with the{' '}
               <strong>Personal Information Protection and Electronic Documents Act (PIPEDA)</strong>{' '}
               and applicable provincial privacy laws. The full comparison engine and brokerage
-              services launch in 2027 — this Policy will be updated before that launch to reflect
+              services launch in summer 2027 — this Policy will be updated before that launch to reflect
               additional data flows (quote engine, partner brokerage).
             </p>
           </div>
@@ -59,7 +59,7 @@ export default function PrivacyPage() {
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-[#1a365d] mb-4">2. What we collect today</h2>
-            <p>At our current pre-launch stage, the personal information we collect is limited:</p>
+            <p>At our current current educational stage, the personal information we collect is limited:</p>
             <ul>
               <li>
                 <strong>Waitlist signups:</strong> email address, plus the page where you signed

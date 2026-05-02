@@ -154,7 +154,7 @@ export default function HomeClient() {
                 <span style={{ fontSize: 13, fontWeight: 700, color: '#0A7E8C' }}>What we are</span>
               </div>
               {[
-                'A pre-launch comparison platform launching in 2027 with 30+ carriers',
+                'A pre-launch comparison platform launching in summer 2027 with 30+ carriers',
                 'Operated by Webhub4u Inc.; partner brokerage will handle quoting at launch',
                 'Founded by a RIBO-licensed broker; content reviewed by a licensed broker',
                 'Educational guides and waitlist signup today; no policies sold yet',

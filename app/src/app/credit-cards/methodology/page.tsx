@@ -20,7 +20,7 @@ export default function MethodologyPage() {
             How we&rsquo;ll evaluate credit cards
           </h1>
           <p className="text-xl text-gray-200 max-w-2xl">
-            TopRates.ca will publish credit-card comparisons at launch in 2027. This page explains
+            TopRates.ca will publish credit-card comparisons at launch in summer 2027. This page explains
             the methodology we&rsquo;re building toward — including how we plan to handle affiliate
             compensation transparently.
           </p>
@@ -33,7 +33,7 @@ export default function MethodologyPage() {
             <p className="text-sm text-gray-800 m-0">
               <strong>Pre-launch note:</strong> No credit-card comparisons are live on the site
               today. The text below describes the methodology we&rsquo;ll follow when comparisons
-              go live at our 2027 launch. It will be revised before any real cards are listed.
+              go live at our summer 2027 launch. It will be revised before any real cards are listed.
             </p>
           </div>
 

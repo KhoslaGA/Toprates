@@ -7,7 +7,7 @@ import WaitlistForm from './_client/WaitlistForm';
  *
  * Compliance note: TopRates.ca is operated by Webhub4u Inc. and is NOT
  * currently a RIBO-licensed brokerage. Copy on this page must reflect
- * the pre-launch state honestly.
+ * the current educational stage honestly.
  */
 
 const TEAL = '#0A7E8C';
@@ -16,7 +16,7 @@ const NAVY = '#1B2A4A';
 export const metadata: Metadata = {
   title: 'About TopRates.ca — Insurance comparison for Canadians',
   description:
-    'TopRates.ca is a pre-launch insurance comparison platform operated by Webhub4u Inc. Founded by a RIBO-licensed broker. Full comparison and brokerage launching 2027.',
+    'TopRates.ca is an independent insurance education platform operated by Webhub4u Inc. Founded by a RIBO-licensed broker. Full comparison and brokerage launching summer 2027.',
   alternates: { canonical: '/about' },
 };
 
@@ -33,7 +33,7 @@ export default function AboutPage() {
             Helping Canadians make better insurance decisions
           </h1>
           <p style={{ fontFamily: "'Newsreader', Georgia, serif", fontSize: 19, color: '#6b7b8d', lineHeight: 1.65, margin: 0 }}>
-            TopRates.ca is a pre-launch insurance comparison platform operated by Webhub4u Inc. We&rsquo;re building the platform to make insurance shopping fast, fair, and transparent — launching 2027.
+            TopRates.ca is an independent insurance education platform operated by Webhub4u Inc. We&rsquo;re building the platform to make insurance shopping fast, fair, and transparent — launching summer 2027.
           </p>
         </div>
       </section>
@@ -88,7 +88,7 @@ export default function AboutPage() {
             What TopRates.ca is today
           </h2>
           <div style={{ fontFamily: "'Newsreader', Georgia, serif", fontSize: 17, lineHeight: 1.75, color: '#374151' }}>
-            <p>TopRates.ca is a pre-launch insurance comparison platform operated by Webhub4u Inc. We are currently building the platform for a 2027 launch.</p>
+            <p>TopRates.ca is an independent insurance education platform operated by Webhub4u Inc. We are currently building the platform for a 2027 launch.</p>
             <p>Today, the site provides educational content about Canadian insurance — auto, home, life, business, travel — and lets visitors join our waitlist for the comparison platform launch. <strong>We do not currently sell insurance, take applications, or operate as a registered insurance broker.</strong></p>
             <p>At launch, TopRates.ca will partner with a RIBO-licensed brokerage to handle the regulated activities — quoting, application, policy placement. The licensed brokerage will be operated by the founder, who is currently working toward Level 3 management licence (expected May/June 2027).</p>
           </div>
