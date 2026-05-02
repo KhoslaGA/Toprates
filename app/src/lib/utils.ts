@@ -1,5 +1,5 @@
 /**
- * Utility functions for Insurimple application
+ * Utility functions for TopRates.ca application
  */
 
 /**

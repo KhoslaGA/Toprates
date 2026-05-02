@@ -101,7 +101,7 @@ export default function AutoInsuranceClient() {
               )}
 
               <div style={{ display: 'flex', gap: 20, marginTop: 16, flexWrap: 'wrap' }}>
-                {['30+ carriers', 'Under 2 min', '100% free', 'RIBO licensed'].map((t) => (
+                {['30+ carriers at launch', 'Under 2 min', '100% free', 'Founded by RIBO-licensed broker'].map((t) => (
                   <span key={t} style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)' }}>
                     <span style={{ color: TEAL }}>✓</span> {t}
                   </span>
@@ -163,7 +163,7 @@ export default function AutoInsuranceClient() {
             {[
               { n: '1', title: 'Snap your pink slip', desc: 'Upload a photo of your current insurance card. Our AI extracts vehicle, driver, and coverage details automatically. Or enter your info manually — takes about 5 minutes.', icon: '📸' },
               { n: '2', title: 'We compare 30+ carriers', desc: "Your profile is sent to Ontario's top insurance companies simultaneously. Real quotes from real carriers, personalized to your driving history and coverage needs.", icon: '🔍' },
-              { n: '3', title: 'Choose & save', desc: 'See quotes side by side. Compare not just price, but coverage, deductibles, and discounts. Bind your policy online through our licensed brokerage partner.', icon: '✅' },
+              { n: '3', title: 'Choose & save', desc: 'At launch (2027): see quotes side by side, compare coverage and deductibles, and bind your policy online through our partner brokerage. Today: join the waitlist for early access.', icon: '✅' },
             ].map((s) => (
               <div key={s.n} style={{ flex: 1, minWidth: 260, padding: '28px 24px', borderRadius: 12, border: '1px solid #e8ecf0' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>

@@ -154,10 +154,10 @@ export default function HomeClient() {
                 <span style={{ fontSize: 13, fontWeight: 700, color: '#0A7E8C' }}>What we are</span>
               </div>
               {[
-                'A free comparison platform that shows you real rates from 30+ carriers',
-                'Powered by Insurimple, a RIBO-licensed brokerage in Ontario',
-                'AI-powered tools that save you time (snap your pink slip, done)',
-                'Your advocate — we find the best rate AND the right coverage for you',
+                'A pre-launch comparison platform launching in 2027 with 30+ carriers',
+                'Operated by Webhub4u Inc.; partner brokerage will handle quoting at launch',
+                'Founded by a RIBO-licensed broker; content reviewed by a licensed broker',
+                'Educational guides and waitlist signup today; no policies sold yet',
                 '100% Canadian-owned and operated, based in Ontario',
               ].map((t, i) => (
                 <div key={i} style={{ display: 'flex', gap: 10, marginBottom: 12, alignItems: 'flex-start' }}>

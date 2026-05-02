@@ -3,7 +3,7 @@ import PageWrapper from '@/components/layout/PageWrapper';
 
 export const metadata = {
   title: 'Terms of Service | Toprates.ca',
-  description: 'Toprates.ca Terms of Service - Our terms and conditions for using our insurance brokerage services.',
+  description: 'Toprates.ca Terms of Service — Pre-launch comparison platform operated by Webhub4u Inc. Comparison engine launching 2027.',
 };
 
 export default function TermsPage() {
@@ -39,10 +39,10 @@ export default function TermsPage() {
               1. Service Definition
             </h2>
             <p>
-              Toprates.ca is an insurance broker that provides insurance quotes and brokerage services for customers in Canada. We connect customers with insurance providers and facilitate the purchase of insurance policies.
+              Toprates.ca is operated by Webhub4u Inc. as a pre-launch insurance comparison platform. Today, the site provides educational content and accepts waitlist signups for our 2027 launch. TopRates.ca is not currently a registered insurance broker and does not currently sell insurance, take applications, or place policies.
             </p>
             <p className="mt-4">
-              We are licensed to conduct insurance brokerage services in all Canadian provinces and territories. We do not underwrite insurance policies; we act as a broker on your behalf.
+              TopRates.ca is not currently licensed as an insurance broker in any Canadian province. At our planned 2027 launch, the regulated brokerage activities (quoting, application, policy placement) will be performed by a partner brokerage registered with the Registered Insurance Brokers of Ontario (RIBO). These Terms will be updated to reflect the licensed brokerage relationship at that time.
             </p>
           </section>
 
@@ -79,16 +79,16 @@ export default function TermsPage() {
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-[#1a365d] mb-4">
-              4. Our Role as Broker
+              4. Our Role (Pre-Launch and at Launch)
             </h2>
             <p>
-              <strong>Brokerage Services:</strong> Toprates.ca acts as your insurance broker. We represent your interests in obtaining insurance coverage.
+              <strong>Today (Pre-Launch):</strong> TopRates.ca (Webhub4u Inc.) operates the website, publishes educational content, and accepts waitlist signups. We do not act as your insurance broker, do not represent you in insurance transactions, and do not provide insurance advice.
             </p>
             <p className="mt-4">
-              <strong>Not an Insurer:</strong> We do not provide insurance coverage. Insurance policies are issued by licensed insurance companies. We are responsible only for brokerage services.
+              <strong>At Launch (2027):</strong> A partner brokerage registered with RIBO will act as your insurance broker for any quotes, applications, and policy placements initiated through the platform. TopRates.ca itself is a technology platform; the regulated brokerage relationship will be with the partner brokerage, not Webhub4u Inc.
             </p>
             <p className="mt-4">
-              <strong>Policy Terms:</strong> The specific terms, conditions, exclusions, and limitations of your insurance policy are determined by the insurance provider. You should review your policy documents carefully.
+              <strong>Not an Insurer:</strong> Neither Webhub4u Inc. nor the planned partner brokerage underwrites insurance. Insurance policies are issued by licensed insurance companies.
             </p>
           </section>
 
@@ -133,7 +133,7 @@ export default function TermsPage() {
               7. Claims and Coverage
             </h2>
             <p>
-              <strong>Claims Handling:</strong> While we facilitate your insurance purchase, claims are handled directly by the insurance provider. We can assist you in submitting claims, but the insurance company makes coverage decisions.
+              <strong>Claims Handling (at launch):</strong> Once the platform launches and you purchase a policy through the partner brokerage, claims will be handled directly by the insurance provider. The partner brokerage can assist you in submitting claims, but the insurance company makes coverage decisions. (Today, no policies are placed through the platform.)
             </p>
             <p className="mt-4">
               <strong>Policy Disputes:</strong> Disputes regarding policy coverage should be directed to the insurance provider. We will cooperate in resolving disputes but cannot override insurance company decisions.
@@ -193,7 +193,7 @@ export default function TermsPage() {
               <li>Engage in harassment or abusive behavior</li>
             </ul>
             <p className="mt-4">
-              <strong>Content Ownership:</strong> All content on Toprates.ca is owned by or licensed to Toprates.ca. You may not reproduce, distribute, or transmit content without permission.
+              <strong>Content Ownership:</strong> All content on Toprates.ca is owned by or licensed to Webhub4u Inc. You may not reproduce, distribute, or transmit content without permission.
             </p>
           </section>
 
@@ -271,7 +271,7 @@ export default function TermsPage() {
               <strong>Insurance Disputes:</strong> For disputes related to insurance policies or coverage, you should contact the insurance company first. If unresolved, you may file a complaint with your provincial insurance regulator.
             </p>
             <p className="mt-4">
-              <strong>Brokerage Disputes:</strong> For disputes with Toprates.ca regarding our brokerage services, please contact our office to attempt resolution. If unresolved, disputes may be subject to binding arbitration.
+              <strong>Platform Disputes:</strong> For disputes with TopRates.ca (Webhub4u Inc.) regarding the website or services described in these Terms, please contact us to attempt resolution. If unresolved, disputes may be subject to binding arbitration. Brokerage disputes will, at launch, be handled by the partner brokerage under its own complaints process.
             </p>
           </section>
 

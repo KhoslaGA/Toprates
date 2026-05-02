@@ -42,7 +42,6 @@ const columns: { title: string; links: { label: string; href: string }[] }[] = [
     links: [
       { label: 'Privacy Policy', href: '/privacy' },
       { label: 'Terms of Service', href: '/terms' },
-      { label: 'RIBO Disclosure', href: '/about' },
       { label: 'Accessibility', href: '/about' },
       { label: 'Contact Us', href: '/contact' },
     ],
@@ -89,8 +88,8 @@ export default function Footer() {
                 margin: 0,
               }}
             >
-              AI-powered insurance comparison for Canadians. Powered by Insurimple,
-              a RIBO-licensed brokerage.
+              Pre-launch insurance comparison platform for Canadians.
+              Operated by Webhub4u Inc. Comparison engine launching 2027.
             </p>
           </div>
 
@@ -141,7 +140,7 @@ export default function Footer() {
           }}
         >
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)' }}>
-            © 2026 TopRates.ca. All rights reserved. Powered by Insurimple (RIBO Licensed).
+            © 2026 TopRates.ca, a brand of Webhub4u Inc. Pre-launch — not yet a registered insurance broker.
           </span>
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.15)' }}>
             Made in Canada 🇨🇦

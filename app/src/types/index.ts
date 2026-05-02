@@ -1,5 +1,5 @@
 /**
- * Common types for Insurimple (Toprates.ca)
+ * Common types for TopRates.ca (Webhub4u Inc.)
  */
 
 /* SEO & Metadata */
