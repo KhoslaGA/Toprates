@@ -85,21 +85,21 @@ function SavingsCoin({
     <div
       style={{
         background: bg,
-        borderRadius: 14,
-        padding: '18px 22px',
+        borderRadius: 16,
+        padding: '24px 28px',
         textAlign: 'center',
         flexShrink: 0,
-        minWidth: 140,
+        minWidth: 180,
       }}
     >
       <div
         style={{
           fontFamily: fonts.mono,
-          fontSize: 9,
+          fontSize: 11,
           fontWeight: 800,
           color: c,
           letterSpacing: 1.5,
-          marginBottom: 4,
+          marginBottom: 6,
         }}
       >
         {label}
@@ -108,16 +108,16 @@ function SavingsCoin({
         style={{
           fontFamily: fonts.heading,
           fontWeight: 900,
-          fontSize: 32,
+          fontSize: 44,
           color: c,
-          letterSpacing: '-1px',
+          letterSpacing: '-1.4px',
           lineHeight: 1,
         }}
       >
         {value}
       </div>
       {sub && (
-        <div style={{ fontFamily: fonts.heading, fontSize: 11, color: colors.muted, marginTop: 4 }}>
+        <div style={{ fontFamily: fonts.heading, fontSize: 13, color: colors.muted, marginTop: 6 }}>
           {sub}
         </div>
       )}
@@ -127,12 +127,12 @@ function SavingsCoin({
 
 function AutoPanel() {
   return (
-    <div className="ps-panel-v2" style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
+    <div className="ps-panel-v2" style={{ display: 'flex', alignItems: 'center', gap: 40 }}>
       <div style={{ flex: 1 }}>
-        <h3 style={{ fontFamily: fonts.heading, fontWeight: 900, fontSize: 22, color: colors.navy, margin: '0 0 8px', letterSpacing: '-0.5px' }}>
+        <h3 style={{ fontFamily: fonts.heading, fontWeight: 900, fontSize: 30, color: colors.navy, margin: '0 0 12px', letterSpacing: '-0.8px', lineHeight: 1.15 }}>
           Compare car insurance from 30+ Ontario carriers
         </h3>
-        <p style={{ fontFamily: fonts.heading, fontSize: 14, color: colors.muted, margin: '0 0 18px', lineHeight: 1.5 }}>
+        <p style={{ fontFamily: fonts.heading, fontSize: 16, color: colors.muted, margin: '0 0 24px', lineHeight: 1.55 }}>
           Snap your pink slip to skip the typing — we pull the details in seconds. Or start with your postal code.
         </p>
         <div className="ps-form-v2" style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
@@ -187,12 +187,12 @@ function AutoPanel() {
 
 function HomePanel() {
   return (
-    <div className="ps-panel-v2" style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
+    <div className="ps-panel-v2" style={{ display: 'flex', alignItems: 'center', gap: 40 }}>
       <div style={{ flex: 1 }}>
-        <h3 style={{ fontFamily: fonts.heading, fontWeight: 900, fontSize: 22, color: colors.navy, margin: '0 0 8px', letterSpacing: '-0.5px' }}>
+        <h3 style={{ fontFamily: fonts.heading, fontWeight: 900, fontSize: 30, color: colors.navy, margin: '0 0 12px', letterSpacing: '-0.8px', lineHeight: 1.15 }}>
           Protect your home at the best rate in Ontario
         </h3>
-        <p style={{ fontFamily: fonts.heading, fontSize: 14, color: colors.muted, margin: '0 0 18px', lineHeight: 1.5 }}>
+        <p style={{ fontFamily: fonts.heading, fontSize: 16, color: colors.muted, margin: '0 0 24px', lineHeight: 1.55 }}>
           Homeowner, condo, or tenant — snap your declaration page to skip the typing, or enter details manually.
         </p>
         <div className="ps-form-v2" style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
@@ -243,12 +243,12 @@ function HomePanel() {
 function CardsPanel() {
   const cats = ['Cash back', 'Travel rewards', 'No fee', 'Low interest', 'Student', 'Business'];
   return (
-    <div className="ps-panel-v2" style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
+    <div className="ps-panel-v2" style={{ display: 'flex', alignItems: 'center', gap: 40 }}>
       <div style={{ flex: 1 }}>
-        <h3 style={{ fontFamily: fonts.heading, fontWeight: 900, fontSize: 22, color: colors.navy, margin: '0 0 8px', letterSpacing: '-0.5px' }}>
+        <h3 style={{ fontFamily: fonts.heading, fontWeight: 900, fontSize: 30, color: colors.navy, margin: '0 0 12px', letterSpacing: '-0.8px', lineHeight: 1.15 }}>
           Find the best credit card for your spending
         </h3>
-        <p style={{ fontFamily: fonts.heading, fontSize: 14, color: colors.muted, margin: '0 0 18px', lineHeight: 1.5 }}>
+        <p style={{ fontFamily: fonts.heading, fontSize: 16, color: colors.muted, margin: '0 0 24px', lineHeight: 1.55 }}>
           Cashback, travel rewards, no-fee, low interest — compare Canada&apos;s top cards side by side.
         </p>
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
@@ -327,12 +327,12 @@ function ComingSoonPanel({ tab, when }: { tab: TabId; when: string }) {
   };
   const c = copy[tab];
   return (
-    <div className="ps-panel-v2" style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
+    <div className="ps-panel-v2" style={{ display: 'flex', alignItems: 'center', gap: 40 }}>
       <div style={{ flex: 1 }}>
-        <h3 style={{ fontFamily: fonts.heading, fontWeight: 900, fontSize: 22, color: colors.navy, margin: '0 0 8px', letterSpacing: '-0.5px' }}>
+        <h3 style={{ fontFamily: fonts.heading, fontWeight: 900, fontSize: 30, color: colors.navy, margin: '0 0 12px', letterSpacing: '-0.8px', lineHeight: 1.15 }}>
           {c.h}
         </h3>
-        <p style={{ fontFamily: fonts.heading, fontSize: 14, color: colors.muted, margin: '0 0 20px', lineHeight: 1.5 }}>
+        <p style={{ fontFamily: fonts.heading, fontSize: 16, color: colors.muted, margin: '0 0 24px', lineHeight: 1.55 }}>
           {c.p}
         </p>
         <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
@@ -368,18 +368,18 @@ export default function ProductSelector() {
   const [tab, setTab] = useState<TabId>('auto');
 
   return (
-    <section style={{ padding: '80px 0', background: colors.paper, position: 'relative' }}>
-      <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 32px' }}>
-        <div style={{ textAlign: 'center', marginBottom: 32 }}>
+    <section style={{ padding: '96px 0', background: colors.paper, position: 'relative' }}>
+      <div style={{ maxWidth: 1180, margin: '0 auto', padding: '0 32px' }}>
+        <div style={{ textAlign: 'center', marginBottom: 40 }}>
           <div
             style={{
               fontFamily: fonts.mono,
-              fontSize: 11,
+              fontSize: 12,
               letterSpacing: 2,
               color: colors.teal,
               fontWeight: 700,
               textTransform: 'uppercase',
-              marginBottom: 10,
+              marginBottom: 12,
             }}
           >
             Start comparing
@@ -388,10 +388,11 @@ export default function ProductSelector() {
             style={{
               fontFamily: fonts.heading,
               fontWeight: 900,
-              fontSize: 34,
+              fontSize: 44,
               color: colors.navy,
               margin: 0,
-              letterSpacing: '-1px',
+              letterSpacing: '-1.4px',
+              lineHeight: 1.1,
             }}
           >
             What are you shopping for today?
@@ -404,8 +405,8 @@ export default function ProductSelector() {
             display: 'flex',
             gap: 2,
             background: colors.cream,
-            borderRadius: '14px 14px 0 0',
-            padding: '6px 6px 0',
+            borderRadius: '16px 16px 0 0',
+            padding: '8px 8px 0',
           }}
         >
           {TABS.map((t) => {
@@ -417,24 +418,24 @@ export default function ProductSelector() {
                 className="ps-tab-v2"
                 style={{
                   flex: 1,
-                  padding: '16px 10px 14px',
+                  padding: '22px 14px 18px',
                   background: on ? colors.paper : 'transparent',
                   border: 'none',
-                  borderRadius: '10px 10px 0 0',
+                  borderRadius: '12px 12px 0 0',
                   cursor: 'pointer',
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
-                  gap: 6,
+                  gap: 8,
                   position: 'relative',
                   color: on ? colors.teal : colors.navy,
                   fontFamily: fonts.heading,
                   fontWeight: on ? 800 : 600,
-                  fontSize: 12,
+                  fontSize: 14,
                   transition: 'all 0.18s',
                 }}
               >
-                <Icon name={t.icon} size={20} strokeWidth={1.8} color={on ? colors.teal : colors.navy} />
+                <Icon name={t.icon} size={26} strokeWidth={1.8} color={on ? colors.teal : colors.navy} />
                 <span>{t.label}</span>
                 {t.status === 'soon' && t.when && (
                   <span
@@ -465,8 +466,8 @@ export default function ProductSelector() {
             background: colors.paper,
             border: `1px solid ${colors.borderSoft}`,
             borderTop: `3px solid ${colors.teal}`,
-            borderRadius: '0 0 18px 18px',
-            padding: '32px 36px',
+            borderRadius: '0 0 20px 20px',
+            padding: '48px 56px',
             boxShadow: '0 20px 40px -20px rgba(27,42,74,0.12)',
           }}
         >
@@ -484,11 +485,11 @@ export default function ProductSelector() {
             display: 'flex',
             justifyContent: 'space-around',
             alignItems: 'center',
-            gap: 24,
-            marginTop: 32,
-            padding: '18px 24px',
+            gap: 32,
+            marginTop: 40,
+            padding: '24px 32px',
             background: colors.cream,
-            borderRadius: 14,
+            borderRadius: 16,
             border: `1px solid ${colors.borderSoft}`,
           }}
         >
@@ -497,12 +498,12 @@ export default function ProductSelector() {
             { icon: 'sparkle' as IconName, title: '1M+ Canadians helped', sub: 'Better rates since 2026' },
             { icon: 'check' as IconName, title: '30+ carrier partners', sub: 'Intact · Wawanesa · Aviva & more' },
           ].map((t) => (
-            <div key={t.title} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <div key={t.title} style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
               <div
                 style={{
-                  width: 36,
-                  height: 36,
-                  borderRadius: 10,
+                  width: 44,
+                  height: 44,
+                  borderRadius: 12,
                   background: 'rgba(10,126,140,0.1)',
                   color: colors.teal,
                   display: 'flex',
@@ -511,11 +512,11 @@ export default function ProductSelector() {
                   flexShrink: 0,
                 }}
               >
-                <Icon name={t.icon} size={16} color={colors.teal} />
+                <Icon name={t.icon} size={20} color={colors.teal} />
               </div>
               <div>
-                <div style={{ fontFamily: fonts.heading, fontWeight: 800, fontSize: 13, color: colors.navy }}>{t.title}</div>
-                <div style={{ fontFamily: fonts.heading, fontSize: 11, color: colors.muted }}>{t.sub}</div>
+                <div style={{ fontFamily: fonts.heading, fontWeight: 800, fontSize: 15, color: colors.navy }}>{t.title}</div>
+                <div style={{ fontFamily: fonts.heading, fontSize: 13, color: colors.muted }}>{t.sub}</div>
               </div>
             </div>
           ))}
