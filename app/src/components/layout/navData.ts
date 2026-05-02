@@ -43,6 +43,7 @@ export interface NavCategory {
 const SOON = '/coming-soon';
 
 export const NAV_DATA: NavCategory[] = [
+  /* ──────────────────── Car Insurance ──────────────────── */
   {
     id: 'car',
     label: 'Car Insurance',
@@ -90,6 +91,8 @@ export const NAV_DATA: NavCategory[] = [
       accent: 'gold',
     },
   },
+
+  /* ──────────────────── Home Insurance ──────────────────── */
   {
     id: 'home',
     label: 'Home Insurance',
@@ -135,51 +138,107 @@ export const NAV_DATA: NavCategory[] = [
       accent: 'green',
     },
   },
+
+  /* ──────────────────── Business Insurance ──────────────────── */
   {
-    id: 'life',
-    label: 'Life Insurance',
-    tag: 'SOON',
+    id: 'business',
+    label: 'Business Insurance',
+    tag: 'LIVE',
     sections: [
       {
-        title: 'Life Insurance Types',
+        title: 'By Industry',
         items: [
-          { name: 'Term Life Insurance', desc: '10, 20, 30-year coverage', href: SOON, soon: true },
-          { name: 'Whole Life Insurance', desc: 'Permanent coverage', href: SOON, soon: true },
-          { name: 'Universal Life', desc: 'Flexible premiums', href: SOON, soon: true },
-          { name: 'Final Expense', desc: 'Simplified issue', href: SOON, soon: true },
-          { name: 'No Medical Life', desc: 'Guaranteed issue', href: SOON, soon: true },
+          { name: 'Restaurants & Food', desc: 'Liability + property bundles', href: '/business-insurance', live: true },
+          { name: 'Construction & Trades', desc: 'Tools, liability, builders risk', href: '/business-insurance' },
+          { name: 'Retail & E-Commerce', desc: 'In-store & online stores', href: '/business-insurance' },
+          { name: 'Tech & IT Consulting', desc: 'Cyber + E&O coverage', href: '/business-insurance' },
+          { name: 'Healthcare Practices', desc: 'Malpractice & clinic coverage', href: SOON },
+          { name: 'Real Estate Agents', desc: 'E&O for realtors', href: SOON },
         ],
       },
       {
-        title: 'Health & Protection',
+        title: 'By Coverage Type',
         items: [
-          { name: 'Critical Illness', desc: 'Lump-sum on diagnosis', href: SOON, soon: true },
-          { name: 'Disability Insurance', desc: 'Income protection', href: SOON, soon: true },
-          { name: 'Health & Dental', desc: 'Supplemental coverage', href: SOON, soon: true },
-          { name: 'Long-Term Care', desc: 'Senior care planning', href: SOON, soon: true },
-          { name: 'Pet Insurance', desc: 'Cat, dog & exotic', href: SOON, soon: true },
+          { name: 'General Liability (CGL)', desc: 'Slip-and-fall protection', href: '/business-insurance' },
+          { name: 'Commercial Property', desc: 'Building, contents, equipment', href: '/business-insurance' },
+          { name: 'Professional Liability (E&O)', desc: 'Errors & omissions', href: '/business-insurance' },
+          { name: 'Cyber Liability', desc: 'Data breach + ransomware', href: SOON },
+          { name: 'Workers Comp / WSIB', desc: 'Employee injury coverage', href: SOON },
+          { name: 'Tools & Equipment', desc: 'Theft + damage on jobsites', href: SOON },
         ],
       },
       {
-        title: 'Travel Insurance',
+        title: 'Resources',
         items: [
-          { name: 'Single-Trip Travel', desc: 'Vacation & business', href: SOON, soon: true },
-          { name: 'Multi-Trip Annual', desc: 'Unlimited trips/yr', href: SOON, soon: true },
-          { name: 'Snowbird Insurance', desc: 'Long-stay US', href: SOON, soon: true },
-          { name: 'Visitors to Canada', desc: 'Super Visa', href: SOON, soon: true },
-          { name: 'Student Travel', desc: 'Study abroad', href: SOON, soon: true },
+          { name: 'Business Insurance 101', desc: 'What every owner should know', href: '/blog' },
+          { name: 'Get Business Quotes', desc: '5-min business profile', href: '/get-quotes' },
+          { name: 'Renewal Checklist', desc: 'Audit before you re-sign', href: SOON },
+          { name: 'Premium-Saving Tips', desc: '12 tactics for SMB owners', href: SOON },
+          { name: 'Glossary of Terms', desc: 'CGL, BOP, E&O, decoded', href: SOON },
         ],
       },
     ],
     promo: {
-      tag: 'COMING 2027',
-      title: 'Life insurance launching soon',
-      desc: "We're expanding to life, health, and travel coverage. Join the waitlist for early access.",
-      cta: 'Join waitlist →',
-      href: SOON,
-      accent: 'teal',
+      tag: 'BUNDLE SAVINGS',
+      title: 'Save up to 40% on bundles',
+      desc: 'Combine general liability + commercial property + cyber for the lowest rate. One quote, three covers.',
+      cta: 'Compare bundles →',
+      href: '/business-insurance',
+      accent: 'green',
     },
   },
+
+  /* ──────────────────── Mortgage Rates ──────────────────── */
+  {
+    id: 'mortgage',
+    label: 'Mortgage Rates',
+    tag: 'LIVE',
+    sections: [
+      {
+        title: 'Rate Types',
+        items: [
+          { name: '5-Year Fixed', desc: 'Most popular term in Canada', href: '/mortgages', live: true },
+          { name: '3-Year Fixed', desc: 'Mid-term flexibility', href: '/mortgages' },
+          { name: '1-Year Fixed', desc: 'Short-term lock', href: '/mortgages' },
+          { name: 'Variable Rate', desc: 'Floats with prime', href: '/mortgages' },
+          { name: 'Adjustable Rate', desc: 'Payment moves with rate', href: SOON },
+          { name: 'Open Mortgages', desc: 'Pay any time, no penalty', href: SOON },
+        ],
+      },
+      {
+        title: 'By Situation',
+        items: [
+          { name: 'First-Time Buyer', desc: 'Programs + insured rates', href: '/mortgages' },
+          { name: 'Renewal', desc: 'Compare before re-signing', href: '/mortgages' },
+          { name: 'Refinance', desc: 'Tap equity or lower payment', href: '/mortgages' },
+          { name: 'Switch Lender', desc: 'Move at renewal — keep amortization', href: SOON },
+          { name: 'Investment Property', desc: 'Rental & rental income rules', href: SOON },
+          { name: 'HELOC', desc: 'Home equity line of credit', href: SOON },
+        ],
+      },
+      {
+        title: 'Tools & Calculators',
+        items: [
+          { name: 'Mortgage Calculator', desc: 'Monthly payment estimator', href: SOON },
+          { name: 'Affordability Calculator', desc: 'How much can you borrow?', href: SOON },
+          { name: 'Stress Test Calculator', desc: 'OSFI qualifying rate', href: SOON },
+          { name: 'Penalty Estimator', desc: 'IRD vs 3-month interest', href: SOON },
+          { name: 'Rate Alerts', desc: 'Get notified when rates drop', href: SOON },
+          { name: 'BoC Rate Forecasts', desc: 'What economists expect', href: '/blog' },
+        ],
+      },
+    ],
+    promo: {
+      tag: "TODAY'S BEST",
+      title: '5-year fixed: 4.79%',
+      desc: 'Lock in this week — rates ticked down 0.12%. Pre-approved in 24 hrs, no obligation.',
+      cta: 'See all rates →',
+      href: '/mortgages',
+      accent: 'green',
+    },
+  },
+
+  /* ──────────────────── Credit Cards ──────────────────── */
   {
     id: 'cards',
     label: 'Credit Cards',
@@ -228,41 +287,43 @@ export const NAV_DATA: NavCategory[] = [
       accent: 'green',
     },
   },
+
+  /* ──────────────────── More Options ──────────────────── */
   {
-    id: 'investing',
-    label: 'Investing',
+    id: 'more',
+    label: 'More Options',
     sections: [
       {
-        title: 'By Account Type',
+        title: 'Life & Health',
         items: [
-          { name: 'TFSA', desc: 'Tax-Free Savings Account', href: '/investing' },
-          { name: 'RRSP', desc: 'Retirement Savings Plan', href: '/investing' },
-          { name: 'RESP', desc: 'Education Savings Plan', href: '/investing' },
-          { name: 'FHSA', desc: 'First Home Savings Account', href: '/investing' },
-          { name: 'Non-Registered', desc: 'Taxable investment accounts', href: '/investing' },
-          { name: 'RRIF & Pensions', desc: 'Retirement income', href: SOON },
+          { name: 'Term Life Insurance', desc: '10, 20, 30-year coverage', href: '/life-insurance', soon: true },
+          { name: 'Whole Life Insurance', desc: 'Permanent coverage', href: '/life-insurance', soon: true },
+          { name: 'Critical Illness', desc: 'Lump-sum on diagnosis', href: SOON, soon: true },
+          { name: 'Disability Insurance', desc: 'Income protection', href: SOON, soon: true },
+          { name: 'Health & Dental', desc: 'Supplemental coverage', href: '/health-insurance', soon: true },
+          { name: 'Pet Insurance', desc: 'Cat, dog & exotic', href: SOON, soon: true },
         ],
       },
       {
-        title: 'Savings & Cash',
+        title: 'Travel Insurance',
+        items: [
+          { name: 'Single-Trip Travel', desc: 'Vacation & business', href: '/travel-insurance', soon: true },
+          { name: 'Multi-Trip Annual', desc: 'Unlimited trips/yr', href: '/travel-insurance', soon: true },
+          { name: 'Snowbird Insurance', desc: 'Long-stay US', href: SOON, soon: true },
+          { name: 'Visitors to Canada', desc: 'Super Visa', href: SOON, soon: true },
+          { name: 'Student Travel', desc: 'Study abroad', href: SOON, soon: true },
+          { name: 'Trip Cancellation', desc: 'Add-on protection', href: SOON, soon: true },
+        ],
+      },
+      {
+        title: 'Saving & Investing',
         items: [
           { name: 'High-Interest Savings', desc: 'Best HISA rates in Canada', href: '/investing' },
           { name: 'GICs', desc: '1-, 3-, 5-year fixed rates', href: '/investing' },
-          { name: 'Cashable GICs', desc: 'Withdraw before maturity', href: SOON },
-          { name: 'Market-Linked GICs', desc: 'Index-tracked returns', href: SOON },
-          { name: 'US Dollar Savings', desc: 'USD HISA accounts', href: SOON },
-          { name: 'Money Market Funds', desc: 'Short-term yield', href: SOON },
-        ],
-      },
-      {
-        title: 'Investing Platforms',
-        items: [
-          { name: 'Robo-Advisors', desc: 'Wealthsimple, Questrade, BMO', href: '/investing' },
-          { name: 'Self-Directed Brokerages', desc: 'Trade stocks & ETFs', href: '/investing' },
-          { name: 'Mutual Fund Dealers', desc: 'Advised investing', href: SOON },
-          { name: 'ETF Comparison', desc: 'Top Canadian ETFs', href: SOON },
-          { name: 'Stock Trading Apps', desc: 'Wealthsimple Trade, Questrade, IBKR', href: SOON },
-          { name: 'Crypto Platforms', desc: 'Newton, Bitbuy, Wealthsimple Crypto', href: SOON, soon: true },
+          { name: 'TFSA', desc: 'Tax-Free Savings', href: '/investing' },
+          { name: 'RRSP', desc: 'Retirement Savings', href: '/investing' },
+          { name: 'FHSA', desc: 'First Home Savings', href: '/investing' },
+          { name: 'Robo-Advisors', desc: 'Wealthsimple, Questrade & more', href: '/investing' },
         ],
       },
     ],
@@ -272,12 +333,14 @@ export const NAV_DATA: NavCategory[] = [
       desc: 'Beat 5% on cash with the highest-paying high-interest accounts and GICs in Canada this month.',
       cta: 'Compare rates →',
       href: '/investing',
-      accent: 'green',
+      accent: 'teal',
     },
   },
+
+  /* ──────────────────── News and Resources ──────────────────── */
   {
     id: 'news',
-    label: 'News & Resources',
+    label: 'News and Resources',
     sections: [
       {
         title: 'Pillar Guides',
