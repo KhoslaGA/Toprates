@@ -14,6 +14,8 @@ interface QuoteFormData {
   email: string;
   phone: string;
   postalCode: string;
+  consentCollection: boolean;
+  consentMarketing: boolean;
 }
 
 interface InsuranceType {
@@ -70,6 +72,8 @@ export default function GetQuotesPage() {
     email: '',
     phone: '',
     postalCode: '',
+    consentCollection: false,
+    consentMarketing: false,
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -120,6 +124,10 @@ export default function GetQuotesPage() {
       newErrors.postalCode = 'Postal code is required';
     }
 
+    if (!formData.consentCollection) {
+      newErrors.consentCollection = 'You must consent to information collection to proceed';
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -145,6 +153,8 @@ export default function GetQuotesPage() {
         email: '',
         phone: '',
         postalCode: '',
+        consentCollection: false,
+        consentMarketing: false,
       });
 
       // Reset after 3 seconds
@@ -329,6 +339,62 @@ export default function GetQuotesPage() {
                       </div>
                     </div>
 
+                    {/* PIPEDA-compliant consent block (required) */}
+                    <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 my-4">
+                      <div className="flex items-start gap-3">
+                        <input
+                          type="checkbox"
+                          id="consent-collection"
+                          name="consent-collection"
+                          checked={formData.consentCollection || false}
+                          onChange={(e) =>
+                            setFormData({ ...formData, consentCollection: e.target.checked })
+                          }
+                          required
+                          className="mt-1"
+                        />
+                        <label htmlFor="consent-collection" className="text-sm text-gray-700">
+                          I consent to TopRates.ca (operated by Webhub4u Inc.) collecting and using
+                          the information above to: (a) prepare an insurance quote request,
+                          (b) connect me with a licensed insurance broker partner who will contact
+                          me with quote details, and (c) send me a copy of my quote and related
+                          communications. I understand my information will be shared with the
+                          licensed broker for this purpose.{' '}
+                          <a href="/privacy" className="text-[#0d9488] underline">
+                            Read our Privacy Policy
+                          </a>
+                          .
+                        </label>
+                      </div>
+                      {errors.consentCollection && (
+                        <p className="text-red-700 text-xs mt-2 ml-7">
+                          {errors.consentCollection}
+                        </p>
+                      )}
+                    </div>
+
+                    {/* PIPEDA-compliant marketing opt-in (optional, separate consent) */}
+                    <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4">
+                      <div className="flex items-start gap-3">
+                        <input
+                          type="checkbox"
+                          id="consent-marketing"
+                          name="consent-marketing"
+                          checked={formData.consentMarketing || false}
+                          onChange={(e) =>
+                            setFormData({ ...formData, consentMarketing: e.target.checked })
+                          }
+                          className="mt-1"
+                        />
+                        <label htmlFor="consent-marketing" className="text-sm text-gray-700">
+                          <strong>Optional:</strong> I&rsquo;d like to receive insurance tips,
+                          reform updates, and renewal reminders by email. (You can unsubscribe at
+                          any time. We will not send credit card or financial product promotions
+                          through this signup &mdash; those require a separate opt-in.)
+                        </label>
+                      </div>
+                    </div>
+
                     <div className="flex gap-4">
                       <Button
                         type="button"
@@ -346,10 +412,6 @@ export default function GetQuotesPage() {
                         {isLoading ? 'Submitting...' : 'Get My Free Quote'}
                       </Button>
                     </div>
-
-                    <p className="text-xs text-gray-500 text-center">
-                      We respect your privacy. Your information will only be used to provide insurance quotes.
-                    </p>
                   </form>
                 )}
               </>
