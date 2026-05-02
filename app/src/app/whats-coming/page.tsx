@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const ROADMAP: { when: string; what: string; status: 'now' | 'next' | 'soon' }[] = [
   { when: 'Now (May 2026)', what: 'Educational platform live. Newsletter live. Credit card affiliate disclosure in place.', status: 'now' },
   { when: 'Q4 2026', what: 'More guides published across every pillar. Pink-slip OCR research underway.', status: 'next' },
-  { when: 'Q1 2027', what: 'Pre-launch beta of the quote engine on staging.', status: 'next' },
+  { when: 'Q1 2027', what: 'Beta of the quote engine on staging.', status: 'next' },
   { when: 'Q2 2027', what: 'RIBO Level 3 management licence (expected May/June 2027).', status: 'next' },
   { when: 'Summer 2027', what: 'KLC Group registered with RIBO. Quote engine goes live across 30+ Canadian carriers.', status: 'soon' },
 ];

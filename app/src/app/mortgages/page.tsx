@@ -155,7 +155,7 @@ export default function MortgagesPage() {
             Webhub4u Inc.) is not a registered mortgage brokerage. Mortgage referrals are made to
             licensed mortgage brokerages registered under Ontario&rsquo;s Mortgage Brokerages,
             Lenders and Administrators Act (MBLAA). At launch, we may receive a per-referral fee
-            from the partner brokerage. We do not provide mortgage advice. Choice of mortgage
+            from KLC Group. We do not provide mortgage advice. Choice of mortgage
             broker and product is yours.
           </div>
         </div>

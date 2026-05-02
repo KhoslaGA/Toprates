@@ -30,13 +30,14 @@ export default function PrivacyPage() {
               <strong>Last Updated:</strong> {LAST_UPDATED}
             </p>
             <p className="text-sm text-gray-700">
-              TopRates.ca is operated by <strong>Webhub4u Inc.</strong> as a pre-launch insurance
-              comparison platform. This Privacy Policy describes how we collect, use, and protect
-              personal information today, in compliance with the{' '}
+              TopRates.ca is operated by <strong>Webhub4u Inc.</strong> as an independent
+              insurance education platform. This Privacy Policy describes how we collect, use,
+              and protect personal information today, in compliance with the{' '}
               <strong>Personal Information Protection and Electronic Documents Act (PIPEDA)</strong>{' '}
-              and applicable provincial privacy laws. The full comparison engine and brokerage
-              services launch in summer 2027 — this Policy will be updated before that launch to reflect
-              additional data flows (quote engine, partner brokerage).
+              and applicable provincial privacy laws. A RIBO-registered insurance brokerage
+              (KLC Group) launches in summer 2027 — this Policy will be updated before that
+              launch to reflect additional data flows (quote engine, KLC Group as a separate
+              data recipient).
             </p>
           </div>
 
@@ -45,9 +46,11 @@ export default function PrivacyPage() {
             <p>
               TopRates.ca is operated by <strong>Webhub4u Inc.</strong>, a private Canadian
               corporation. Webhub4u Inc. is the entity responsible for personal information
-              collected through this website. TopRates.ca is currently a pre-launch platform; it is
-              not yet a registered insurance broker and does not currently sell insurance, take
-              applications, or place policies.
+              collected through this website. TopRates.ca is an independent insurance education
+              platform; it is not currently a registered insurance broker and does not currently
+              sell insurance, take applications, or place policies. <strong>KLC Group</strong>,
+              a separate Canadian company, will register with the Registered Insurance Brokers
+              of Ontario (RIBO) and launch as a licensed brokerage in summer 2027.
             </p>
             <p className="mt-4">
               <strong>Privacy Officer:</strong>{' '}
@@ -59,13 +62,13 @@ export default function PrivacyPage() {
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-[#1a365d] mb-4">2. What we collect today</h2>
-            <p>At our current current educational stage, the personal information we collect is limited:</p>
+            <p>At our current educational stage, the personal information we collect is limited:</p>
             <ul>
               <li>
-                <strong>Waitlist signups:</strong> email address, plus the page where you signed
-                up, the consent text shown to you, your IP address, your browser user agent, and
-                the referring URL. (We capture the consent record so we can demonstrate, under
-                CASL, exactly what you agreed to and when.)
+                <strong>Newsletter signups:</strong> email address, plus the page where you
+                signed up, the consent text shown to you, your IP address, your browser user
+                agent, and the referring URL. (We capture the consent record so we can
+                demonstrate, under CASL, exactly what you agreed to and when.)
               </li>
               <li>
                 <strong>Quote-request form (/get-quotes):</strong> when you fill out the form, we
@@ -94,7 +97,7 @@ export default function PrivacyPage() {
             <p>
               The following categories of information are common in insurance quoting but are{' '}
               <strong>not</strong> collected today, because the platform doesn&rsquo;t support
-              quoting yet. They will be collected through the partner brokerage at launch (2027),
+              quoting yet. They will be collected through KLC Group at the summer 2027 launch,
               and this Privacy Policy will be updated before that happens:
             </p>
             <ul>
@@ -113,19 +116,19 @@ export default function PrivacyPage() {
             <p>The personal information we collect today is used only for the following purposes:</p>
             <ul>
               <li>
-                <strong>To notify you of launch.</strong> If you joined the waitlist, we&rsquo;ll
-                email you when TopRates.ca goes live.
+                <strong>To send the newsletter.</strong> If you subscribed, we&rsquo;ll send you
+                Canadian insurance education content roughly every other week.
               </li>
               <li>
-                <strong>To send pre-launch insurance content</strong> (only if you opted in to
-                marketing). This includes guides, reform updates, and educational material.
+                <strong>To notify you of the summer 2027 brokerage launch.</strong> Newsletter
+                subscribers will receive an announcement when KLC Group goes live as a
+                RIBO-registered brokerage.
               </li>
               <li>
-                <strong>To pass quote requests to a partner broker</strong> (if you submitted the
-                quote form with explicit consent). Today we are still finalizing partner
-                arrangements; quote requests received now will be held until a registered broker
-                partner is in place to fulfill them. You will be notified before any quote request
-                is shared.
+                <strong>To pass quote requests to KLC Group at launch</strong> (if you submitted
+                the quote form with explicit consent and KLC Group is registered). Today, no
+                quote requests are forwarded — the form is held until KLC Group is operational.
+                You will be notified before any quote request is shared.
               </li>
               <li>
                 <strong>To improve the website</strong> using aggregate analytics (no individual
@@ -143,9 +146,9 @@ export default function PrivacyPage() {
             <p>We share personal information with the following parties only:</p>
             <ul>
               <li>
-                <strong>Sanity (sanity.io)</strong> &mdash; our headless content management system,
-                which hosts waitlist entries and the public website&rsquo;s content. Data is stored
-                on servers operated by Sanity in their selected region.
+                <strong>Sanity (sanity.io)</strong> &mdash; our headless content management
+                system, which hosts newsletter subscriber records and the public website&rsquo;s
+                content. Data is stored on servers operated by Sanity in their selected region.
               </li>
               <li>
                 <strong>Vercel</strong> &mdash; our hosting provider. Vercel processes site
@@ -157,10 +160,11 @@ export default function PrivacyPage() {
                 identifiable-person tracking.
               </li>
               <li>
-                <strong>Licensed broker partner</strong> &mdash; at launch, quote requests will be
-                forwarded to a RIBO-registered insurance brokerage to handle the regulated
-                activity. We will name the partner brokerage on this page when the relationship is
-                in place. You will provide explicit consent before any quote request is shared.
+                <strong>KLC Group</strong> &mdash; at the summer 2027 launch, quote requests
+                will be forwarded to KLC Group, a separate Canadian company that will be
+                registered with RIBO as an insurance brokerage. KLC Group will operate under its
+                own privacy practices, which will be linked here when the brokerage launches.
+                You will provide explicit consent before any quote request is shared.
               </li>
               <li>
                 <strong>Law enforcement, regulators, or courts</strong> &mdash; only when required
@@ -288,7 +292,7 @@ export default function PrivacyPage() {
             </h2>
             <p>
               We will update this Privacy Policy when our data practices change &mdash; including
-              before the platform launches in 2027 with the partner brokerage and quote engine.
+              before KLC Group launches as a registered brokerage in summer 2027 with the quote engine.
               Changes will be reflected in the &ldquo;Last Updated&rdquo; date at the top.
               Material changes will be communicated to anyone on the waitlist via email.
             </p>

@@ -56,7 +56,7 @@ export default function AutoInsuranceClient() {
                 Compare Car Insurance<br />in Ontario
               </h1>
               <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: '0 0 28px', maxWidth: 460 }}>
-                At launch (2027): compare quotes from 30+ Ontario carriers in under 2 minutes. Today: educational content and waitlist signup.
+                At summer 2027 launch: compare quotes from 30+ Ontario carriers in under 2 minutes. Today: educational content and waitlist signup.
               </p>
 
               {!submitted ? (
@@ -163,7 +163,7 @@ export default function AutoInsuranceClient() {
             {[
               { n: '1', title: 'Snap your pink slip', desc: 'Upload a photo of your current insurance card. Our AI extracts vehicle, driver, and coverage details automatically. Or enter your info manually — takes about 5 minutes.', icon: '📸' },
               { n: '2', title: 'We compare 30+ carriers', desc: "Your profile is sent to Ontario's top insurance companies simultaneously. Real quotes from real carriers, personalized to your driving history and coverage needs.", icon: '🔍' },
-              { n: '3', title: 'Choose & save', desc: 'At launch (2027): see quotes side by side, compare coverage and deductibles, and bind your policy online through our partner brokerage. Today: join the waitlist for early access.', icon: '✅' },
+              { n: '3', title: 'Choose & save', desc: 'At summer 2027 launch: see quotes side by side, compare coverage and deductibles, and bind your policy online through KLC Group. Today: join the waitlist for early access.', icon: '✅' },
             ].map((s) => (
               <div key={s.n} style={{ flex: 1, minWidth: 260, padding: '28px 24px', borderRadius: 12, border: '1px solid #e8ecf0' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>

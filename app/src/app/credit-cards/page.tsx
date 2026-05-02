@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Compare Credit Cards in Canada | TopRates.ca',
-  description: 'Compare Canadian credit cards by category — cash back, travel rewards, no annual fee, low interest. Pre-launch educational content; full card comparison launching summer 2027.',
+  description: 'Compare Canadian credit cards by category — cash back, travel rewards, no annual fee, low interest. Educational content; full card comparison launching summer 2027.',
   keywords: 'credit cards Canada, credit card comparison, cash back cards, travel rewards cards, no annual fee',
 };
 
@@ -26,7 +26,7 @@ export default function CreditCardsPage() {
             Compare credit cards in Canada
           </h1>
           <p className="text-xl text-gray-200 mb-8 max-w-2xl">
-            Browse Canadian credit cards by category — cash back, travel rewards, no annual fee, low interest. Pre-launch educational content; full comparison and applications launching summer 2027.
+            Browse Canadian credit cards by category — cash back, travel rewards, no annual fee, low interest. Educational content; full comparison and applications launching summer 2027.
           </p>
           <Link
             href="/coming-soon"
@@ -50,7 +50,7 @@ export default function CreditCardsPage() {
                 methodology
               </Link>{' '}
               for how we evaluate cards. (No live affiliate links are shown on the site today —
-              this is the pre-launch placeholder.)
+              this is a current placeholder.)
             </p>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function CreditCardsPage() {
         </div>
       </section>
 
-      {/* Featured Cards — pre-launch placeholder */}
+      {/* Featured Cards — current placeholder */}
       <section className="py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4 text-[#1B2A4A]">Featured cards coming at launch</h2>

@@ -16,7 +16,7 @@ const ALLOWED_SCOPES = new Set([
 ]);
 
 const CURRENT_CONSENT_TEXT =
-  'I am joining the TopRates.ca waitlist. Webhub4u Inc. will email me when the platform launches and may send pre-launch updates about Canadian insurance reform and the platform itself. I can unsubscribe at any time.';
+  'I am joining the TopRates.ca waitlist. Webhub4u Inc. will email me when the platform launches and may send launch updates about Canadian insurance reform and the platform itself. I can unsubscribe at any time.';
 
 /** Default retention: 24 months from signup (PIPEDA principle 5). */
 const RETENTION_MONTHS = 24;

@@ -154,10 +154,10 @@ export default function HomeClient() {
                 <span style={{ fontSize: 13, fontWeight: 700, color: '#0A7E8C' }}>What we are</span>
               </div>
               {[
-                'A pre-launch comparison platform launching in summer 2027 with 30+ carriers',
-                'Operated by Webhub4u Inc.; partner brokerage will handle quoting at launch',
+                'An independent insurance education platform; quote engine launches summer 2027 with 30+ carriers',
+                'Operated by Webhub4u Inc.; KLC Group (a separate company) will handle quoting at the summer 2027 launch',
                 'Founded by a RIBO-licensed broker; content reviewed by a licensed broker',
-                'Educational guides and waitlist signup today; no policies sold yet',
+                'Educational guides and a newsletter today; no policies sold yet',
                 '100% Canadian-owned and operated, based in Ontario',
               ].map((t, i) => (
                 <div key={i} style={{ display: 'flex', gap: 10, marginBottom: 12, alignItems: 'flex-start' }}>
@@ -317,7 +317,7 @@ export default function HomeClient() {
               marginRight: 'auto',
               lineHeight: 1.5,
             }}>
-              By joining, you agree to receive launch updates and pre-launch insurance content
+              By joining, you agree to receive launch updates and Canadian insurance education content
               from Webhub4u Inc. (operator of TopRates.ca). Unsubscribe anytime. See our{' '}
               <a href="/privacy" style={{ color: '#0fbdc9' }}>Privacy Policy</a>.
             </p>

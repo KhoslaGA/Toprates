@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Credit Card Evaluation Methodology | TopRates.ca',
   description:
-    'How TopRates.ca will evaluate and rank Canadian credit cards at launch (2027). Methodology, refresh schedule, and our affiliate-disclosure policy.',
+    'How TopRates.ca will evaluate and rank Canadian credit cards at summer 2027 launch. Methodology, refresh schedule, and our affiliate-disclosure policy.',
   alternates: { canonical: '/credit-cards/methodology' },
 };
 
@@ -14,7 +14,7 @@ export default function MethodologyPage() {
       <section className="bg-gradient-to-r from-[#1B2A4A] to-[#2d3f5a] text-white py-16 md:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-xs uppercase tracking-widest text-amber-300 font-semibold mb-3">
-            Pre-launch · Methodology
+            Methodology
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             How we&rsquo;ll evaluate credit cards
@@ -31,7 +31,7 @@ export default function MethodologyPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg">
           <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
             <p className="text-sm text-gray-800 m-0">
-              <strong>Pre-launch note:</strong> No credit-card comparisons are live on the site
+              <strong>Note:</strong> No credit-card comparisons are live on the site
               today. The text below describes the methodology we&rsquo;ll follow when comparisons
               go live at our summer 2027 launch. It will be revised before any real cards are listed.
             </p>
@@ -111,7 +111,7 @@ export default function MethodologyPage() {
 
           <h2 className="text-2xl font-bold text-[#1B2A4A]">Who&rsquo;s evaluating?</h2>
           <p>
-            Today, TopRates.ca is a pre-launch platform with no live card listings. At launch,
+            Today, TopRates.ca is a platform with no live card listings. At launch,
             evaluations will be authored by content reviewers working alongside the founder
             (Gautam Khosla, RIBO-licensed broker, Level 1) and reviewed before publication. When
             real evaluators are named, their byline and credentials will appear on each card

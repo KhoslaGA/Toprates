@@ -227,7 +227,7 @@ export default function ComingSoonPage() {
               lineHeight: 1.5,
             }}
           >
-            By joining, you agree to receive launch updates and pre-launch insurance content from
+            By joining, you agree to receive launch updates and Canadian insurance education content from
             Webhub4u Inc. (operator of TopRates.ca). Unsubscribe anytime. See our{' '}
             <a href="/privacy" style={{ color: '#0fbdc9' }}>
               Privacy Policy

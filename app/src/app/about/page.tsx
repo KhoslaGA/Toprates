@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import WaitlistForm from './_client/WaitlistForm';
 
 /**
- * About page — pre-launch (April 2026).
+ * About page — strategy-pivot version.
  * Server component except for the WaitlistForm (client island).
  *
  * Compliance note: TopRates.ca is operated by Webhub4u Inc. and is NOT
@@ -64,7 +64,7 @@ export default function AboutPage() {
               { title: 'Technology-first comparison', desc: 'Our comparison engine is built on automated data extraction and ranking — not a call centre. Nobody pressures you into a policy. The technology surfaces options; you decide.', icon: '⚡' },
               { title: 'Founded by a licensed broker', desc: 'TopRates.ca was founded by a RIBO-licensed broker. At launch, we will partner with a registered brokerage that handles the regulated activities under proper oversight.', icon: '🛡️' },
               { title: 'Your data, your control', desc: 'We never sell your personal information. Uploaded documents will be deleted immediately after extraction. No spam calls, no third-party data sharing.', icon: '🔒' },
-              { title: 'Same rates as going direct', desc: 'When the platform launches, the quotes you see will match what you&rsquo;d get calling the carrier yourself. Insurance companies pay the partner brokerage — you don&rsquo;t.', icon: '💰' },
+              { title: 'Same rates as going direct', desc: 'When the platform launches, the quotes you see will match what you&rsquo;d get calling the carrier yourself. Insurance companies pay KLC Group — you don&rsquo;t.', icon: '💰' },
               { title: 'Built by an engineer', desc: 'TopRates.ca was built by an ML/AI engineer who wanted to solve the insurance comparison problem with technology, not more salespeople.', icon: '🤖' },
               { title: '100% Canadian', desc: 'Built in Ontario, for Canadians. We follow the rules — RIBO regulations, Competition Act substantiation requirements, PIPEDA, CASL, and provincial broker laws.', icon: '🍁' },
             ].map((d) => (
@@ -102,8 +102,8 @@ export default function AboutPage() {
             Founded by a licensed broker
           </h2>
           <div style={{ fontFamily: "'Newsreader', Georgia, serif", fontSize: 17, lineHeight: 1.75, color: '#374151' }}>
-            <p>TopRates.ca was founded by Gautam Khosla, a RIBO-licensed insurance broker (Level 1, issued April 2025) and ML/AI engineer. Gautam is currently working toward Level 3 management licence (expected May/June 2027) to lead the partner brokerage that will launch alongside the comparison platform.</p>
-            <p>Until the partner brokerage is operating, the content on this site is reviewed by a licensed broker — but the site itself is a pre-launch technology platform, not a registered brokerage. We&rsquo;re careful about that distinction because it matters legally and to anyone counting on us to do this honestly.</p>
+            <p>TopRates.ca was founded by Gautam Khosla, a RIBO-licensed insurance broker (Level 1, issued April 2025) and ML/AI engineer. Gautam is currently working toward Level 3 management licence (expected May/June 2027) to lead KLC Group that will launch alongside the comparison platform.</p>
+            <p>Until KLC Group is operating, the content on this site is reviewed by a licensed broker — but the site itself is a technology and education platform, not a registered brokerage. We&rsquo;re careful about that distinction because it matters legally and to anyone counting on us to do this honestly.</p>
           </div>
         </div>
       </section>
