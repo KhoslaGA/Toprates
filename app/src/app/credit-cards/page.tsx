@@ -2,9 +2,9 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Find the Best Credit Card for You | TopRates Canada',
-  description: 'Compare the best credit cards in Canada. Find cash back, travel rewards, no annual fee, and low interest cards that match your lifestyle.',
-  keywords: 'best credit cards Canada, credit card comparison, cash back cards, travel rewards cards, no annual fee',
+  title: 'Compare Credit Cards in Canada | TopRates.ca',
+  description: 'Compare Canadian credit cards by category — cash back, travel rewards, no annual fee, low interest. Pre-launch educational content; full card comparison launching 2027.',
+  keywords: 'credit cards Canada, credit card comparison, cash back cards, travel rewards cards, no annual fee',
 };
 
 export default function CreditCardsPage() {
@@ -17,47 +17,42 @@ export default function CreditCardsPage() {
     { name: 'Business Cards', icon: '💼', description: 'For your business' },
   ];
 
-  const featuredCards = [
-    {
-      name: 'TopRates Cash Back Plus',
-      issuer: 'Major Canadian Bank',
-      benefit: 'Up to 4% cash back',
-      annualFee: 'Free',
-      bestFor: 'Everyday spending',
-      highlights: ['4% groceries', '3% gas', '1.5% other purchases'],
-    },
-    {
-      name: 'Maple Rewards Elite',
-      issuer: 'Major Canadian Bank',
-      benefit: '2x points on travel',
-      annualFee: '$120',
-      bestFor: 'Frequent travelers',
-      highlights: ['Double points on flights', 'Travel insurance', 'Airport lounge access'],
-    },
-    {
-      name: 'SimpleLiving Card',
-      issuer: 'Canadian Fintech',
-      benefit: 'No fees, no catch',
-      annualFee: 'Free',
-      bestFor: 'Budget-conscious',
-      highlights: ['No annual fee', 'No foreign fees', 'Simple rewards'],
-    },
-  ];
-
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#1B2A4A] to-[#2d3f5a] text-white py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Find the Best Credit Card for You
+            Compare credit cards in Canada
           </h1>
           <p className="text-xl text-gray-200 mb-8 max-w-2xl">
-            Compare hundreds of Canadian credit cards by rewards, fees, and benefits. Find the card that matches your lifestyle and maximizes your value.
+            Browse Canadian credit cards by category — cash back, travel rewards, no annual fee, low interest. Pre-launch educational content; full comparison and applications launching 2027.
           </p>
-          <button className="bg-[#00B482] hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition">
-            Compare Cards
-          </button>
+          <Link
+            href="/coming-soon"
+            className="inline-block bg-[#00B482] hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition"
+          >
+            Join the waitlist
+          </Link>
+        </div>
+      </section>
+
+      {/* AFFILIATE DISCLOSURE — prominent, above-fold */}
+      <section className="bg-amber-50 border-y-2 border-amber-300 py-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-start gap-3">
+            <div className="text-amber-700 font-bold flex-shrink-0">⚡ Affiliate Disclosure</div>
+            <p className="text-sm text-gray-800">
+              At launch, this page will contain affiliate links to credit-card issuers. We may
+              receive compensation if you apply for and are approved for a card through our links.
+              Compensation does not affect our reviews or rankings — see our{' '}
+              <Link href="/credit-cards/methodology" className="underline font-semibold">
+                methodology
+              </Link>{' '}
+              for how we evaluate cards. (No live affiliate links are shown on the site today —
+              this is the pre-launch placeholder.)
+            </p>
+          </div>
         </div>
       </section>
 
@@ -86,64 +81,29 @@ export default function CreditCardsPage() {
         </div>
       </section>
 
-      {/* Featured Cards Section */}
+      {/* Featured Cards — pre-launch placeholder */}
       <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-4 text-[#1B2A4A]">Top Featured Cards</h2>
-          <p className="text-gray-600 mb-12">Our top picks based on Canadian consumer preferences.</p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredCards.map((card, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-white to-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition"
-              >
-                {/* Card Header */}
-                <div className="bg-gradient-to-r from-[#1B2A4A] to-[#2d3f5a] text-white p-6">
-                  <h3 className="text-xl font-bold mb-1">{card.name}</h3>
-                  <p className="text-sm text-gray-300">{card.issuer}</p>
-                </div>
-
-                {/* Card Content */}
-                <div className="p-6">
-                  {/* Main Benefit */}
-                  <div className="mb-6">
-                    <div className="text-[#00B482] font-bold text-lg mb-1">Main Benefit</div>
-                    <p className="text-2xl font-bold text-[#1B2A4A]">{card.benefit}</p>
-                  </div>
-
-                  {/* Annual Fee */}
-                  <div className="mb-6 pb-6 border-b border-gray-200">
-                    <div className="text-sm text-gray-600">Annual Fee</div>
-                    <p className="text-xl font-bold text-[#00B482]">{card.annualFee}</p>
-                  </div>
-
-                  {/* Best For */}
-                  <div className="mb-6">
-                    <div className="text-sm font-semibold text-gray-700 mb-2">Best For</div>
-                    <p className="text-gray-700">{card.bestFor}</p>
-                  </div>
-
-                  {/* Highlights */}
-                  <div className="mb-6">
-                    <div className="text-sm font-semibold text-gray-700 mb-3">Key Features</div>
-                    <ul className="space-y-2">
-                      {card.highlights.map((highlight, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm">
-                          <span className="text-[#00B482] font-bold mt-0.5">✓</span>
-                          <span className="text-gray-700">{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* CTA */}
-                  <button className="w-full bg-[#00B482] hover:bg-emerald-700 text-white font-bold py-3 rounded-lg transition">
-                    Learn More
-                  </button>
-                </div>
-              </div>
-            ))}
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-4 text-[#1B2A4A]">Featured cards coming at launch</h2>
+          <p className="text-gray-600 mb-8">
+            We&rsquo;re working with Canadian credit-card issuers (banks and fintechs) to bring you a
+            transparent, methodology-driven comparison at launch in 2027. We won&rsquo;t show
+            placeholder card names or made-up offers in the meantime — when real cards appear here,
+            they will be real cards with real terms, properly disclosed under our methodology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link
+              href="/coming-soon"
+              className="inline-block bg-[#00B482] hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition"
+            >
+              Join the waitlist
+            </Link>
+            <Link
+              href="/credit-cards/methodology"
+              className="inline-block bg-white border-2 border-[#1B2A4A] hover:bg-gray-50 text-[#1B2A4A] font-bold py-3 px-8 rounded-lg transition"
+            >
+              How we&rsquo;ll evaluate cards
+            </Link>
           </div>
         </div>
       </section>
