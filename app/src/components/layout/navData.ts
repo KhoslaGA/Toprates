@@ -229,6 +229,53 @@ export const NAV_DATA: NavCategory[] = [
     },
   },
   {
+    id: 'investing',
+    label: 'Investing',
+    sections: [
+      {
+        title: 'By Account Type',
+        items: [
+          { name: 'TFSA', desc: 'Tax-Free Savings Account', href: '/investing' },
+          { name: 'RRSP', desc: 'Retirement Savings Plan', href: '/investing' },
+          { name: 'RESP', desc: 'Education Savings Plan', href: '/investing' },
+          { name: 'FHSA', desc: 'First Home Savings Account', href: '/investing' },
+          { name: 'Non-Registered', desc: 'Taxable investment accounts', href: '/investing' },
+          { name: 'RRIF & Pensions', desc: 'Retirement income', href: SOON },
+        ],
+      },
+      {
+        title: 'Savings & Cash',
+        items: [
+          { name: 'High-Interest Savings', desc: 'Best HISA rates in Canada', href: '/investing' },
+          { name: 'GICs', desc: '1-, 3-, 5-year fixed rates', href: '/investing' },
+          { name: 'Cashable GICs', desc: 'Withdraw before maturity', href: SOON },
+          { name: 'Market-Linked GICs', desc: 'Index-tracked returns', href: SOON },
+          { name: 'US Dollar Savings', desc: 'USD HISA accounts', href: SOON },
+          { name: 'Money Market Funds', desc: 'Short-term yield', href: SOON },
+        ],
+      },
+      {
+        title: 'Investing Platforms',
+        items: [
+          { name: 'Robo-Advisors', desc: 'Wealthsimple, Questrade, BMO', href: '/investing' },
+          { name: 'Self-Directed Brokerages', desc: 'Trade stocks & ETFs', href: '/investing' },
+          { name: 'Mutual Fund Dealers', desc: 'Advised investing', href: SOON },
+          { name: 'ETF Comparison', desc: 'Top Canadian ETFs', href: SOON },
+          { name: 'Stock Trading Apps', desc: 'Wealthsimple Trade, Questrade, IBKR', href: SOON },
+          { name: 'Crypto Platforms', desc: 'Newton, Bitbuy, Wealthsimple Crypto', href: SOON, soon: true },
+        ],
+      },
+    ],
+    promo: {
+      tag: 'BEST RATES',
+      title: 'Top HISA & GIC rates',
+      desc: 'Beat 5% on cash with the highest-paying high-interest accounts and GICs in Canada this month.',
+      cta: 'Compare rates →',
+      href: '/investing',
+      accent: 'green',
+    },
+  },
+  {
     id: 'news',
     label: 'News & Resources',
     sections: [
