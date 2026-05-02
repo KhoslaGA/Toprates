@@ -138,7 +138,7 @@ export default function MortgagesPage() {
             Ready to compare mortgage rates?
           </h2>
           <p className="text-xl text-gray-200 mb-8">
-            Connect with a licensed mortgage broker who'll guide you through the process and help you compare options.
+            Connect with a licensed mortgage broker who&rsquo;ll guide you through the process and help you compare options.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-[#00B482] hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition">
@@ -147,6 +147,16 @@ export default function MortgagesPage() {
             <button className="border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-[#1B2A4A] transition">
               Learn More
             </button>
+          </div>
+
+          {/* MBLAA-compliant referral disclosure */}
+          <div className="bg-white/5 border border-white/10 rounded-lg p-4 mt-8 text-sm text-gray-200 max-w-3xl mx-auto text-left">
+            <strong className="text-white">Referral disclosure:</strong> TopRates.ca (operated by
+            Webhub4u Inc.) is not a registered mortgage brokerage. Mortgage referrals are made to
+            licensed mortgage brokerages registered under Ontario&rsquo;s Mortgage Brokerages,
+            Lenders and Administrators Act (MBLAA). At launch, we may receive a per-referral fee
+            from the partner brokerage. We do not provide mortgage advice. Choice of mortgage
+            broker and product is yours.
           </div>
         </div>
       </section>
