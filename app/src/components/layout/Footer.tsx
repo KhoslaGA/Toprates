@@ -94,15 +94,20 @@ export default function Footer() {
             </div>
             <p
               style={{
-                fontSize: 13,
+                fontSize: 12,
+                fontStyle: 'italic',
                 color: 'rgba(255,255,255,0.45)',
                 lineHeight: 1.65,
                 margin: 0,
-                maxWidth: 320,
+                maxWidth: 360,
               }}
             >
-              TopRates.ca is an independent insurance education platform for Canadians. Operated
-              by Webhub4u Inc. A RIBO-licensed brokerage (KLC Group) launches summer 2027.
+              TopRates.ca is operated by Webhub4u Inc., a Canadian financial technology company.
+              Life insurance content is reviewed by LLQP-licensed advisors at KLC Group Canada
+              Inc., an independent Canadian insurance brokerage, under partnership agreement.
+              Property &amp; casualty content is educational only — TopRates.ca is not currently
+              a registered insurance broker. Quote comparison and brokerage services launch
+              summer 2027.
             </p>
           </div>
 
@@ -161,23 +166,10 @@ export default function Footer() {
                 lineHeight: 1.6,
               }}
             >
-              © 2026 TopRates.ca, a brand of Webhub4u Inc. ·{' '}
+              © 2026 TopRates.ca · A Webhub4u Inc. brand ·{' '}
               <span style={{ fontWeight: 700, color: 'rgba(255,255,255,0.55)' }}>
                 Education today. Quotes summer 2027.
               </span>
-            </p>
-            <p
-              style={{
-                fontSize: 11,
-                color: 'rgba(255,255,255,0.25)',
-                marginTop: 8,
-                fontStyle: 'italic',
-                lineHeight: 1.55,
-              }}
-            >
-              This site is not currently a registered insurance broker. We provide educational
-              content only. A RIBO-registered brokerage operated by KLC Group launches summer
-              2027.
             </p>
           </div>
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.18)' }}>

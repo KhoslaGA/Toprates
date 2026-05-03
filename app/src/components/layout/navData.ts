@@ -47,38 +47,38 @@ export const NAV_DATA: NavCategory[] = [
   {
     id: 'car',
     label: 'Car Insurance',
-    tag: 'LIVE',
+
     sections: [
       {
         title: 'By Province',
         items: [
-          { name: 'Ontario Car Insurance', desc: '50+ carriers compared', href: '/auto-insurance', live: true },
-          { name: 'Alberta Car Insurance', desc: 'Grid rate comparison', href: '/auto-insurance/alberta', live: true },
-          { name: 'Quebec Car Insurance', desc: 'Hybrid no-fault system', href: '/auto-insurance/quebec', live: true },
-          { name: 'Atlantic Canada', desc: 'NB, NS, PEI & NL', href: '/auto-insurance/atlantic', live: true },
-          { name: 'Compare All Provinces', desc: 'National rate map', href: '/auto-insurance/all-provinces', live: true },
+          { name: 'Ontario Car Insurance', desc: '50+ carriers compared', href: '/auto-insurance' },
+          { name: 'Alberta Car Insurance', desc: 'Grid rate comparison', href: '/auto-insurance/alberta' },
+          { name: 'Quebec Car Insurance', desc: 'Hybrid no-fault system', href: '/auto-insurance/quebec' },
+          { name: 'Atlantic Canada', desc: 'NB, NS, PEI & NL', href: '/auto-insurance/atlantic' },
+          { name: 'Compare All Provinces', desc: 'National rate map', href: '/auto-insurance/all-provinces' },
         ],
       },
       {
         title: 'By Ontario City',
         items: [
-          { name: 'Brampton', desc: 'Avg $3,802/yr', href: '/auto-insurance/brampton', live: true },
-          { name: 'Mississauga', desc: 'Avg $2,489/yr', href: '/auto-insurance/mississauga', live: true },
-          { name: 'Scarborough & North York', desc: 'Toronto periphery', href: '/auto-insurance/scarborough', live: true },
-          { name: 'Vaughan & Markham', desc: 'High-premium 905', href: '/auto-insurance/vaughan', live: true },
-          { name: 'Eastern Ontario', desc: 'From $1,412/yr', href: '/auto-insurance/eastern-ontario', live: true },
-          { name: 'All Ontario Cities →', desc: 'Full city directory', href: '/auto-insurance/ontario-cities', live: true },
+          { name: 'Brampton', desc: 'Avg $3,802/yr', href: '/auto-insurance/brampton' },
+          { name: 'Mississauga', desc: 'Avg $2,489/yr', href: '/auto-insurance/mississauga' },
+          { name: 'Scarborough & North York', desc: 'Toronto periphery', href: '/auto-insurance/scarborough' },
+          { name: 'Vaughan & Markham', desc: 'High-premium 905', href: '/auto-insurance/vaughan' },
+          { name: 'Eastern Ontario', desc: 'From $1,412/yr', href: '/auto-insurance/eastern-ontario' },
+          { name: 'All Ontario Cities →', desc: 'Full city directory', href: '/auto-insurance/ontario-cities' },
         ],
       },
       {
         title: 'By Driver Type',
         items: [
-          { name: 'New to Canada', desc: 'Build history from scratch', href: '/auto-insurance/new-canadian', live: true },
-          { name: 'New Drivers (G1/G2)', desc: 'Your first policy', href: '/auto-insurance/new-driver', live: true },
-          { name: 'Young Drivers Under 25', desc: 'Lower youth premiums', href: '/auto-insurance/young-drivers', live: true },
-          { name: 'Seniors 65+', desc: 'Mature driver discounts', href: '/auto-insurance/seniors', live: true },
-          { name: 'High-Risk Drivers', desc: 'After tickets or accidents', href: '/auto-insurance/high-risk', live: true },
-          { name: 'Rideshare Drivers', desc: 'Uber, Lyft coverage', href: '/auto-insurance/rideshare', live: true },
+          { name: 'New to Canada', desc: 'Build history from scratch', href: '/auto-insurance/new-canadian' },
+          { name: 'New Drivers (G1/G2)', desc: 'Your first policy', href: '/auto-insurance/new-driver' },
+          { name: 'Young Drivers Under 25', desc: 'Lower youth premiums', href: '/auto-insurance/young-drivers' },
+          { name: 'Seniors 65+', desc: 'Mature driver discounts', href: '/auto-insurance/seniors' },
+          { name: 'High-Risk Drivers', desc: 'After tickets or accidents', href: '/auto-insurance/high-risk' },
+          { name: 'Rideshare Drivers', desc: 'Uber, Lyft coverage', href: '/auto-insurance/rideshare' },
         ],
       },
     ],
@@ -96,16 +96,16 @@ export const NAV_DATA: NavCategory[] = [
   {
     id: 'home',
     label: 'Home Insurance',
-    tag: 'LIVE',
+
     sections: [
       {
         title: 'Property Type',
         items: [
-          { name: 'Home Insurance', desc: 'Detached, semi & townhouse', href: '/home-insurance', live: true },
+          { name: 'Home Insurance', desc: 'Detached, semi & townhouse', href: '/home-insurance' },
           { name: 'Condo Insurance', desc: 'Unit owner protection', href: SOON },
           { name: 'Tenant Insurance', desc: 'Renters & roommates', href: SOON },
-          { name: 'Landlord Insurance', desc: 'Rental property', href: SOON, soon: true },
-          { name: 'Cottage & Seasonal', desc: 'Secondary home', href: SOON, soon: true },
+          { name: 'Landlord Insurance', desc: 'Rental property', href: SOON },
+          { name: 'Cottage & Seasonal', desc: 'Secondary home', href: SOON },
         ],
       },
       {
@@ -147,7 +147,7 @@ export const NAV_DATA: NavCategory[] = [
       {
         title: 'Life Insurance Types',
         items: [
-          { name: 'Term Life Insurance', desc: '10, 20, 30-year coverage', href: '/life-insurance', live: true },
+          { name: 'Term Life Insurance', desc: '10, 20, 30-year coverage', href: '/life-insurance' },
           { name: 'Whole Life Insurance', desc: 'Permanent coverage', href: '/life-insurance' },
           { name: 'Universal Life', desc: 'Flexible premium + investment', href: SOON },
           { name: 'Final Expense', desc: 'Funeral & burial coverage', href: SOON },
@@ -158,12 +158,12 @@ export const NAV_DATA: NavCategory[] = [
       {
         title: 'Health & Protection',
         items: [
-          { name: 'Critical Illness', desc: 'Lump-sum on diagnosis', href: SOON, soon: true },
-          { name: 'Disability Insurance', desc: 'Income protection', href: SOON, soon: true },
-          { name: 'Health & Dental', desc: 'Supplemental coverage', href: '/health-insurance', live: true },
-          { name: 'Long-Term Care', desc: 'Senior care planning', href: SOON, soon: true },
-          { name: 'Group Benefits', desc: 'Employer-sponsored plans', href: SOON, soon: true },
-          { name: 'Pet Insurance', desc: 'Cat, dog & exotic', href: SOON, soon: true },
+          { name: 'Critical Illness', desc: 'Lump-sum on diagnosis', href: SOON },
+          { name: 'Disability Insurance', desc: 'Income protection', href: SOON },
+          { name: 'Health & Dental', desc: 'Supplemental coverage', href: '/health-insurance' },
+          { name: 'Long-Term Care', desc: 'Senior care planning', href: SOON },
+          { name: 'Group Benefits', desc: 'Employer-sponsored plans', href: SOON },
+          { name: 'Pet Insurance', desc: 'Cat, dog & exotic', href: SOON },
         ],
       },
       {
@@ -192,12 +192,12 @@ export const NAV_DATA: NavCategory[] = [
   {
     id: 'business',
     label: 'Business Insurance',
-    tag: 'LIVE',
+
     sections: [
       {
         title: 'By Industry',
         items: [
-          { name: 'Restaurants & Food', desc: 'Liability + property bundles', href: '/business-insurance', live: true },
+          { name: 'Restaurants & Food', desc: 'Liability + property bundles', href: '/business-insurance' },
           { name: 'Construction & Trades', desc: 'Tools, liability, builders risk', href: '/business-insurance' },
           { name: 'Retail & E-Commerce', desc: 'In-store & online stores', href: '/business-insurance' },
           { name: 'Tech & IT Consulting', desc: 'Cyber + E&O coverage', href: '/business-insurance' },
@@ -241,12 +241,12 @@ export const NAV_DATA: NavCategory[] = [
   {
     id: 'mortgage',
     label: 'Mortgage Rates',
-    tag: 'LIVE',
+
     sections: [
       {
         title: 'Rate Types',
         items: [
-          { name: '5-Year Fixed', desc: 'Most popular term in Canada', href: '/mortgages', live: true },
+          { name: '5-Year Fixed', desc: 'Most popular term in Canada', href: '/mortgages' },
           { name: '3-Year Fixed', desc: 'Mid-term flexibility', href: '/mortgages' },
           { name: '1-Year Fixed', desc: 'Short-term lock', href: '/mortgages' },
           { name: 'Variable Rate', desc: 'Floats with prime', href: '/mortgages' },
@@ -291,7 +291,7 @@ export const NAV_DATA: NavCategory[] = [
   {
     id: 'cards',
     label: 'Credit Cards',
-    tag: 'LIVE',
+
     sections: [
       {
         title: 'By Reward Type',
@@ -345,7 +345,7 @@ export const NAV_DATA: NavCategory[] = [
       {
         title: 'Travel Insurance',
         items: [
-          { name: 'Travel Insurance', desc: 'Single & multi-trip coverage', href: '/travel-insurance', live: true },
+          { name: 'Travel Insurance', desc: 'Single & multi-trip coverage', href: '/travel-insurance' },
           { name: 'Visitors to Canada', desc: 'Medical coverage for visitors', href: SOON },
           { name: 'International Students', desc: 'Study abroad coverage', href: SOON },
           { name: 'Super Visa Insurance', desc: 'Parent / grandparent visa', href: SOON },
@@ -355,12 +355,12 @@ export const NAV_DATA: NavCategory[] = [
       {
         title: 'Other Products',
         items: [
-          { name: 'Motorcycle Insurance', desc: 'Bike & scooter coverage', href: SOON, soon: true },
-          { name: 'RV & Trailer Insurance', desc: 'Recreational vehicles', href: SOON, soon: true },
-          { name: 'Boat Insurance', desc: 'Watercraft coverage', href: SOON, soon: true },
-          { name: 'ATV & Snowmobile', desc: 'Off-road vehicles', href: SOON, soon: true },
-          { name: 'Personal Loans', desc: 'Compare loan rates', href: SOON, soon: true },
-          { name: 'Lines of Credit', desc: 'Personal LOCs', href: SOON, soon: true },
+          { name: 'Motorcycle Insurance', desc: 'Bike & scooter coverage', href: SOON },
+          { name: 'RV & Trailer Insurance', desc: 'Recreational vehicles', href: SOON },
+          { name: 'Boat Insurance', desc: 'Watercraft coverage', href: SOON },
+          { name: 'ATV & Snowmobile', desc: 'Off-road vehicles', href: SOON },
+          { name: 'Personal Loans', desc: 'Compare loan rates', href: SOON },
+          { name: 'Lines of Credit', desc: 'Personal LOCs', href: SOON },
         ],
       },
       {

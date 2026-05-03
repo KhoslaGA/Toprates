@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import '../styles/globals.css'
-import SiteHeader from '../components/layout/SiteHeader'
+import MegaNav from '../components/layout/MegaNav'
 import Footer from '../components/layout/Footer'
 
 const GOOGLE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
@@ -61,7 +61,7 @@ export default function RootLayout({
         )}
       </head>
       <body className="flex flex-col min-h-screen">
-        <SiteHeader />
+        <MegaNav />
         <main className="flex-grow">{children}</main>
         <Footer />
       </body>
