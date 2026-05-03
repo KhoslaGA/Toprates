@@ -101,7 +101,7 @@ export default function AutoInsuranceClient() {
               )}
 
               <div style={{ display: 'flex', gap: 20, marginTop: 16, flexWrap: 'wrap' }}>
-                {['30+ carriers at launch', 'Under 2 min', '100% free', 'Founded by RIBO-licensed broker'].map((t) => (
+                {['30+ carriers at launch', 'Under 2 min', '100% free', 'Founded by a licensed broker'].map((t) => (
                   <span key={t} style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)' }}>
                     <span style={{ color: TEAL }}>✓</span> {t}
                   </span>
@@ -112,8 +112,8 @@ export default function AutoInsuranceClient() {
             <div style={{ flex: '0 0 260px' }}>
               {[
                 { label: 'Average Ontario auto premium', value: '$1,920/yr', sub: '2026 average' },
-                { label: 'Average savings with TopRates', value: '$612/yr', sub: 'by comparing carriers' },
-                { label: 'Time to compare quotes', value: '<2 min', sub: 'with pink slip upload' },
+                { label: 'Carriers covered editorially', value: '30+', sub: 'at 2027 launch' },
+                { label: 'Time to submit a quote inquiry', value: '<2 min', sub: 'with pink slip upload' },
               ].map((s, i, arr) => (
                 <div key={i} style={{ padding: '16px 0', borderBottom: i < arr.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none' }}>
                   <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', marginBottom: 4 }}>{s.label}</div>

@@ -316,7 +316,7 @@ export default function ReformSpotlight() {
                     letterSpacing: '-0.5px',
                   }}
                 >
-                  $612/yr (25%)
+                  Up to ~25%
                 </span>
               </div>
 

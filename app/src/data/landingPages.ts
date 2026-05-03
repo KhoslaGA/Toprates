@@ -299,9 +299,9 @@ const cities: LandingData[] = [
       "Mississauga car insurance averages $2,489/yr. Compare 30+ Ontario carriers and see how Mississauga premiums vary by postal code, age, and vehicle.",
     primaryStat: { label: 'Avg Mississauga premium', value: '$2,489/yr' },
     secondaryStats: [
-      { label: 'Carriers compared', value: '30+' },
-      { label: 'Avg savings', value: '$612/yr' },
-      { label: 'Quote time', value: '<2 min' },
+      { label: 'Carriers covered editorially', value: '30+' },
+      { label: 'Quote inquiry time', value: '<2 min' },
+      { label: 'Comparison launch', value: '2027' },
     ],
     intro:
       "Mississauga is Ontario's third-largest auto-insurance market by premium volume, and rates sit roughly $1,300/yr below Brampton but $400/yr above the Ontario average. Carrier pricing varies dramatically by L4-prefix postal code: Lakeview (L5G) is among the cheapest in Mississauga; Malton (L4T) is among the most expensive. Comparing carriers is where most Mississauga drivers find their savings.",
@@ -349,7 +349,7 @@ const cities: LandingData[] = [
       { label: 'Quote time', value: '<2 min' },
     ],
     intro:
-      "Toronto's eastern suburbs (Scarborough) and northern suburbs (North York) make up the M1, M2, and M3 postal-code zones. Premiums are roughly mid-Toronto: lower than Brampton or downtown Toronto, but higher than 905 areas like Oakville or Markham. The variance across carriers is the biggest single factor — switching can save $400-$800/yr for the same driver.",
+      "Toronto's eastern suburbs (Scarborough) and northern suburbs (North York) make up the M1, M2, and M3 postal-code zones. Premiums are roughly mid-Toronto: lower than Brampton or downtown Toronto, but higher than 905 areas like Oakville or Markham. The variance across carriers is the biggest single factor — for the same driver, premiums can differ by hundreds of dollars depending on the carrier.",
     sections: [
       {
         heading: 'Toronto suburb rate breakdown',

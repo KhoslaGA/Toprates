@@ -156,7 +156,7 @@ export default function HomeClient() {
               {[
                 'An independent insurance education platform; quote engine launches summer 2027 with 30+ carriers',
                 'Operated by Webhub4u Inc.; KLC Group (a separate company) will handle quoting at the summer 2027 launch',
-                'Founded by a RIBO-licensed broker; content reviewed by a licensed broker',
+                'Founded by a licensed broker; content reviewed by a licensed broker',
                 'Educational guides and a newsletter today; no policies sold yet',
                 '100% Canadian-owned and operated, based in Ontario',
               ].map((t, i) => (
