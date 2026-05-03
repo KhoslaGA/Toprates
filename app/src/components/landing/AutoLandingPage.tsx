@@ -138,7 +138,7 @@ export default function AutoLandingPage({ data }: { data: LandingData }) {
 
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Link
-              href="/get-quotes"
+              href="/contact"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -154,10 +154,10 @@ export default function AutoLandingPage({ data }: { data: LandingData }) {
                 textDecoration: 'none',
               }}
             >
-              Get my quote <Icon name="arrow" size={14} color="#fff" />
+              Talk to us <Icon name="arrow" size={14} color="#fff" />
             </Link>
             <Link
-              href="/coming-soon"
+              href="/whats-coming"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -173,7 +173,7 @@ export default function AutoLandingPage({ data }: { data: LandingData }) {
                 textDecoration: 'none',
               }}
             >
-              <Icon name="sparkle" size={14} color="#fff" /> Snap pink slip
+              <Icon name="sparkle" size={14} color="#fff" /> What&rsquo;s coming
             </Link>
           </div>
         </div>
@@ -425,7 +425,7 @@ export default function AutoLandingPage({ data }: { data: LandingData }) {
               letterSpacing: '-1px',
             }}
           >
-            Ready to compare your options?
+            Education today. Quotes summer 2027.
           </h2>
           <p
             style={{
@@ -436,27 +436,48 @@ export default function AutoLandingPage({ data }: { data: LandingData }) {
               lineHeight: 1.55,
             }}
           >
-            Snap your pink slip or enter your postal code. Real quotes from 30+ Canadian
-            carriers in under 90 seconds.
+            Quote comparison and brokerage launch summer 2027 alongside KLC Group Canada Inc.&rsquo;s
+            RIBO registration. Get on the launch list — or talk to us today.
           </p>
-          <Link
-            href="/get-quotes"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 8,
-              padding: '14px 28px',
-              borderRadius: 999,
-              fontFamily: fonts.heading,
-              fontWeight: 800,
-              fontSize: 15,
-              background: colors.teal,
-              color: '#fff',
-              textDecoration: 'none',
-            }}
-          >
-            Get my quote <Icon name="arrow" size={14} color="#fff" />
-          </Link>
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
+            <Link
+              href="/contact"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 8,
+                padding: '14px 28px',
+                borderRadius: 999,
+                fontFamily: fonts.heading,
+                fontWeight: 800,
+                fontSize: 15,
+                background: colors.teal,
+                color: '#fff',
+                textDecoration: 'none',
+              }}
+            >
+              Talk to us <Icon name="arrow" size={14} color="#fff" />
+            </Link>
+            <Link
+              href="/whats-coming"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 8,
+                padding: '14px 28px',
+                borderRadius: 999,
+                fontFamily: fonts.heading,
+                fontWeight: 800,
+                fontSize: 15,
+                background: 'transparent',
+                color: '#fff',
+                border: '1px solid rgba(255,255,255,0.2)',
+                textDecoration: 'none',
+              }}
+            >
+              What&rsquo;s coming
+            </Link>
+          </div>
         </div>
       </section>
     </>

@@ -62,14 +62,14 @@ const provinces: LandingData[] = [
     h1: 'Compare car insurance in Alberta',
     subhead:
       "Alberta uses a grid system that caps premiums for basic drivers. We compare optional coverage, accident benefits, and add-ons across every Alberta carrier so you can see what you're really paying for.",
-    metaTitle: 'Alberta Car Insurance — Compare Rates from Top Carriers | TopRates.ca',
+    metaTitle: 'Alberta Car Insurance — Editorial Guide & Grid System | TopRates.ca',
     metaDescription:
-      "Compare Alberta car insurance rates from 20+ carriers. Understand the grid system, optional coverage, and how to lower your Alberta auto premium.",
+      "Editorial guide to Alberta auto insurance: the AIRB grid, optional coverage, and which carriers compete in Alberta. Education today; quote comparison launches summer 2027.",
     primaryStat: { label: 'Avg AB premium', value: '$1,316/yr', hint: '2026 GIO data' },
     secondaryStats: [
-      { label: 'Carriers compared', value: '20+' },
-      { label: 'Avg savings', value: '$420/yr' },
-      { label: 'Quote time', value: '<2 min' },
+      { label: 'Carriers covered editorially', value: '20+' },
+      { label: 'Comparison launches', value: 'Summer 2027' },
+      { label: 'Quote inquiry time', value: '<2 min' },
     ],
     intro:
       "Alberta's auto insurance market is the second-largest in Canada, but it's also one of the most regulated. Premiums for the mandatory parts of your policy are set by a province-wide grid that limits how much insurers can charge basic drivers. The competition happens around optional coverage — collision, comprehensive, accident benefits — where carriers can price freely.",
@@ -109,12 +109,12 @@ const provinces: LandingData[] = [
       "Quebec runs a hybrid system: bodily injury is publicly insured by the SAAQ (everyone pays the same), while property damage and physical damage are private. That's why Quebec has Canada's lowest auto premiums.",
     metaTitle: 'Quebec Car Insurance — SAAQ + Private Coverage Compared | TopRates.ca',
     metaDescription:
-      "Quebec auto insurance combines SAAQ public coverage for injuries with private coverage for collision and theft. Compare 15+ Quebec carriers in 2 minutes.",
+      "Quebec auto insurance combines SAAQ public coverage for injuries with private coverage for collision and theft. Editorial coverage of 15+ Quebec carriers; quote comparison launches summer 2027.",
     primaryStat: { label: 'Avg QC premium', value: '$717/yr', hint: 'Lowest in Canada' },
     secondaryStats: [
-      { label: 'Carriers compared', value: '15+' },
-      { label: 'Avg savings', value: '$180/yr' },
-      { label: 'Quote time', value: '<2 min' },
+      { label: 'Carriers covered editorially', value: '15+' },
+      { label: 'Comparison launches', value: 'Summer 2027' },
+      { label: 'Quote inquiry time', value: '<2 min' },
     ],
     intro:
       "Quebec drivers pay the lowest car insurance in Canada — about half of what Ontarians pay — because injury coverage is handled publicly through the Société de l'assurance automobile du Québec (SAAQ). Private insurers only cover property damage and physical damage to your vehicle, so there's less premium to compete on. But the optional pieces still matter: collision, comprehensive, and replacement-cost endorsements vary 20-40% between carriers.",
@@ -157,9 +157,9 @@ const provinces: LandingData[] = [
       "Compare car insurance in New Brunswick, Nova Scotia, PEI, and Newfoundland. Different rules per province; we break down each market.",
     primaryStat: { label: 'Avg ATL premium', value: '$891/yr', hint: 'Across 4 provinces' },
     secondaryStats: [
-      { label: 'Carriers compared', value: '12+' },
-      { label: 'Avg savings', value: '$240/yr' },
-      { label: 'Quote time', value: '<2 min' },
+      { label: 'Carriers covered editorially', value: '12+' },
+      { label: 'Comparison launches', value: 'Summer 2027' },
+      { label: 'Quote inquiry time', value: '<2 min' },
     ],
     intro:
       "Atlantic Canada's auto insurance markets are smaller than Ontario or Quebec, but each province has its own rules and carrier mix. New Brunswick and Nova Scotia run private, tort-based systems with mandatory minimums. PEI is similar but with a much smaller market. Newfoundland & Labrador has the most expensive Atlantic premiums, partly due to weather and partly due to fewer carriers competing.",
@@ -204,7 +204,7 @@ const provinces: LandingData[] = [
     secondaryStats: [
       { label: 'Provinces covered', value: '10' },
       { label: 'Carriers nationwide', value: '50+' },
-      { label: 'Quote time', value: '<2 min' },
+      { label: 'Quote inquiry time', value: '<2 min' },
     ],
     intro:
       "Canadian car insurance is regulated provincially, so a 35-year-old with a clean record will pay $700 in Quebec, $1,300 in Alberta, $1,800 in Ontario, and $2,100 in BC for nearly identical coverage. The differences come from how each province handles bodily-injury claims (public vs. private), fraud rates, and weather risk.",
@@ -248,18 +248,18 @@ const cities: LandingData[] = [
     eyebrow: 'BRAMPTON · ONTARIO',
     h1: 'Car insurance in Brampton',
     subhead:
-      "Brampton has the highest average car insurance rates in Ontario — averaging $3,802/yr — driven by fraud rates, vehicle theft, and dense storage. Comparing carriers is the single biggest lever Brampton drivers have.",
-    metaTitle: 'Brampton Car Insurance — Compare Rates from 30+ Carriers | TopRates.ca',
+      "Brampton has the highest average car insurance rates in Ontario — averaging $3,802/yr — driven by fraud rates, vehicle theft, and dense storage. This editorial guide breaks down what's driving those rates and the levers Brampton drivers have today.",
+    metaTitle: 'Brampton Car Insurance — Why Premiums Are Highest in Ontario | TopRates.ca',
     metaDescription:
-      "Brampton car insurance averages $3,802/yr — the highest in Ontario. Compare 30+ carriers, find telematics savings, and lower your Brampton premium.",
+      "Brampton car insurance averages $3,802/yr — the highest in Ontario. Editorial guide to fraud, theft, and territory factors driving Brampton premiums. Education today; quote comparison launches summer 2027.",
     primaryStat: { label: 'Avg Brampton premium', value: '$3,802/yr', hint: '2× Ontario average' },
     secondaryStats: [
-      { label: 'Carriers compared', value: '30+' },
-      { label: 'Avg savings', value: '$842/yr' },
-      { label: 'Quote time', value: '<2 min' },
+      { label: 'Carriers covered editorially', value: '30+' },
+      { label: 'Comparison launches', value: 'Summer 2027' },
+      { label: 'Quote inquiry time', value: '<2 min' },
     ],
     intro:
-      "Brampton sits at the top of Ontario's auto-insurance ranking — and not in a good way. The average Brampton premium is roughly twice the Ontario average, due to a combination of fraud rates, high vehicle theft, dense urban storage, and a younger demographic. Most Brampton drivers are over-paying simply because they haven't shopped competitively in the last 12 months. Comparing 30+ carriers is the single biggest savings lever.",
+      "Brampton sits at the top of Ontario's auto-insurance ranking — and not in a good way. The average Brampton premium is roughly twice the Ontario average, due to a combination of fraud rates, high vehicle theft, dense urban storage, and a younger demographic. Many Brampton drivers haven't shopped competitively in the last 12 months — and Ontario carrier pricing varies enough between providers that periodic comparison is one of the biggest levers Brampton drivers have.",
     sections: [
       {
         heading: 'Why Brampton premiums are so high',
@@ -294,14 +294,14 @@ const cities: LandingData[] = [
     h1: 'Car insurance in Mississauga',
     subhead:
       "Mississauga sits between Brampton's high rates and Toronto's mid-tier rates. The average premium is $2,489/yr — but variance between carriers runs over $1,000/yr for identical coverage.",
-    metaTitle: 'Mississauga Car Insurance — Compare Top Carriers | TopRates.ca',
+    metaTitle: 'Mississauga Car Insurance — Postal Code Pricing Guide | TopRates.ca',
     metaDescription:
-      "Mississauga car insurance averages $2,489/yr. Compare 30+ Ontario carriers and see how Mississauga premiums vary by postal code, age, and vehicle.",
+      "Mississauga car insurance averages $2,489/yr. Editorial breakdown of how 30+ Ontario carriers price Mississauga by postal code, age, and vehicle. Education today; quote comparison launches summer 2027.",
     primaryStat: { label: 'Avg Mississauga premium', value: '$2,489/yr' },
     secondaryStats: [
       { label: 'Carriers covered editorially', value: '30+' },
       { label: 'Quote inquiry time', value: '<2 min' },
-      { label: 'Comparison launch', value: '2027' },
+      { label: 'Comparison launches', value: 'Summer 2027' },
     ],
     intro:
       "Mississauga is Ontario's third-largest auto-insurance market by premium volume, and rates sit roughly $1,300/yr below Brampton but $400/yr above the Ontario average. Carrier pricing varies dramatically by L4-prefix postal code: Lakeview (L5G) is among the cheapest in Mississauga; Malton (L4T) is among the most expensive. Comparing carriers is where most Mississauga drivers find their savings.",
@@ -339,14 +339,14 @@ const cities: LandingData[] = [
     h1: 'Car insurance in Scarborough & North York',
     subhead:
       "Scarborough (M1 postal codes) and North York (M2/M3) sit on Toronto's periphery with mid-tier auto insurance rates — averaging $2,200/yr but with major variance based on age, vehicle, and exact postal code.",
-    metaTitle: 'Scarborough & North York Car Insurance — Compare Rates | TopRates.ca',
+    metaTitle: 'Scarborough & North York Car Insurance — Toronto Suburb Rates | TopRates.ca',
     metaDescription:
-      "Scarborough and North York car insurance averages $2,200/yr. Compare 30+ carriers across Toronto's eastern and northern suburbs.",
+      "Scarborough and North York car insurance averages $2,200/yr. Editorial coverage of how 30+ Ontario carriers price Toronto's eastern and northern suburbs. Education today; quote comparison launches summer 2027.",
     primaryStat: { label: 'Avg M1/M2/M3 premium', value: '$2,200/yr' },
     secondaryStats: [
-      { label: 'Carriers compared', value: '30+' },
-      { label: 'Avg savings', value: '$580/yr' },
-      { label: 'Quote time', value: '<2 min' },
+      { label: 'Carriers covered editorially', value: '30+' },
+      { label: 'Comparison launches', value: 'Summer 2027' },
+      { label: 'Quote inquiry time', value: '<2 min' },
     ],
     intro:
       "Toronto's eastern suburbs (Scarborough) and northern suburbs (North York) make up the M1, M2, and M3 postal-code zones. Premiums are roughly mid-Toronto: lower than Brampton or downtown Toronto, but higher than 905 areas like Oakville or Markham. The variance across carriers is the biggest single factor — for the same driver, premiums can differ by hundreds of dollars depending on the carrier.",
@@ -386,12 +386,12 @@ const cities: LandingData[] = [
       "Vaughan, Markham, and Richmond Hill sit in the higher-premium 905 territory — averaging $2,300/yr. Newer luxury vehicles, higher theft rates, and longer commutes drive the rates up.",
     metaTitle: 'Vaughan & Markham Car Insurance — York Region Rates | TopRates.ca',
     metaDescription:
-      "Compare Vaughan, Markham, and Richmond Hill car insurance. Average $2,300/yr in York Region — see how 30+ carriers price your area.",
+      "Vaughan, Markham, and Richmond Hill car insurance averages $2,300/yr. Editorial coverage of how 30+ Ontario carriers price York Region. Education today; quote comparison launches summer 2027.",
     primaryStat: { label: 'Avg York Region premium', value: '$2,300/yr' },
     secondaryStats: [
-      { label: 'Carriers compared', value: '30+' },
-      { label: 'Avg savings', value: '$650/yr' },
-      { label: 'Quote time', value: '<2 min' },
+      { label: 'Carriers covered editorially', value: '30+' },
+      { label: 'Comparison launches', value: 'Summer 2027' },
+      { label: 'Quote inquiry time', value: '<2 min' },
     ],
     intro:
       "York Region — Vaughan, Markham, Richmond Hill, and surrounding municipalities — has Ontario's third-highest urban auto-insurance rates after Brampton and Toronto's central wards. The mix of newer luxury vehicles, longer 401/407 commutes into Toronto, and elevated comprehensive theft claims (especially Honda CR-Vs and Toyota Highlanders) all push premiums above the Ontario average.",
@@ -431,12 +431,12 @@ const cities: LandingData[] = [
       "Eastern Ontario — Ottawa, Kingston, Cornwall, Belleville and surrounding areas — has Ontario's lowest auto insurance rates, averaging $1,412/yr. Lower theft, less congestion, and more rural driving keep rates down.",
     metaTitle: 'Eastern Ontario Car Insurance — Ottawa, Kingston, Cornwall | TopRates.ca',
     metaDescription:
-      "Eastern Ontario auto insurance averages $1,412/yr — Ontario's lowest. Compare 30+ carriers in Ottawa, Kingston, Cornwall, Belleville and more.",
+      "Eastern Ontario auto insurance averages $1,412/yr — Ontario's lowest. Editorial coverage of Ottawa, Kingston, Cornwall, Belleville and area carriers. Education today; quote comparison launches summer 2027.",
     primaryStat: { label: 'Avg Eastern Ontario premium', value: '$1,412/yr', hint: "Lowest in ON" },
     secondaryStats: [
-      { label: 'Carriers compared', value: '30+' },
-      { label: 'Avg savings', value: '$320/yr' },
-      { label: 'Quote time', value: '<2 min' },
+      { label: 'Carriers covered editorially', value: '30+' },
+      { label: 'Comparison launches', value: 'Summer 2027' },
+      { label: 'Quote inquiry time', value: '<2 min' },
     ],
     intro:
       "If you live in Ottawa, Kingston, Cornwall, Belleville, or anywhere east of Toronto, you're in Ontario's cheapest auto-insurance territory. The average Eastern Ontario premium is roughly $1,412/yr — about 25% below the Ontario average and less than half of Brampton. Lower vehicle-theft rates, less congestion, and more highway driving (which has lower claim frequency than city driving) all keep premiums down.",
@@ -476,12 +476,12 @@ const cities: LandingData[] = [
       "Ontario car insurance is rated by territory, and territories don't always match city boundaries. Use our directory to find your local territory's average premium and the carriers that price it lowest.",
     metaTitle: 'Ontario Car Insurance by City — Full Directory | TopRates.ca',
     metaDescription:
-      "Compare car insurance rates across every major Ontario city — Brampton, Mississauga, Toronto, Ottawa, Hamilton, London, and more.",
+      "Editorial directory of Ontario car insurance by city — Brampton, Mississauga, Toronto, Ottawa, Hamilton, London, and more. Education today; quote comparison launches summer 2027.",
     primaryStat: { label: 'Ontario avg premium', value: '$1,838/yr' },
     secondaryStats: [
       { label: 'Cities covered', value: '40+' },
       { label: 'Carriers', value: '30+' },
-      { label: 'Quote time', value: '<2 min' },
+      { label: 'Quote inquiry time', value: '<2 min' },
     ],
     intro:
       "Ontario uses a territorial rating system — your premium is partly determined by where you park your car overnight. Auto-insurance territories don't always match municipal boundaries: a single city can have multiple territory codes, and pricing can swing $500/yr between them. Use our city directory to see your local territory's average and the carriers that price it best.",
@@ -526,14 +526,14 @@ const drivers: LandingData[] = [
     h1: 'Car insurance for new Canadians',
     subhead:
       "Most insurers price new Canadians 2-3× higher than equivalent Canadian drivers because they don't recognize foreign driving history. We compare carriers that DO accept international records.",
-    metaTitle: 'Car Insurance for New Canadians — Compare Carriers | TopRates.ca',
+    metaTitle: 'Car Insurance for New Canadians — Foreign Driving History | TopRates.ca',
     metaDescription:
-      "New to Canada? Most carriers ignore your foreign driving history. We compare 30+ Canadian carriers including those that accept international experience.",
+      "New to Canada? Most carriers ignore your foreign driving history. Editorial guide to 30+ Canadian carriers, including those that accept international experience. Education today; quote comparison launches summer 2027.",
     primaryStat: { label: 'Avg new-Canadian quote', value: '$5,200/yr', hint: 'Without intl. credit' },
     secondaryStats: [
       { label: 'Best-case quote', value: '$2,400/yr' },
-      { label: 'Avg savings', value: '$2,100/yr' },
-      { label: 'Quote time', value: '<2 min' },
+      { label: 'Comparison launches', value: 'Summer 2027' },
+      { label: 'Quote inquiry time', value: '<2 min' },
     ],
     intro:
       "Recent immigrants to Canada often discover their international driving record means almost nothing to Canadian insurers. With no Canadian-licensed history, most carriers treat you like a brand-new G2 driver — pricing premiums at $5,000+/yr. But a small number of carriers accept verified foreign driving records and price new Canadians as the experienced drivers they actually are. That's the difference between $5,200 and $2,400 a year.",
@@ -573,12 +573,12 @@ const drivers: LandingData[] = [
       "First-year G2 drivers in Ontario typically see quotes between $4,500 and $8,000/yr. Comparison + telematics + good carrier choice can drop that under $3,000.",
     metaTitle: 'Car Insurance for New Drivers — G1, G2, Beginners | TopRates.ca',
     metaDescription:
-      "First-year drivers in Ontario can pay up to $8,000/yr. Compare 30+ carriers, find telematics programs, and lower your new-driver premium.",
+      "First-year drivers in Ontario can pay up to $8,000/yr. Editorial guide to telematics programs, parental-policy stacking, and what 30+ carriers do with new drivers. Education today; quote comparison launches summer 2027.",
     primaryStat: { label: 'Avg new-driver quote', value: '$5,400/yr', hint: '17-24 with G2' },
     secondaryStats: [
       { label: 'Best-case quote', value: '$2,800/yr' },
       { label: 'With telematics', value: '$2,100/yr' },
-      { label: 'Quote time', value: '<2 min' },
+      { label: 'Quote inquiry time', value: '<2 min' },
     ],
     intro:
       "If you've just got your G2 — congratulations. Now brace yourself: Ontario insurers price first-year drivers 2-3× higher than experienced drivers, often $5,000-$8,000/yr for a basic Honda Civic. The good news is that the gap between cheap and expensive carriers is even wider for new drivers than for experienced ones. Plus telematics programs are particularly generous for new drivers — often saving 20-35% in year one.",
@@ -618,12 +618,12 @@ const drivers: LandingData[] = [
       "Drivers under 25 in Ontario pay 60-100% more than 30-year-olds for identical coverage. Telematics, good-student discounts, and aggressive comparison can close most of that gap.",
     metaTitle: 'Young Driver Car Insurance Under 25 — Lower Your Premium | TopRates.ca',
     metaDescription:
-      "Under-25 drivers pay 60-100% more than older drivers. Compare carriers, telematics programs, and good-student discounts to lower your premium.",
+      "Under-25 drivers pay 60-100% more than older drivers. Editorial guide to telematics programs and good-student discounts across Ontario carriers. Education today; quote comparison launches summer 2027.",
     primaryStat: { label: 'Avg <25 premium', value: '$3,400/yr' },
     secondaryStats: [
       { label: 'Best-case quote', value: '$1,900/yr' },
       { label: 'Good-student discount', value: 'up to 20%' },
-      { label: 'Quote time', value: '<2 min' },
+      { label: 'Quote inquiry time', value: '<2 min' },
     ],
     intro:
       "Insurers consider drivers under 25 statistically higher-risk — and they price accordingly. A 22-year-old with a clean G license typically pays $2,800-$4,000/yr in Ontario for a basic sedan, compared to $1,400-$1,800 for a 30-year-old with the same record. The path to lower premiums runs through three things: telematics, a good-student or post-secondary discount, and ruthless year-over-year comparison.",
@@ -663,12 +663,12 @@ const drivers: LandingData[] = [
       "Seniors with clean records often qualify for the lowest premiums of any age group — but only if they shop. Carriers price seniors very differently, and most senior drivers leave $400-$600/yr on the table by not comparing.",
     metaTitle: 'Senior Car Insurance 65+ — Mature Driver Discounts | TopRates.ca',
     metaDescription:
-      "Senior drivers 65+ often qualify for the lowest premiums. Compare 30+ carriers and senior-specific discounts to lower your auto insurance.",
+      "Senior drivers 65+ often qualify for the lowest premiums. Editorial coverage of senior-specific discounts across 30+ Canadian carriers. Education today; quote comparison launches summer 2027.",
     primaryStat: { label: 'Avg senior premium', value: '$1,580/yr' },
     secondaryStats: [
       { label: 'Best-case quote', value: '$1,180/yr' },
       { label: 'Mature-driver discount', value: 'up to 15%' },
-      { label: 'Quote time', value: '<2 min' },
+      { label: 'Quote inquiry time', value: '<2 min' },
     ],
     intro:
       "If you're 65 or older with a clean driving record, congratulations — you're in the demographic that insurers love. Decades of accident-free driving, lower mileage in retirement, and no commuting risk mean carriers compete hardest for your business. The catch: most senior drivers have been with the same carrier for 10+ years and are paying loyalty-tax pricing. Comparing once a year typically saves $300-$600.",
@@ -713,7 +713,7 @@ const drivers: LandingData[] = [
     secondaryStats: [
       { label: 'Specialty carriers', value: '8+' },
       { label: 'Standard return', value: '3-5 yrs' },
-      { label: 'Quote time', value: '<2 min' },
+      { label: 'Quote inquiry time', value: '<2 min' },
     ],
     intro:
       "If you've had a DUI, multiple speeding tickets, an at-fault accident in the last 3 years, or a license suspension, most standard insurers will decline you or quote unaffordable premiums. That's where Ontario's high-risk market exists — specialty carriers (Pafco, Echelon, Coachman, Jevco) and the Facility Association as last resort. Premiums run 3-5× standard rates, but the gap closes every year you drive clean.",
@@ -758,7 +758,7 @@ const drivers: LandingData[] = [
     secondaryStats: [
       { label: 'Carriers with endorsements', value: '8+' },
       { label: 'Coverage gap risk', value: 'High' },
-      { label: 'Quote time', value: '<2 min' },
+      { label: 'Quote inquiry time', value: '<2 min' },
     ],
     intro:
       "Most personal Ontario auto policies explicitly exclude commercial use, including ridesharing. Uber and Lyft provide commercial coverage when you have a passenger or are en route to a pickup, but the gap — the period when the app is on but you haven't accepted a ride — is your responsibility. Without a proper rideshare endorsement, an accident during that gap leaves you with no coverage and possibly fraud allegations against your standard insurer.",

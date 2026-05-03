@@ -56,7 +56,7 @@ export default function AutoInsuranceClient() {
                 Compare Car Insurance<br />in Ontario
               </h1>
               <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: '0 0 28px', maxWidth: 460 }}>
-                At summer 2027 launch: compare quotes from 30+ Ontario carriers in under 2 minutes. Today: educational content and waitlist signup.
+                Plain-English Ontario auto insurance education today — including the July 2026 reform. Quote comparison launches summer 2027.
               </p>
 
               {!submitted ? (
@@ -101,7 +101,7 @@ export default function AutoInsuranceClient() {
               )}
 
               <div style={{ display: 'flex', gap: 20, marginTop: 16, flexWrap: 'wrap' }}>
-                {['30+ carriers at launch', 'Under 2 min', '100% free', 'Founded by a licensed broker'].map((t) => (
+                {['30+ carriers at 2027 launch', 'Free to read', 'Independent editorial', 'Founded by a licensed broker'].map((t) => (
                   <span key={t} style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)' }}>
                     <span style={{ color: TEAL }}>✓</span> {t}
                   </span>
@@ -113,7 +113,7 @@ export default function AutoInsuranceClient() {
               {[
                 { label: 'Average Ontario auto premium', value: '$1,920/yr', sub: '2026 average' },
                 { label: 'Carriers covered editorially', value: '30+', sub: 'at 2027 launch' },
-                { label: 'Time to submit a quote inquiry', value: '<2 min', sub: 'with pink slip upload' },
+                { label: 'Quote comparison launches', value: 'Summer 2027', sub: 'with KLC RIBO registration' },
               ].map((s, i, arr) => (
                 <div key={i} style={{ padding: '16px 0', borderBottom: i < arr.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none' }}>
                   <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', marginBottom: 4 }}>{s.label}</div>
@@ -152,18 +152,21 @@ export default function AutoInsuranceClient() {
         <div style={{ maxWidth: 1080, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 40 }}>
             <div style={{ fontSize: 11, fontWeight: 700, color: TEAL, letterSpacing: 1.5, textTransform: 'uppercase', marginBottom: 6 }}>
-              How It Works
+              At summer 2027 launch
             </div>
             <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 28, color: NAVY, margin: 0 }}>
-              Compare Ontario auto insurance in 3 steps
+              How quote comparison will work
             </h2>
+            <p style={{ fontSize: 14, color: '#6b7b8d', maxWidth: 540, margin: '10px auto 0', lineHeight: 1.55 }}>
+              The platform launches in summer 2027 alongside KLC Group Canada Inc.&rsquo;s RIBO registration. Until then, the page below is education only.
+            </p>
           </div>
 
           <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
             {[
-              { n: '1', title: 'Snap your pink slip', desc: 'Upload a photo of your current insurance card. Our AI extracts vehicle, driver, and coverage details automatically. Or enter your info manually — takes about 5 minutes.', icon: '📸' },
-              { n: '2', title: 'We compare 30+ carriers', desc: "Your profile is sent to Ontario's top insurance companies simultaneously. Real quotes from real carriers, personalized to your driving history and coverage needs.", icon: '🔍' },
-              { n: '3', title: 'Choose & save', desc: 'At summer 2027 launch: see quotes side by side, compare coverage and deductibles, and bind your policy online through KLC Group. Today: join the waitlist for early access.', icon: '✅' },
+              { n: '1', title: 'Snap your pink slip', desc: 'Photo upload of your current insurance card to pre-fill vehicle, driver, and coverage details. Manual entry as a fallback. Available at summer 2027 launch.', icon: '📸' },
+              { n: '2', title: 'See ranked offers from 30+ carriers', desc: "Quote comparison across Ontario's top carriers, ranked by price and coverage. Available at summer 2027 launch under KLC Group Canada Inc.'s RIBO registration.", icon: '🔍' },
+              { n: '3', title: 'Choose & bind', desc: 'Compare coverage and deductibles side by side and bind online through KLC Group. Today: join the waitlist below for launch notification.', icon: '✅' },
             ].map((s) => (
               <div key={s.n} style={{ flex: 1, minWidth: 260, padding: '28px 24px', borderRadius: 12, border: '1px solid #e8ecf0' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
