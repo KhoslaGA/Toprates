@@ -2,10 +2,10 @@ import { Icon, type IconName } from '../brand/Icon';
 import { colors, fonts } from '@/styles/tokens';
 
 const STATS: { n: string; l: string; icon: IconName }[] = [
-  { n: '30+', l: 'Carriers at launch', icon: 'chart' },
-  { n: '<2 min', l: 'Quote target time', icon: 'clock' },
-  { n: '2027', l: 'Platform launch', icon: 'sparkle' },
-  { n: '100%', l: 'Free, no obligation', icon: 'lock' },
+  { n: '12+', l: 'Guides published', icon: 'chart' },
+  { n: 'Summer 2027', l: 'P&C brokerage launch', icon: 'clock' },
+  { n: 'LLQP-reviewed', l: 'Life insurance content', icon: 'check' },
+  { n: '100%', l: 'Educational, today', icon: 'lock' },
 ];
 
 export default function StatsBand() {

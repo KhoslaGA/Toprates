@@ -275,26 +275,24 @@ export default function Hero() {
                   background: colors.gold,
                 }}
               />
-              Ontario auto reform · July 2026
+              Education today · Quotes summer 2027
             </div>
             <h1 className="hero-h1-v2">
-              Stop overpaying for
+              Insurance,
               <br />
-              <span style={{ color: '#0fbdc9' }}>auto &amp; home</span> insurance.
+              in <span style={{ color: '#0fbdc9' }}>plain English.</span>
             </h1>
             <p
               style={{
                 fontFamily: fonts.heading,
-                fontSize: 18,
+                fontSize: 17,
                 color: 'rgba(246,239,224,0.68)',
-                maxWidth: 520,
+                maxWidth: 560,
                 margin: '24px 0 32px',
-                lineHeight: 1.55,
+                lineHeight: 1.6,
               }}
             >
-              Snap your pink slip or home dec page and get real quotes from 30+
-              carriers in under 90 seconds. Skip the long forms — talk to a broker
-              only when you want to.
+              Reviewed by LLQP-licensed advisors at KLC Group Canada Inc. and the editorial team at TopRates.ca · operated by Webhub4u Inc. We read the fine print. We rewrite it in English. You decide what to do with it.
             </p>
 
             {!done ? (

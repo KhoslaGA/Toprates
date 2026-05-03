@@ -111,11 +111,9 @@ export default function MethodologyPage() {
 
           <h2 className="text-2xl font-bold text-[#1B2A4A]">Who&rsquo;s evaluating?</h2>
           <p>
-            Today, TopRates.ca is a platform with no live card listings. At launch,
-            evaluations will be authored by content reviewers working alongside the founder
-            (Gautam Khosla, RIBO-licensed broker, Level 1) and reviewed before publication. When
-            real evaluators are named, their byline and credentials will appear on each card
-            listing.
+            Today, TopRates.ca has no live card listings. When evaluations go live, they will be
+            authored and reviewed by the editorial team at TopRates.ca (Webhub4u Inc.). Each
+            listing will carry the standard editorial byline plus an affiliate-disclosure tag.
           </p>
 
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mt-8 not-prose">

@@ -151,7 +151,7 @@ export default function WhatsComingPage() {
               <ul style={{ fontFamily: fonts.heading, fontSize: 15, color: colors.muted, lineHeight: 1.7, paddingLeft: 18, margin: 0 }}>
                 <li>Compare real quotes from 30+ Canadian carriers</li>
                 <li>Switch policies with one click via KLC Group</li>
-                <li>Talk to a licensed broker (still Gautam, plus a small team)</li>
+                <li>Talk to a licensed broker at KLC Group Canada Inc.</li>
                 <li>Same plain-English content, now actionable</li>
               </ul>
             </div>
