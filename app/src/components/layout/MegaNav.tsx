@@ -93,7 +93,7 @@ function DesktopNav({
             Sign in
           </Link>
           <Link
-            href="/get-quotes"
+            href="/contact"
             style={{
               background: colors.teal,
               color: '#fff',
@@ -108,7 +108,7 @@ function DesktopNav({
               gap: 6,
             }}
           >
-            Get my rate <Icon name="arrow" size={12} color="#fff" />
+            Talk to us <Icon name="arrow" size={12} color="#fff" />
           </Link>
         </div>
       </div>
@@ -454,7 +454,7 @@ function MobileNav({ open, setOpen }: { open: boolean; setOpen: (b: boolean) => 
           })}
           <div style={{ marginTop: 24, display: 'flex', flexDirection: 'column', gap: 10 }}>
             <Link
-              href="/get-quotes"
+              href="/contact"
               onClick={() => setOpen(false)}
               style={{
                 background: colors.teal,
@@ -468,7 +468,7 @@ function MobileNav({ open, setOpen }: { open: boolean; setOpen: (b: boolean) => 
                 textDecoration: 'none',
               }}
             >
-              Get my rate
+              Talk to us
             </Link>
             <Link
               href="/coming-soon"

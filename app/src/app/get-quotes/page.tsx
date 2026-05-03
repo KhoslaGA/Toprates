@@ -1,485 +1,274 @@
-'use client';
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import ContactForm from '@/components/contact/ContactForm';
+import { Bo } from '@/components/brand/Bo';
+import { colors, fonts } from '@/styles/tokens';
 
-import React, { useState } from 'react';
-import PageWrapper from '@/components/layout/PageWrapper';
-import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { cn } from '@/lib/utils';
-
-interface QuoteFormData {
-  step: number;
-  insuranceType: string;
-  name: string;
-  email: string;
-  phone: string;
-  postalCode: string;
-  consentCollection: boolean;
-  consentMarketing: boolean;
-}
-
-interface InsuranceType {
-  id: string;
-  name: string;
-  description: string;
-  icon: string;
-}
-
-const INSURANCE_TYPES: InsuranceType[] = [
-  {
-    id: 'auto',
-    name: 'Auto Insurance',
-    description: 'Car, truck, motorcycle, or RV coverage',
-    icon: '🚗',
-  },
-  {
-    id: 'home',
-    name: 'Home Insurance',
-    description: 'House, condo, or renter protection',
-    icon: '🏠',
-  },
-  {
-    id: 'life',
-    name: 'Life Insurance',
-    description: 'Term, whole life, or universal life',
-    icon: '❤️',
-  },
-  {
-    id: 'business',
-    name: 'Business Insurance',
-    description: 'Commercial property and liability',
-    icon: '💼',
-  },
-  {
-    id: 'travel',
-    name: 'Travel Insurance',
-    description: 'Trip, emergency, and medical coverage',
-    icon: '✈️',
-  },
-  {
-    id: 'disability',
-    name: 'Disability Insurance',
-    description: 'Income protection and benefits',
-    icon: '🛡️',
-  },
-];
+export const metadata: Metadata = {
+  title: 'Quote Comparison Launches Summer 2027 — TopRates.ca',
+  description:
+    'TopRates.ca quote comparison and brokerage launch summer 2027 alongside KLC Group Canada Inc.’s RIBO registration. Education today; talk to a licensed advisor or join the launch list.',
+  alternates: { canonical: '/get-quotes' },
+  robots: { index: false, follow: true },
+};
 
 export default function GetQuotesPage() {
-  const [formData, setFormData] = useState<QuoteFormData>({
-    step: 1,
-    insuranceType: '',
-    name: '',
-    email: '',
-    phone: '',
-    postalCode: '',
-    consentCollection: false,
-    consentMarketing: false,
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [errors, setErrors] = useState<Record<string, string>>({});
-
-  const handleInsuranceTypeSelect = (typeId: string) => {
-    setFormData({
-      ...formData,
-      insuranceType: typeId,
-      step: 2,
-    });
-    setErrors({});
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-    if (errors[name]) {
-      setErrors({
-        ...errors,
-        [name]: '',
-      });
-    }
-  };
-
-  const validateForm = (): boolean => {
-    const newErrors: Record<string, string> = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email';
-    }
-
-    if (!formData.phone.trim()) {
-      newErrors.phone = 'Phone number is required';
-    }
-
-    if (!formData.postalCode.trim()) {
-      newErrors.postalCode = 'Postal code is required';
-    }
-
-    if (!formData.consentCollection) {
-      newErrors.consentCollection = 'You must consent to information collection to proceed';
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!validateForm()) {
-      return;
-    }
-
-    setIsLoading(true);
-
-    try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      setSubmitted(true);
-      setFormData({
-        step: 1,
-        insuranceType: '',
-        name: '',
-        email: '',
-        phone: '',
-        postalCode: '',
-        consentCollection: false,
-        consentMarketing: false,
-      });
-
-      // Reset after 3 seconds
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 5000);
-    } catch (error) {
-      setErrors({ form: 'Failed to submit quote request. Please try again.' });
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const getSelectedType = () => {
-    return INSURANCE_TYPES.find((t) => t.id === formData.insuranceType);
-  };
-
   return (
     <>
-      {/* Hero */}
-      <div className="bg-gradient-to-r from-[#1a365d] to-[#0d9488] text-white py-16">
-        <PageWrapper>
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Get Your Free Quote
+      <section
+        style={{
+          background: `linear-gradient(135deg, ${colors.navy} 0%, #0f1e38 100%)`,
+          padding: '64px 24px',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: 880,
+            margin: '0 auto',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 32,
+            flexWrap: 'wrap',
+          }}
+        >
+          <div style={{ flex: '0 0 auto' }}>
+            <Bo pose="clipboard" accessory="none" size={140} />
+          </div>
+          <div style={{ flex: 1, minWidth: 280 }}>
+            <div
+              style={{
+                fontFamily: fonts.mono,
+                fontSize: 11,
+                letterSpacing: 2,
+                color: colors.gold,
+                fontWeight: 700,
+                textTransform: 'uppercase',
+                marginBottom: 10,
+              }}
+            >
+              Education today · Quotes summer 2027
+            </div>
+            <h1
+              style={{
+                fontFamily: fonts.heading,
+                fontWeight: 900,
+                fontSize: 36,
+                color: '#fff',
+                margin: '0 0 14px',
+                lineHeight: 1.15,
+                letterSpacing: '-1px',
+              }}
+            >
+              The quote engine isn&rsquo;t live yet.
             </h1>
-            <p className="text-xl text-gray-100">
-              Find the best insurance coverage for your needs in just a few minutes.
+            <p
+              style={{
+                fontFamily: fonts.heading,
+                fontSize: 16,
+                color: 'rgba(255,255,255,0.65)',
+                lineHeight: 1.6,
+                margin: 0,
+              }}
+            >
+              TopRates.ca is operated by Webhub4u Inc., a Canadian financial technology company.
+              Quote comparison and brokerage services launch summer 2027 alongside KLC Group
+              Canada Inc.&rsquo;s RIBO registration. Until then, you have two options below.
             </p>
           </div>
-        </PageWrapper>
-      </div>
+        </div>
+      </section>
 
-      <PageWrapper>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-12">
-          {/* Quote Form */}
-          <div className="lg:col-span-2">
-            {submitted ? (
-              <Card className="border-green-200 bg-green-50">
-                <CardContent className="pt-6">
-                  <div className="text-center">
-                    <div className="mb-4 text-6xl">✓</div>
-                    <h3 className="text-2xl font-bold text-green-800 mb-2">
-                      Thank You!
-                    </h3>
-                    <p className="text-green-700 mb-4">
-                      Your quote request has been submitted successfully. One of our insurance experts will contact you within 24 hours.
-                    </p>
-                    <p className="text-green-600 text-sm">
-                      Check your email for a confirmation and quote estimate.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ) : (
-              <>
-                {/* Step Indicator */}
-                <div className="mb-8">
-                  <div className="flex items-center gap-4">
-                    <div
-                      className={cn(
-                        'w-10 h-10 rounded-full flex items-center justify-center font-bold text-white',
-                        formData.step >= 1
-                          ? 'bg-[#0d9488]'
-                          : 'bg-gray-300'
-                      )}
-                    >
-                      1
-                    </div>
-                    <div className="flex-1 h-1 bg-gray-300"></div>
-                    <div
-                      className={cn(
-                        'w-10 h-10 rounded-full flex items-center justify-center font-bold text-white',
-                        formData.step >= 2
-                          ? 'bg-[#0d9488]'
-                          : 'bg-gray-300'
-                      )}
-                    >
-                      2
-                    </div>
-                  </div>
-                  <div className="flex justify-between mt-2 text-sm">
-                    <span className="font-semibold text-[#1a365d]">
-                      {formData.step === 1 ? 'Select Coverage Type' : 'Your Contact Info'}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Step 1: Insurance Type Selection */}
-                {formData.step === 1 && (
-                  <div>
-                    <h2 className="text-2xl font-bold text-[#1a365d] mb-6">
-                      What type of insurance do you need?
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {INSURANCE_TYPES.map((type) => (
-                        <button
-                          key={type.id}
-                          onClick={() => handleInsuranceTypeSelect(type.id)}
-                          className={cn(
-                            'p-6 rounded-lg border-2 transition-all text-left hover:shadow-lg',
-                            'border-gray-200 hover:border-[#0d9488] hover:bg-blue-50'
-                          )}
-                        >
-                          <div className="text-4xl mb-2">{type.icon}</div>
-                          <h3 className="text-lg font-semibold text-[#1a365d] mb-1">
-                            {type.name}
-                          </h3>
-                          <p className="text-sm text-gray-600">
-                            {type.description}
-                          </p>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Step 2: Contact Information */}
-                {formData.step === 2 && (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
-                      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-                        <p className="text-sm text-[#1a365d] font-semibold">
-                          Selected Coverage: <span className="text-[#0d9488]">{getSelectedType()?.name}</span>
-                        </p>
-                      </div>
-
-                      <h2 className="text-2xl font-bold text-[#1a365d] mb-6">
-                        Tell us about yourself
-                      </h2>
-
-                      <div className="space-y-4">
-                        <Input
-                          label="Full Name"
-                          name="name"
-                          type="text"
-                          placeholder="John Doe"
-                          value={formData.name}
-                          onChange={handleInputChange}
-                          error={errors.name}
-                          required
-                        />
-
-                        <Input
-                          label="Email Address"
-                          name="email"
-                          type="email"
-                          placeholder="john@example.com"
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          error={errors.email}
-                          required
-                        />
-
-                        <Input
-                          label="Phone Number"
-                          name="phone"
-                          type="tel"
-                          placeholder="(123) 456-7890"
-                          value={formData.phone}
-                          onChange={handleInputChange}
-                          error={errors.phone}
-                          required
-                        />
-
-                        <Input
-                          label="Postal Code"
-                          name="postalCode"
-                          type="text"
-                          placeholder="M5H 3S5"
-                          value={formData.postalCode}
-                          onChange={handleInputChange}
-                          error={errors.postalCode}
-                          required
-                        />
-
-                        {errors.form && (
-                          <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                            <p className="text-red-700 text-sm">{errors.form}</p>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-
-                    {/* PIPEDA-compliant consent block (required) */}
-                    <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 my-4">
-                      <div className="flex items-start gap-3">
-                        <input
-                          type="checkbox"
-                          id="consent-collection"
-                          name="consent-collection"
-                          checked={formData.consentCollection || false}
-                          onChange={(e) =>
-                            setFormData({ ...formData, consentCollection: e.target.checked })
-                          }
-                          required
-                          className="mt-1"
-                        />
-                        <label htmlFor="consent-collection" className="text-sm text-gray-700">
-                          I consent to TopRates.ca (operated by Webhub4u Inc.) collecting and using
-                          the information above to: (a) prepare an insurance quote request,
-                          (b) connect me with a licensed insurance broker partner who will contact
-                          me with quote details, and (c) send me a copy of my quote and related
-                          communications. I understand my information will be shared with the
-                          licensed broker for this purpose.{' '}
-                          <a href="/privacy" className="text-[#0d9488] underline">
-                            Read our Privacy Policy
-                          </a>
-                          .
-                        </label>
-                      </div>
-                      {errors.consentCollection && (
-                        <p className="text-red-700 text-xs mt-2 ml-7">
-                          {errors.consentCollection}
-                        </p>
-                      )}
-                    </div>
-
-                    {/* PIPEDA-compliant marketing opt-in (optional, separate consent) */}
-                    <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4">
-                      <div className="flex items-start gap-3">
-                        <input
-                          type="checkbox"
-                          id="consent-marketing"
-                          name="consent-marketing"
-                          checked={formData.consentMarketing || false}
-                          onChange={(e) =>
-                            setFormData({ ...formData, consentMarketing: e.target.checked })
-                          }
-                          className="mt-1"
-                        />
-                        <label htmlFor="consent-marketing" className="text-sm text-gray-700">
-                          <strong>Optional:</strong> I&rsquo;d like to receive insurance tips,
-                          reform updates, and renewal reminders by email. (You can unsubscribe at
-                          any time. We will not send credit card or financial product promotions
-                          through this signup &mdash; those require a separate opt-in.)
-                        </label>
-                      </div>
-                    </div>
-
-                    <div className="flex gap-4">
-                      <Button
-                        type="button"
-                        variant="outline"
-                        onClick={() => setFormData({ ...formData, step: 1 })}
-                      >
-                        Back
-                      </Button>
-                      <Button
-                        type="submit"
-                        variant="primary"
-                        disabled={isLoading}
-                        className="flex-1"
-                      >
-                        {isLoading ? 'Submitting...' : 'Get My Free Quote'}
-                      </Button>
-                    </div>
-                  </form>
-                )}
-              </>
-            )}
+      <section style={{ background: '#fbf8f0', padding: '64px 24px' }}>
+        <div
+          style={{
+            maxWidth: 880,
+            margin: '0 auto',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+            gap: 16,
+            marginBottom: 48,
+          }}
+        >
+          <div
+            style={{
+              background: '#fff',
+              borderRadius: 14,
+              padding: '24px 22px',
+              border: `1px solid ${colors.borderSoft}`,
+            }}
+          >
+            <h2
+              style={{
+                fontFamily: fonts.heading,
+                fontWeight: 800,
+                fontSize: 18,
+                color: colors.navy,
+                margin: '0 0 8px',
+                letterSpacing: '-0.4px',
+              }}
+            >
+              Talk to a licensed advisor today
+            </h2>
+            <p
+              style={{
+                fontFamily: fonts.heading,
+                fontSize: 14,
+                color: colors.muted,
+                lineHeight: 1.55,
+                margin: '0 0 14px',
+              }}
+            >
+              Life, critical illness, disability, and travel insurance content is reviewed by
+              LLQP-licensed advisors at KLC Group Canada Inc. Send a note via the form below and
+              we&rsquo;ll respond within one business day.
+            </p>
+            <span
+              style={{
+                fontFamily: fonts.mono,
+                fontSize: 11,
+                color: colors.teal,
+                fontWeight: 700,
+                letterSpacing: 1,
+              }}
+            >
+              Available now ↓
+            </span>
           </div>
-
-          {/* Sidebar */}
-          <div>
-            {/* Why Choose Us */}
-            <Card className="mb-6">
-              <CardHeader>
-                <CardTitle className="text-lg">Why Get a Quote?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  <li className="flex gap-2">
-                    <svg className="w-5 h-5 text-[#0d9488] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-sm text-gray-700">Free, no-obligation quotes</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <svg className="w-5 h-5 text-[#0d9488] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-sm text-gray-700">Personalized coverage options</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <svg className="w-5 h-5 text-[#0d9488] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-sm text-gray-700">Expert guidance included</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <svg className="w-5 h-5 text-[#0d9488] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-sm text-gray-700">Compare top Canadian insurers</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Quick Facts */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Quick Facts</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div>
-                    <p className="text-sm text-gray-600">Average time to quote</p>
-                    <p className="text-2xl font-bold text-[#1a365d]">24 hours</p>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-600">Insurers we work with</p>
-                    <p className="text-2xl font-bold text-[#0d9488]">25+</p>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-600">Satisfied customers</p>
-                    <p className="text-2xl font-bold text-[#f59e0b]">50,000+</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+          <div
+            style={{
+              background: '#fff',
+              borderRadius: 14,
+              padding: '24px 22px',
+              border: `1px solid ${colors.borderSoft}`,
+            }}
+          >
+            <h2
+              style={{
+                fontFamily: fonts.heading,
+                fontWeight: 800,
+                fontSize: 18,
+                color: colors.navy,
+                margin: '0 0 8px',
+                letterSpacing: '-0.4px',
+              }}
+            >
+              Read the education library
+            </h2>
+            <p
+              style={{
+                fontFamily: fonts.heading,
+                fontSize: 14,
+                color: colors.muted,
+                lineHeight: 1.55,
+                margin: '0 0 14px',
+              }}
+            >
+              Plain-English coverage breakdowns across auto, home, life, business, travel, and
+              mortgage. Updated as Canadian regulations change.
+            </p>
+            <Link
+              href="/learn"
+              style={{
+                fontFamily: fonts.mono,
+                fontSize: 11,
+                color: colors.teal,
+                fontWeight: 700,
+                letterSpacing: 1,
+                textDecoration: 'none',
+              }}
+            >
+              Browse /learn →
+            </Link>
+          </div>
+          <div
+            style={{
+              background: '#fff',
+              borderRadius: 14,
+              padding: '24px 22px',
+              border: `1px solid ${colors.borderSoft}`,
+            }}
+          >
+            <h2
+              style={{
+                fontFamily: fonts.heading,
+                fontWeight: 800,
+                fontSize: 18,
+                color: colors.navy,
+                margin: '0 0 8px',
+                letterSpacing: '-0.4px',
+              }}
+            >
+              See what&rsquo;s coming
+            </h2>
+            <p
+              style={{
+                fontFamily: fonts.heading,
+                fontSize: 14,
+                color: colors.muted,
+                lineHeight: 1.55,
+                margin: '0 0 14px',
+              }}
+            >
+              The full timeline for the summer 2027 quote-comparison platform launch and the
+              KLC Group Canada Inc. RIBO registration.
+            </p>
+            <Link
+              href="/whats-coming"
+              style={{
+                fontFamily: fonts.mono,
+                fontSize: 11,
+                color: colors.teal,
+                fontWeight: 700,
+                letterSpacing: 1,
+                textDecoration: 'none',
+              }}
+            >
+              Read the roadmap →
+            </Link>
           </div>
         </div>
-      </PageWrapper>
+
+        <div style={{ maxWidth: 720, margin: '0 auto' }}>
+          <h2
+            style={{
+              fontFamily: fonts.heading,
+              fontWeight: 900,
+              fontSize: 26,
+              color: colors.navy,
+              margin: '0 0 8px',
+              letterSpacing: '-0.6px',
+            }}
+          >
+            Send us a note
+          </h2>
+          <p
+            style={{
+              fontFamily: fonts.heading,
+              fontSize: 15,
+              color: colors.muted,
+              lineHeight: 1.55,
+              margin: '0 0 24px',
+            }}
+          >
+            Tell us what you&rsquo;re looking for. For insurance inquiries, your information may be
+            shared with KLC Group Canada Inc. See our{' '}
+            <Link href="/privacy" style={{ color: colors.teal }}>
+              Privacy Policy
+            </Link>
+            .
+          </p>
+          <div
+            style={{
+              background: '#fff',
+              borderRadius: 14,
+              padding: '28px 24px',
+              border: `1px solid ${colors.borderSoft}`,
+            }}
+          >
+            <ContactForm />
+          </div>
+        </div>
+      </section>
     </>
   );
 }

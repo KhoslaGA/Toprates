@@ -220,7 +220,7 @@ export const NAV_DATA: NavCategory[] = [
         title: 'Resources',
         items: [
           { name: 'Business Insurance 101', desc: 'What every owner should know', href: '/blog' },
-          { name: 'Get Business Quotes', desc: '5-min business profile', href: '/get-quotes' },
+          { name: 'Talk to us', desc: 'Get matched with a licensed advisor', href: '/contact' },
           { name: 'Renewal Checklist', desc: 'Audit before you re-sign', href: SOON },
           { name: 'Premium-Saving Tips', desc: '12 tactics for SMB owners', href: SOON },
           { name: 'Glossary of Terms', desc: 'CGL, BOP, E&O, decoded', href: SOON },

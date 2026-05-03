@@ -120,7 +120,7 @@ export default function Header() {
 
             {/* CTA Button */}
             <Link
-              href="/get-quotes"
+              href="/contact"
               style={{
                 background: TEAL,
                 color: '#fff',
@@ -140,7 +140,7 @@ export default function Header() {
                 e.currentTarget.style.opacity = '1'
               }}
             >
-              Get Quotes
+              Talk to us
             </Link>
           </div>
         </div>
@@ -262,7 +262,7 @@ export default function Header() {
 
               <div style={{ padding: '16px' }}>
                 <Link
-                  href="/get-quotes"
+                  href="/contact"
                   onClick={() => setMobileMenuOpen(false)}
                   style={{
                     display: 'block',
@@ -277,7 +277,7 @@ export default function Header() {
                     fontFamily: "'Inter Tight'",
                   }}
                 >
-                  Get Quotes
+                  Talk to us
                 </Link>
               </div>
             </div>
