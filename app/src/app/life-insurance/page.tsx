@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/Button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/Card';
 import ContactForm from '@/components/contact/ContactForm';
 import FaqAccordion from '@/components/shared/FaqAccordion';
+import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata = {
   title: 'Life Insurance | Toprates.ca - Term, Whole & Universal Life Coverage',
@@ -83,6 +84,10 @@ export default function LifeInsurancePage() {
           </div>
         </PageWrapper>
       </section>
+
+      <PageWrapper>
+        <DisclaimerBlock vertical="life" />
+      </PageWrapper>
 
       {/* Coverage Features */}
       <section className="py-16 md:py-20">

@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/Button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/Card';
 import ContactForm from '@/components/contact/ContactForm';
 import FaqAccordion from '@/components/shared/FaqAccordion';
+import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata = {
   title: 'Business Insurance | Toprates.ca - Commercial Coverage for Canadian Businesses',
@@ -83,6 +84,10 @@ export default function BusinessInsurancePage() {
           </div>
         </PageWrapper>
       </section>
+
+      <PageWrapper>
+        <DisclaimerBlock vertical="pc" />
+      </PageWrapper>
 
       {/* Coverage Features */}
       <section className="py-16 md:py-20">

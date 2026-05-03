@@ -94,24 +94,38 @@ export default function Footer() {
             </div>
             <p
               style={{
+                fontFamily: "'Inter Tight'",
+                fontSize: 18,
+                fontWeight: 700,
+                color: 'rgba(255,255,255,0.85)',
+                margin: '0 0 16px',
+                lineHeight: 1.3,
+                maxWidth: 380,
+              }}
+            >
+              Education today. Quotes summer 2027.
+            </p>
+            <p
+              style={{
                 fontSize: 12,
                 color: 'rgba(255,255,255,0.55)',
                 lineHeight: 1.65,
                 margin: 0,
                 maxWidth: 380,
+                fontStyle: 'italic',
               }}
             >
-              TopRates.ca is a brand of Webhub4u Inc. Webhub4u Inc. is a technology company; it
-              is not a licensed insurance broker, mortgage broker, credit advisor, or investment
-              advisor. Insurance distribution is provided through KLC Group Canada Inc., a
-              licensed insurance advisory firm. Editorial content on this site is for general
-              information only and does not constitute personalized financial, insurance,
-              mortgage, credit, or investment advice.{' '}
+              TopRates.ca is operated by Webhub4u Inc., a Canadian financial technology company.
+              Life insurance content is reviewed by LLQP-licensed advisors at KLC Group Canada
+              Inc., an independent Canadian insurance brokerage, under partnership agreement.
+              Property &amp; casualty content is educational only — TopRates.ca is not currently
+              a registered insurance broker. Quote comparison and brokerage services launch
+              summer 2027.{' '}
               <Link
                 href="/legal"
-                style={{ color: '#0fbdc9', textDecoration: 'underline' }}
+                style={{ color: '#0fbdc9', textDecoration: 'underline', fontStyle: 'normal' }}
               >
-                Read our full disclosure
+                Full disclosure
               </Link>
               .
             </p>

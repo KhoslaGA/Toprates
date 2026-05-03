@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import ContactForm from '@/components/contact/ContactForm';
+import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata: Metadata = {
   title: 'Compare Credit Cards in Canada | TopRates.ca',
@@ -38,21 +39,8 @@ export default function CreditCardsPage() {
         </div>
       </section>
 
-      {/* Affiliate disclosure — required on cards page */}
-      <section className="bg-amber-50 border-y-2 border-amber-300 py-4">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-start gap-3">
-            <div className="text-amber-700 font-bold flex-shrink-0">⚡ Affiliate Disclosure</div>
-            <p className="text-sm text-gray-800">
-              This page contains affiliate links. We may receive compensation if you apply for and are approved for a card through our links. Compensation does not affect our editorial reviews or rankings.{' '}
-              <Link href="/credit-cards/methodology" className="underline font-semibold">
-                How we review cards
-              </Link>
-              .
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Affiliate disclosure — Tier 3 above the fold (audit Task 5a) */}
+      <DisclaimerBlock vertical="cards" />
 
       {/* Category Grid */}
       <section className="py-16 bg-gray-50">
