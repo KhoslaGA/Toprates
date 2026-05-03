@@ -1,10 +1,11 @@
 import React from 'react';
+import Link from 'next/link';
 import PageWrapper from '@/components/layout/PageWrapper';
 
 export const metadata = {
   title: 'Privacy Policy | TopRates.ca',
   description:
-    'TopRates.ca privacy policy. Operated by Webhub4u Inc. PIPEDA-compliant practices covering waitlist signups, quote requests, and analytics.',
+    'TopRates.ca privacy policy. Operated by Webhub4u Inc. PIPEDA-compliant practices covering newsletter signups, contact-form inquiries, and analytics.',
 };
 
 const LAST_UPDATED = 'May 2026';
@@ -30,14 +31,11 @@ export default function PrivacyPage() {
               <strong>Last Updated:</strong> {LAST_UPDATED}
             </p>
             <p className="text-sm text-gray-700">
-              TopRates.ca is operated by <strong>Webhub4u Inc.</strong> as an independent
-              insurance education platform. This Privacy Policy describes how we collect, use,
-              and protect personal information today, in compliance with the{' '}
+              TopRates.ca is operated by <strong>Webhub4u Inc.</strong>, a Canadian technology
+              company. This Privacy Policy describes how we collect, use, and protect personal
+              information, in compliance with the{' '}
               <strong>Personal Information Protection and Electronic Documents Act (PIPEDA)</strong>{' '}
-              and applicable provincial privacy laws. A RIBO-registered insurance brokerage
-              (KLC Group) launches in summer 2027 — this Policy will be updated before that
-              launch to reflect additional data flows (quote engine, KLC Group as a separate
-              data recipient).
+              and applicable provincial privacy laws.
             </p>
           </div>
 
@@ -46,11 +44,13 @@ export default function PrivacyPage() {
             <p>
               TopRates.ca is operated by <strong>Webhub4u Inc.</strong>, a private Canadian
               corporation. Webhub4u Inc. is the entity responsible for personal information
-              collected through this website. TopRates.ca is an independent insurance education
-              platform; it is not currently a registered insurance broker and does not currently
-              sell insurance, take applications, or place policies. <strong>KLC Group Canada Inc.</strong>,
-              a separate Canadian company, will register with the Registered Insurance Brokers
-              of Ontario (RIBO) and launch as a licensed brokerage in summer 2027.
+              collected through this website. <strong>Webhub4u Inc. is not a licensed insurance
+              broker, mortgage broker, credit advisor, or investment advisor.</strong> Insurance
+              inquiries received through TopRates.ca are referred to{' '}
+              <strong>KLC Group Canada Inc.</strong>, an independent insurance advisory firm
+              licensed under Ontario&rsquo;s life-insurance agent licensing framework administered
+              by FSRA. See <Link href="/legal" className="text-[#0d9488] underline">/legal</Link>{' '}
+              for full partnership and licensing disclosure.
             </p>
             <p className="mt-4">
               <strong>Privacy Officer:</strong>{' '}
@@ -61,24 +61,26 @@ export default function PrivacyPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-[#1a365d] mb-4">2. What we collect today</h2>
-            <p>At our current educational stage, the personal information we collect is limited:</p>
+            <h2 className="text-2xl font-bold text-[#1a365d] mb-4">2. What we collect</h2>
+            <p>The personal information we collect is limited to:</p>
             <ul>
               <li>
-                <strong>Newsletter signups:</strong> email address, plus the page where you
-                signed up, the consent text shown to you, your IP address, your browser user
-                agent, and the referring URL. (We capture the consent record so we can
-                demonstrate, under CASL, exactly what you agreed to and when.)
+                <strong>Newsletter signups:</strong> email address, the page where you signed up,
+                the consent text shown to you, your IP address, your browser user agent, and the
+                referring URL. (We capture the consent record so we can demonstrate, under CASL,
+                exactly what you agreed to and when.)
               </li>
               <li>
-                <strong>Quote-request form (/get-quotes):</strong> when you fill out the form, we
-                collect your name, email, phone number, postal code, and the type of insurance
-                you&rsquo;re asking about. We do not collect any of this until you actively submit
-                the form with explicit consent.
+                <strong>Contact form (/contact and product-page CTAs):</strong> when you submit the
+                form we collect the product category you selected, your name, email, phone
+                (optional), postal code (optional), and the message you wrote. We also store the
+                consent text shown at submission, your IP address, browser user agent, and a
+                timestamp. None of this is collected until you actively submit the form with
+                explicit consent.
               </li>
               <li>
                 <strong>Standard analytics:</strong> page views, referrer, browser type, language,
-                approximate location (IP-based), and how you navigate the site. If we use a
+                approximate location (IP-based), and how you navigate the site. Where we use a
                 privacy-respecting analytics provider (e.g. Plausible), no cookies are set and
                 visits are not associated with an identifiable individual.
               </li>
@@ -92,13 +94,13 @@ export default function PrivacyPage() {
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-[#1a365d] mb-4">
-              3. What we do <em>not</em> collect (yet)
+              3. What we do <em>not</em> collect
             </h2>
             <p>
-              The following categories of information are common in insurance quoting but are{' '}
-              <strong>not</strong> collected today, because the platform doesn&rsquo;t support
-              quoting yet. They will be collected through KLC Group Canada Inc. at the summer 2027 launch,
-              and this Privacy Policy will be updated before that happens:
+              The following categories of information are common in insurance underwriting but are{' '}
+              <strong>not</strong> collected by TopRates.ca. If you choose to be referred to KLC
+              Group Canada Inc. or another regulated partner, those providers may collect
+              additional information directly from you under their own privacy practices:
             </p>
             <ul>
               <li>Driver&rsquo;s licence numbers</li>
@@ -106,29 +108,23 @@ export default function PrivacyPage() {
               <li>Claims history</li>
               <li>Driving records</li>
               <li>Financial information (income, banking details, payment data)</li>
+              <li>Health information (medical records, medication, etc.)</li>
               <li>Call recordings or call-centre logs</li>
-              <li>Health information (relevant for life and health insurance only)</li>
             </ul>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-[#1a365d] mb-4">4. Why we collect it</h2>
-            <p>The personal information we collect today is used only for the following purposes:</p>
+            <p>The personal information we collect is used only for the following purposes:</p>
             <ul>
               <li>
-                <strong>To send the newsletter.</strong> If you subscribed, we&rsquo;ll send you
-                Canadian insurance education content roughly every other week.
+                <strong>To respond to your inquiry.</strong> If you submitted the contact form, we
+                use your information to reply, and where appropriate, to refer you to a regulated
+                partner (see Section 5).
               </li>
               <li>
-                <strong>To notify you of the summer 2027 brokerage launch.</strong> Newsletter
-                subscribers will receive an announcement when KLC Group goes live as a
-                RIBO-registered brokerage.
-              </li>
-              <li>
-                <strong>To pass quote requests to KLC Group at launch</strong> (if you submitted
-                the quote form with explicit consent and KLC Group Canada Inc. is registered). Today, no
-                quote requests are forwarded — the form is held until KLC Group Canada Inc. is operational.
-                You will be notified before any quote request is shared.
+                <strong>To send the newsletter.</strong> If you subscribed, we send Canadian
+                insurance and personal-finance educational content.
               </li>
               <li>
                 <strong>To improve the website</strong> using aggregate analytics (no individual
@@ -147,8 +143,9 @@ export default function PrivacyPage() {
             <ul>
               <li>
                 <strong>Sanity (sanity.io)</strong> &mdash; our headless content management
-                system, which hosts newsletter subscriber records and the public website&rsquo;s
-                content. Data is stored on servers operated by Sanity in their selected region.
+                system, which hosts newsletter records, contact-inquiry records, and the public
+                website&rsquo;s content. Data is stored on servers operated by Sanity in their
+                selected region.
               </li>
               <li>
                 <strong>Vercel</strong> &mdash; our hosting provider. Vercel processes site
@@ -160,11 +157,30 @@ export default function PrivacyPage() {
                 identifiable-person tracking.
               </li>
               <li>
-                <strong>KLC Group Canada Inc.</strong> &mdash; at the summer 2027 launch, quote requests
-                will be forwarded to KLC Group Canada Inc., a separate Canadian company that will be
-                registered with RIBO as an insurance brokerage. KLC Group will operate under its
-                own privacy practices, which will be linked here when the brokerage launches.
-                You will provide explicit consent before any quote request is shared.
+                <strong>KLC Group Canada Inc.</strong> &mdash; an independent insurance advisory
+                firm licensed under Ontario&rsquo;s life-insurance agent licensing framework
+                administered by FSRA. Inquiries about life insurance, critical illness, disability,
+                or travel insurance submitted through our contact form are referred to KLC Group
+                Canada Inc. with your consent. KLC Group Canada Inc. operates under its own
+                privacy practices.
+              </li>
+              <li>
+                <strong>Mortgage brokerage partner</strong> &mdash; a registered Ontario mortgage
+                brokerage (under MBLAA). Mortgage inquiries submitted through our contact form may
+                be referred under the MBLAA referral-arrangement exemption with your consent.
+              </li>
+              <li>
+                <strong>Credit-card issuers and affiliate networks</strong> &mdash; where you click
+                an affiliate link on a credit-cards page and apply for a card, the card issuer (or
+                an affiliate-tracking provider) collects your application data directly.
+                TopRates.ca only receives anonymized referral confirmations.
+              </li>
+              <li>
+                <strong>Future P&amp;C insurance partner</strong> &mdash; we anticipate launching
+                auto, home, business, and tenant insurance comparison in 2027 alongside KLC Group
+                Canada Inc.&rsquo;s registration as a RIBO-licensed brokerage. Until then, no P&amp;C
+                inquiries are forwarded; they are held internally on a future-quote list with your
+                consent.
               </li>
               <li>
                 <strong>Law enforcement, regulators, or courts</strong> &mdash; only when required
@@ -186,18 +202,23 @@ export default function PrivacyPage() {
             </p>
             <ul>
               <li>
-                <strong>Waitlist entries:</strong> retained until you unsubscribe, plus an
+                <strong>Newsletter records:</strong> retained until you unsubscribe, plus an
                 additional 12-month audit window to demonstrate consent compliance under CASL.
-                Default purge target is 24 months from signup unless extended consent is given.
+                Default purge target is 24 months from signup unless renewed consent is given.
               </li>
               <li>
-                <strong>Quote requests:</strong> retained for 90 days if not converted into a
-                policy purchase, then purged.
+                <strong>Contact inquiries (unconverted):</strong> retained for 90 days if no policy,
+                referral conversion, or other follow-up action results, then purged.
               </li>
               <li>
-                <strong>Analytics data:</strong> aggregated event-level data retained for the
-                purposes of service improvement; individual server logs are retained for the
-                duration of our hosting provider&rsquo;s default policy (typically 30-90 days).
+                <strong>Contact inquiries (converted to a policy or product):</strong> retained for
+                the period required by the regulator governing the product (RIBO, FSRA, MBLAA, or
+                the issuer&rsquo;s rules) &mdash; typically 7 years.
+              </li>
+              <li>
+                <strong>Analytics data:</strong> aggregated event-level data retained for service
+                improvement; individual server logs are retained for the duration of our hosting
+                provider&rsquo;s default policy (typically 30&ndash;90 days).
               </li>
               <li>
                 <strong>Withdrawn consent records:</strong> we retain a record of withdrawal
@@ -266,7 +287,7 @@ export default function PrivacyPage() {
               <li>
                 Encryption in transit (HTTPS/TLS) on every page that collects personal information.
               </li>
-              <li>Encryption at rest for our content and waitlist databases.</li>
+              <li>Encryption at rest for our content and inquiry databases.</li>
               <li>Access controls limiting who at Webhub4u Inc. can access raw records.</li>
               <li>
                 Service providers (Sanity, Vercel, Plausible) are contractually bound to handle
@@ -292,9 +313,10 @@ export default function PrivacyPage() {
             </h2>
             <p>
               We will update this Privacy Policy when our data practices change &mdash; including
-              before KLC Group Canada Inc. launches as a registered brokerage in summer 2027 with the quote engine.
-              Changes will be reflected in the &ldquo;Last Updated&rdquo; date at the top.
-              Material changes will be communicated to anyone on the waitlist via email.
+              before the planned 2027 launch of P&amp;C insurance comparison alongside KLC Group
+              Canada Inc.&rsquo;s RIBO registration. Changes will be reflected in the
+              &ldquo;Last Updated&rdquo; date at the top. Material changes will be communicated to
+              newsletter subscribers via email.
             </p>
           </section>
 
@@ -309,8 +331,13 @@ export default function PrivacyPage() {
               </a>
               <br />
               General contact:{' '}
-              <a href="mailto:hello@toprates.ca" className="text-[#0d9488] underline">
-                hello@toprates.ca
+              <a href="mailto:contact@toprates.ca" className="text-[#0d9488] underline">
+                contact@toprates.ca
+              </a>
+              <br />
+              Editorial / complaints:{' '}
+              <a href="mailto:editorial@toprates.ca" className="text-[#0d9488] underline">
+                editorial@toprates.ca
               </a>
               <br />
               Mailing address: available on request via privacy@toprates.ca
