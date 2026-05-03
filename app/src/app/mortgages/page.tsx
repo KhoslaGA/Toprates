@@ -36,9 +36,12 @@ export default function MortgagesPage() {
           <p className="text-xl text-gray-200 mb-8 max-w-2xl">
             Compare mortgage rates from multiple Canadian lenders. Get multiple quotes and compare terms before you commit.
           </p>
-          <button className="bg-[#00B482] hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition">
+          <Link
+            href="#get-quote"
+            className="inline-block bg-[#00B482] hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition"
+          >
             Get Your Quote
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -198,7 +201,7 @@ export default function MortgagesPage() {
       </section>
 
       {/* Contact form CTA */}
-      <section className="py-16">
+      <section id="get-quote" className="py-16">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#1B2A4A] mb-2">Get in touch</h2>
           <p className="text-gray-700 mb-8">
