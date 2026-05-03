@@ -1,27 +1,28 @@
+import Link from 'next/link';
 import { Icon, type IconName } from '../brand/Icon';
 import { colors, fonts } from '@/styles/tokens';
 
 const STEPS: { n: string; icon: IconName; title: string; desc: string; time: string }[] = [
   {
     n: '01',
-    icon: 'sparkle',
-    title: 'Snap your pink slip or dec page',
-    desc: 'Upload a photo — our OCR reads policy #, VIN, carrier, and coverage in seconds. Or enter details manually if you prefer.',
-    time: '30 sec',
+    icon: 'search',
+    title: 'Read the guide',
+    desc: 'Plain-English coverage breakdowns across auto, home, life, business, travel, and mortgage. Updated as Canadian regulations change.',
+    time: 'Free to read',
   },
   {
     n: '02',
-    icon: 'chart',
-    title: 'Compare quotes side by side',
-    desc: 'See ranked offers from 30+ carriers. Filter by price, deductible, or coverage level. No personal data shared with carriers until you pick one.',
-    time: '60 sec',
+    icon: 'shield',
+    title: 'Talk to a licensed advisor',
+    desc: 'Life, critical illness, disability, and travel content is reviewed by LLQP-licensed advisors at KLC Group Canada Inc. Use the contact form and we will get back within one business day.',
+    time: '1 business day',
   },
   {
     n: '03',
-    icon: 'check',
-    title: "Save & switch — or don't",
-    desc: "Found a better deal? We handle the switch-over paperwork. Happy with what you have? Nothing's pushed. Zero pressure, zero spam.",
-    time: 'Your choice',
+    icon: 'bell',
+    title: 'Join the launch list',
+    desc: 'Quote comparison and brokerage services launch summer 2027. Sign up and we will email you the day carriers turn on — no spam in between.',
+    time: 'Summer 2027',
   },
 ];
 
@@ -53,7 +54,7 @@ export default function HowItWorks() {
               letterSpacing: '-1.3px',
             }}
           >
-            Real quotes in under two minutes.
+            Education today. Quotes summer 2027.
           </h2>
           <p
             style={{
@@ -65,8 +66,8 @@ export default function HowItWorks() {
               lineHeight: 1.55,
             }}
           >
-            Faster than filling out a quote form on a single carrier&apos;s site. Because you
-            shouldn&apos;t have to type your address fifteen times.
+            Plain-English Canadian insurance and mortgage education today. Quote comparison and
+            brokerage launch summer 2027.
           </p>
         </div>
 
@@ -174,11 +175,11 @@ export default function HowItWorks() {
         </div>
 
         <div style={{ textAlign: 'center', marginTop: 44 }}>
-          <button
+          <Link
+            href="/learn"
             style={{
               background: colors.teal,
               color: '#fff',
-              border: 'none',
               borderRadius: 999,
               padding: '14px 26px',
               fontFamily: fonts.heading,
@@ -188,10 +189,11 @@ export default function HowItWorks() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: 8,
+              textDecoration: 'none',
             }}
           >
-            Start my comparison <Icon name="arrow" size={14} color="#fff" />
-          </button>
+            Browse the education library <Icon name="arrow" size={14} color="#fff" />
+          </Link>
         </div>
       </div>
     </section>

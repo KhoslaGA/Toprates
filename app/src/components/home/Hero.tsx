@@ -2,166 +2,9 @@
 
 import { useState } from 'react';
 import { Icon } from '../brand/Icon';
+import { Bo } from '../brand/Bo';
 import { colors, fonts } from '@/styles/tokens';
 
-function SampleSavingsCard() {
-  const quotes = [
-    { name: 'Carrier A', rate: '$1,838', save: 'Lower-tier example', best: true },
-    { name: 'Carrier B', rate: '$1,956', save: 'Mid-tier example', best: false },
-    { name: 'Carrier C', rate: '$2,104', save: 'Higher-tier example', best: false },
-  ];
-  return (
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <div
-        style={{
-          background: 'rgba(255,255,255,0.04)',
-          backdropFilter: 'blur(18px)',
-          borderRadius: 22,
-          border: '1px solid rgba(255,255,255,0.1)',
-          padding: '32px 28px 26px',
-          width: 380,
-          maxWidth: '100%',
-          boxShadow: '0 40px 80px -30px rgba(0,0,0,0.5)',
-          position: 'relative',
-        }}
-      >
-        <div
-          style={{
-            position: 'absolute',
-            top: -12,
-            left: 24,
-            background: colors.gold,
-            color: colors.navy,
-            fontFamily: fonts.mono,
-            fontSize: 9,
-            fontWeight: 800,
-            letterSpacing: 1.5,
-            padding: '5px 11px',
-            borderRadius: 999,
-          }}
-        >
-          SAMPLE SAVINGS
-        </div>
-
-        <div style={{ textAlign: 'center', marginBottom: 20, paddingTop: 6 }}>
-          <div
-            style={{
-              fontFamily: fonts.mono,
-              fontSize: 10,
-              letterSpacing: 1.5,
-              color: 'rgba(255,255,255,0.4)',
-              textTransform: 'uppercase',
-              fontWeight: 700,
-              marginBottom: 4,
-            }}
-          >
-            Current premium
-          </div>
-          <div
-            style={{
-              fontFamily: fonts.heading,
-              fontWeight: 800,
-              fontSize: 28,
-              color: 'rgba(255,255,255,0.3)',
-              textDecoration: 'line-through',
-              textDecorationColor: 'rgba(225,93,93,0.5)',
-              letterSpacing: '-0.8px',
-            }}
-          >
-            $2,450
-            <span style={{ fontSize: 15 }}>/yr</span>
-          </div>
-        </div>
-
-        {quotes.map((q) => (
-          <div
-            key={q.name}
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              padding: '14px 16px',
-              marginBottom: 8,
-              background: q.best
-                ? 'linear-gradient(135deg, rgba(15,189,201,0.16), rgba(10,126,140,0.08))'
-                : 'rgba(255,255,255,0.03)',
-              border: q.best
-                ? '1px solid rgba(15,189,201,0.4)'
-                : '1px solid rgba(255,255,255,0.06)',
-              borderRadius: 12,
-            }}
-          >
-            <div>
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 6,
-                  fontFamily: fonts.heading,
-                  fontWeight: 800,
-                  fontSize: 14,
-                  color: '#fff',
-                }}
-              >
-                {q.name}
-                {q.best && (
-                  <span
-                    style={{
-                      fontFamily: fonts.mono,
-                      fontSize: 8,
-                      background: 'rgba(15,189,201,0.25)',
-                      color: '#0fbdc9',
-                      padding: '2px 6px',
-                      borderRadius: 3,
-                      fontWeight: 800,
-                      letterSpacing: 1,
-                    }}
-                  >
-                    BEST
-                  </span>
-                )}
-              </div>
-              <div
-                style={{
-                  fontFamily: fonts.mono,
-                  fontSize: 10,
-                  color: 'rgba(255,255,255,0.35)',
-                  marginTop: 3,
-                }}
-              >
-                {q.save}
-              </div>
-            </div>
-            <div
-              style={{
-                fontFamily: fonts.heading,
-                fontWeight: 900,
-                fontSize: 22,
-                color: q.best ? '#0fbdc9' : 'rgba(255,255,255,0.7)',
-                letterSpacing: '-0.8px',
-              }}
-            >
-              {q.rate}
-            </div>
-          </div>
-        ))}
-
-        <div
-          style={{
-            textAlign: 'center',
-            marginTop: 10,
-            fontFamily: fonts.mono,
-            fontSize: 10,
-            color: 'rgba(255,255,255,0.3)',
-            letterSpacing: 0.5,
-          }}
-        >
-          ILLUSTRATIVE EXAMPLE · NOT REAL QUOTES · ACTUAL RATES VARY
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function Hero() {
   const [email, setEmail] = useState('');
@@ -413,7 +256,9 @@ export default function Hero() {
             </div>
           </div>
 
-          <SampleSavingsCard />
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <Bo pose="clipboard" accessory="none" size={320} />
+          </div>
         </div>
       </div>
     </section>

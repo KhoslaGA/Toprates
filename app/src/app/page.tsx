@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import HomeClient from './_home/HomeClient';
 
 export const metadata: Metadata = {
-  title: 'TopRates.ca — Compare Insurance, Mortgage & Credit Card Rates in Canada',
+  title: 'TopRates.ca — Insurance, in plain English',
   description:
-    'Compare auto, home, life, and tenant insurance, mortgage rates, and credit cards from top Canadian providers. Snap your pink slip. Get quotes from 30+ carriers in under 2 minutes.',
+    'Independent Canadian insurance education. Plain-English guides on auto, home, life, business, travel, and mortgage. Life content reviewed by LLQP-licensed advisors at KLC Group Canada Inc. Education today. Quotes summer 2027. Operated by Webhub4u Inc.',
 };
 
 export default function Page() {

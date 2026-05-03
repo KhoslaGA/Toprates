@@ -116,7 +116,7 @@ export default function CarrierRow() {
             marginBottom: 32,
           }}
         >
-          Comparing quotes from 30+ Canadian carriers
+          Carriers we'll work with at summer 2027 launch
         </div>
       </div>
 
