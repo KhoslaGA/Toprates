@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata: Metadata = {
   title: 'Compare Canadian Mortgage Rates | TopRates.ca',
@@ -27,7 +26,6 @@ export default function MortgagesPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      <DisclaimerBlock vertical="mortgage" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#1B2A4A] to-[#2d3f5a] text-white py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

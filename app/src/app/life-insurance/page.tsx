@@ -3,7 +3,6 @@ import { Button } from '@/components/ui/Button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/Card';
 import ContactForm from '@/components/shared/ContactForm';
 import FaqAccordion from '@/components/shared/FaqAccordion';
-import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata = {
   title: 'Life Insurance | Toprates.ca - Term, Whole & Universal Life Coverage',
@@ -68,7 +67,6 @@ export default function LifeInsurancePage() {
 
   return (
     <main className="w-full">
-      <DisclaimerBlock vertical="life" />
       {/* Hero Banner */}
       <section className="bg-gradient-to-r from-[#1a365d] to-[#0f1f3a] text-white py-16 md:py-24">
         <PageWrapper>

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import AutoInsuranceClient from './_client/AutoInsuranceClient';
-import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata: Metadata = {
   title: 'Auto Insurance Education — TopRates.ca',
@@ -20,7 +19,6 @@ export const metadata: Metadata = {
 export default function AutoInsurancePage() {
   return (
     <>
-      <DisclaimerBlock vertical="pc" />
       <AutoInsuranceClient />
     </>
   );

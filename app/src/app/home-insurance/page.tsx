@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import HomeInsuranceClient from './_client/HomeInsuranceClient';
-import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata: Metadata = {
   title: 'Home Insurance Education — TopRates.ca',
@@ -20,7 +19,6 @@ export const metadata: Metadata = {
 export default function HomeInsurancePage() {
   return (
     <>
-      <DisclaimerBlock vertical="pc" />
       <HomeInsuranceClient />
     </>
   );

@@ -3,7 +3,6 @@ import { Button } from '@/components/ui/Button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/Card';
 import ContactForm from '@/components/shared/ContactForm';
 import FaqAccordion from '@/components/shared/FaqAccordion';
-import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata = {
   title: 'Business Insurance | Toprates.ca - Commercial Coverage for Canadian Businesses',
