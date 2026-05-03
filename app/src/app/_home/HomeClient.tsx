@@ -74,7 +74,7 @@ export default function HomeClient() {
               { tag: 'REFORM', tagColor: '#CC3333', tagBg: '#FFF0F0', title: 'Income Replacement Benefits: Do You Need Them?', date: 'May 11, 2026', read: '7 min read' },
               { tag: 'PERSONA', tagColor: '#B8960C', tagBg: '#FDF6E3', title: 'Self-Employed & Gig Workers: Why Coverage Matters More Than Ever', date: 'May 27, 2026', read: '6 min read' },
               { tag: 'TOOL', tagColor: '#6B46C1', tagBg: '#F3EEFF', title: 'Self-Assessment Checklist: Which Optional Benefits Do You Need?', date: 'May 22, 2026', read: 'Interactive' },
-              { tag: 'COMPARE', tagColor: '#0D8050', tagBg: '#E6F5ED', title: 'Cheapest Car Insurance in Ontario 2026: Complete Guide', date: 'Jun 5, 2026', read: '10 min read' },
+              { tag: 'COMPARE', tagColor: '#0D8050', tagBg: '#E6F5ED', title: 'Ontario Car Insurance in 2026: A Complete Guide to What You Pay', date: 'Jun 5, 2026', read: '10 min read' },
             ].map((article, i) => {
               const bar =
                 article.tag === 'REFORM' ? 'linear-gradient(90deg, #CC3333, #e05555)' :

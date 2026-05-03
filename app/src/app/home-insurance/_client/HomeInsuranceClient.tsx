@@ -42,7 +42,7 @@ export default function HomeInsuranceClient() {
                 Compare Home Insurance<br />in Ontario
               </h1>
               <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: '0 0 28px', maxWidth: 460 }}>
-                Homeowner, condo, or tenant — compare coverage and pricing from Ontario&rsquo;s top carriers. Bundle with auto and save up to 20%.
+                Homeowner, condo, or tenant — editorial coverage of Ontario home insurance: what is covered, what is not, and what to consider when bundling with auto.
               </p>
 
               <div style={{ display: 'flex', gap: 8, marginBottom: 20, flexWrap: 'wrap' }}>
@@ -200,7 +200,7 @@ export default function HomeInsuranceClient() {
                 Bundle home + auto and save 15–20%
               </h3>
               <p style={{ fontSize: 14, color: '#6b7b8d', margin: 0, maxWidth: 480 }}>
-                TopRates.ca automatically compares both bundled and unbundled rates to find you the actual cheapest option — not just the best single-carrier discount.
+                Editorial guides on TopRates.ca explain how bundled and unbundled options differ — so you know what to ask before you choose.
               </p>
             </div>
             <div style={{ textAlign: 'center', flexShrink: 0 }}>

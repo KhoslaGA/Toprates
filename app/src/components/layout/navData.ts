@@ -132,7 +132,7 @@ export const NAV_DATA: NavCategory[] = [
     promo: {
       tag: 'AVG SAVINGS',
       title: 'Bundle home + auto',
-      desc: 'Ontario homeowners save $782/yr on average by bundling home and auto with the same carrier.',
+      desc: 'Bundling home + auto with the same carrier typically reduces premiums. Editorial guide on what to know before you bundle.',
       cta: 'Learn how →',
       href: '/blog',
       accent: 'green',
@@ -229,8 +229,8 @@ export const NAV_DATA: NavCategory[] = [
     ],
     promo: {
       tag: 'BUNDLE SAVINGS',
-      title: 'Save up to 40% on bundles',
-      desc: 'Combine general liability + commercial property + cyber for the lowest rate. One quote, three covers.',
+      title: 'Bundle business coverage',
+      desc: 'Combining general liability, commercial property, and cyber typically reduces premiums. Editorial guide on the trade-offs.',
       cta: 'Compare bundles →',
       href: '/business-insurance',
       accent: 'green',
@@ -376,7 +376,7 @@ export const NAV_DATA: NavCategory[] = [
       },
     ],
     promo: {
-      tag: 'BEST RATES',
+      tag: 'FEATURED RATES',
       title: 'Top HISA & GIC rates',
       desc: 'Beat 5% on cash with the highest-paying high-interest accounts and GICs in Canada this month.',
       cta: 'Compare rates →',

@@ -90,7 +90,7 @@ export default function InvestingPage() {
                   <thead className="bg-gray-100 border-b-2 border-gray-200">
                     <tr>
                       <th className="px-6 py-4 text-left font-semibold text-[#1B2A4A]">Term</th>
-                      <th className="px-6 py-4 text-left font-semibold text-[#1B2A4A]">Best Rate</th>
+                      <th className="px-6 py-4 text-left font-semibold text-[#1B2A4A]">Featured Rate</th>
                       <th className="px-6 py-4 text-left font-semibold text-[#1B2A4A]">Provider</th>
                     </tr>
                   </thead>
