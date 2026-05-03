@@ -39,10 +39,10 @@ const columns: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: 'Legal',
     links: [
+      { label: 'Legal & Disclosures', href: '/legal' },
       { label: 'Privacy', href: '/privacy' },
       { label: 'Terms', href: '/terms' },
       { label: 'Affiliate disclosure', href: '/credit-cards/methodology' },
-      { label: 'Accessibility', href: '/about' },
     ],
   },
 ];
@@ -95,19 +95,25 @@ export default function Footer() {
             <p
               style={{
                 fontSize: 12,
-                fontStyle: 'italic',
-                color: 'rgba(255,255,255,0.45)',
+                color: 'rgba(255,255,255,0.55)',
                 lineHeight: 1.65,
                 margin: 0,
-                maxWidth: 360,
+                maxWidth: 380,
               }}
             >
-              TopRates.ca is operated by Webhub4u Inc., a Canadian financial technology company.
-              Life insurance content is reviewed by LLQP-licensed advisors at KLC Group Canada
-              Inc., an independent Canadian insurance brokerage, under partnership agreement.
-              Property &amp; casualty content is educational only — TopRates.ca is not currently
-              a registered insurance broker. Quote comparison and brokerage services launch
-              summer 2027.
+              TopRates.ca is a brand of Webhub4u Inc. Webhub4u Inc. is a technology company; it
+              is not a licensed insurance broker, mortgage broker, credit advisor, or investment
+              advisor. Insurance distribution is provided through KLC Group Canada Inc., a
+              licensed insurance advisory firm. Editorial content on this site is for general
+              information only and does not constitute personalized financial, insurance,
+              mortgage, credit, or investment advice.{' '}
+              <Link
+                href="/legal"
+                style={{ color: '#0fbdc9', textDecoration: 'underline' }}
+              >
+                Read our full disclosure
+              </Link>
+              .
             </p>
           </div>
 
@@ -166,10 +172,7 @@ export default function Footer() {
                 lineHeight: 1.6,
               }}
             >
-              © 2026 TopRates.ca · A Webhub4u Inc. brand ·{' '}
-              <span style={{ fontWeight: 700, color: 'rgba(255,255,255,0.55)' }}>
-                Education today. Quotes summer 2027.
-              </span>
+              © 2026 TopRates.ca, a brand of Webhub4u Inc. All rights reserved.
             </p>
           </div>
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.18)' }}>
