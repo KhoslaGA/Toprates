@@ -48,7 +48,7 @@ export default function PrivacyPage() {
               corporation. Webhub4u Inc. is the entity responsible for personal information
               collected through this website. TopRates.ca is an independent insurance education
               platform; it is not currently a registered insurance broker and does not currently
-              sell insurance, take applications, or place policies. <strong>KLC Group</strong>,
+              sell insurance, take applications, or place policies. <strong>KLC Group Canada Inc.</strong>,
               a separate Canadian company, will register with the Registered Insurance Brokers
               of Ontario (RIBO) and launch as a licensed brokerage in summer 2027.
             </p>
@@ -97,7 +97,7 @@ export default function PrivacyPage() {
             <p>
               The following categories of information are common in insurance quoting but are{' '}
               <strong>not</strong> collected today, because the platform doesn&rsquo;t support
-              quoting yet. They will be collected through KLC Group at the summer 2027 launch,
+              quoting yet. They will be collected through KLC Group Canada Inc. at the summer 2027 launch,
               and this Privacy Policy will be updated before that happens:
             </p>
             <ul>
@@ -126,8 +126,8 @@ export default function PrivacyPage() {
               </li>
               <li>
                 <strong>To pass quote requests to KLC Group at launch</strong> (if you submitted
-                the quote form with explicit consent and KLC Group is registered). Today, no
-                quote requests are forwarded — the form is held until KLC Group is operational.
+                the quote form with explicit consent and KLC Group Canada Inc. is registered). Today, no
+                quote requests are forwarded — the form is held until KLC Group Canada Inc. is operational.
                 You will be notified before any quote request is shared.
               </li>
               <li>
@@ -160,8 +160,8 @@ export default function PrivacyPage() {
                 identifiable-person tracking.
               </li>
               <li>
-                <strong>KLC Group</strong> &mdash; at the summer 2027 launch, quote requests
-                will be forwarded to KLC Group, a separate Canadian company that will be
+                <strong>KLC Group Canada Inc.</strong> &mdash; at the summer 2027 launch, quote requests
+                will be forwarded to KLC Group Canada Inc., a separate Canadian company that will be
                 registered with RIBO as an insurance brokerage. KLC Group will operate under its
                 own privacy practices, which will be linked here when the brokerage launches.
                 You will provide explicit consent before any quote request is shared.
@@ -292,7 +292,7 @@ export default function PrivacyPage() {
             </h2>
             <p>
               We will update this Privacy Policy when our data practices change &mdash; including
-              before KLC Group launches as a registered brokerage in summer 2027 with the quote engine.
+              before KLC Group Canada Inc. launches as a registered brokerage in summer 2027 with the quote engine.
               Changes will be reflected in the &ldquo;Last Updated&rdquo; date at the top.
               Material changes will be communicated to anyone on the waitlist via email.
             </p>

@@ -42,7 +42,7 @@ export default function TermsPage() {
               Toprates.ca is operated by Webhub4u Inc. as an independent insurance education platform. Today, the site provides educational content and accepts waitlist signups for our summer 2027 launch. TopRates.ca is not currently a registered insurance broker and does not currently sell insurance, take applications, or place policies.
             </p>
             <p className="mt-4">
-              TopRates.ca is not currently licensed as an insurance broker in any Canadian province. At our planned summer 2027 launch, the regulated brokerage activities (quoting, application, policy placement) will be performed by KLC Group, registered with the Registered Insurance Brokers of Ontario (RIBO). These Terms will be updated to reflect the licensed brokerage relationship at that time.
+              TopRates.ca is not currently licensed as an insurance broker in any Canadian province. At our planned summer 2027 launch, the regulated brokerage activities (quoting, application, policy placement) will be performed by KLC Group Canada Inc., registered with the Registered Insurance Brokers of Ontario (RIBO). These Terms will be updated to reflect the licensed brokerage relationship at that time.
             </p>
           </section>
 
@@ -79,16 +79,16 @@ export default function TermsPage() {
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-[#1a365d] mb-4">
-              4. Our Role (Pre-Launch and at Launch)
+              4. Our Role (Today and at Summer 2027 Launch)
             </h2>
             <p>
-              <strong>Today (Pre-Launch):</strong> TopRates.ca (Webhub4u Inc.) operates the website, publishes educational content, and accepts waitlist signups. We do not act as your insurance broker, do not represent you in insurance transactions, and do not provide insurance advice.
+              <strong>Today:</strong> TopRates.ca (Webhub4u Inc.) operates the website, publishes educational content, and accepts newsletter signups. Life insurance content is reviewed by LLQP-licensed advisors at KLC Group Canada Inc. under partnership agreement. We do not act as your insurance broker, do not represent you in insurance transactions, and do not provide insurance advice.
             </p>
             <p className="mt-4">
-              <strong>At Summer 2027 Launch:</strong> KLC Group, registered with RIBO will act as your insurance broker for any quotes, applications, and policy placements initiated through the platform. TopRates.ca itself is a technology platform; the regulated brokerage relationship will be with KLC Group, not Webhub4u Inc.
+              <strong>At Summer 2027 Launch:</strong> KLC Group Canada Inc., registered with RIBO will act as your insurance broker for any quotes, applications, and policy placements initiated through the platform. TopRates.ca itself is a technology platform; the regulated brokerage relationship will be with KLC Group Canada Inc., not Webhub4u Inc.
             </p>
             <p className="mt-4">
-              <strong>Not an Insurer:</strong> Neither Webhub4u Inc. nor KLC Group underwrites insurance. Insurance policies are issued by licensed insurance companies.
+              <strong>Not an Insurer:</strong> Neither Webhub4u Inc. nor KLC Group Canada Inc. underwrites insurance. Insurance policies are issued by licensed insurance companies.
             </p>
           </section>
 
@@ -124,7 +124,7 @@ export default function TermsPage() {
               <strong>Compensation (current):</strong> Today, TopRates.ca (Webhub4u Inc.) does not earn insurance commissions because the platform is not yet operating insurance transactions.
             </p>
             <p className="mt-4">
-              <strong>Compensation (at launch):</strong> When the platform launches in 2027 with KLC Group, KLC Group will be compensated through commissions paid by insurance providers. Those commissions do not increase the price you pay. TopRates.ca (Webhub4u Inc.) will receive a per-lead or per-referral fee from the licensed brokerage, separate from insurance commission. We will update these Terms before summer 2027 launch to reflect the operating arrangement.
+              <strong>Compensation (at launch):</strong> When the platform launches in 2027 with KLC Group Canada Inc., KLC Group Canada Inc. will be compensated through commissions paid by insurance providers. Those commissions do not increase the price you pay. TopRates.ca (Webhub4u Inc.) will receive a per-lead or per-referral fee from the licensed brokerage, separate from insurance commission. We will update these Terms before summer 2027 launch to reflect the operating arrangement.
             </p>
             <p className="mt-4">
               <strong>Service Fees:</strong> In some cases, after launch, we may charge service fees for policy administration, changes, or other services. We will inform you of any applicable fees before proceeding.
@@ -136,7 +136,7 @@ export default function TermsPage() {
               7. Claims and Coverage
             </h2>
             <p>
-              <strong>Claims Handling (at summer 2027 launch):</strong> Once KLC Group is operating and you purchase a policy through KLC Group, claims will be handled directly by the insurance provider. KLC Group can assist you in submitting claims, but the insurance company makes coverage decisions. (Today, no policies are placed through the platform.)
+              <strong>Claims Handling (at summer 2027 launch):</strong> Once KLC Group Canada Inc. is operating and you purchase a policy through KLC Group Canada Inc., claims will be handled directly by the insurance provider. KLC Group Canada Inc. can assist you in submitting claims, but the insurance company makes coverage decisions. (Today, no policies are placed through the platform.)
             </p>
             <p className="mt-4">
               <strong>Policy Disputes:</strong> Disputes regarding policy coverage should be directed to the insurance provider. We will cooperate in resolving disputes but cannot override insurance company decisions.
@@ -274,7 +274,7 @@ export default function TermsPage() {
               <strong>Insurance Disputes:</strong> For disputes related to insurance policies or coverage, you should contact the insurance company first. If unresolved, you may file a complaint with your provincial insurance regulator.
             </p>
             <p className="mt-4">
-              <strong>Platform Disputes:</strong> For disputes with TopRates.ca (Webhub4u Inc.) regarding the website or services described in these Terms, please contact us to attempt resolution. If unresolved, disputes may be subject to binding arbitration. Brokerage disputes will, at launch, be handled by KLC Group under its own complaints process.
+              <strong>Platform Disputes:</strong> For disputes with TopRates.ca (Webhub4u Inc.) regarding the website or services described in these Terms, please contact us to attempt resolution. If unresolved, disputes may be subject to binding arbitration. Brokerage disputes will, at launch, be handled by KLC Group Canada Inc. under its own complaints process.
             </p>
           </section>
 
