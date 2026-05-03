@@ -58,7 +58,7 @@ export default function HomeClient() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 40, flexWrap: 'wrap', gap: 16 }}>
             <div>
               <div style={{ fontSize: 12, fontWeight: 700, color: '#0A7E8C', letterSpacing: 2, textTransform: 'uppercase', marginBottom: 8 }}>Latest Guides</div>
-              <h2 style={{ fontFamily: "'Outfit'", fontWeight: 800, fontSize: 30, color: '#1B2A4A', margin: 0 }}>
+              <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 30, color: '#1B2A4A', margin: 0 }}>
                 Ontario insurance, explained simply
               </h2>
             </div>
@@ -106,7 +106,7 @@ export default function HomeClient() {
                         {article.tag}
                       </span>
                     </div>
-                    <h3 style={{ fontFamily: "'Outfit'", fontWeight: 700, fontSize: 17, color: '#1B2A4A', margin: '0 0 12px', lineHeight: 1.3 }}>
+                    <h3 style={{ fontFamily: "'Inter Tight'", fontWeight: 700, fontSize: 17, color: '#1B2A4A', margin: '0 0 12px', lineHeight: 1.3 }}>
                       {article.title}
                     </h3>
                     <div style={{ display: 'flex', gap: 12, fontSize: 12, color: '#98a2b3' }}>
@@ -127,7 +127,7 @@ export default function HomeClient() {
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
             <div style={{ fontSize: 12, fontWeight: 700, color: '#0A7E8C', letterSpacing: 2, textTransform: 'uppercase', marginBottom: 8 }}>Got Questions?</div>
-            <h2 style={{ fontFamily: "'Outfit'", fontWeight: 800, fontSize: 30, color: '#1B2A4A', margin: '0 0 12px' }}>
+            <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 30, color: '#1B2A4A', margin: '0 0 12px' }}>
               We help Canadians make better insurance<br />and money decisions
             </h2>
             <p style={{ fontSize: 15, color: '#6b7b8d', maxWidth: 520, margin: '0 auto' }}>
@@ -206,7 +206,7 @@ export default function HomeClient() {
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
             <div style={{ fontSize: 12, fontWeight: 700, color: '#0A7E8C', letterSpacing: 2, textTransform: 'uppercase', marginBottom: 8 }}>Compare & Save</div>
-            <h2 style={{ fontFamily: "'Outfit'", fontWeight: 800, fontSize: 30, color: '#1B2A4A', margin: 0 }}>
+            <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 30, color: '#1B2A4A', margin: 0 }}>
               One platform for all your insurance needs
             </h2>
           </div>
@@ -229,7 +229,7 @@ export default function HomeClient() {
                 }}
               >
                 <div style={{ fontSize: 36, marginBottom: 12 }}>{prod.icon}</div>
-                <h3 style={{ fontFamily: "'Outfit'", fontWeight: 700, fontSize: 17, color: '#1B2A4A', margin: '0 0 8px' }}>{prod.title}</h3>
+                <h3 style={{ fontFamily: "'Inter Tight'", fontWeight: 700, fontSize: 17, color: '#1B2A4A', margin: '0 0 8px' }}>{prod.title}</h3>
                 <p style={{ fontSize: 13, color: '#6b7b8d', lineHeight: 1.5, margin: '0 0 14px' }}>{prod.desc}</p>
                 <span
                   style={{
@@ -257,7 +257,7 @@ export default function HomeClient() {
       >
         <div style={{ position: 'absolute', top: -80, right: -80, width: 300, height: 300, borderRadius: '50%', background: 'rgba(10,126,140,0.06)' }} />
         <div style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
-          <h2 style={{ fontFamily: "'Outfit'", fontWeight: 800, fontSize: 30, color: '#fff', margin: '0 0 12px' }}>
+          <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 30, color: '#fff', margin: '0 0 12px' }}>
             Be the first to compare
           </h2>
           <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', margin: '0 0 32px' }}>
@@ -274,7 +274,7 @@ export default function HomeClient() {
                 style={{
                   flex: 1, padding: '14px 18px', borderRadius: 12,
                   border: '2px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.07)',
-                  color: '#fff', fontSize: 15, fontFamily: "'DM Sans'", outline: 'none',
+                  color: '#fff', fontSize: 15, fontFamily: "'Inter Tight'", outline: 'none',
                 }}
               />
               <button
@@ -284,7 +284,7 @@ export default function HomeClient() {
                   background: 'linear-gradient(135deg, #0A7E8C, #0d9aa8)',
                   color: '#fff', border: 'none', borderRadius: 12,
                   padding: '14px 28px', fontSize: 15, fontWeight: 700,
-                  cursor: submitting ? 'wait' : 'pointer', fontFamily: "'DM Sans'",
+                  cursor: submitting ? 'wait' : 'pointer', fontFamily: "'Inter Tight'",
                   boxShadow: '0 4px 20px rgba(10,126,140,0.35)', whiteSpace: 'nowrap',
                   opacity: submitting ? 0.7 : 1,
                 }}

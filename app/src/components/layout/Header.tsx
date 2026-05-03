@@ -65,7 +65,7 @@ export default function Header() {
             >
               <span
                 style={{
-                  fontFamily: "'Outfit'",
+                  fontFamily: "'Inter Tight'",
                   fontWeight: 900,
                   fontSize: 21,
                   color: TEAL,
@@ -75,7 +75,7 @@ export default function Header() {
               </span>
               <span
                 style={{
-                  fontFamily: "'Outfit'",
+                  fontFamily: "'Inter Tight'",
                   fontWeight: 900,
                   fontSize: 21,
                   color: NAVY,
@@ -128,7 +128,7 @@ export default function Header() {
                 padding: '8px 18px',
                 fontSize: 13,
                 fontWeight: 700,
-                fontFamily: "'DM Sans'",
+                fontFamily: "'Inter Tight'",
                 textDecoration: 'none',
                 whiteSpace: 'nowrap',
                 transition: 'opacity 0.2s',
@@ -166,7 +166,7 @@ export default function Header() {
             >
               <span
                 style={{
-                  fontFamily: "'Outfit'",
+                  fontFamily: "'Inter Tight'",
                   fontWeight: 900,
                   fontSize: 18,
                   color: TEAL,
@@ -176,7 +176,7 @@ export default function Header() {
               </span>
               <span
                 style={{
-                  fontFamily: "'Outfit'",
+                  fontFamily: "'Inter Tight'",
                   fontWeight: 900,
                   fontSize: 18,
                   color: NAVY,
@@ -274,7 +274,7 @@ export default function Header() {
                     borderRadius: 8,
                     textDecoration: 'none',
                     fontSize: 13,
-                    fontFamily: "'DM Sans'",
+                    fontFamily: "'Inter Tight'",
                   }}
                 >
                   Get Quotes

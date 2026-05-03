@@ -37,9 +37,9 @@
   --color-accent-800: #92400e;
   --color-accent-900: #78350f;
 
-  --font-sans: 'DM Sans', system-ui, sans-serif;
-  --font-heading: 'Outfit', system-ui, sans-serif;
-  --font-serif: 'Newsreader', Georgia, serif;
+  --font-sans: 'Inter Tight', system-ui, sans-serif;
+  --font-heading: 'Inter Tight', system-ui, sans-serif;
+  --font-serif: 'Inter Tight', system-ui, sans-serif;
 
   --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.06);
   --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.10);
@@ -79,7 +79,7 @@
   align-items: center;
 }
 .hero-h1-v2 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 900;
   font-size: 64px;
   letter-spacing: -2.2px;
@@ -160,7 +160,7 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'Inter Tight', system-ui, sans-serif;
   color: #2D2D2D;
   background: #fff;
 }

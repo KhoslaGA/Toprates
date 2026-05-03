@@ -26,11 +26,14 @@ export const colors = {
   green: '#0D8050',
 } as const;
 
+// One headline + body font. One mono. That's it.
 export const fonts = {
-  heading: "'Outfit', system-ui, sans-serif",
-  body: "'DM Sans', system-ui, sans-serif",
-  serif: "'Newsreader', Georgia, serif",
+  display: "'Inter Tight', system-ui, sans-serif",
+  body: "'Inter Tight', system-ui, sans-serif",
   mono: "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+  // Aliases kept so existing call-sites don't break during migration.
+  heading: "'Inter Tight', system-ui, sans-serif",
+  serif: "'Inter Tight', system-ui, sans-serif",
 } as const;
 
 export const layout = {

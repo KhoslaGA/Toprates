@@ -70,7 +70,7 @@ export default function Footer() {
           <div>
             <div
               style={{
-                fontFamily: "'Outfit'",
+                fontFamily: "'Inter Tight'",
                 fontWeight: 900,
                 fontSize: 22,
                 color: '#0A7E8C',
