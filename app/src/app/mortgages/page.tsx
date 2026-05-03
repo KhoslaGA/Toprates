@@ -152,11 +152,11 @@ export default function MortgagesPage() {
           {/* MBLAA-compliant referral disclosure */}
           <div className="bg-white/5 border border-white/10 rounded-lg p-4 mt-8 text-sm text-gray-200 max-w-3xl mx-auto text-left">
             <strong className="text-white">Referral disclosure:</strong> TopRates.ca (operated by
-            Webhub4u Inc.) is not a registered mortgage brokerage. Mortgage referrals are made to
-            licensed mortgage brokerages registered under Ontario&rsquo;s Mortgage Brokerages,
-            Lenders and Administrators Act (MBLAA). At launch, we may receive a per-referral fee
-            from KLC Group. We do not provide mortgage advice. Choice of mortgage
-            broker and product is yours.
+            Webhub4u Inc.) is not a registered mortgage brokerage. Mortgage referrals on this site
+            are made under Ontario&rsquo;s Mortgage Brokerages, Lenders and Administrators Act
+            (MBLAA) referral arrangement exemption, to a registered mortgage brokerage partner.
+            Webhub4u Inc. may receive a per-referral fee. We do not provide mortgage advice.
+            Choice of mortgage broker and product is yours.
           </div>
         </div>
       </section>
