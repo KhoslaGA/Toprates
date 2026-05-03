@@ -1,21 +1,27 @@
 import type { Metadata } from 'next';
 import AutoInsuranceClient from './_client/AutoInsuranceClient';
+import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata: Metadata = {
-  title: 'Compare Car Insurance in Ontario — TopRates.ca',
+  title: 'Auto Insurance Education — TopRates.ca',
   description:
-    'Compare Ontario auto insurance from 30+ carriers at summer 2027 launch. Independent insurance education platform with educational content on the July 2026 Ontario auto reform.',
+    'Plain-English Ontario auto insurance education. Educational content on the July 2026 Ontario reform. Education today. Quotes summer 2027. Operated by Webhub4u Inc.',
   keywords:
-    'car insurance Ontario, auto insurance Ontario, compare car insurance, Ontario auto reform 2026, pink slip, cheapest car insurance Ontario',
+    'car insurance Ontario, auto insurance Ontario, Ontario auto reform 2026, pink slip',
   openGraph: {
-    title: 'Compare Car Insurance in Ontario — TopRates.ca',
+    title: 'Auto Insurance Education — TopRates.ca',
     description:
-      'Compare 30+ Ontario auto insurance carriers in under 2 minutes. Built for the July 2026 reform.',
+      'Plain-English Ontario auto insurance education. Education today. Quotes summer 2027.',
     type: 'website',
   },
   alternates: { canonical: '/auto-insurance' },
 };
 
 export default function AutoInsurancePage() {
-  return <AutoInsuranceClient />;
+  return (
+    <>
+      <DisclaimerBlock vertical="pc" />
+      <AutoInsuranceClient />
+    </>
+  );
 }

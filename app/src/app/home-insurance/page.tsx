@@ -1,21 +1,27 @@
 import type { Metadata } from 'next';
 import HomeInsuranceClient from './_client/HomeInsuranceClient';
+import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata: Metadata = {
-  title: 'Compare Home Insurance in Ontario — TopRates.ca',
+  title: 'Home Insurance Education — TopRates.ca',
   description:
-    "Compare Ontario home insurance from top carriers. Homeowner, condo, or tenant — bundle with auto and save 15–20%. Water damage, liability, and replacement cost coverage explained.",
+    'Plain-English Ontario home insurance education. Homeowner, condo, tenant — what is covered, what is not, what to ask. Education today. Quotes summer 2027.',
   keywords:
-    'home insurance Ontario, condo insurance Ontario, tenant insurance Ontario, bundle home auto insurance, water damage coverage Ontario',
+    'home insurance Ontario, condo insurance Ontario, tenant insurance Ontario, water damage coverage Ontario',
   openGraph: {
-    title: 'Compare Home Insurance in Ontario — TopRates.ca',
+    title: 'Home Insurance Education — TopRates.ca',
     description:
-      "Compare Ontario home insurance from top carriers. Bundle with auto and save 15–20%.",
+      'Plain-English Ontario home insurance education. Education today. Quotes summer 2027.',
     type: 'website',
   },
   alternates: { canonical: '/home-insurance' },
 };
 
 export default function HomeInsurancePage() {
-  return <HomeInsuranceClient />;
+  return (
+    <>
+      <DisclaimerBlock vertical="pc" />
+      <HomeInsuranceClient />
+    </>
+  );
 }
