@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import ContactForm from '@/components/contact/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Compare Canadian Mortgage Rates | TopRates.ca',
@@ -192,6 +193,19 @@ export default function MortgagesPage() {
                 <p className="text-gray-600 mt-4">{item.a}</p>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact form CTA */}
+      <section className="py-16">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-[#1B2A4A] mb-2">Get in touch</h2>
+          <p className="text-gray-700 mb-8">
+            Have a mortgage question or want to talk to a licensed broker? Send us a quick note and we&rsquo;ll be in touch within one business day.
+          </p>
+          <div className="bg-white rounded-lg shadow-md p-8 border border-gray-100">
+            <ContactForm defaultProduct="mortgages" />
           </div>
         </div>
       </section>

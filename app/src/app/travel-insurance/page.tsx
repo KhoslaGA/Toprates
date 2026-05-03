@@ -1,7 +1,7 @@
 import PageWrapper from '@/components/layout/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/Card';
-import ContactForm from '@/components/shared/ContactForm';
+import ContactForm from '@/components/contact/ContactForm';
 import FaqAccordion from '@/components/shared/FaqAccordion';
 
 export const metadata = {
@@ -168,7 +168,9 @@ export default function TravelInsurancePage() {
             <p className="text-lg text-gray-100 mb-10 text-center">
               Instant quotes and online purchase. Protect your health and investment with comprehensive travel coverage.
             </p>
-            <ContactForm className="bg-white rounded-lg p-8" />
+            <div className="bg-white rounded-lg p-8">
+              <ContactForm defaultProduct="travel-insurance" />
+            </div>
           </div>
         </PageWrapper>
       </section>

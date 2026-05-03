@@ -1,7 +1,7 @@
 import PageWrapper from '@/components/layout/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/Card';
-import ContactForm from '@/components/shared/ContactForm';
+import ContactForm from '@/components/contact/ContactForm';
 import FaqAccordion from '@/components/shared/FaqAccordion';
 
 export const metadata = {
@@ -168,7 +168,9 @@ export default function BusinessInsurancePage() {
             <p className="text-lg text-gray-100 mb-10 text-center">
               Get comprehensive business insurance quotes tailored to your industry and needs. Quick turnaround and competitive rates.
             </p>
-            <ContactForm className="bg-white rounded-lg p-8" />
+            <div className="bg-white rounded-lg p-8">
+              <ContactForm defaultProduct="business-insurance" />
+            </div>
           </div>
         </PageWrapper>
       </section>

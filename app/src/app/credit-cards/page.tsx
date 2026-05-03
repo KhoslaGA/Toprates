@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import ContactForm from '@/components/contact/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Compare Credit Cards in Canada | TopRates.ca',
@@ -202,18 +203,16 @@ export default function CreditCardsPage() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="py-12 bg-[#1B2A4A] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">
-            Compare, Apply, and Get Rewards
-          </h2>
-          <p className="text-gray-300 mb-6">
-            TopRates makes it easy to find and apply for the best credit cards in Canada.
+      {/* Contact form CTA */}
+      <section className="py-16 bg-white">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-[#1B2A4A] mb-2">Get in touch</h2>
+          <p className="text-gray-700 mb-8">
+            Have a question about Canadian credit cards? Send us a quick note and we&rsquo;ll be in touch within one business day.
           </p>
-          <button className="bg-[#00B482] hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition">
-            View All Cards
-          </button>
+          <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+            <ContactForm defaultProduct="credit-cards" />
+          </div>
         </div>
       </section>
     </main>

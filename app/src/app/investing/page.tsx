@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import ContactForm from '@/components/contact/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Best Investment Rates in Canada | GIC, HISA, Robo-Advisors | TopRates',
@@ -397,22 +398,15 @@ export default function InvestingPage() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="py-16 bg-gradient-to-r from-[#1B2A4A] to-[#2d3f5a] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Ready to Grow Your Wealth?
-          </h2>
-          <p className="text-xl text-gray-200 mb-8">
-            Compare rates, choose the right investment, and start your journey to financial freedom.
+      {/* Bottom CTA — unified ContactForm */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-[#1B2A4A] mb-2">Get in touch</h2>
+          <p className="text-gray-700 mb-8">
+            Have a question about investing in Canada? Send us a quick note and we&rsquo;ll be in touch within one business day.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-[#00B482] hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition">
-              Compare All Options
-            </button>
-            <button className="border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-[#1B2A4A] transition">
-              Learn More
-            </button>
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <ContactForm defaultProduct="investing" />
           </div>
         </div>
       </section>
