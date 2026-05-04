@@ -287,11 +287,10 @@ export default function TermsPage() {
               If you have questions about these Terms of Service:
             </p>
             <p className="mt-4">
-              <strong>Toprates.ca</strong><br />
-              250 King Street West, Suite 1200<br />
-              Toronto, ON M5H 3S5<br />
-              Email: <a href="mailto:legal@toprates.ca" className="text-[#0d9488] hover:text-[#0a7566]">legal@toprates.ca</a><br />
-              Phone: 1-800-TOPRATES
+              <strong>Webhub4u Inc. (TopRates.ca)</strong><br />
+              Operating from Brampton, Ontario, Canada<br />
+              Email: <a href="mailto:toprates56@gmail.com" className="text-[#0d9488] hover:text-[#0a7566]">toprates56@gmail.com</a><br />
+              Mailing address available on request via toprates56@gmail.com
             </p>
           </section>
 

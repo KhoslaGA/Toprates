@@ -54,8 +54,8 @@ export default function PrivacyPage() {
             </p>
             <p className="mt-4">
               <strong>Privacy Officer:</strong>{' '}
-              <a href="mailto:privacy@toprates.ca" className="text-[#0d9488] underline">
-                privacy@toprates.ca
+              <a href="mailto:toprates56@gmail.com" className="text-[#0d9488] underline">
+                toprates56@gmail.com
               </a>
             </p>
           </section>
@@ -252,8 +252,8 @@ export default function PrivacyPage() {
               <li>
                 <strong>Complain</strong> &mdash; if you believe we have mishandled your personal
                 information, you can complain to our Privacy Officer at{' '}
-                <a href="mailto:privacy@toprates.ca" className="text-[#0d9488] underline">
-                  privacy@toprates.ca
+                <a href="mailto:toprates56@gmail.com" className="text-[#0d9488] underline">
+                  toprates56@gmail.com
                 </a>{' '}
                 or to the Office of the Privacy Commissioner of Canada (OPC) at{' '}
                 <a
@@ -269,8 +269,8 @@ export default function PrivacyPage() {
             </ul>
             <p>
               To exercise any of these rights, email{' '}
-              <a href="mailto:privacy@toprates.ca" className="text-[#0d9488] underline">
-                privacy@toprates.ca
+              <a href="mailto:toprates56@gmail.com" className="text-[#0d9488] underline">
+                toprates56@gmail.com
               </a>{' '}
               from the address associated with your record. We aim to respond within 30 days as
               required by PIPEDA.
@@ -325,22 +325,13 @@ export default function PrivacyPage() {
             <p>
               <strong>Webhub4u Inc.</strong>
               <br />
-              Privacy Officer:{' '}
-              <a href="mailto:privacy@toprates.ca" className="text-[#0d9488] underline">
-                privacy@toprates.ca
+              For privacy, data protection, general inquiries, editorial complaints, or website
+              operations:{' '}
+              <a href="mailto:toprates56@gmail.com" className="text-[#0d9488] underline">
+                toprates56@gmail.com
               </a>
               <br />
-              General contact:{' '}
-              <a href="mailto:contact@toprates.ca" className="text-[#0d9488] underline">
-                contact@toprates.ca
-              </a>
-              <br />
-              Editorial / complaints:{' '}
-              <a href="mailto:editorial@toprates.ca" className="text-[#0d9488] underline">
-                editorial@toprates.ca
-              </a>
-              <br />
-              Mailing address: available on request via privacy@toprates.ca
+              Mailing address: available on request via toprates56@gmail.com
             </p>
             <p className="mt-4 text-sm text-gray-600">
               Operating from Brampton, Ontario, Canada.

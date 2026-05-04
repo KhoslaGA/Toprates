@@ -111,8 +111,7 @@ export function generateOrganizationSchema() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Service',
-      telephone: '+1-XXX-XXX-XXXX',
-      email: 'info@toprates.ca',
+      email: 'toprates56@gmail.com',
     },
   };
 }

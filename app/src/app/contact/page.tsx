@@ -59,33 +59,16 @@ export default function ContactPage() {
               <CardContent>
                 <p className="text-gray-700 font-semibold mb-1">
                   <a
-                    href="mailto:contact@toprates.ca"
+                    href="mailto:toprates56@gmail.com"
                     className="text-[#0d9488] hover:text-[#0a7566]"
                   >
-                    contact@toprates.ca
+                    toprates56@gmail.com
                   </a>
                 </p>
-                <p className="text-gray-600 text-sm mb-4">General inquiries</p>
-
-                <p className="text-gray-700 font-semibold mb-1">
-                  <a
-                    href="mailto:privacy@toprates.ca"
-                    className="text-[#0d9488] hover:text-[#0a7566]"
-                  >
-                    privacy@toprates.ca
-                  </a>
+                <p className="text-gray-600 text-sm">
+                  General inquiries, privacy and data-protection requests, and complaints about
+                  content or operations.
                 </p>
-                <p className="text-gray-600 text-sm mb-4">Privacy or data-protection inquiries</p>
-
-                <p className="text-gray-700 font-semibold mb-1">
-                  <a
-                    href="mailto:editorial@toprates.ca"
-                    className="text-[#0d9488] hover:text-[#0a7566]"
-                  >
-                    editorial@toprates.ca
-                  </a>
-                </p>
-                <p className="text-gray-600 text-sm">Complaints about content or operations</p>
               </CardContent>
             </Card>
 
@@ -98,7 +81,7 @@ export default function ContactPage() {
                 <p className="text-gray-600 text-sm">
                   Brampton, Ontario, Canada
                   <br />
-                  Mailing address available on request via privacy@toprates.ca
+                  Mailing address available on request via toprates56@gmail.com
                 </p>
               </CardContent>
             </Card>
