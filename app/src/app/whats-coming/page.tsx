@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Bo } from '@/components/brand/Bo';
 import { colors, fonts } from '@/styles/tokens';
+import { WebhubLink } from '@/components/legal/WebhubLink';
 
 export const metadata: Metadata = {
   title: "What's coming summer 2027 — TopRates.ca",
@@ -71,7 +72,7 @@ export default function WhatsComingPage() {
                   maxWidth: 560,
                 }}
               >
-                TopRates.ca is operated by Webhub4u Inc. as an independent insurance education
+                TopRates.ca is operated by <WebhubLink /> as an independent insurance education
                 platform today. Summer 2027, KLC Group launches as a RIBO-registered insurance
                 brokerage to handle the quoting and policy placement. This page lays out the
                 roadmap.

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Icon } from '@/components/brand/Icon';
 import { Bo } from '@/components/brand/Bo';
 import { colors, fonts } from '@/styles/tokens';
+import { WebhubLink } from '@/components/legal/WebhubLink';
 
 export default function ComingSoonPage() {
   const [email, setEmail] = useState('');
@@ -227,8 +228,8 @@ export default function ComingSoonPage() {
               lineHeight: 1.5,
             }}
           >
-            By joining, you agree to receive launch updates and Canadian insurance education content from
-            Webhub4u Inc. (operator of TopRates.ca). Unsubscribe anytime. See our{' '}
+            By joining, you agree to receive launch updates and Canadian insurance education content from{' '}
+            <WebhubLink /> (operator of TopRates.ca). Unsubscribe anytime. See our{' '}
             <a href="/privacy" style={{ color: '#0fbdc9' }}>
               Privacy Policy
             </a>

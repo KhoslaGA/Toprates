@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { WebhubLink } from '@/components/legal/WebhubLink';
 
 export const metadata: Metadata = {
   title: 'Legal & Disclosures — TopRates.ca',
@@ -49,15 +50,18 @@ export default function LegalPage() {
               About TopRates.ca
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              TopRates.ca is operated by <strong className="text-[#1B2A4A]">Webhub4u Inc.</strong>,
-              a Canadian technology company that publishes educational content about Canadian
+              TopRates.ca is operated by{' '}
+              <strong className="text-[#1B2A4A]">
+                <WebhubLink />
+              </strong>
+              , a Canadian technology company that publishes educational content about Canadian
               insurance, credit cards, mortgages, and investing. TopRates.ca also operates a
               contact form through which prospective customers may submit inquiries.
             </p>
             <div className="bg-[#1B2A4A]/[0.04] border-l-4 border-[#1B2A4A] rounded-r-lg p-5 my-5">
               <p className="text-[#1B2A4A] font-semibold leading-relaxed">
-                Webhub4u Inc. is not a licensed insurance broker, mortgage broker, credit advisor,
-                investment advisor, or financial advisor.
+                <WebhubLink /> is not a licensed insurance broker, mortgage broker, credit
+                advisor, investment advisor, or financial advisor.
               </p>
               <p className="text-[#1B2A4A]/80 leading-relaxed text-sm mt-2">
                 Information published on TopRates.ca is provided for general educational purposes
@@ -90,7 +94,9 @@ export default function LegalPage() {
                 <div className="text-[10px] uppercase tracking-wider text-gray-500 font-bold mb-1">
                   Operator
                 </div>
-                <div className="font-semibold text-[#1B2A4A] mb-1">Webhub4u Inc.</div>
+                <div className="font-semibold text-[#1B2A4A] mb-1">
+                  <WebhubLink />
+                </div>
                 <div className="text-sm text-gray-600">Owned by Tanvi Kapoor</div>
               </div>
               <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
@@ -103,8 +109,8 @@ export default function LegalPage() {
             </div>
 
             <p className="text-gray-700 leading-relaxed mb-4">
-              The two companies maintain a documented commercial referral arrangement under which
-              Webhub4u Inc. may receive a per-referral fee for inquiries referred to KLC Group
+              The two companies maintain a documented commercial referral arrangement under which{' '}
+              <WebhubLink /> may receive a per-referral fee for inquiries referred to KLC Group
               Canada Inc.
             </p>
 
@@ -185,15 +191,15 @@ export default function LegalPage() {
               </div>
               <p className="text-gray-800 leading-relaxed mb-3">
                 Submitting a contact form through TopRates.ca does not create a broker-client,
-                advisor-client, financial advisor-client, or fiduciary relationship with
-                Webhub4u Inc.
+                advisor-client, financial advisor-client, or fiduciary relationship with{' '}
+                <WebhubLink />.
               </p>
               <p className="text-gray-800 leading-relaxed mb-3">
                 Any licensed insurance advice, where applicable, is provided only by appropriately
                 licensed representatives of KLC Group Canada Inc.
               </p>
               <p className="text-gray-800 leading-relaxed">
-                Webhub4u Inc. does not provide licensed insurance, mortgage, credit, investment,
+                <WebhubLink /> does not provide licensed insurance, mortgage, credit, investment,
                 tax, legal, or financial advice.
               </p>
             </div>

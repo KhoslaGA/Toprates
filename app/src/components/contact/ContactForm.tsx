@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { WebhubLink } from '@/components/legal/WebhubLink';
 
 export type ContactProduct =
   | 'life-insurance'
@@ -213,7 +214,7 @@ export default function ContactForm({
             style={{ marginTop: 4, flexShrink: 0 }}
           />
           <span style={{ fontSize: 13, lineHeight: 1.5, color: '#374151' }}>
-            I consent to TopRates.ca (operated by Webhub4u Inc.) collecting my information to
+            I consent to TopRates.ca (operated by <WebhubLink />) collecting my information to
             respond to my inquiry. For insurance inquiries, my information may be shared with{' '}
             <strong>KLC Group Canada Inc.</strong>, a licensed insurance advisory firm. See{' '}
             <Link

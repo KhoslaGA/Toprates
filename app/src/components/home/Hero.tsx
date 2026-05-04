@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Icon } from '../brand/Icon';
 import { Bo } from '../brand/Bo';
 import { colors, fonts } from '@/styles/tokens';
+import { WebhubLink } from '@/components/legal/WebhubLink';
 
 
 export default function Hero() {
@@ -135,7 +136,7 @@ export default function Hero() {
                 lineHeight: 1.6,
               }}
             >
-              Reviewed by LLQP-licensed advisors at KLC Group Canada Inc. and the editorial team at TopRates.ca · operated by Webhub4u Inc. We read the fine print. We rewrite it in English. You decide what to do with it.
+              Reviewed by LLQP-licensed advisors at KLC Group Canada Inc. and the editorial team at TopRates.ca · operated by <WebhubLink />. We read the fine print. We rewrite it in English. You decide what to do with it.
             </p>
 
             {!done ? (
@@ -228,7 +229,7 @@ export default function Hero() {
                 }}
               >
                 By joining, you agree to receive launch updates and Canadian insurance education content
-                from Webhub4u Inc. (operator of TopRates.ca). Unsubscribe anytime. See our{' '}
+                from <WebhubLink /> (operator of TopRates.ca). Unsubscribe anytime. See our{' '}
                 <a href="/privacy" style={{ color: '#0fbdc9' }}>
                   Privacy Policy
                 </a>

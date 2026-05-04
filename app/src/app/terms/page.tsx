@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import PageWrapper from '@/components/layout/PageWrapper';
+import { WebhubLink } from '@/components/legal/WebhubLink';
 
 export const metadata = {
   title: 'Terms of Service | TopRates.ca',
@@ -40,10 +41,10 @@ export default function TermsPage() {
               1. Service Definition
             </h2>
             <p>
-              TopRates.ca is operated by Webhub4u Inc., a Canadian technology company that publishes educational content about Canadian insurance, credit cards, mortgages, and investing. TopRates.ca also operates a contact form through which prospective customers may submit inquiries.
+              TopRates.ca is operated by <WebhubLink />, a Canadian technology company that publishes educational content about Canadian insurance, credit cards, mortgages, and investing. TopRates.ca also operates a contact form through which prospective customers may submit inquiries.
             </p>
             <p className="mt-4">
-              <strong>Webhub4u Inc. is not a licensed insurance broker, mortgage broker, credit advisor, investment advisor, or financial advisor.</strong> Insurance inquiries submitted through TopRates.ca may be referred to KLC Group Canada Inc., an independent insurance advisory firm licensed under Ontario&rsquo;s life insurance agent licensing framework administered by FSRA. For full licensing and partnership disclosure see <Link href="/legal" className="text-[#0d9488] underline">/legal</Link>.
+              <strong><WebhubLink /> is not a licensed insurance broker, mortgage broker, credit advisor, investment advisor, or financial advisor.</strong> Insurance inquiries submitted through TopRates.ca may be referred to KLC Group Canada Inc., an independent insurance advisory firm licensed under Ontario&rsquo;s life insurance agent licensing framework administered by FSRA. For full licensing and partnership disclosure see <Link href="/legal" className="text-[#0d9488] underline">/legal</Link>.
             </p>
           </section>
 
@@ -83,16 +84,16 @@ export default function TermsPage() {
               4. Services and our role
             </h2>
             <p>
-              TopRates.ca is operated by Webhub4u Inc., a Canadian technology company that publishes educational content about Canadian insurance, credit cards, mortgages, and investing. TopRates.ca also operates a contact form through which prospective customers may submit inquiries.
+              TopRates.ca is operated by <WebhubLink />, a Canadian technology company that publishes educational content about Canadian insurance, credit cards, mortgages, and investing. TopRates.ca also operates a contact form through which prospective customers may submit inquiries.
             </p>
             <p className="mt-4">
-              <strong>Webhub4u Inc. is not a licensed insurance broker, mortgage broker, credit advisor, investment advisor, or financial advisor.</strong> Information published on TopRates.ca is provided for general educational purposes only and should not be treated as personalized financial, insurance, mortgage, credit, tax, legal, or investment advice.
+              <strong><WebhubLink /> is not a licensed insurance broker, mortgage broker, credit advisor, investment advisor, or financial advisor.</strong> Information published on TopRates.ca is provided for general educational purposes only and should not be treated as personalized financial, insurance, mortgage, credit, tax, legal, or investment advice.
             </p>
             <p className="mt-4">
-              Insurance inquiries submitted through TopRates.ca may be referred to <strong>KLC Group Canada Inc.</strong>, an independent insurance advisory firm licensed under Ontario&rsquo;s life insurance agent licensing framework administered by FSRA. The two companies maintain a documented commercial referral arrangement under which Webhub4u Inc. may receive a per-referral fee for inquiries referred to KLC Group Canada Inc. For full licensing and partnership disclosure, see <Link href="/legal" className="text-[#0d9488] underline">/legal</Link>.
+              Insurance inquiries submitted through TopRates.ca may be referred to <strong>KLC Group Canada Inc.</strong>, an independent insurance advisory firm licensed under Ontario&rsquo;s life insurance agent licensing framework administered by FSRA. The two companies maintain a documented commercial referral arrangement under which <WebhubLink /> may receive a per-referral fee for inquiries referred to KLC Group Canada Inc. For full licensing and partnership disclosure, see <Link href="/legal" className="text-[#0d9488] underline">/legal</Link>.
             </p>
             <p className="mt-4">
-              <strong>Not an insurer:</strong> Neither Webhub4u Inc. nor KLC Group Canada Inc. underwrites insurance. Insurance policies are issued by licensed insurance companies.
+              <strong>Not an insurer:</strong> Neither <WebhubLink /> nor KLC Group Canada Inc. underwrites insurance. Insurance policies are issued by licensed insurance companies.
             </p>
           </section>
 
@@ -125,7 +126,7 @@ export default function TermsPage() {
               <strong>No Direct Quotes:</strong> We do not charge customers a fee for quotes. Our services are provided at no cost to you.
             </p>
             <p className="mt-4">
-              <strong>Compensation structure:</strong> TopRates.ca (Webhub4u Inc.) does not earn insurance commissions; Webhub4u Inc. is not a licensed insurance broker. When a consumer requests an insurance quote through TopRates.ca and is referred to KLC Group Canada Inc., KLC Group Canada Inc.&rsquo;s licensed advisors earn commissions paid by the carriers. Commissions do not increase the price the consumer pays for insurance. Webhub4u Inc. receives a per-referral fee from KLC Group Canada Inc., separate from insurance commission. Where TopRates.ca refers consumers to other regulated providers (mortgage brokerages, credit card issuers, investment platforms), referral or affiliate compensation may apply, disclosed on the relevant page.
+              <strong>Compensation structure:</strong> TopRates.ca (<WebhubLink />) does not earn insurance commissions; <WebhubLink /> is not a licensed insurance broker. When a consumer requests an insurance quote through TopRates.ca and is referred to KLC Group Canada Inc., KLC Group Canada Inc.&rsquo;s licensed advisors earn commissions paid by the carriers. Commissions do not increase the price the consumer pays for insurance. <WebhubLink /> receives a per-referral fee from KLC Group Canada Inc., separate from insurance commission. Where TopRates.ca refers consumers to other regulated providers (mortgage brokerages, credit card issuers, investment platforms), referral or affiliate compensation may apply, disclosed on the relevant page.
             </p>
           </section>
 
@@ -194,7 +195,7 @@ export default function TermsPage() {
               <li>Engage in harassment or abusive behavior</li>
             </ul>
             <p className="mt-4">
-              <strong>Content Ownership:</strong> All content on Toprates.ca is owned by or licensed to Webhub4u Inc. You may not reproduce, distribute, or transmit content without permission.
+              <strong>Content Ownership:</strong> All content on Toprates.ca is owned by or licensed to <WebhubLink />. You may not reproduce, distribute, or transmit content without permission.
             </p>
           </section>
 
@@ -272,7 +273,7 @@ export default function TermsPage() {
               <strong>Insurance Disputes:</strong> For disputes related to insurance policies or coverage, you should contact the insurance company first. If unresolved, you may file a complaint with your provincial insurance regulator.
             </p>
             <p className="mt-4">
-              <strong>Platform Disputes:</strong> For disputes with TopRates.ca (Webhub4u Inc.) regarding the website or services described in these Terms, please contact us to attempt resolution. If unresolved, disputes may be subject to binding arbitration. Disputes related to insurance, mortgage, or other regulated services obtained through a referral are handled by the regulated provider under its own complaints process.
+              <strong>Platform Disputes:</strong> For disputes with TopRates.ca (<WebhubLink />) regarding the website or services described in these Terms, please contact us to attempt resolution. If unresolved, disputes may be subject to binding arbitration. Disputes related to insurance, mortgage, or other regulated services obtained through a referral are handled by the regulated provider under its own complaints process.
             </p>
           </section>
 
@@ -284,7 +285,7 @@ export default function TermsPage() {
               If you have questions about these Terms of Service:
             </p>
             <p className="mt-4">
-              <strong>Webhub4u Inc. (TopRates.ca)</strong><br />
+              <strong><WebhubLink /> (TopRates.ca)</strong><br />
               Operating from Brampton, Ontario, Canada<br />
               Email: <a href="mailto:toprates56@gmail.com" className="text-[#0d9488] hover:text-[#0a7566]">toprates56@gmail.com</a><br />
               Mailing address available on request via toprates56@gmail.com

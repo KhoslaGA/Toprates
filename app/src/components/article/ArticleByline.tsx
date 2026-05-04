@@ -1,5 +1,7 @@
+import type { ReactNode } from 'react';
 import { colors, fonts } from '@/styles/tokens';
 import type { Vertical } from '@/components/disclaimers/DisclaimerBlock';
+import { WebhubLink } from '@/components/legal/WebhubLink';
 
 /**
  * Vertical-specific article byline.
@@ -11,11 +13,11 @@ import type { Vertical } from '@/components/disclaimers/DisclaimerBlock';
  * Strategy doc rule: "No individual names anywhere in public copy."
  */
 
-const BYLINES: Record<Vertical, string> = {
+const BYLINES: Record<Vertical, ReactNode> = {
   life: 'Content reviewed by LLQP-licensed advisors at KLC Group Canada Inc.',
-  pc: 'Editorial content from TopRates.ca · Webhub4u Inc.',
-  mortgage: 'Editorial content from TopRates.ca · Webhub4u Inc.',
-  cards: 'Editorial content with affiliate disclosure · TopRates.ca · Webhub4u Inc.',
+  pc: <>Editorial content from TopRates.ca · <WebhubLink /></>,
+  mortgage: <>Editorial content from TopRates.ca · <WebhubLink /></>,
+  cards: <>Editorial content with affiliate disclosure · TopRates.ca · <WebhubLink /></>,
 };
 
 export function ArticleByline({ vertical }: { vertical: Vertical }) {

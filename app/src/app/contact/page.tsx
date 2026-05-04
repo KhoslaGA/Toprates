@@ -3,6 +3,7 @@ import Link from 'next/link';
 import PageWrapper from '@/components/layout/PageWrapper';
 import ContactForm from '@/components/contact/ContactForm';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { WebhubLink } from '@/components/legal/WebhubLink';
 
 export const metadata = {
   title: 'Contact TopRates.ca | Get in Touch',
@@ -77,7 +78,7 @@ export default function ContactPage() {
                 <CardTitle>Operating from</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-700 font-semibold mb-1">Webhub4u Inc.</p>
+                <p className="text-gray-700 font-semibold mb-1"><WebhubLink /></p>
                 <p className="text-gray-600 text-sm">
                   Brampton, Ontario, Canada
                   <br />
@@ -92,7 +93,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-sm mb-3">
-                  TopRates.ca is operated by Webhub4u Inc., a Canadian technology company. Insurance inquiries are referred to KLC Group Canada Inc., a licensed insurance advisory firm.
+                  TopRates.ca is operated by <WebhubLink />, a Canadian technology company. Insurance inquiries are referred to KLC Group Canada Inc., a licensed insurance advisory firm.
                 </p>
                 <Link
                   href="/legal"
@@ -124,7 +125,7 @@ export default function ContactPage() {
                 Is TopRates.ca a licensed broker?
               </h3>
               <p className="text-gray-700">
-                No. TopRates.ca is operated by Webhub4u Inc., a technology company. Webhub4u Inc. is not a licensed insurance broker, mortgage broker, credit advisor, or investment advisor. Insurance inquiries are referred to KLC Group Canada Inc., an independent insurance advisory firm. See{' '}
+                No. TopRates.ca is operated by <WebhubLink />, a technology company. <WebhubLink /> is not a licensed insurance broker, mortgage broker, credit advisor, or investment advisor. Insurance inquiries are referred to KLC Group Canada Inc., an independent insurance advisory firm. See{' '}
                 <Link href="/legal" className="text-[#0d9488] underline">
                   /legal
                 </Link>
@@ -144,7 +145,7 @@ export default function ContactPage() {
                 What happens to my information?
               </h3>
               <p className="text-gray-700">
-                Your information is collected by Webhub4u Inc. and, with your consent, may be shared with the relevant regulated partner (e.g. KLC Group Canada Inc. for insurance, a registered mortgage brokerage for mortgages). See our{' '}
+                Your information is collected by <WebhubLink /> and, with your consent, may be shared with the relevant regulated partner (e.g. KLC Group Canada Inc. for insurance, a registered mortgage brokerage for mortgages). See our{' '}
                 <Link href="/privacy" className="text-[#0d9488] underline">
                   Privacy Policy
                 </Link>

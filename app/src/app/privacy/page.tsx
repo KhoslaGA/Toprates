@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import PageWrapper from '@/components/layout/PageWrapper';
+import { WebhubLink } from '@/components/legal/WebhubLink';
 
 export const metadata = {
   title: 'Privacy Policy | TopRates.ca',
@@ -18,7 +19,7 @@ export default function PrivacyPage() {
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
             <p className="text-xl text-gray-100">
-              How TopRates.ca (Webhub4u Inc.) handles your personal information
+              How TopRates.ca (<WebhubLink />) handles your personal information
             </p>
           </div>
         </PageWrapper>
@@ -31,9 +32,12 @@ export default function PrivacyPage() {
               <strong>Last Updated:</strong> {LAST_UPDATED}
             </p>
             <p className="text-sm text-gray-700">
-              TopRates.ca is operated by <strong>Webhub4u Inc.</strong>, a Canadian technology
-              company. This Privacy Policy describes how we collect, use, and protect personal
-              information, in compliance with the{' '}
+              TopRates.ca is operated by{' '}
+              <strong>
+                <WebhubLink />
+              </strong>
+              , a Canadian technology company. This Privacy Policy describes how we collect, use,
+              and protect personal information, in compliance with the{' '}
               <strong>Personal Information Protection and Electronic Documents Act (PIPEDA)</strong>{' '}
               and applicable provincial privacy laws.
             </p>
@@ -42,10 +46,16 @@ export default function PrivacyPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-[#1a365d] mb-4">1. Who we are</h2>
             <p>
-              TopRates.ca is operated by <strong>Webhub4u Inc.</strong>, a private Canadian
-              corporation. Webhub4u Inc. is the entity responsible for personal information
-              collected through this website. <strong>Webhub4u Inc. is not a licensed insurance
-              broker, mortgage broker, credit advisor, or investment advisor.</strong> Insurance
+              TopRates.ca is operated by{' '}
+              <strong>
+                <WebhubLink />
+              </strong>
+              , a private Canadian corporation. <WebhubLink /> is the entity responsible for
+              personal information collected through this website.{' '}
+              <strong>
+                <WebhubLink /> is not a licensed insurance broker, mortgage broker, credit
+                advisor, or investment advisor.
+              </strong> Insurance
               inquiries received through TopRates.ca are referred to{' '}
               <strong>KLC Group Canada Inc.</strong>, an independent insurance advisory firm
               licensed under Ontario&rsquo;s life-insurance agent licensing framework administered
@@ -288,7 +298,7 @@ export default function PrivacyPage() {
                 Encryption in transit (HTTPS/TLS) on every page that collects personal information.
               </li>
               <li>Encryption at rest for our content and inquiry databases.</li>
-              <li>Access controls limiting who at Webhub4u Inc. can access raw records.</li>
+              <li>Access controls limiting who at <WebhubLink /> can access raw records.</li>
               <li>
                 Service providers (Sanity, Vercel, Plausible) are contractually bound to handle
                 personal information consistent with PIPEDA.
@@ -323,7 +333,9 @@ export default function PrivacyPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-[#1a365d] mb-4">11. Contact</h2>
             <p>
-              <strong>Webhub4u Inc.</strong>
+              <strong>
+                <WebhubLink />
+              </strong>
               <br />
               For privacy, data protection, general inquiries, editorial complaints, or website
               operations:{' '}

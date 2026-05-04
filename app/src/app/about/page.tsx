@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import WaitlistForm from './_client/WaitlistForm';
+import { WebhubLink } from '@/components/legal/WebhubLink';
 
 /**
  * About page — Webhub4u Inc. + KLC Group Canada Inc. corporate story.
@@ -76,7 +77,7 @@ export default function AboutPage() {
           </h2>
           <div style={{ fontFamily: "'Inter Tight', Georgia, serif", fontSize: 17, lineHeight: 1.8, color: '#374151' }}>
             <p>
-              TopRates.ca is operated by <strong>Webhub4u Inc.</strong>, a Canadian financial
+              TopRates.ca is operated by <strong><WebhubLink /></strong>, a Canadian financial
               technology company. We publish plain-English Canadian insurance education — auto,
               home, life, business, travel, mortgage — and we review credit cards with full
               affiliate disclosure.
@@ -99,7 +100,7 @@ export default function AboutPage() {
               for accuracy and regulatory compliance.
             </p>
             <p>
-              Webhub4u Inc. and KLC Group Canada Inc. are independent companies — separate
+              <WebhubLink /> and KLC Group Canada Inc. are independent companies — separate
               ownership, separate management, with a partnership agreement scoped specifically to
               LLQP-related content review. The scope today is life insurance only. It does not
               extend to property &amp; casualty (auto, home, business, travel) until summer 2027,

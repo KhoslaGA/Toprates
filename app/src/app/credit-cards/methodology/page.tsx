@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { WebhubLink } from '@/components/legal/WebhubLink';
 
 export const metadata: Metadata = {
   title: 'Credit Card Evaluation Methodology | TopRates.ca',
@@ -41,7 +42,7 @@ export default function MethodologyPage() {
           <p>
             At launch, certain card listings on TopRates.ca will include affiliate links. If a
             visitor applies for and is approved for a card through one of our links, the issuer may
-            pay TopRates.ca (operated by Webhub4u Inc.) a referral commission. We disclose this
+            pay TopRates.ca (operated by <WebhubLink />) a referral commission. We disclose this
             arrangement clearly and conspicuously on every page that contains affiliate links, per
             the Competition Bureau&rsquo;s 2024 Influencer Marketing Guidance.
           </p>
@@ -112,7 +113,7 @@ export default function MethodologyPage() {
           <h2 className="text-2xl font-bold text-[#1B2A4A]">Who&rsquo;s evaluating?</h2>
           <p>
             Today, TopRates.ca has no live card listings. When evaluations go live, they will be
-            authored and reviewed by the editorial team at TopRates.ca (Webhub4u Inc.). Each
+            authored and reviewed by the editorial team at TopRates.ca (<WebhubLink />). Each
             listing will carry the standard editorial byline plus an affiliate-disclosure tag.
           </p>
 

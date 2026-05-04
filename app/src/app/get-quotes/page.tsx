@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ContactForm from '@/components/contact/ContactForm';
 import { Bo } from '@/components/brand/Bo';
 import { colors, fonts } from '@/styles/tokens';
+import { WebhubLink } from '@/components/legal/WebhubLink';
 
 export const metadata: Metadata = {
   title: 'Quote Comparison Launches Summer 2027 — TopRates.ca',
@@ -70,7 +71,7 @@ export default function GetQuotesPage() {
                 margin: 0,
               }}
             >
-              TopRates.ca is operated by Webhub4u Inc., a Canadian financial technology company.
+              TopRates.ca is operated by <WebhubLink />, a Canadian financial technology company.
               Quote comparison and brokerage services launch summer 2027 alongside KLC Group
               Canada Inc.&rsquo;s RIBO registration. Until then, you have two options below.
             </p>

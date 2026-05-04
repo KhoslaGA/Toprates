@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import { WebhubLink } from '@/components/legal/WebhubLink';
 import ReformAlertStrip from '@/components/home/ReformAlertStrip';
 import Hero from '@/components/home/Hero';
 import StatsBand from '@/components/home/StatsBand';
@@ -153,13 +154,13 @@ export default function HomeClient() {
                 <span style={{ fontSize: 16 }}>✅</span>
                 <span style={{ fontSize: 13, fontWeight: 700, color: '#0A7E8C' }}>What we are</span>
               </div>
-              {[
+              {([
                 'An independent insurance education platform; quote engine launches summer 2027 with 30+ carriers',
-                'Operated by Webhub4u Inc.; KLC Group (a separate company) will handle quoting at the summer 2027 launch',
+                <>Operated by <WebhubLink />; KLC Group (a separate company) will handle quoting at the summer 2027 launch</>,
                 'Founded by a licensed broker; content reviewed by a licensed broker',
                 'Educational guides and a newsletter today; no policies sold yet',
                 '100% Canadian-owned and operated, based in Ontario',
-              ].map((t, i) => (
+              ] as React.ReactNode[]).map((t, i) => (
                 <div key={i} style={{ display: 'flex', gap: 10, marginBottom: 12, alignItems: 'flex-start' }}>
                   <span style={{ color: '#0A7E8C', fontSize: 14, marginTop: 2, flexShrink: 0 }}>●</span>
                   <span style={{ fontSize: 14, color: '#1B2A4A', lineHeight: 1.5 }}>{t}</span>
@@ -318,7 +319,7 @@ export default function HomeClient() {
               lineHeight: 1.5,
             }}>
               By joining, you agree to receive launch updates and Canadian insurance education content
-              from Webhub4u Inc. (operator of TopRates.ca). Unsubscribe anytime. See our{' '}
+              from <WebhubLink /> (operator of TopRates.ca). Unsubscribe anytime. See our{' '}
               <a href="/privacy" style={{ color: '#0fbdc9' }}>Privacy Policy</a>.
             </p>
           )}

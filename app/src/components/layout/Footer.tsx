@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { WebhubLink } from '@/components/legal/WebhubLink';
 
 /**
  * Footer — strategy-doc compliant.
@@ -115,7 +116,7 @@ export default function Footer() {
                 fontStyle: 'italic',
               }}
             >
-              TopRates.ca is operated by Webhub4u Inc., a Canadian financial technology company.
+              TopRates.ca is operated by <WebhubLink />, a Canadian financial technology company.
               Life insurance content is reviewed by LLQP-licensed advisors at KLC Group Canada
               Inc., an independent Canadian insurance brokerage, under partnership agreement.
               Property &amp; casualty content is educational only — TopRates.ca is not currently
@@ -186,7 +187,7 @@ export default function Footer() {
                 lineHeight: 1.6,
               }}
             >
-              © 2026 TopRates.ca, a brand of Webhub4u Inc. All rights reserved.
+              © 2026 TopRates.ca, a brand of <WebhubLink />. All rights reserved.
             </p>
           </div>
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.18)' }}>
