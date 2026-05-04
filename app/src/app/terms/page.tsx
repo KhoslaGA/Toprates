@@ -40,10 +40,10 @@ export default function TermsPage() {
               1. Service Definition
             </h2>
             <p>
-              TopRates.ca is operated by Webhub4u Inc., a Canadian technology company. Webhub4u Inc. publishes editorial content about Canadian insurance, credit cards, mortgages, and investing, and operates the TopRates.ca contact form for inquiries from prospective customers.
+              TopRates.ca is operated by Webhub4u Inc., a Canadian technology company that publishes educational content about Canadian insurance, credit cards, mortgages, and investing. TopRates.ca also operates a contact form through which prospective customers may submit inquiries.
             </p>
             <p className="mt-4">
-              <strong>Webhub4u Inc. is not a licensed insurance broker, mortgage broker, credit advisor, or investment advisor in any Canadian province or territory.</strong> Insurance inquiries received through TopRates.ca are referred to KLC Group Canada Inc., an independent insurance advisory firm licensed under Ontario&rsquo;s life-insurance agent licensing framework administered by FSRA. For full licensing and partnership disclosure see <Link href="/legal" className="text-[#0d9488] underline">/legal</Link>.
+              <strong>Webhub4u Inc. is not a licensed insurance broker, mortgage broker, credit advisor, investment advisor, or financial advisor.</strong> Insurance inquiries submitted through TopRates.ca may be referred to KLC Group Canada Inc., an independent insurance advisory firm licensed under Ontario&rsquo;s life insurance agent licensing framework administered by FSRA. For full licensing and partnership disclosure see <Link href="/legal" className="text-[#0d9488] underline">/legal</Link>.
             </p>
           </section>
 
@@ -83,16 +83,13 @@ export default function TermsPage() {
               4. Services and our role
             </h2>
             <p>
-              TopRates.ca is operated by Webhub4u Inc. Webhub4u Inc. publishes editorial content about Canadian insurance, credit cards, mortgages, and investing, and operates the TopRates.ca contact form for inquiries from prospective customers.
+              TopRates.ca is operated by Webhub4u Inc., a Canadian technology company that publishes educational content about Canadian insurance, credit cards, mortgages, and investing. TopRates.ca also operates a contact form through which prospective customers may submit inquiries.
             </p>
             <p className="mt-4">
-              <strong>Webhub4u Inc. is not a licensed insurance broker, mortgage broker, credit advisor, or investment advisor in any Canadian province or territory.</strong>
+              <strong>Webhub4u Inc. is not a licensed insurance broker, mortgage broker, credit advisor, investment advisor, or financial advisor.</strong> Information published on TopRates.ca is provided for general educational purposes only and should not be treated as personalized financial, insurance, mortgage, credit, tax, legal, or investment advice.
             </p>
             <p className="mt-4">
-              Insurance inquiries received through TopRates.ca are referred to <strong>KLC Group Canada Inc.</strong>, an independent insurance advisory firm licensed under Ontario&rsquo;s life-insurance agent licensing framework administered by FSRA. The two companies have a documented commercial referral arrangement.
-            </p>
-            <p className="mt-4">
-              Editorial content on this site is for general information only and does not constitute personalized financial, insurance, mortgage, credit, or investment advice. For full disclosure of relationships and licensing, see <Link href="/legal" className="text-[#0d9488] underline">/legal</Link>.
+              Insurance inquiries submitted through TopRates.ca may be referred to <strong>KLC Group Canada Inc.</strong>, an independent insurance advisory firm licensed under Ontario&rsquo;s life insurance agent licensing framework administered by FSRA. The two companies maintain a documented commercial referral arrangement under which Webhub4u Inc. may receive a per-referral fee for inquiries referred to KLC Group Canada Inc. For full licensing and partnership disclosure, see <Link href="/legal" className="text-[#0d9488] underline">/legal</Link>.
             </p>
             <p className="mt-4">
               <strong>Not an insurer:</strong> Neither Webhub4u Inc. nor KLC Group Canada Inc. underwrites insurance. Insurance policies are issued by licensed insurance companies.

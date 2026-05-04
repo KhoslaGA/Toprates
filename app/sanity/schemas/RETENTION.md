@@ -32,7 +32,7 @@ stopped sending commercial messages in compliance with the law.
 | `withdrawnAt` field on `waitlistEntry` schema | ✅ Done (Task 4) | — |
 | Unsubscribe endpoint that sets `withdrawnAt` instead of deleting | ⏳ TODO before any commercial message is sent | engineering |
 | Scheduled cleanup job that purges entries past `retentionUntil` | ⏳ TODO before significant lead volume accumulates | engineering |
-| Privacy Officer DSAR (data subject access request) workflow | ⏳ TODO; manual today | privacy@toprates.ca |
+| Privacy Officer DSAR (data subject access request) workflow | ⏳ TODO; manual today | toprates56@gmail.com |
 
 ## Scheduled cleanup — implementation notes
 
@@ -64,5 +64,5 @@ only to demonstrate that we stopped messaging on a specific date.
 
 If you're touching schemas in this directory, do not remove
 `retentionUntil`, `withdrawnAt`, `withdrawnReason`, or `consentText` without
-first consulting the Privacy Officer (privacy@toprates.ca). Those fields are
+first consulting the Privacy Officer (toprates56@gmail.com). Those fields are
 part of our PIPEDA / CASL audit trail.
