@@ -24,7 +24,7 @@ const columns: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: 'Tools',
     links: [
-      { label: 'Newsletter', href: '/#newsletter' },
+      { label: 'Launch list', href: '/coming-soon' },
       { label: 'Glossary', href: '/glossary' },
       { label: 'Article archive', href: '/blog' },
     ],
