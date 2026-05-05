@@ -6,12 +6,12 @@ import FaqAccordion from '@/components/shared/FaqAccordion';
 import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata = {
-  title: 'Travel Insurance | Toprates.ca - Emergency & Trip Coverage',
-  description: 'Comprehensive travel insurance for Canadians traveling abroad. Emergency medical, trip cancellation, baggage coverage, and travel health protection. Get quotes instantly.',
-  keywords: 'travel insurance, travel medical insurance, trip cancellation, baggage insurance, emergency medical, Canada',
+  title: 'Travel Insurance — Emergency Medical & Trip Coverage | TopRates.ca',
+  description: 'Plain-English Canadian travel insurance education — emergency medical, trip cancellation, baggage, and travel health. Reviewed by LLQP-licensed advisors at KLC Group Canada Inc. Operated by Webhub4u Inc.',
+  keywords: 'travel insurance, travel medical insurance, trip cancellation, baggage insurance, emergency medical, Canada, LLQP',
   openGraph: {
-    title: 'Travel Insurance | Toprates.ca',
-    description: 'Compare travel insurance rates for Canadian travelers',
+    title: 'Travel Insurance Education — TopRates.ca',
+    description: 'Plain-English Canadian travel insurance education. Reviewed by LLQP-licensed advisors at KLC Group Canada Inc.',
   },
 };
 
@@ -39,10 +39,10 @@ const coverageFeatures = [
 ];
 
 const whyChooseToprates = [
-  'Coverage available for single trips or annual multi-trip plans',
-  'Quick quote process - purchase online instantly before departure',
-  ' 24/7 emergency assistance hotline wherever you travel',
-  'Pre-existing condition coverage available with proper underwriting',
+  'Plain-English education on single-trip vs annual plans, medical caps, and pre-existing conditions',
+  'Reviewed by LLQP-licensed advisors at KLC Group Canada Inc.',
+  'Talk to a licensed advisor about coverage limits, exclusions, and claims process',
+  'Independent editorial — no commission-driven product pitches',
 ];
 
 const faqItems = [
@@ -72,21 +72,27 @@ export default function TravelInsurancePage() {
       <section className="bg-gradient-to-r from-[#1a365d] to-[#0f1f3a] text-white py-16 md:py-24">
         <PageWrapper>
           <div className="max-w-3xl">
+            <div className="text-[11px] uppercase tracking-[0.2em] text-amber-300 font-bold mb-3">
+              LLQP-licensed referral · Available now
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Travel with Confidence - Complete Coverage for Your Journey
+              Canadian Travel Insurance, in Plain English
             </h1>
             <p className="text-xl text-gray-100 mb-8">
-              Emergency medical, trip cancellation, and baggage protection. Travel insurance from Canada's top providers.
+              Plain-English education on emergency medical, trip cancellation, baggage, and
+              travel health coverage. Content reviewed by LLQP-licensed advisors at KLC Group
+              Canada Inc., an independent insurance advisory firm. When you&rsquo;re ready, send
+              a note and we&rsquo;ll connect you with a licensed advisor.
             </p>
             <Button variant="accent" size="lg" href="#get-quote">
-              Get Your Free Quote
+              Talk to a licensed advisor
             </Button>
           </div>
         </PageWrapper>
       </section>
 
       <PageWrapper>
-        <DisclaimerBlock vertical="pc" />
+        <DisclaimerBlock vertical="life" />
       </PageWrapper>
 
       {/* Coverage Features */}
@@ -117,7 +123,7 @@ export default function TravelInsurancePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mb-8">
-                Why Choose Toprates for Travel Insurance?
+                What this page is — and what it isn&rsquo;t
               </h2>
               <ul className="space-y-4">
                 {whyChooseToprates.map((reason, index) => (
@@ -129,23 +135,21 @@ export default function TravelInsurancePage() {
               </ul>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-[#0d9488]">
-              <h3 className="text-2xl font-bold text-[#1a365d] mb-6">
-                Coverage Levels
-              </h3>
-              <div className="space-y-4">
-                <div className="pb-4 border-b border-gray-200">
-                  <p className="text-sm text-gray-600 font-medium">Medical Coverage</p>
-                  <p className="text-lg font-bold text-[#1a365d]">Up to $500,000</p>
-                </div>
-                <div className="pb-4 border-b border-gray-200">
-                  <p className="text-sm text-gray-600 font-medium">Trip Cancellation</p>
-                  <p className="text-lg font-bold text-[#1a365d]">Up to 100% of costs</p>
-                </div>
-                <div>
-                  <p className="text-sm text-gray-600 font-medium">Typical Cost</p>
-                  <p className="text-lg font-bold text-[#0d9488]">$50-$150 per trip</p>
-                </div>
+              <div className="text-[11px] uppercase tracking-[0.2em] text-[#0d9488] font-bold mb-3">
+                Regulatory note
               </div>
+              <h3 className="text-xl font-bold text-[#1a365d] mb-4">
+                Travel medical is FSRA / LLQP-licensed in Ontario
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Travel medical insurance falls under Ontario&rsquo;s accident &amp; sickness
+                licensing framework, regulated by FSRA. The Life Licence Qualification Program
+                (LLQP) is part of the licensing pathway.
+              </p>
+              <p className="text-gray-700 leading-relaxed text-sm">
+                KLC Group Canada Inc. holds licensing under this framework. Personalized advice
+                is provided only by KLC&rsquo;s licensed representatives, not by Webhub4u Inc.
+              </p>
             </div>
           </div>
         </PageWrapper>
@@ -168,10 +172,12 @@ export default function TravelInsurancePage() {
         <PageWrapper>
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-              Get Travel Insurance Before Your Next Trip
+              Talk to a licensed advisor
             </h2>
             <p className="text-lg text-gray-100 mb-10 text-center">
-              Instant quotes and online purchase. Protect your health and investment with comprehensive travel coverage.
+              Send us a note. Insurance inquiries are referred to KLC Group Canada Inc., an
+              independent insurance advisory firm with LLQP-licensed advisors. KLC will follow
+              up within one business day.
             </p>
             <div className="bg-white rounded-lg p-8">
               <ContactForm defaultProduct="travel-insurance" />

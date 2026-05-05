@@ -6,12 +6,12 @@ import FaqAccordion from '@/components/shared/FaqAccordion';
 import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata = {
-  title: 'Health Insurance | Toprates.ca - Extended Health & Dental Coverage',
-  description: 'Compare health insurance plans in Canada. Get coverage for extended health, dental, vision, prescription drugs, and travel medical. Affordable rates for families and individuals.',
-  keywords: 'health insurance, extended health, dental insurance, vision coverage, prescription drugs, travel medical, Canada',
+  title: 'Health Insurance — Critical Illness, Disability & Extended Health | TopRates.ca',
+  description: 'Plain-English Canadian health insurance education — critical illness, disability, extended health, and travel medical. Reviewed by LLQP-licensed advisors at KLC Group Canada Inc. Operated by Webhub4u Inc.',
+  keywords: 'health insurance, critical illness, disability insurance, extended health, dental, prescription drugs, travel medical, Canada, LLQP',
   openGraph: {
-    title: 'Health Insurance | Toprates.ca',
-    description: 'Compare health insurance rates across Canada',
+    title: 'Health Insurance Education — TopRates.ca',
+    description: 'Plain-English Canadian health insurance education. Reviewed by LLQP-licensed advisors at KLC Group Canada Inc.',
   },
 };
 
@@ -39,10 +39,10 @@ const coverageFeatures = [
 ];
 
 const whyChooseToprates = [
-  'Personalized plans that complement your provincial health coverage',
-  'Options for individuals, families, and small business groups',
-  'Access to top Canadian health insurers with quick approval',
-  'Expert guidance on maximizing your health benefits',
+  'Plain-English education on critical illness, disability, and extended health products',
+  'Reviewed by LLQP-licensed advisors at KLC Group Canada Inc.',
+  'Talk to a licensed advisor about how private coverage layers on top of provincial health',
+  'Independent editorial — no commission-driven product pitches',
 ];
 
 const faqItems = [
@@ -72,14 +72,20 @@ export default function HealthInsurancePage() {
       <section className="bg-gradient-to-r from-[#1a365d] to-[#0f1f3a] text-white py-16 md:py-24">
         <PageWrapper>
           <div className="max-w-3xl">
+            <div className="text-[11px] uppercase tracking-[0.2em] text-amber-300 font-bold mb-3">
+              LLQP-licensed referral · Available now
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Complete Health Insurance Coverage for You and Your Family
+              Canadian Health Insurance, in Plain English
             </h1>
             <p className="text-xl text-gray-100 mb-8">
-              Supplement provincial coverage with extended health, dental, vision, and travel medical insurance. Compare plans across Canada.
+              Plain-English education on critical illness, disability, extended health, and
+              travel medical. Content reviewed by LLQP-licensed advisors at KLC Group Canada
+              Inc., an independent insurance advisory firm. When you&rsquo;re ready, send a note
+              and we&rsquo;ll connect you with a licensed advisor.
             </p>
             <Button variant="accent" size="lg" href="#get-quote">
-              Get Your Free Quote
+              Talk to a licensed advisor
             </Button>
           </div>
         </PageWrapper>
@@ -117,7 +123,7 @@ export default function HealthInsurancePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mb-8">
-                Why Choose Toprates for Health Insurance?
+                What this page is — and what it isn&rsquo;t
               </h2>
               <ul className="space-y-4">
                 {whyChooseToprates.map((reason, index) => (
@@ -129,23 +135,21 @@ export default function HealthInsurancePage() {
               </ul>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-[#0d9488]">
-              <h3 className="text-2xl font-bold text-[#1a365d] mb-6">
-                Plan Categories
-              </h3>
-              <div className="space-y-4">
-                <div className="pb-4 border-b border-gray-200">
-                  <p className="text-sm text-gray-600 font-medium">Individual Plans</p>
-                  <p className="text-lg font-bold text-[#1a365d]">For self-employed or employees without group coverage</p>
-                </div>
-                <div className="pb-4 border-b border-gray-200">
-                  <p className="text-sm text-gray-600 font-medium">Family Plans</p>
-                  <p className="text-lg font-bold text-[#1a365d]">Comprehensive coverage for multiple family members</p>
-                </div>
-                <div>
-                  <p className="text-sm text-gray-600 font-medium">Group Plans</p>
-                  <p className="text-lg font-bold text-[#0d9488]">For small to large businesses and organizations</p>
-                </div>
+              <div className="text-[11px] uppercase tracking-[0.2em] text-[#0d9488] font-bold mb-3">
+                Regulatory note
               </div>
+              <h3 className="text-xl font-bold text-[#1a365d] mb-4">
+                Accident &amp; sickness is FSRA / LLQP-licensed in Ontario
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                In Ontario, life and accident &amp; sickness insurance agents must be licensed
+                through FSRA, with the Life Licence Qualification Program (LLQP) as part of the
+                pathway. Critical illness, disability, and travel medical fall within this scope.
+              </p>
+              <p className="text-gray-700 leading-relaxed text-sm">
+                KLC Group Canada Inc. holds licensing under this framework. Personalized advice
+                is provided only by KLC&rsquo;s licensed representatives, not by Webhub4u Inc.
+              </p>
             </div>
           </div>
         </PageWrapper>
@@ -168,10 +172,12 @@ export default function HealthInsurancePage() {
         <PageWrapper>
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-              Get Comprehensive Health Coverage Today
+              Talk to a licensed advisor
             </h2>
             <p className="text-lg text-gray-100 mb-10 text-center">
-              Get personalized health insurance quotes in minutes. We\'ll help find the best coverage for your needs and budget.
+              Send us a note. Insurance inquiries are referred to KLC Group Canada Inc., an
+              independent insurance advisory firm with LLQP-licensed advisors. KLC will follow
+              up within one business day.
             </p>
             <div className="bg-white rounded-lg p-8">
               <ContactForm defaultProduct="critical-illness" />

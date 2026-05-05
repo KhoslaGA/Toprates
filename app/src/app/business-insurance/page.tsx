@@ -6,12 +6,12 @@ import FaqAccordion from '@/components/shared/FaqAccordion';
 import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata = {
-  title: 'Business Insurance | Toprates.ca - Commercial Coverage for Canadian Businesses',
-  description: 'Protect your business with comprehensive insurance. General liability, property, professional liability, and workers compensation coverage. Quotes for small to large businesses across Canada.',
+  title: 'Business Insurance Education — TopRates.ca',
+  description: 'Plain-English Canadian business insurance education — general liability, commercial property, professional liability, workers compensation. Education today. Quotes summer 2027 alongside KLC Group Canada Inc.’s RIBO registration. Operated by Webhub4u Inc.',
   keywords: 'business insurance, commercial liability, property insurance, professional liability, workers compensation, Canada',
   openGraph: {
-    title: 'Business Insurance | Toprates.ca',
-    description: 'Compare business insurance rates across Canada',
+    title: 'Business Insurance Education — TopRates.ca',
+    description: 'Plain-English Canadian business insurance education. Education today. Quotes summer 2027.',
   },
 };
 
@@ -39,10 +39,10 @@ const coverageFeatures = [
 ];
 
 const whyChooseToprates = [
-  'Industry-specific coverage options tailored to your business type',
-  'Fast quotes from leading Canadian commercial insurers',
-  'Expert advisors help ensure you have comprehensive protection',
-  'Bundle discounts available for multiple coverage types',
+  'Plain-English explanations of every commercial coverage type',
+  'Independent editorial — no commission-driven product pitches',
+  'Updated as Canadian regulations change (CGL, WSIB, professional liability rules)',
+  'Quote comparison launches summer 2027 alongside KLC Group Canada Inc.’s RIBO registration',
 ];
 
 const faqItems = [
@@ -72,14 +72,20 @@ export default function BusinessInsurancePage() {
       <section className="bg-gradient-to-r from-[#1a365d] to-[#0f1f3a] text-white py-16 md:py-24">
         <PageWrapper>
           <div className="max-w-3xl">
+            <div className="text-[11px] uppercase tracking-[0.2em] text-amber-300 font-bold mb-3">
+              Education today · Quotes summer 2027
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Comprehensive Business Insurance for Canadian Enterprises
+              Canadian Business Insurance, in Plain English
             </h1>
             <p className="text-xl text-gray-100 mb-8">
-              Protect your assets, employees, and livelihood. General liability, property, professional liability, and workers compensation coverage.
+              Plain-English education on commercial general liability, property, professional
+              liability, and workers compensation across Canada. Quote comparison launches
+              summer 2027 alongside KLC Group Canada Inc.&rsquo;s RIBO registration. Until then,
+              this page is education only.
             </p>
             <Button variant="accent" size="lg" href="#get-quote">
-              Get Your Free Quote
+              Join the launch list
             </Button>
           </div>
         </PageWrapper>
@@ -117,7 +123,7 @@ export default function BusinessInsurancePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mb-8">
-                Why Toprates for Business Insurance?
+                What this page is — and what it isn&rsquo;t
               </h2>
               <ul className="space-y-4">
                 {whyChooseToprates.map((reason, index) => (
@@ -128,24 +134,23 @@ export default function BusinessInsurancePage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-[#0d9488]">
-              <h3 className="text-2xl font-bold text-[#1a365d] mb-6">
-                Coverage Bundles
-              </h3>
-              <div className="space-y-4">
-                <div className="pb-4 border-b border-gray-200">
-                  <p className="text-sm text-gray-600 font-medium">Starter Package</p>
-                  <p className="text-lg font-bold text-[#1a365d]">General Liability + Property</p>
-                </div>
-                <div className="pb-4 border-b border-gray-200">
-                  <p className="text-sm text-gray-600 font-medium">Complete Package</p>
-                  <p className="text-lg font-bold text-[#1a365d]">All above + Professional Liability</p>
-                </div>
-                <div>
-                  <p className="text-sm text-gray-600 font-medium">Premium Package</p>
-                  <p className="text-lg font-bold text-[#0d9488]">Complete + Cyber + Key Person</p>
-                </div>
+            <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-amber-500">
+              <div className="text-[11px] uppercase tracking-[0.2em] text-amber-700 font-bold mb-3">
+                Regulatory note
               </div>
+              <h3 className="text-xl font-bold text-[#1a365d] mb-4">
+                P&amp;C is RIBO-licensed in Ontario
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Property and casualty insurance — including business insurance — is regulated by
+                the Registered Insurance Brokers of Ontario (RIBO). KLC Group Canada Inc. plans
+                to register with RIBO ahead of the summer 2027 launch.
+              </p>
+              <p className="text-gray-700 leading-relaxed text-sm">
+                Until that registration is granted, TopRates.ca does not sell, quote, bind,
+                broker, or advise on business insurance. The content on this page is for
+                general educational purposes only.
+              </p>
             </div>
           </div>
         </PageWrapper>
@@ -168,10 +173,12 @@ export default function BusinessInsurancePage() {
         <PageWrapper>
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-              Protect Your Business Today
+              Be first when business insurance comparison launches
             </h2>
             <p className="text-lg text-gray-100 mb-10 text-center">
-              Get comprehensive business insurance quotes tailored to your industry and needs. Quick turnaround and competitive rates.
+              Business insurance comparison and brokerage are planned for summer 2027 alongside
+              KLC Group Canada Inc.&rsquo;s RIBO registration. Send us a note and we&rsquo;ll add
+              you to our launch list — we&rsquo;ll reach out when quotes are live.
             </p>
             <div className="bg-white rounded-lg p-8">
               <ContactForm defaultProduct="business-insurance" />

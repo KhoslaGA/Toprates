@@ -6,12 +6,12 @@ import FaqAccordion from '@/components/shared/FaqAccordion';
 import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata = {
-  title: 'Life Insurance | Toprates.ca - Term, Whole & Universal Life Coverage',
-  description: 'Compare life insurance options in Canada. Get coverage information for term life, whole life, and universal life insurance. Protect your family\'s financial future.',
-  keywords: 'life insurance, term life, whole life, universal life, life coverage, beneficiary, Canada',
+  title: 'Life Insurance — Term, Whole & Universal Coverage | TopRates.ca',
+  description: 'Plain-English Canadian life insurance education — term, whole, and universal life. Reviewed by LLQP-licensed advisors at KLC Group Canada Inc. Talk to a licensed advisor today. Operated by Webhub4u Inc.',
+  keywords: 'life insurance, term life, whole life, universal life, life coverage, beneficiary, Canada, LLQP',
   openGraph: {
-    title: 'Life Insurance | Toprates.ca',
-    description: 'Compare life insurance rates across Canada',
+    title: 'Life Insurance Education — TopRates.ca',
+    description: 'Plain-English Canadian life insurance education. Reviewed by LLQP-licensed advisors at KLC Group Canada Inc.',
   },
 };
 
@@ -39,10 +39,10 @@ const coverageFeatures = [
 ];
 
 const whyChooseToprates = [
-  'Expert advisors help determine the right coverage amount for your family\'s needs',
-  'Quick underwriting process - get approved faster than ever',
-  'Access to rates from multiple Canadian life insurance providers',
-  'Guidance on beneficiary designation and policy reviews',
+  'Plain-English education on every life insurance product type',
+  'Reviewed by LLQP-licensed advisors at KLC Group Canada Inc.',
+  'Talk to a licensed advisor about coverage amount, term length, and beneficiary structure',
+  'Independent editorial — no commission-driven product pitches',
 ];
 
 const faqItems = [
@@ -72,14 +72,20 @@ export default function LifeInsurancePage() {
       <section className="bg-gradient-to-r from-[#1a365d] to-[#0f1f3a] text-white py-16 md:py-24">
         <PageWrapper>
           <div className="max-w-3xl">
+            <div className="text-[11px] uppercase tracking-[0.2em] text-amber-300 font-bold mb-3">
+              LLQP-licensed referral · Available now
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Protect Your Family's Financial Future
+              Canadian Life Insurance, in Plain English
             </h1>
             <p className="text-xl text-gray-100 mb-8">
-              Compare affordable life insurance options across Canada. Term, whole, and universal life coverage to meet your family's needs.
+              Plain-English education on term, whole, and universal life insurance. Content
+              reviewed by LLQP-licensed advisors at KLC Group Canada Inc., an independent
+              insurance advisory firm. When you&rsquo;re ready, send a note and we&rsquo;ll
+              connect you with a licensed advisor.
             </p>
             <Button variant="accent" size="lg" href="#get-quote">
-              Get Your Free Quote
+              Talk to a licensed advisor
             </Button>
           </div>
         </PageWrapper>
@@ -117,7 +123,7 @@ export default function LifeInsurancePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mb-8">
-                Why Choose Toprates for Life Insurance?
+                What this page is — and what it isn&rsquo;t
               </h2>
               <ul className="space-y-4">
                 {whyChooseToprates.map((reason, index) => (
@@ -129,23 +135,22 @@ export default function LifeInsurancePage() {
               </ul>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-[#0d9488]">
-              <h3 className="text-2xl font-bold text-[#1a365d] mb-6">
-                Coverage Comparison
-              </h3>
-              <div className="space-y-4">
-                <div className="pb-4 border-b border-gray-200">
-                  <p className="text-sm text-gray-600 font-medium">Most Popular</p>
-                  <p className="text-lg font-bold text-[#1a365d]">Term Life - 20 Years</p>
-                </div>
-                <div className="pb-4 border-b border-gray-200">
-                  <p className="text-sm text-gray-600 font-medium">Average Monthly Cost</p>
-                  <p className="text-lg font-bold text-[#0d9488]">$30-$60 for $500K coverage (age 35, healthy)</p>
-                </div>
-                <div>
-                  <p className="text-sm text-gray-600 font-medium">Recommended Amount</p>
-                  <p className="text-lg font-bold text-[#1a365d]">8-10x Annual Income</p>
-                </div>
+              <div className="text-[11px] uppercase tracking-[0.2em] text-[#0d9488] font-bold mb-3">
+                Regulatory note
               </div>
+              <h3 className="text-xl font-bold text-[#1a365d] mb-4">
+                Life insurance is FSRA / LLQP-licensed in Ontario
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                In Ontario, life and accident &amp; sickness insurance agents must be licensed
+                through FSRA, and the Life Licence Qualification Program (LLQP) is part of the
+                licensing pathway.
+              </p>
+              <p className="text-gray-700 leading-relaxed text-sm">
+                KLC Group Canada Inc. holds licensing under this framework. Content on this page
+                is reviewed by LLQP-licensed advisors at KLC. Personalized advice is provided
+                only by KLC&rsquo;s licensed representatives, not by Webhub4u Inc.
+              </p>
             </div>
           </div>
         </PageWrapper>
@@ -168,10 +173,12 @@ export default function LifeInsurancePage() {
         <PageWrapper>
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-              Get Life Insurance Protection Today
+              Talk to a licensed advisor
             </h2>
             <p className="text-lg text-gray-100 mb-10 text-center">
-              Secure your family's future with affordable life insurance. Get personalized quotes from Canada\'s top providers.
+              Send us a note. Insurance inquiries are referred to KLC Group Canada Inc., an
+              independent insurance advisory firm with LLQP-licensed advisors. KLC will follow
+              up within one business day to discuss your needs.
             </p>
             <div className="bg-white rounded-lg p-8">
               <ContactForm defaultProduct="life-insurance" />
