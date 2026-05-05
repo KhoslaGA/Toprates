@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { writeClient } from '@/lib/sanity/writeClient';
+import { notifyContactInquiry } from '@/lib/notify';
 
 export const runtime = 'nodejs';
 
@@ -98,25 +99,31 @@ export async function POST(request: Request) {
   const submittedAt = new Date();
   const retentionUntil = addDays(submittedAt, RETENTION_DAYS_UNCONVERTED);
 
+  const trimmedName = name.trim();
+  const normalizedEmail = email.trim().toLowerCase();
+  const trimmedPhone = phone?.trim() ?? '';
+  const normalizedPostalCode = postalCode?.trim().toUpperCase() ?? '';
+  const trimmedMessage = message?.trim() ?? '';
+  const routedTo = routeFor(product);
+
   try {
     await writeClient.create({
       _type: 'contactInquiry',
       product,
-      name: name.trim(),
-      email: email.trim().toLowerCase(),
-      phone: phone?.trim() ?? '',
-      postalCode: postalCode?.trim().toUpperCase() ?? '',
-      message: message?.trim() ?? '',
+      name: trimmedName,
+      email: normalizedEmail,
+      phone: trimmedPhone,
+      postalCode: normalizedPostalCode,
+      message: trimmedMessage,
       consent: true,
       consentText: consentText ?? '',
-      routedTo: routeFor(product),
+      routedTo,
       ipAddress: ip,
       userAgent: request.headers.get('user-agent') ?? undefined,
       submittedAt: submittedAt.toISOString(),
       retentionUntil: retentionUntil.toISOString(),
       status: 'new',
     });
-    return NextResponse.json({ ok: true });
   } catch (err) {
     console.error('Contact inquiry failed', err);
     return NextResponse.json(
@@ -124,4 +131,20 @@ export async function POST(request: Request) {
       { status: 500 },
     );
   }
+
+  // Fire-and-forget notification email. Failures are logged but do not
+  // affect the user-facing response — the inquiry is already persisted.
+  await notifyContactInquiry({
+    product,
+    name: trimmedName,
+    email: normalizedEmail,
+    phone: trimmedPhone,
+    postalCode: normalizedPostalCode,
+    message: trimmedMessage,
+    routedTo,
+    submittedAt: submittedAt.toISOString(),
+    ipAddress: ip,
+  });
+
+  return NextResponse.json({ ok: true });
 }

@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { writeClient } from '@/lib/sanity/writeClient';
+import { notifyWaitlistSignup } from '@/lib/notify';
 
 export const runtime = 'nodejs';
 
@@ -71,6 +72,8 @@ export async function POST(request: Request) {
   const submittedAt = new Date();
   const retentionUntil = addMonths(submittedAt, RETENTION_MONTHS);
 
+  const referer = request.headers.get('referer') ?? undefined;
+
   try {
     await writeClient.create({
       _type: 'waitlistEntry',
@@ -81,12 +84,10 @@ export async function POST(request: Request) {
       consentMethod: 'express_opt_in',
       ipAddress,
       userAgent: request.headers.get('user-agent') ?? undefined,
-      referer: request.headers.get('referer') ?? undefined,
+      referer,
       submittedAt: submittedAt.toISOString(),
       retentionUntil: retentionUntil.toISOString(),
     });
-
-    return NextResponse.json({ ok: true });
   } catch (err) {
     console.error('Waitlist create failed', err);
     return NextResponse.json(
@@ -94,4 +95,17 @@ export async function POST(request: Request) {
       { status: 500 },
     );
   }
+
+  // Fire-and-forget notification email. Failures are logged but do not
+  // affect the user-facing response — the entry is already persisted.
+  await notifyWaitlistSignup({
+    email: normalizedEmail,
+    source: normalizedSource ?? 'other',
+    scope: normalizedScope ?? 'waitlist',
+    submittedAt: submittedAt.toISOString(),
+    ipAddress,
+    referer,
+  });
+
+  return NextResponse.json({ ok: true });
 }
