@@ -14,7 +14,10 @@ import { WebhubLink } from '@/components/legal/WebhubLink';
  */
 
 const BYLINES: Record<Vertical, ReactNode> = {
-  life: 'Content reviewed by LLQP-licensed advisors at KLC Group Canada Inc.',
+  // The /life/ byline is substantive — explicitly names the partnership and
+  // the regulated capacity (review + quote + placement). Other verticals are
+  // editorial-only credits.
+  life: 'LLQP-licensed advisors at KLC Group Canada Inc. — content reviewed and quotes provided in partnership with TopRates.ca',
   pc: <>Editorial content from TopRates.ca · <WebhubLink /></>,
   mortgage: <>Editorial content from TopRates.ca · <WebhubLink /></>,
   cards: <>Editorial content with affiliate disclosure · TopRates.ca · <WebhubLink /></>,

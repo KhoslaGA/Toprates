@@ -5,29 +5,44 @@ import { colors, fonts } from '@/styles/tokens';
  * Vertical-specific in-page disclaimer block (Tier 3 of the disclaimer system).
  *
  * Usage:
- *   <DisclaimerBlock vertical="life" />     // /learn/life/* pages + life articles
- *   <DisclaimerBlock vertical="pc" />       // auto, home, business, travel
- *   <DisclaimerBlock vertical="mortgage" /> // /learn/mortgage/* + mortgage articles
+ *   <DisclaimerBlock vertical="life" />     // /life-insurance, /health-insurance, /travel-insurance
+ *   <DisclaimerBlock vertical="pc" />       // /auto-insurance, /home-insurance, /business-insurance
+ *   <DisclaimerBlock vertical="mortgage" /> // /mortgages and mortgage articles
  *   <DisclaimerBlock vertical="cards" />    // /credit-cards/* — appears ABOVE THE FOLD
  *
- * The "cards" variant has a distinct styling (amber callout, full-width band)
- * because affiliate disclosure has the strictest visibility requirement
- * (Competition Bureau 2024 Influencer Marketing Guidance + audit Task 5a).
+ * Three distinct visual treatments:
  *
- * Each text below is true and specific to the vertical:
- *   - life:     true today (KLC Group LLQP advisors review life content)
- *   - pc:       true today (Webhub4u Inc. is fintech, not a broker; KLC Group P&C launches summer 2027)
- *   - mortgage: true today (no MBLAA registration, no mortgage broker activity)
- *   - cards:    true today (affiliate-disclosed, methodology-driven)
+ *   life     — substantive teal callout (full teal left border, navy text,
+ *              no italic). The message ANNOUNCES capability: KLC Group
+ *              advisors today provide quote, advice, and policy placement.
+ *              This is not a cautionary disclaimer; it's an active-
+ *              brokerage notice and the styling reflects that.
+ *
+ *   pc / mortgage — muted cautionary callout (faint teal border, muted text,
+ *                   italic). The message SETS EXPECTATIONS: educational
+ *                   content only, no licensed activity here.
+ *
+ *   cards    — amber full-width band (Competition Bureau 2024 Influencer
+ *              Marketing Guidance + audit Task 5a strictest visibility).
+ *
+ * Each text is true and specific:
+ *   - life:     active LLQP referral today via KLC Group Canada Inc.
+ *   - pc:       no P&C broker today; KLC Group plans RIBO registration
+ *   - mortgage: not a licensed mortgage broker under MBLAA
+ *   - cards:    affiliate-disclosed, methodology-driven
+ *
+ * No specific dates appear in any variant — conditional language only.
+ * The /about and /whats-coming pages are the only places where target
+ * timing for KLC Group's RIBO registration is described, with hedging.
  */
 
 export type Vertical = 'life' | 'pc' | 'mortgage' | 'cards';
 
 const TEXT: Record<Exclude<Vertical, 'cards'>, string> = {
   life:
-    'Reviewed by LLQP-licensed advisors at KLC Group Canada Inc., an independent Canadian insurance brokerage, in partnership with TopRates.ca. Educational content. For personal recommendations specific to your situation, consult a licensed life insurance advisor.',
+    "Quote, advice, and policy-placement services on this page are provided by KLC Group Canada Inc., an independent Ontario-based life insurance advisory firm licensed under FSRA, in partnership with TopRates.ca. KLC Group's advisors hold LLQP credentials and are authorized to provide personalized recommendations and place coverage in life insurance, accident & sickness coverage (critical illness, disability, travel medical), and insurance-based investment products (segregated funds, annuities, GIAs). Educational content on this page is reviewed by KLC Group's licensed advisors. To talk to a licensed advisor about your situation, complete the form on this page or book a call.",
   pc:
-    'Educational content only. TopRates.ca is operated by Webhub4u Inc. and is not currently a registered insurance broker. For personal advice on your specific situation, consult a licensed insurance broker. Quote comparison and brokerage services launch summer 2027.',
+    'Educational content only. TopRates.ca is operated by Webhub4u Inc. and is not a licensed insurance broker. For personal advice on your specific situation, consult a licensed insurance broker. KLC Group Canada Inc. plans to register as a RIBO-licensed property and casualty brokerage; until that registration is granted, no P&C insurance is sold or quoted on TopRates.ca.',
   mortgage:
     'Educational content only. TopRates.ca is not a licensed mortgage broker under the Mortgage Brokerages, Lenders and Administrators Act, 2006 (MBLAA). For personal mortgage advice, consult a licensed mortgage agent or broker.',
 };
@@ -82,6 +97,38 @@ export function DisclaimerBlock({ vertical }: { vertical: Vertical }) {
     );
   }
 
+  // /life/ gets a substantive treatment — full teal border, navy text, no
+  // italic. The disclaimer ANNOUNCES active brokerage capability, not a
+  // cautionary "we're not licensed" notice.
+  if (vertical === 'life') {
+    return (
+      <div
+        style={{
+          borderLeft: `4px solid ${colors.teal}`,
+          background: `rgba(10, 126, 140, 0.06)`,
+          padding: '20px 24px',
+          margin: '24px 0',
+          borderRadius: '0 8px 8px 0',
+        }}
+      >
+        <p
+          style={{
+            fontFamily: fonts.heading,
+            fontSize: 14,
+            color: colors.navy,
+            margin: 0,
+            lineHeight: 1.65,
+          }}
+        >
+          {TEXT.life}
+        </p>
+      </div>
+    );
+  }
+
+  // pc + mortgage: muted cautionary treatment. Faint teal border, muted
+  // body text, italic. The message SETS EXPECTATIONS rather than
+  // announcing capability.
   return (
     <div
       style={{

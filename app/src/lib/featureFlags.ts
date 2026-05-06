@@ -1,30 +1,36 @@
 /**
- * Feature flags for TopRates.ca
+ * Feature flags for TopRates.ca compliance-final.
  *
- * The QUOTE_ENGINE flag gates the Track B quote-engine code. It MUST stay
- * false on production until KLC Group is registered with RIBO (target:
- * summer 2027). The build-time guard below throws if it's accidentally
- * enabled on Vercel production.
+ * The /life/ lead form is NOT behind a feature flag — KLC Group Canada Inc.
+ * holds active LLQP licensing today, so life insurance referral activity
+ * (lead capture + KLC handoff) is live from day one of this branch.
  *
- * Strategy doc: education today, quotes summer 2027.
+ * The P&C quote engine IS behind a feature flag — KLC Group does not yet
+ * hold RIBO registration, so P&C quoting / selling is not permitted on
+ * production. The flag exists so a P&C quote-engine track can be developed
+ * on a long-running feature branch without ever leaking to production.
  */
 
 export const FEATURES = {
   /**
-   * Quote engine — rate comparison + brokerage flow.
-   * Production: must be false until KLC Group is RIBO-registered (summer 2027).
-   * Preview / staging: may be true for internal testing only.
+   * P&C quote engine — auto / home / business / travel rate comparison +
+   * brokerage flow. Production: must remain false until KLC Group Canada
+   * Inc. completes RIBO registration. Preview / staging: may be true for
+   * internal testing only.
    */
-  QUOTE_ENGINE: process.env.NEXT_PUBLIC_FEATURE_QUOTE_ENGINE === 'true',
+  PC_QUOTE_ENGINE:
+    process.env.NEXT_PUBLIC_FEATURE_PC_QUOTE_ENGINE === 'true',
 } as const;
 
-// Build-time guard: prevent the quote engine from leaking into production.
+// Build-time guard: production deploys must never enable the P&C quote
+// engine. Throws at module load so `next build` fails loudly rather than
+// shipping an inadvertently-enabled flag.
 if (
   process.env.VERCEL_ENV === 'production' &&
-  process.env.NEXT_PUBLIC_FEATURE_QUOTE_ENGINE === 'true'
+  process.env.NEXT_PUBLIC_FEATURE_PC_QUOTE_ENGINE === 'true'
 ) {
   throw new Error(
-    'NEXT_PUBLIC_FEATURE_QUOTE_ENGINE must not be true on production. ' +
-      'The quote engine is gated until KLC Group is RIBO-registered (summer 2027).',
+    '[compliance] NEXT_PUBLIC_FEATURE_PC_QUOTE_ENGINE must not be true on production. ' +
+      'P&C quote engine is gated until KLC Group Canada Inc. is RIBO-registered.',
   );
 }
