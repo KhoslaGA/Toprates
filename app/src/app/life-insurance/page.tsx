@@ -1,9 +1,9 @@
 import PageWrapper from '@/components/layout/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/Card';
-import ContactForm from '@/components/contact/ContactForm';
 import FaqAccordion from '@/components/shared/FaqAccordion';
 import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
+import { LifeLeadForm } from '@/components/life/LifeLeadForm';
 
 export const metadata = {
   title: 'Life Insurance — Term, Whole & Universal Coverage | TopRates.ca',
@@ -168,21 +168,19 @@ export default function LifeInsurancePage() {
         </PageWrapper>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section — LifeLeadForm with full CASL consent + KLC handoff */}
       <section id="get-quote" className="py-16 md:py-20 bg-gradient-to-r from-[#1a365d] to-[#0f1f3a] text-white">
         <PageWrapper>
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
               Talk to a licensed advisor
             </h2>
             <p className="text-lg text-gray-100 mb-10 text-center">
-              Send us a note. Insurance inquiries are referred to KLC Group Canada Inc., an
-              independent insurance advisory firm with LLQP-licensed advisors. KLC will follow
-              up within one business day to discuss your needs.
+              Send us a note and a LLQP-licensed advisor at KLC Group Canada Inc. will reach out
+              shortly. KLC handles the regulated parts: needs analysis, illustrative quotes,
+              underwriting coordination, policy placement.
             </p>
-            <div className="bg-white rounded-lg p-8">
-              <ContactForm defaultProduct="life-insurance" />
-            </div>
+            <LifeLeadForm subPillar="general" source="life_insurance_bottom_cta" variant="card" />
           </div>
         </PageWrapper>
       </section>
