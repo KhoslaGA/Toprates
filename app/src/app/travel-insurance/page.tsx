@@ -1,17 +1,16 @@
 import PageWrapper from '@/components/layout/PageWrapper';
 import { Button } from '@/components/ui/Button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/Card';
-import ContactForm from '@/components/contact/ContactForm';
 import FaqAccordion from '@/components/shared/FaqAccordion';
 import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata = {
   title: 'Travel Insurance — Emergency Medical & Trip Coverage | TopRates.ca',
-  description: 'Plain-English Canadian travel insurance education — emergency medical, trip cancellation, baggage, and travel health. Reviewed by LLQP-licensed advisors at KLC Group Canada Inc. Operated by Webhub4u Inc.',
-  keywords: 'travel insurance, travel medical insurance, trip cancellation, baggage insurance, emergency medical, Canada, LLQP',
+  description: 'Plain-English Canadian travel insurance education — emergency medical, trip cancellation, baggage, and travel health. Independent Canadian insurance education. Operated by Webhub4u Inc.',
+  keywords: 'travel insurance, travel medical insurance, trip cancellation, baggage insurance, emergency medical, Canada',
   openGraph: {
     title: 'Travel Insurance Education — TopRates.ca',
-    description: 'Plain-English Canadian travel insurance education. Reviewed by LLQP-licensed advisors at KLC Group Canada Inc.',
+    description: 'Plain-English Canadian travel insurance education. Independent Canadian insurance education.',
   },
 };
 
@@ -40,9 +39,9 @@ const coverageFeatures = [
 
 const whyChooseToprates = [
   'Plain-English education on single-trip vs annual plans, medical caps, and pre-existing conditions',
-  'Reviewed by LLQP-licensed advisors at KLC Group Canada Inc.',
-  'Talk to a licensed advisor about coverage limits, exclusions, and claims process',
   'Independent editorial — no commission-driven product pitches',
+  'Updated as Canadian regulations and provincial OHIP-equivalent rules change',
+  'Quote and advisory services planned, once KLC Group Canada Inc. completes RIBO registration',
 ];
 
 const faqItems = [
@@ -73,26 +72,25 @@ export default function TravelInsurancePage() {
         <PageWrapper>
           <div className="max-w-3xl">
             <div className="text-[11px] uppercase tracking-[0.2em] text-amber-300 font-bold mb-3">
-              LLQP-licensed referral · Available now
+              INDEPENDENT CANADIAN INSURANCE EDUCATION
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Canadian Travel Insurance, in Plain English
             </h1>
             <p className="text-xl text-gray-100 mb-8">
               Plain-English education on emergency medical, trip cancellation, baggage, and
-              travel health coverage. Content reviewed by LLQP-licensed advisors at KLC Group
-              Canada Inc., an independent insurance advisory firm. When you&rsquo;re ready, send
-              a note and we&rsquo;ll connect you with a licensed advisor.
+              travel health coverage. Educational content only — for personal advice on your
+              specific situation, consult a licensed insurance advisor.
             </p>
-            <Button variant="accent" size="lg" href="#get-quote">
-              Talk to a licensed advisor
+            <Button variant="accent" size="lg" href="#read-more">
+              Read the guide
             </Button>
           </div>
         </PageWrapper>
       </section>
 
       <PageWrapper>
-        <DisclaimerBlock vertical="life" />
+        <DisclaimerBlock vertical="pc" />
       </PageWrapper>
 
       {/* Coverage Features */}
@@ -134,8 +132,8 @@ export default function TravelInsurancePage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-[#0d9488]">
-              <div className="text-[11px] uppercase tracking-[0.2em] text-[#0d9488] font-bold mb-3">
+            <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-amber-500">
+              <div className="text-[11px] uppercase tracking-[0.2em] text-amber-700 font-bold mb-3">
                 Regulatory note
               </div>
               <h3 className="text-xl font-bold text-[#1a365d] mb-4">
@@ -147,8 +145,9 @@ export default function TravelInsurancePage() {
                 (LLQP) is part of the licensing pathway.
               </p>
               <p className="text-gray-700 leading-relaxed text-sm">
-                KLC Group Canada Inc. holds licensing under this framework. Personalized advice
-                is provided only by KLC&rsquo;s licensed representatives, not by Webhub4u Inc.
+                TopRates.ca is operated by Webhub4u Inc., a Canadian technology company that is
+                not a licensed insurance broker. For personal advice on your specific situation,
+                consult a licensed advisor.
               </p>
             </div>
           </div>
@@ -167,21 +166,21 @@ export default function TravelInsurancePage() {
         </PageWrapper>
       </section>
 
-      {/* CTA Section */}
-      <section id="get-quote" className="py-16 md:py-20 bg-gradient-to-r from-[#1a365d] to-[#0f1f3a] text-white">
+      {/* Educational CTA Section — no licensed advisory on this page in Phase 1 */}
+      <section id="read-more" className="py-16 md:py-20 bg-gradient-to-r from-[#1a365d] to-[#0f1f3a] text-white">
         <PageWrapper>
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-              Talk to a licensed advisor
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Got a specific question?
             </h2>
-            <p className="text-lg text-gray-100 mb-10 text-center">
-              Send us a note. Insurance inquiries are referred to KLC Group Canada Inc., an
-              independent insurance advisory firm with LLQP-licensed advisors. KLC will follow
-              up within one business day.
+            <p className="text-lg text-gray-100 mb-10">
+              Educational content only on this page. For licensed advisory, our partner KLC
+              Group Canada Inc. handles life insurance referrals — visit our life insurance
+              page to get connected with a LLQP-licensed advisor.
             </p>
-            <div className="bg-white rounded-lg p-8">
-              <ContactForm defaultProduct="travel-insurance" />
-            </div>
+            <a href="/life-insurance" className="inline-block bg-white text-[#1a365d] font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition">
+              Go to life insurance →
+            </a>
           </div>
         </PageWrapper>
       </section>
