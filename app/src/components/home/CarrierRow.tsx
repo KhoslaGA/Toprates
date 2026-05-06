@@ -116,7 +116,7 @@ export default function CarrierRow() {
             marginBottom: 32,
           }}
         >
-          Carriers we'll work with at RIBO-registered launch
+          Carriers in our reviews
         </div>
       </div>
 
