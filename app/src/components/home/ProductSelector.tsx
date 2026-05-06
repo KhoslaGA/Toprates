@@ -494,9 +494,9 @@ export default function ProductSelector() {
           }}
         >
           {[
-            { icon: 'star' as IconName, title: '4.9/5 on Google', sub: 'Thousands of happy customers' },
-            { icon: 'sparkle' as IconName, title: '1M+ Canadians helped', sub: 'Better rates since 2026' },
-            { icon: 'check' as IconName, title: '30+ carrier partners', sub: 'Intact · Wawanesa · Aviva & more' },
+            { icon: 'shield' as IconName, title: 'LLQP-licensed advisory', sub: 'Via KLC Group Canada Inc., FSRA-licensed' },
+            { icon: 'check' as IconName, title: 'Independent editorial', sub: 'No commission-driven product pitches' },
+            { icon: 'sparkle' as IconName, title: 'Plain-English education', sub: 'Reviewed by licensed advisors' },
           ].map((t) => (
             <div key={t.title} style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
               <div
