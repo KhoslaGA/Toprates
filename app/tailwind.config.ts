@@ -9,6 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Brand tokens — match src/styles/tokens.ts. Used by LifeLeadForm,
+        // Eyebrow, DisclaimerBlock, and any other component that prefers
+        // Tailwind utility classes over inline styles.
+        teal: '#0A7E8C',
+        'teal-hover': '#0d9aa8',
+        'teal-dark': '#086874',
+        navy: '#1B2A4A',
+        'navy-dark': '#0f1e38',
+        gold: '#B8960C',
+        cream: '#f6efe0',
+        paper: '#fbf8f0',
+        mute: 'rgba(27, 42, 74, 0.6)',
+        border: 'rgba(27, 42, 74, 0.1)',
+        'border-soft': 'rgba(27, 42, 74, 0.06)',
+
         primary: {
           50: '#f0f4f8',
           100: '#d9e2f0',
@@ -48,6 +63,10 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        // Brand families — display = Outfit (heading); mono = JetBrains Mono
+        // (eyebrows + caption work). Font CSS variables wired in layout.tsx.
+        display: ['"Inter Tight"', 'Outfit', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       spacing: {
         '128': '32rem',
