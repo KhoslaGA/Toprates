@@ -205,6 +205,57 @@ export default function PrivacyPage() {
           </section>
 
           <section className="mb-8">
+            <h2 className="text-2xl font-bold text-[#1a365d] mb-4">
+              5b. Life insurance referrals (/life-insurance lead form)
+            </h2>
+            <p>
+              When you submit our life-insurance lead form on{' '}
+              <Link href="/life-insurance" className="text-[#0d9488] underline">/life-insurance</Link>:
+            </p>
+            <ol>
+              <li>
+                <strong><WebhubLink /></strong> (operator of TopRates.ca) collects: your name,
+                email, phone number (optional), preferred contact method, province, age range,
+                broad coverage interest, contact-time preferences, your optional message, your
+                IP address, and your browser user-agent string. We do <strong>not</strong>{' '}
+                collect medical history, financial details, current coverage details,
+                beneficiary information, smoking status, or any other underwriting-relevant
+                personal information.
+              </li>
+              <li>
+                <WebhubLink /> forwards this minimum-necessary information to{' '}
+                <strong>KLC Group Canada Inc.</strong>, an independent Ontario-based life
+                insurance advisory firm licensed under FSRA, in accordance with the partnership
+                agreement and your CASL-compliant consent provided at the time of submission.
+              </li>
+              <li>
+                KLC Group Canada Inc. collects any additional information needed for advice and
+                underwriting (medical history, current coverage, financial details, beneficiary
+                designations, etc.) directly from you, under their own privacy practices and
+                FSRA-regulated framework. <WebhubLink /> does not collect, transmit, or retain
+                this information.
+              </li>
+              <li>
+                Lead records are retained by <WebhubLink /> for{' '}
+                <strong>24 months</strong> from submission. To withdraw consent or request
+                earlier deletion, visit{' '}
+                <Link href="/withdraw-consent" className="text-[#0d9488] underline">/withdraw-consent</Link>{' '}
+                or email{' '}
+                <a href="mailto:toprates56@gmail.com" className="text-[#0d9488] underline">
+                  toprates56@gmail.com
+                </a>
+                . Withdrawn records are marked as such (not deleted) for CASL audit purposes.
+              </li>
+            </ol>
+            <p className="mt-4">
+              <strong>Per-referral compensation:</strong> <WebhubLink /> receives a per-referral
+              fee from KLC Group Canada Inc. for qualifying life-insurance referrals submitted
+              through TopRates.ca. The fee is paid per referral, not per sale or per dollar of
+              premium written, and does not affect what consumers pay for any insurance product.
+            </p>
+          </section>
+
+          <section className="mb-8">
             <h2 className="text-2xl font-bold text-[#1a365d] mb-4">6. How long we keep it</h2>
             <p>
               We retain personal information only as long as necessary for the purposes for which
@@ -224,6 +275,12 @@ export default function PrivacyPage() {
                 <strong>Contact inquiries (converted to a policy or product):</strong> retained for
                 the period required by the regulator governing the product (RIBO, FSRA, MBLAA, or
                 the issuer&rsquo;s rules) &mdash; typically 7 years.
+              </li>
+              <li>
+                <strong>Life insurance referral records (/life-insurance lead form):</strong>{' '}
+                retained by <WebhubLink /> for 24 months from submission, per PIPEDA Principle 5.
+                Withdrawal via /withdraw-consent sets a withdrawn-at timestamp; the record is
+                marked as withdrawn but not deleted for CASL audit-trail purposes.
               </li>
               <li>
                 <strong>Analytics data:</strong> aggregated event-level data retained for service
