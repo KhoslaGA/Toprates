@@ -38,7 +38,7 @@ export default function AboutPage() {
               fontFamily: "'JetBrains Mono', monospace",
             }}
           >
-            Education today · Quotes summer 2027
+            INDEPENDENT CANADIAN INSURANCE EDUCATION
           </div>
           <h1
             style={{

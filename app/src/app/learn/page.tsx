@@ -7,7 +7,7 @@ import { colors, fonts } from '@/styles/tokens';
 export const metadata: Metadata = {
   title: 'Learn — Plain-English Canadian insurance | TopRates.ca',
   description:
-    'Plain-English guides on Canadian insurance — auto, home, life, business, travel. Education today. Quotes summer 2027. Operated by Webhub4u Inc.',
+    'Plain-English guides on Canadian insurance — auto, home, life, business, travel. Independent Canadian insurance education. Operated by Webhub4u Inc.',
   alternates: { canonical: '/learn' },
 };
 
@@ -36,7 +36,7 @@ export default function LearnHubPage() {
               marginBottom: 12,
             }}
           >
-            Education today · Quotes summer 2027
+            INDEPENDENT CANADIAN INSURANCE EDUCATION
           </div>
           <h1
             style={{
@@ -161,7 +161,7 @@ export default function LearnHubPage() {
             New guides, every other week.
           </h2>
           <p style={{ fontFamily: fonts.heading, fontSize: 16, color: colors.muted, marginBottom: 24 }}>
-            We&rsquo;re writing toward summer 2027. Subscribe so you&rsquo;re there when quotes go live.
+            We&rsquo;re writing toward the RIBO-registered launch. Subscribe so you&rsquo;re there when quotes go live.
           </p>
           <Link
             href="/#newsletter"

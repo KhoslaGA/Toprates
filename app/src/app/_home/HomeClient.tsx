@@ -155,9 +155,9 @@ export default function HomeClient() {
                 <span style={{ fontSize: 13, fontWeight: 700, color: '#0A7E8C' }}>What we are</span>
               </div>
               {([
-                'An independent insurance education platform; quote engine launches summer 2027 with 30+ carriers',
-                <>Operated by <WebhubLink />; KLC Group (a separate company) will handle quoting at the summer 2027 launch</>,
-                'Founded by a licensed broker; content reviewed by a licensed broker',
+                'An independent insurance education platform; quote engine planned for KLC Group Canada Inc. RIBO-registered launch with 30+ carriers',
+                <>Operated by <WebhubLink />; KLC Group (a separate company) will handle quoting at the RIBO-registered launch</>,
+                'Life insurance content reviewed by LLQP-licensed advisors at KLC Group Canada Inc.',
                 'Educational guides and a newsletter today; no policies sold yet',
                 '100% Canadian-owned and operated, based in Ontario',
               ] as React.ReactNode[]).map((t, i) => (
@@ -214,10 +214,11 @@ export default function HomeClient() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}>
             {[
-              { icon: '🚗', title: 'Auto Insurance', desc: 'Compare quotes from 30+ Ontario carriers', status: 'Coming May 2027', live: false, href: '/auto-insurance' },
-              { icon: '🏠', title: 'Home Insurance', desc: 'Compare home insurance from multiple carriers at launch', status: 'Coming May 2027', live: false, href: '/home-insurance' },
-              { icon: '💳', title: 'Credit Cards', desc: 'Find the best rewards, cashback & travel cards', status: 'Live Now', live: true, href: '/credit-cards' },
-              { icon: '📊', title: 'Mortgage Rates', desc: 'Compare rates from top Canadian lenders', status: 'Coming 2028', live: false, href: '/mortgages' },
+              { icon: '🚗', title: 'Auto Insurance', desc: 'Plain-English Ontario auto insurance education', status: 'Editorial today', live: false, href: '/auto-insurance' },
+              { icon: '🏠', title: 'Home Insurance', desc: 'Plain-English Canadian home insurance education', status: 'Editorial today', live: false, href: '/home-insurance' },
+              { icon: '🛡️', title: 'Life Insurance', desc: 'Talk to a LLQP-licensed advisor at KLC Group', status: 'Available now', live: true, href: '/life-insurance' },
+              { icon: '💳', title: 'Credit Cards', desc: 'Independent reviews with affiliate disclosure', status: 'Editorial today', live: false, href: '/credit-cards' },
+              { icon: '📊', title: 'Mortgage Rates', desc: 'Plain-English Canadian mortgage education', status: 'Editorial today', live: false, href: '/mortgages' },
             ].map((prod) => (
               <Link
                 key={prod.title}
@@ -262,7 +263,7 @@ export default function HomeClient() {
             Be the first to compare
           </h2>
           <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', margin: '0 0 32px' }}>
-            TopRates.ca launches May 2027. Join the waitlist to get early access and never overpay for insurance again.
+            TopRates.ca quote comparison launches once KLC Group Canada Inc. completes RIBO registration. Join the launch list to be first when carriers turn on.
           </p>
           {!submitted ? (
             <div style={{ display: 'flex', gap: 10, maxWidth: 420, margin: '0 auto' }}>

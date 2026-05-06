@@ -116,7 +116,7 @@ export default function CarrierRow() {
             marginBottom: 32,
           }}
         >
-          Carriers we'll work with at summer 2027 launch
+          Carriers we'll work with at RIBO-registered launch
         </div>
       </div>
 

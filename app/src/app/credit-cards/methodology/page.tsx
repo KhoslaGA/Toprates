@@ -5,7 +5,7 @@ import { WebhubLink } from '@/components/legal/WebhubLink';
 export const metadata: Metadata = {
   title: 'Credit Card Evaluation Methodology | TopRates.ca',
   description:
-    'How TopRates.ca will evaluate and rank Canadian credit cards at summer 2027 launch. Methodology, refresh schedule, and our affiliate-disclosure policy.',
+    'How TopRates.ca will evaluate and rank Canadian credit cards at RIBO-registered launch. Methodology, refresh schedule, and our affiliate-disclosure policy.',
   alternates: { canonical: '/credit-cards/methodology' },
 };
 
@@ -21,7 +21,7 @@ export default function MethodologyPage() {
             How we&rsquo;ll evaluate credit cards
           </h1>
           <p className="text-xl text-gray-200 max-w-2xl">
-            TopRates.ca will publish credit-card comparisons at launch in summer 2027. This page explains
+            TopRates.ca will publish credit-card comparisons at planned RIBO-registered launch. This page explains
             the methodology we&rsquo;re building toward — including how we plan to handle affiliate
             compensation transparently.
           </p>
@@ -34,7 +34,7 @@ export default function MethodologyPage() {
             <p className="text-sm text-gray-800 m-0">
               <strong>Note:</strong> No credit-card comparisons are live on the site
               today. The text below describes the methodology we&rsquo;ll follow when comparisons
-              go live at our summer 2027 launch. It will be revised before any real cards are listed.
+              go live at our RIBO-registered launch. It will be revised before any real cards are listed.
             </p>
           </div>
 

@@ -7,11 +7,11 @@ import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata = {
   title: 'Business Insurance Education — TopRates.ca',
-  description: 'Plain-English Canadian business insurance education — general liability, commercial property, professional liability, workers compensation. Education today. Quotes summer 2027 alongside KLC Group Canada Inc.’s RIBO registration. Operated by Webhub4u Inc.',
+  description: 'Plain-English Canadian business insurance education — general liability, commercial property, professional liability, workers compensation. Independent Canadian insurance education. Quote comparison planned, once KLC Group Canada Inc. completes RIBO registration. Operated by Webhub4u Inc.',
   keywords: 'business insurance, commercial liability, property insurance, professional liability, workers compensation, Canada',
   openGraph: {
     title: 'Business Insurance Education — TopRates.ca',
-    description: 'Plain-English Canadian business insurance education. Education today. Quotes summer 2027.',
+    description: 'Plain-English Canadian business insurance education. Independent Canadian insurance education.',
   },
 };
 
@@ -42,7 +42,7 @@ const whyChooseToprates = [
   'Plain-English explanations of every commercial coverage type',
   'Independent editorial — no commission-driven product pitches',
   'Updated as Canadian regulations change (CGL, WSIB, professional liability rules)',
-  'Quote comparison launches summer 2027 alongside KLC Group Canada Inc.’s RIBO registration',
+  'Quote comparison is planned, once KLC Group Canada Inc. completes RIBO registration',
 ];
 
 const faqItems = [
@@ -73,16 +73,16 @@ export default function BusinessInsurancePage() {
         <PageWrapper>
           <div className="max-w-3xl">
             <div className="text-[11px] uppercase tracking-[0.2em] text-amber-300 font-bold mb-3">
-              Education today · Quotes summer 2027
+              INDEPENDENT CANADIAN INSURANCE EDUCATION
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Canadian Business Insurance, in Plain English
             </h1>
             <p className="text-xl text-gray-100 mb-8">
               Plain-English education on commercial general liability, property, professional
-              liability, and workers compensation across Canada. Quote comparison launches
-              summer 2027 alongside KLC Group Canada Inc.&rsquo;s RIBO registration. Until then,
-              this page is education only.
+              liability, and workers compensation across Canada. Quote comparison is planned,
+              once KLC Group Canada Inc. completes RIBO registration. Until then, this page is
+              education only.
             </p>
             <Button variant="accent" size="lg" href="#get-quote">
               Join the launch list
@@ -144,7 +144,7 @@ export default function BusinessInsurancePage() {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Property and casualty insurance — including business insurance — is regulated by
                 the Registered Insurance Brokers of Ontario (RIBO). KLC Group Canada Inc. plans
-                to register with RIBO ahead of the summer 2027 launch.
+                to register with RIBO ahead of the RIBO-registered launch.
               </p>
               <p className="text-gray-700 leading-relaxed text-sm">
                 Until that registration is granted, TopRates.ca does not sell, quote, bind,
@@ -176,7 +176,7 @@ export default function BusinessInsurancePage() {
               Be first when business insurance comparison launches
             </h2>
             <p className="text-lg text-gray-100 mb-10 text-center">
-              Business insurance comparison and brokerage are planned for summer 2027 alongside
+              Business insurance comparison and brokerage are planned, once KLC Group Canada Inc. completes RIBO registration. Alongside
               KLC Group Canada Inc.&rsquo;s RIBO registration. Send us a note and we&rsquo;ll add
               you to our launch list — we&rsquo;ll reach out when quotes are live.
             </p>

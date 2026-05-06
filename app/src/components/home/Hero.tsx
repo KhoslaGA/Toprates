@@ -119,7 +119,7 @@ export default function Hero() {
                   background: colors.gold,
                 }}
               />
-              Education today · Quotes summer 2027
+              INDEPENDENT CANADIAN INSURANCE EDUCATION
             </div>
             <h1 className="hero-h1-v2">
               Insurance,

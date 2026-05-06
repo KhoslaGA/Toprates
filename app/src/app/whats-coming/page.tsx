@@ -45,7 +45,7 @@ export default function WhatsComingPage() {
                   marginBottom: 12,
                 }}
               >
-                Education today · Quotes summer 2027
+                INDEPENDENT CANADIAN INSURANCE EDUCATION
               </div>
               <h1
                 style={{

@@ -425,7 +425,7 @@ export default function AutoLandingPage({ data }: { data: LandingData }) {
               letterSpacing: '-1px',
             }}
           >
-            Education today. Quotes summer 2027.
+            Independent Canadian insurance education.
           </h2>
           <p
             style={{
@@ -436,7 +436,7 @@ export default function AutoLandingPage({ data }: { data: LandingData }) {
               lineHeight: 1.55,
             }}
           >
-            Quote comparison and brokerage launch summer 2027 alongside KLC Group Canada Inc.&rsquo;s
+            Quote comparison and brokerage are planned, once KLC Group Canada Inc. completes RIBO registration alongside KLC Group Canada Inc.&rsquo;s
             RIBO registration. Get on the launch list — or talk to us today.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>

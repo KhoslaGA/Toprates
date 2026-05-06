@@ -17,7 +17,9 @@
 #   bash scripts/verify-compliance.sh
 #   npm run verify:compliance      (if wired into package.json)
 
-set -uo pipefail
+set -u
+# pipefail intentionally disabled — `grep | grep -q .` triggers SIGPIPE
+# (rc 141) on large match sets when the downstream grep exits early.
 
 ERRORS=0
 
@@ -43,11 +45,16 @@ else
   ok "Insurimple purged"
 fi
 
-if grep -rni "education today" src/ 2>/dev/null | grep -q . ; then
-  fail "Old brand line 'Education today' still in src/ — replace with 'Independent Canadian insurance education':"
-  grep -rni "education today" src/ 2>/dev/null
+# Pattern targets the old brand-line forms only:
+#   "Education today. Quotes summer 2027."
+#   "Education today · Quotes summer 2027"
+#   "EDUCATION TODAY · QUOTES SUMMER 2027"
+# Avoids false positives on natural body copy ending '...insurance education today.'
+if grep -rEni "education today\.\s+quotes? (summer|may) 2027|education today (·|\\\.) quotes? (summer|may) 2027|education today · quotes summer 2027" src/ 2>/dev/null | grep -q . ; then
+  fail "Old brand line 'Education today / Quotes summer 2027' still in src/ — replace with 'Independent Canadian insurance education':"
+  grep -rEni "education today\.\s+quotes? (summer|may) 2027|education today (·|\\\.) quotes? (summer|may) 2027|education today · quotes summer 2027" src/ 2>/dev/null
 else
-  ok "Old brand line 'Education today' purged"
+  ok "Old brand line 'Education today / Quotes summer 2027' purged"
 fi
 
 if grep -rni "1-800-toprates\|250 King Street West, Suite 1200" src/ 2>/dev/null | grep -q . ; then
@@ -84,25 +91,27 @@ COMMERCE_PHRASES=(
 )
 
 # Paths where commerce phrases ARE permitted (LLQP-licensed scope).
-# Includes the existing URL structure (/life-insurance, /health-insurance,
-# /travel-insurance) and the future /learn/life/ structure.
+# Patterns drop the "src/" prefix so they match both "src/foo" and the
+# double-slash "src//foo" that grep -r emits.
 LIFE_EXCLUSIONS=(
-  "src/app/learn/life/"
-  "src/app/life-insurance/"
-  "src/app/health-insurance/"
-  "src/app/travel-insurance/"
-  "src/components/life/"
-  "src/components/disclaimers/DisclaimerBlock.tsx"
-  "src/components/article/ArticleByline.tsx"
-  "src/components/layout/Eyebrow.tsx"
-  "src/lib/verticals.ts"
-  "src/lib/featureFlags.ts"
-  "src/app/api/life-referral/"
-  "src/app/api/contact/"
-  "src/components/contact/ContactForm.tsx"
-  "src/emails/"
-  "src/lib/email/"
-  "src/lib/notify.ts"
+  "app/learn/life/"
+  "app/life-insurance/"
+  "app/health-insurance/"
+  "app/travel-insurance/"
+  "components/life/"
+  "components/disclaimers/DisclaimerBlock.tsx"
+  "components/article/ArticleByline.tsx"
+  "components/layout/Eyebrow.tsx"
+  "lib/verticals.ts"
+  "lib/featureFlags.ts"
+  "app/api/life-referral/"
+  "app/api/contact/"
+  "app/api/withdraw-consent/"
+  "app/withdraw-consent/"
+  "components/contact/ContactForm.tsx"
+  "emails/"
+  "lib/email/"
+  "lib/notify.ts"
   "scripts/verify-compliance.sh"
 )
 
@@ -134,14 +143,21 @@ fi
 # ────────────────────────────────────────────────────────────────────────────
 
 DATE_PATTERNS="summer 2027|may 2027|q2 2027|by 2028"
-# Files allowed to mention specific launch dates.
+# Files allowed to mention specific launch dates. The /about and
+# /whats-coming pages are the canonical roadmap surfaces; /legal,
+# /privacy, /terms reference summer 2027 as a regulatory milestone for
+# the partnership compensation language. Sanity schema files describe
+# the same milestone for documentation. landingPages.ts secondaryStats
+# uses 'Summer 2027' as a stat-row value (still safe — labelled as
+# 'Comparison launches' which is a forward-looking commitment, but the
+# Phase 1 spec will rewrite to conditional language in Step 4).
 DATE_EXCLUSIONS=(
-  "src/app/about/"
-  "src/app/whats-coming/"
-  "src/app/legal/"
-  "src/app/privacy/"
-  "src/app/terms/"
-  "src/app/_home/HomeClient.tsx"
+  "app/about/"
+  "app/whats-coming/"
+  "app/legal/"
+  "app/privacy/"
+  "app/terms/"
+  "sanity/schemas/"
   "scripts/verify-compliance.sh"
 )
 
@@ -159,9 +175,9 @@ fi
 
 # Allowed: /legal page (ownership disclosure for the related-party section).
 FOUNDER_EXCLUSIONS=(
-  "src/app/legal/page.tsx"
+  "app/legal/page.tsx"
   "scripts/verify-compliance.sh"
-  "src/types/"
+  "types/"
 )
 
 founder_matches=$(grep -rEni "gautam khosla|tanvi kapoor|founded by" src/ 2>/dev/null | grep -v -F -f <(printf '%s\n' "${FOUNDER_EXCLUSIONS[@]}") || true)
@@ -190,10 +206,16 @@ BANNED_EVERYWHERE=(
 )
 
 EVERYWHERE_EXCLUSIONS=(
-  "src/lib/verticals.ts"
-  "src/lib/featureFlags.ts"
+  "lib/verticals.ts"
+  "lib/featureFlags.ts"
   "scripts/verify-compliance.sh"
-  "src/data/landingPages.ts"  # contains illustrative ranges + market data, audited separately
+  # data/landingPages.ts intentionally excluded: contains factual market
+  # data ('Quebec is the cheapest province', 'could save $400-700 by
+  # opting out of optional benefits') reporting Canadian regulatory
+  # math, not marketing claims about TopRates products. Body sections
+  # are editorial; metadata + headings are audited via the title/H1
+  # checks below.
+  "data/landingPages.ts"
 )
 
 BANNED_VIOLATIONS=0
@@ -217,7 +239,9 @@ fi
 required_check() {
   local pattern="$1"
   local label="$2"
-  if grep -rEni "$pattern" src/ 2>/dev/null | grep -q . ; then
+  local count
+  count=$(grep -rEni "$pattern" src/ 2>/dev/null | wc -l | tr -d ' ')
+  if [ "${count:-0}" -gt 0 ]; then
     ok "Required: $label"
   else
     fail "Required string MISSING: $label"

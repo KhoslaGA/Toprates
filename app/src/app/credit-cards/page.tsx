@@ -5,7 +5,7 @@ import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 
 export const metadata: Metadata = {
   title: 'Compare Credit Cards in Canada | TopRates.ca',
-  description: 'Compare Canadian credit cards by category — cash back, travel rewards, no annual fee, low interest. Educational content; full card comparison launching summer 2027.',
+  description: 'Compare Canadian credit cards by category — cash back, travel rewards, no annual fee, low interest. Educational content; full card comparison planned, once KLC Group is RIBO-registered.',
   keywords: 'credit cards Canada, credit card comparison, cash back cards, travel rewards cards, no annual fee',
 };
 
@@ -28,7 +28,7 @@ export default function CreditCardsPage() {
             Compare credit cards in Canada
           </h1>
           <p className="text-xl text-gray-200 mb-8 max-w-2xl">
-            Browse Canadian credit cards by category — cash back, travel rewards, no annual fee, low interest. Educational content; full comparison and applications launching summer 2027.
+            Browse Canadian credit cards by category — cash back, travel rewards, no annual fee, low interest. Educational content; full comparison and applications planned, once KLC Group is RIBO-registered.
           </p>
           <Link
             href="/coming-soon"
@@ -73,7 +73,7 @@ export default function CreditCardsPage() {
           <h2 className="text-3xl font-bold mb-4 text-[#1B2A4A]">Featured cards coming at launch</h2>
           <p className="text-gray-600 mb-8">
             We&rsquo;re working with Canadian credit-card issuers (banks and fintechs) to bring you a
-            transparent, methodology-driven comparison at launch in summer 2027. We won&rsquo;t show
+            transparent, methodology-driven comparison at planned RIBO-registered launch. We won&rsquo;t show
             placeholder card names or made-up offers in the meantime — when real cards appear here,
             they will be real cards with real terms, properly disclosed under our methodology.
           </p>

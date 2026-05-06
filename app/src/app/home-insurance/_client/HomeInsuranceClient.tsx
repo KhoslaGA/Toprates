@@ -253,10 +253,10 @@ export default function HomeInsuranceClient() {
       <section style={{ padding: '56px 32px', background: '#fff', borderTop: '1px solid #e8ecf0' }}>
         <div style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
           <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 10px' }}>
-            Compare home insurance from multiple carriers
+            Be first when home insurance comparison launches
           </h2>
           <p style={{ fontSize: 15, color: '#6b7b8d', margin: '0 0 24px' }}>
-            TopRates.ca launches May 2027. Compare home insurance from Ontario&rsquo;s top carriers.
+            Quote comparison and brokerage launch once KLC Group Canada Inc. completes RIBO registration. Independent Canadian insurance education today.
           </p>
           {!submitted ? (
             <div style={{ display: 'flex', gap: 8, maxWidth: 380, margin: '0 auto' }}>

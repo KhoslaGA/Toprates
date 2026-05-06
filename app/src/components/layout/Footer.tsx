@@ -5,9 +5,11 @@ import { usePathname } from 'next/navigation';
 import { WebhubLink } from '@/components/legal/WebhubLink';
 
 /**
- * Footer — strategy-doc compliant.
- * Brand line "Education today. Quotes summer 2027." appears prominently.
- * Operated by Webhub4u Inc. KLC Group brokerage launches summer 2027.
+ * Footer — Phase 1 compliance-final.
+ * Brand line: "Independent Canadian insurance education." (site-wide).
+ * Operated by Webhub4u Inc.; KLC Group Canada Inc. handles life insurance
+ * referrals today via the LLQP partnership; P&C planned, once KLC Group
+ * completes RIBO registration.
  */
 const columns: { title: string; links: { label: string; href: string }[] }[] = [
   {
@@ -33,7 +35,7 @@ const columns: { title: string; links: { label: string; href: string }[] }[] = [
     title: 'Company',
     links: [
       { label: 'About', href: '/about' },
-      { label: "What's coming summer 2027", href: '/whats-coming' },
+      { label: "Whatâs coming", href: '/whats-coming' },
       { label: 'Contact', href: '/contact' },
     ],
   },
@@ -91,7 +93,7 @@ export default function Footer() {
                 marginBottom: 14,
               }}
             >
-              Education today · Quotes summer 2027
+              INDEPENDENT CANADIAN INSURANCE EDUCATION
             </div>
             <p
               style={{
@@ -104,7 +106,7 @@ export default function Footer() {
                 maxWidth: 380,
               }}
             >
-              Education today. Quotes summer 2027.
+              Independent Canadian insurance education.
             </p>
             <p
               style={{
@@ -116,12 +118,16 @@ export default function Footer() {
                 fontStyle: 'italic',
               }}
             >
-              TopRates.ca is operated by <WebhubLink />, a Canadian financial technology company.
-              Life insurance content is reviewed by LLQP-licensed advisors at KLC Group Canada
-              Inc., an independent Canadian insurance brokerage, under partnership agreement.
-              Property &amp; casualty content is educational only — TopRates.ca is not currently
-              a registered insurance broker. Quote comparison and brokerage services launch
-              summer 2027.{' '}
+              TopRates.ca is operated by <WebhubLink />, a Canadian technology company.
+              Webhub4u Inc. is not a licensed insurance broker, mortgage broker, credit advisor,
+              or investment advisor. Insurance inquiries received through TopRates.ca are
+              referred to KLC Group Canada Inc., an independent Ontario-based life insurance
+              advisory firm licensed under FSRA. KLC Group&rsquo;s LLQP-licensed advisors provide
+              quote, advisory, and policy-placement services for life insurance, accident &amp;
+              sickness coverage, and insurance-based investment products today. KLC Group Canada
+              Inc. plans to register as a RIBO-licensed property and casualty brokerage; until
+              that registration is granted, no property and casualty insurance is sold or quoted
+              on TopRates.ca.{' '}
               <Link
                 href="/legal"
                 style={{ color: '#0fbdc9', textDecoration: 'underline', fontStyle: 'normal' }}

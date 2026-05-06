@@ -5,9 +5,9 @@ import { DisclaimerBlock } from '@/components/disclaimers/DisclaimerBlock';
 import { WebhubLink } from '@/components/legal/WebhubLink';
 
 export const metadata: Metadata = {
-  title: 'Compare Canadian Mortgage Rates | TopRates.ca',
-  description: 'Find and compare the best mortgage rates across Canada. Get instant quotes, use our mortgage calculators, and connect with trusted brokers.',
-  keywords: 'mortgage rates Canada, best mortgage rates, mortgage comparison, mortgage calculator, home loan rates',
+  title: 'Canadian Mortgage Rates — Education & Calculators | TopRates.ca',
+  description: 'Plain-English education on Canadian mortgage rates, fixed vs variable, mortgage calculators, and what affects your rate. Editorial only — for personal mortgage advice, consult a licensed mortgage agent or broker.',
+  keywords: 'mortgage rates Canada, mortgage education, mortgage comparison, mortgage calculator, home loan rates',
 };
 
 export default function MortgagesPage() {

@@ -13,16 +13,16 @@ const STEPS: { n: string; icon: IconName; title: string; desc: string; time: str
   {
     n: '02',
     icon: 'shield',
-    title: 'Talk to a licensed advisor',
-    desc: 'Life, critical illness, disability, and travel content is reviewed by LLQP-licensed advisors at KLC Group Canada Inc. Use the contact form and we will get back within one business day.',
+    title: 'Get a licensed referral (life only)',
+    desc: 'Life insurance content is reviewed by LLQP-licensed advisors at KLC Group Canada Inc. Visit /life-insurance to be matched with a licensed advisor.',
     time: '1 business day',
   },
   {
     n: '03',
     icon: 'bell',
     title: 'Join the launch list',
-    desc: 'Quote comparison and brokerage services launch summer 2027. Sign up and we will email you the day carriers turn on — no spam in between.',
-    time: 'Summer 2027',
+    desc: 'Quote comparison and brokerage services are planned, once KLC Group Canada Inc. completes RIBO registration. Sign up and we will email you the day carriers turn on — no spam in between.',
+    time: 'At launch',
   },
 ];
 
@@ -54,7 +54,7 @@ export default function HowItWorks() {
               letterSpacing: '-1.3px',
             }}
           >
-            Education today. Quotes summer 2027.
+            Independent Canadian insurance education.
           </h2>
           <p
             style={{
@@ -67,7 +67,7 @@ export default function HowItWorks() {
             }}
           >
             Plain-English Canadian insurance and mortgage education today. Quote comparison and
-            brokerage launch summer 2027.
+            brokerage launch is planned, once KLC Group Canada Inc. completes RIBO registration.
           </p>
         </div>
 

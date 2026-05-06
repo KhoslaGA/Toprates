@@ -13,14 +13,14 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://toprates.ca'),
   title: 'TopRates.ca — Insurance, in plain English',
   description:
-    'Independent insurance education for Canadians. Plain-English guides on auto, home, life, business, and travel insurance. Education today. Quotes summer 2027. Operated by Webhub4u Inc.',
+    'Independent Canadian insurance education. Plain-English guides on auto, home, life, business, and travel insurance. Talk to a LLQP-licensed advisor at KLC Group Canada Inc. for life insurance. Operated by Webhub4u Inc.',
   keywords:
     'insurance, auto insurance, home insurance, life insurance, mortgage rates, credit cards, Canadian insurance broker, Ontario auto reform',
   authors: [{ name: 'TopRates.ca' }],
   creator: 'TopRates.ca',
   openGraph: {
     title: 'TopRates.ca — Insurance, in plain English',
-    description: 'Independent insurance education for Canadians. Education today. Quotes summer 2027.',
+    description: 'Independent Canadian insurance education. Talk to a LLQP-licensed advisor at KLC Group Canada Inc.',
     type: 'website',
   },
   robots: 'index, follow',

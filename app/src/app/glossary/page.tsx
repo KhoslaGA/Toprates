@@ -6,7 +6,7 @@ import { colors, fonts } from '@/styles/tokens';
 export const metadata: Metadata = {
   title: 'Glossary — Insurance terms in plain English | TopRates.ca',
   description:
-    'A-to-Z glossary of Canadian insurance terms, defined in plain English. Education today. Quotes summer 2027.',
+    'A-to-Z glossary of Canadian insurance terms, defined in plain English. Independent Canadian insurance education.',
   alternates: { canonical: '/glossary' },
 };
 
@@ -50,7 +50,7 @@ export default function GlossaryPage() {
               marginBottom: 12,
             }}
           >
-            Education today · Quotes summer 2027
+            INDEPENDENT CANADIAN INSURANCE EDUCATION
           </div>
           <h1
             style={{

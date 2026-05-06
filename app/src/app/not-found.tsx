@@ -5,7 +5,7 @@ import { colors, fonts } from '@/styles/tokens';
 export const metadata = {
   title: '404 — TopRates.ca',
   description:
-    'This page doesn\'t exist yet — like our quote engine, summer 2027. Browse our Canadian insurance education in the meantime.',
+    'This page doesn\'t exist yet — like our quote engine — planned, once KLC Group Canada Inc. completes RIBO registration. Browse our Canadian insurance education in the meantime.',
 };
 
 export default function NotFound() {
@@ -36,7 +36,7 @@ export default function NotFound() {
             marginBottom: 12,
           }}
         >
-          Education today · Quotes summer 2027
+          INDEPENDENT CANADIAN INSURANCE EDUCATION
         </div>
 
         <h1
@@ -63,7 +63,7 @@ export default function NotFound() {
             maxWidth: 480,
           }}
         >
-          Some things don&rsquo;t exist yet — like our quote engine, launching summer 2027. In the meantime, here&rsquo;s everything that does.
+          Some things don&rsquo;t exist yet — like our quote engine — planned, once KLC Group Canada Inc. completes RIBO registration. In the meantime, here&rsquo;s everything that does.
         </p>
 
         <div

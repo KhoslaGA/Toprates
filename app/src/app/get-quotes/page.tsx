@@ -6,9 +6,9 @@ import { colors, fonts } from '@/styles/tokens';
 import { WebhubLink } from '@/components/legal/WebhubLink';
 
 export const metadata: Metadata = {
-  title: 'Quote Comparison Launches Summer 2027 — TopRates.ca',
+  title: 'Quote Comparison — Planned at KLC Group Canada Inc. RIBO Launch | TopRates.ca',
   description:
-    'TopRates.ca quote comparison and brokerage launch summer 2027 alongside KLC Group Canada Inc.’s RIBO registration. Education today; talk to a licensed advisor or join the launch list.',
+    'TopRates.ca quote comparison and brokerage are planned, once KLC Group Canada Inc. completes RIBO registration. Independent Canadian insurance education today.',
   alternates: { canonical: '/get-quotes' },
   robots: { index: false, follow: true },
 };
@@ -47,7 +47,7 @@ export default function GetQuotesPage() {
                 marginBottom: 10,
               }}
             >
-              Education today · Quotes summer 2027
+              INDEPENDENT CANADIAN INSURANCE EDUCATION
             </div>
             <h1
               style={{
@@ -72,7 +72,7 @@ export default function GetQuotesPage() {
               }}
             >
               TopRates.ca is operated by <WebhubLink />, a Canadian financial technology company.
-              Quote comparison and brokerage services launch summer 2027 alongside KLC Group
+              Quote comparison and brokerage services are planned, once KLC Group Canada Inc. completes RIBO registration alongside KLC Group
               Canada Inc.&rsquo;s RIBO registration. Until then, you have two options below.
             </p>
           </div>
@@ -108,7 +108,7 @@ export default function GetQuotesPage() {
                 letterSpacing: '-0.4px',
               }}
             >
-              Talk to a licensed advisor today
+              Get a licensed life insurance referral
             </h2>
             <p
               style={{
@@ -119,9 +119,12 @@ export default function GetQuotesPage() {
                 margin: '0 0 14px',
               }}
             >
-              Life, critical illness, disability, and travel insurance content is reviewed by
-              LLQP-licensed advisors at KLC Group Canada Inc. Send a note via the form below and
-              we&rsquo;ll respond within one business day.
+              Life insurance content is reviewed by LLQP-licensed advisors at KLC Group Canada
+              Inc. Visit{' '}
+              <Link href="/life-insurance" style={{ color: colors.teal, textDecoration: 'underline' }}>
+                /life-insurance
+              </Link>{' '}
+              to be connected with a licensed advisor.
             </p>
             <span
               style={{
@@ -210,7 +213,7 @@ export default function GetQuotesPage() {
                 margin: '0 0 14px',
               }}
             >
-              The full timeline for the summer 2027 quote-comparison platform launch and the
+              The full timeline for the planned KLC Group Canada Inc. RIBO-registered quote-comparison platform launch and the
               KLC Group Canada Inc. RIBO registration.
             </p>
             <Link
