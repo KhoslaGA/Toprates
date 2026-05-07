@@ -9,20 +9,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand tokens — match src/styles/tokens.ts. Used by LifeLeadForm,
-        // Eyebrow, DisclaimerBlock, and any other component that prefers
-        // Tailwind utility classes over inline styles.
+        // Brand tokens — kept for backward compat with existing Tailwind
+        // utility usages. Authoritative source is now src/styles/globals.css
+        // @theme block (Tailwind v4 CSS-first). Gold token DROPPED here
+        // and in @theme; the Phase 1 muddy gold #B8960C is replaced by
+        // amber #B45309 (disclosure callouts) or navy/teal (decorative).
         teal: '#0A7E8C',
         'teal-hover': '#0d9aa8',
         'teal-dark': '#086874',
         navy: '#1B2A4A',
         'navy-dark': '#0f1e38',
-        gold: '#B8960C',
-        cream: '#f6efe0',
-        paper: '#fbf8f0',
-        mute: 'rgba(27, 42, 74, 0.6)',
-        border: 'rgba(27, 42, 74, 0.1)',
-        'border-soft': 'rgba(27, 42, 74, 0.06)',
+        cream: '#FBF7EE',
+        paper: '#FBF7EE',
+        ink: '#1F2024',
+        'ink-strong': '#121214',
+        'ink-muted': '#5C5C66',
+        mute: '#5C5C66',
+        amber: '#B45309',
+        border: 'rgba(31, 32, 36, 0.10)',
+        'border-soft': 'rgba(31, 32, 36, 0.06)',
 
         primary: {
           50: '#f0f4f8',
@@ -62,11 +67,13 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        // Brand families — display = Outfit (heading); mono = JetBrains Mono
-        // (eyebrows + caption work). Font CSS variables wired in layout.tsx.
-        display: ['"Inter Tight"', 'Outfit', 'system-ui', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        // Editorial register: Source Serif 4 body + headings, Inter UI,
+        // Newsreader display. Loaded via next/font/google in layout.tsx.
+        // No more Inter Tight, no more JetBrains Mono.
+        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-serif)', 'Newsreader', 'Georgia', 'serif'],
+        display: ['var(--font-display)', 'var(--font-serif)', 'Georgia', 'serif'],
+        heading: ['var(--font-serif)', 'Newsreader', 'Georgia', 'serif'],
       },
       spacing: {
         '128': '32rem',
