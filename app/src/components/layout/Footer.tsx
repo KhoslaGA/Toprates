@@ -87,7 +87,7 @@ export default function Footer() {
                 fontFamily: "var(--font-sans), -apple-system, sans-serif",
                 fontSize: 11,
                 letterSpacing: 1.5,
-                color: '#B8960C',
+                color: '#B45309',
                 fontWeight: 700,
                 textTransform: 'uppercase',
                 marginBottom: 14,

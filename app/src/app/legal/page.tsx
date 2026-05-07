@@ -17,7 +17,7 @@ export default function LegalPage() {
       {/* HERO */}
       <section className="bg-[#1B2A4A] text-white py-16 px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="text-[11px] uppercase tracking-[0.2em] text-[#B8960C] font-bold mb-3">
+          <div className="text-[11px] uppercase tracking-[0.2em] text-amber font-bold mb-3">
             TopRates.ca · Webhub4u Inc.
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-3 tracking-tight leading-tight">

@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const TEAL = '#0A7E8C';
 const NAVY = '#1B2A4A';
-const GOLD = '#B8960C';
+const GOLD = '#B45309'; // amber — was muddy #B8960C in Phase 1, swapped per typography brief
 
 export default function AutoInsuranceClient() {
   const [email, setEmail] = useState('');
