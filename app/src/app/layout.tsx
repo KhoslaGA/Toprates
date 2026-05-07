@@ -1,8 +1,36 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { Source_Serif_4, Inter, Newsreader } from 'next/font/google'
 import '../styles/globals.css'
 import MegaNav from '../components/layout/MegaNav'
 import Footer from '../components/layout/Footer'
+
+// Editorial body + headings. Source Serif 4 is screen-optimized variable
+// serif by Adobe — closest free analog to NYT Imperial / Tiempos Text.
+const sourceSerif = Source_Serif_4({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-serif',
+  display: 'swap',
+})
+
+// UI / eyebrows / metadata / commerce body. Inter has tabular-figure
+// support (`tnum`) for rate tables and currency rendering.
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-sans',
+  display: 'swap',
+})
+
+// Optional display face for flagship hero moments. Same family as
+// Source Serif 4, optical-size optimized for large display sizes.
+const newsreader = Newsreader({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-display',
+  display: 'swap',
+})
 
 const GOOGLE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
 const PLAUSIBLE_DOMAIN = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN
@@ -38,19 +66,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${sourceSerif.variable} ${inter.variable} ${newsreader.variable}`}
+    >
       <head>
         <link rel="alternate" type="application/rss+xml" title="TopRates.ca RSS" href="/rss.xml" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap"
-          rel="stylesheet"
-        />
         {PLAUSIBLE_DOMAIN && (
           <Script
             defer
