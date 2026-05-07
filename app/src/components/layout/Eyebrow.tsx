@@ -1,18 +1,27 @@
-import { colors, fonts } from '@/styles/tokens';
-
 /**
  * Page-level eyebrow.
  *
  *   <Eyebrow variant="site" />  → INDEPENDENT CANADIAN INSURANCE EDUCATION
  *   <Eyebrow variant="life" />  → TALK TO A LICENSED ADVISOR TODAY
  *
- * The site-wide variant uses gold (editorial / independence). The life
- * variant uses teal (the partnership / active-brokerage color). The
- * deliberate visual difference reinforces the semantic difference: /life/
- * pages have an active commercial offering today through KLC Group's LLQP
- * licensing; other verticals are educational only until KLC Group obtains
- * RIBO registration.
+ * Site variant uses amber (replaces the muddy gold from Phase 1 — see
+ * SiteFontpostresearch.md "color audit failed; amber #B45309 replaces it
+ * for disclosure callouts"). Life variant stays teal (the partnership /
+ * active-brokerage color).
+ *
+ * Typography: Inter caps at 12px / tracking 0.06em. The previous
+ * JetBrains Mono treatment carried developer-tool semantics; Inter is
+ * the editorial-UI register premium publications use for eyebrows.
+ *
+ * onDark: bumps contrast for navy / dark-gradient heroes.
  */
+
+import { Inter } from 'next/font/google';
+
+const interEyebrow = Inter({
+  subsets: ['latin'],
+  weight: ['700'],
+});
 
 export type EyebrowVariant = 'site' | 'life';
 
@@ -26,31 +35,32 @@ export function Eyebrow({
   onDark = false,
 }: {
   variant?: EyebrowVariant;
-  /** True when the eyebrow sits on a navy hero — uses higher-contrast text. */
+  /** True when the eyebrow sits on a navy/dark hero — uses higher-contrast text. */
   onDark?: boolean;
 }) {
   const isLife = variant === 'life';
 
   // Pill chip background + border. Different accent per variant.
-  const accent = isLife ? colors.teal : colors.gold;
+  // Site = amber; life = teal. Higher opacity on dark backgrounds.
+  const accent = isLife ? '#0A7E8C' : '#B45309';
   const bg = onDark
     ? isLife
       ? 'rgba(15, 189, 201, 0.18)' // teal at higher opacity on dark hero
-      : 'rgba(184, 150, 12, 0.20)' // gold at higher opacity on dark hero
+      : 'rgba(180, 83, 9, 0.20)' // amber at higher opacity on dark hero
     : isLife
       ? 'rgba(10, 126, 140, 0.10)'
-      : 'rgba(184, 150, 12, 0.12)';
+      : 'rgba(180, 83, 9, 0.10)';
   const border = onDark
     ? isLife
       ? 'rgba(15, 189, 201, 0.45)'
-      : 'rgba(184, 150, 12, 0.45)'
+      : 'rgba(180, 83, 9, 0.45)'
     : isLife
       ? 'rgba(10, 126, 140, 0.30)'
-      : 'rgba(184, 150, 12, 0.30)';
+      : 'rgba(180, 83, 9, 0.30)';
   const text = onDark
     ? isLife
       ? '#0fbdc9'
-      : '#e0c270'
+      : '#d97706'
     : accent;
 
   return (
@@ -75,10 +85,10 @@ export function Eyebrow({
         }}
       />
       <span
+        className={interEyebrow.className}
         style={{
-          fontFamily: fonts.mono,
-          fontSize: 10,
-          letterSpacing: '0.18em',
+          fontSize: 12,
+          letterSpacing: '0.06em',
           fontWeight: 700,
           color: text,
           textTransform: 'uppercase',
