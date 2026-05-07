@@ -216,7 +216,7 @@ export default function LegalPage() {
                 content or website operations, please contact:
               </p>
               <a
-                href="mailto:toprates56@gmail.com"
+                href="mailto:privacy@toprates.ca"
                 className="inline-flex items-center gap-2 text-lg sm:text-xl font-semibold text-[#0A7E8C] hover:text-[#085f6b] transition-colors"
               >
                 <svg
@@ -233,7 +233,7 @@ export default function LegalPage() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                toprates56@gmail.com
+                privacy@toprates.ca
               </a>
             </div>
           </article>

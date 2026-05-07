@@ -69,8 +69,8 @@ export default function WithdrawConsentPage() {
           of your consent and its withdrawal as compliance proof. Your record
           is marked as withdrawn but not deleted. For full deletion requests,
           email{' '}
-          <a href="mailto:toprates56@gmail.com" className="text-teal underline">
-            toprates56@gmail.com
+          <a href="mailto:privacy@toprates.ca" className="text-teal underline">
+            privacy@toprates.ca
           </a>
           .
         </p>

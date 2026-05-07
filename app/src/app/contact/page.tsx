@@ -60,10 +60,10 @@ export default function ContactPage() {
               <CardContent>
                 <p className="text-gray-700 font-semibold mb-1">
                   <a
-                    href="mailto:toprates56@gmail.com"
+                    href="mailto:contact@toprates.ca"
                     className="text-[#0d9488] hover:text-[#0a7566]"
                   >
-                    toprates56@gmail.com
+                    contact@toprates.ca
                   </a>
                 </p>
                 <p className="text-gray-600 text-sm">
@@ -82,7 +82,7 @@ export default function ContactPage() {
                 <p className="text-gray-600 text-sm">
                   Brampton, Ontario, Canada
                   <br />
-                  Mailing address available on request via toprates56@gmail.com
+                  Mailing address available on request via contact@toprates.ca
                 </p>
               </CardContent>
             </Card>

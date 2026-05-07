@@ -68,8 +68,8 @@ export default function GlossaryPage() {
           <p style={{ fontFamily: fonts.heading, fontSize: 17, color: colors.muted, lineHeight: 1.55, margin: 0 }}>
             Every insurance term that&rsquo;s ever confused you, defined in plain English. We&rsquo;ll
             keep adding to this. If you spot something missing, email{' '}
-            <a href="mailto:toprates56@gmail.com" style={{ color: colors.teal }}>
-              toprates56@gmail.com
+            <a href="mailto:contact@toprates.ca" style={{ color: colors.teal }}>
+              contact@toprates.ca
             </a>
             .
           </p>

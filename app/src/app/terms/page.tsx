@@ -287,8 +287,8 @@ export default function TermsPage() {
             <p className="mt-4">
               <strong><WebhubLink /> (TopRates.ca)</strong><br />
               Operating from Brampton, Ontario, Canada<br />
-              Email: <a href="mailto:toprates56@gmail.com" className="text-[#0d9488] hover:text-[#0a7566]">toprates56@gmail.com</a><br />
-              Mailing address available on request via toprates56@gmail.com
+              Email: <a href="mailto:contact@toprates.ca" className="text-[#0d9488] hover:text-[#0a7566]">contact@toprates.ca</a><br />
+              Mailing address available on request via contact@toprates.ca
             </p>
           </section>
 

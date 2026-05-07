@@ -21,13 +21,13 @@ import { Resend } from 'resend';
  *                       sender label). Once toprates.ca is verified
  *                       in Resend, set this to e.g.
  *                       'TopRates.ca <noreply@toprates.ca>'.
- *   NOTIFY_TO_EMAIL   — optional override (default: toprates56@gmail.com).
+ *   NOTIFY_TO_EMAIL   — optional override (default: contact@toprates.ca).
  */
 
 const apiKey = process.env.RESEND_API_KEY;
 const fromAddress =
   process.env.NOTIFY_FROM_EMAIL ?? 'TopRates.ca <onboarding@resend.dev>';
-const toAddress = process.env.NOTIFY_TO_EMAIL ?? 'toprates56@gmail.com';
+const toAddress = process.env.NOTIFY_TO_EMAIL ?? 'contact@toprates.ca';
 
 const resend = apiKey ? new Resend(apiKey) : null;
 

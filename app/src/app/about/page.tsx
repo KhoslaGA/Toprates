@@ -200,7 +200,7 @@ export default function AboutPage() {
             Get in touch
           </h2>
           <p style={{ fontSize: 15, color: '#6b7b8d', margin: '0 0 20px' }}>
-            All inquiries — privacy, general, editorial: toprates56@gmail.com
+            General: contact@toprates.ca · Privacy: privacy@toprates.ca · Editorial: editorial@toprates.ca
           </p>
         </div>
       </section>
