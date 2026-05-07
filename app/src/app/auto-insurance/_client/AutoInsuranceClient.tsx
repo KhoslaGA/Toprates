@@ -52,7 +52,7 @@ export default function AutoInsuranceClient() {
                 </span>
               </div>
 
-              <h1 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 38, lineHeight: 1.15, color: '#fff', margin: '0 0 14px' }}>
+              <h1 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 38, lineHeight: 1.15, color: '#fff', margin: '0 0 14px' }}>
                 Compare Car Insurance<br />in Ontario
               </h1>
               <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: '0 0 28px', maxWidth: 460 }}>
@@ -70,7 +70,7 @@ export default function AutoInsuranceClient() {
                     style={{
                       flex: 1, padding: '13px 16px', borderRadius: 10,
                       border: '2px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.07)',
-                      color: '#fff', fontSize: 14, fontFamily: "'Inter Tight'", outline: 'none',
+                      color: '#fff', fontSize: 14, fontFamily: "var(--font-serif)", outline: 'none',
                     }}
                   />
                   <button
@@ -79,7 +79,7 @@ export default function AutoInsuranceClient() {
                       background: `linear-gradient(135deg, ${TEAL}, #0d9aa8)`,
                       color: '#fff', border: 'none', borderRadius: 10,
                       padding: '13px 24px', fontSize: 14, fontWeight: 700,
-                      fontFamily: "'Inter Tight'", cursor: 'pointer', whiteSpace: 'nowrap',
+                      fontFamily: "var(--font-serif)", cursor: 'pointer', whiteSpace: 'nowrap',
                     }}
                   >
                     Join Waitlist
@@ -117,7 +117,7 @@ export default function AutoInsuranceClient() {
               ].map((s, i, arr) => (
                 <div key={i} style={{ padding: '16px 0', borderBottom: i < arr.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none' }}>
                   <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', marginBottom: 4 }}>{s.label}</div>
-                  <div style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 26, color: i === 1 ? '#12b8ca' : '#fff' }}>{s.value}</div>
+                  <div style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 26, color: i === 1 ? '#12b8ca' : '#fff' }}>{s.value}</div>
                   <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.25)' }}>{s.sub}</div>
                 </div>
               ))}
@@ -154,7 +154,7 @@ export default function AutoInsuranceClient() {
             <div style={{ fontSize: 11, fontWeight: 700, color: TEAL, letterSpacing: 1.5, textTransform: 'uppercase', marginBottom: 6 }}>
               Once KLC Group is RIBO-registered
             </div>
-            <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 28, color: NAVY, margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 28, color: NAVY, margin: 0 }}>
               How quote comparison will work
             </h2>
             <p style={{ fontSize: 14, color: '#6b7b8d', maxWidth: 540, margin: '10px auto 0', lineHeight: 1.55 }}>
@@ -181,7 +181,7 @@ export default function AutoInsuranceClient() {
                   </div>
                   <div style={{ fontSize: 11, fontWeight: 700, color: TEAL, letterSpacing: 0.8 }}>STEP {s.n}</div>
                 </div>
-                <h3 style={{ fontFamily: "'Inter Tight'", fontWeight: 700, fontSize: 18, color: NAVY, margin: '0 0 8px' }}>{s.title}</h3>
+                <h3 style={{ fontFamily: "var(--font-serif)", fontWeight: 700, fontSize: 18, color: NAVY, margin: '0 0 8px' }}>{s.title}</h3>
                 <p style={{ fontSize: 14, color: '#6b7b8d', lineHeight: 1.6, margin: 0 }}>{s.desc}</p>
               </div>
             ))}
@@ -192,7 +192,7 @@ export default function AutoInsuranceClient() {
       {/* WHAT AFFECTS YOUR RATE */}
       <section style={{ padding: '64px 32px', background: '#f8fafb' }}>
         <div style={{ maxWidth: 1080, margin: '0 auto' }}>
-          <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 8px' }}>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 8px' }}>
             What affects your auto insurance rate in Ontario?
           </h2>
           <p style={{ fontSize: 15, color: '#6b7b8d', marginBottom: 28, maxWidth: 600 }}>
@@ -209,7 +209,7 @@ export default function AutoInsuranceClient() {
               { factor: 'Claims history', detail: 'At-fault claims stay on your record for 6 years. Even not-at-fault claims can affect rates with some carriers.' },
             ].map((f) => (
               <div key={f.factor} style={{ padding: '20px 22px', background: '#fff', borderRadius: 10, border: '1px solid #e8ecf0' }}>
-                <h4 style={{ fontFamily: "'Inter Tight'", fontWeight: 700, fontSize: 15, color: NAVY, margin: '0 0 6px' }}>{f.factor}</h4>
+                <h4 style={{ fontFamily: "var(--font-serif)", fontWeight: 700, fontSize: 15, color: NAVY, margin: '0 0 6px' }}>{f.factor}</h4>
                 <p style={{ fontSize: 13, color: '#6b7b8d', lineHeight: 1.5, margin: 0 }}>{f.detail}</p>
               </div>
             ))}
@@ -221,7 +221,7 @@ export default function AutoInsuranceClient() {
       <section style={{ padding: '64px 32px', background: '#fff' }}>
         <div style={{ maxWidth: 1080, margin: '0 auto' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24, flexWrap: 'wrap', gap: 12 }}>
-            <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 24, color: NAVY, margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 24, color: NAVY, margin: 0 }}>
               Ontario auto insurance guides
             </h2>
             <Link href="/blog" style={{ fontSize: 13, fontWeight: 600, color: TEAL, textDecoration: 'none' }}>
@@ -249,7 +249,7 @@ export default function AutoInsuranceClient() {
                 }}
               >
                 <span style={{ fontSize: 10, fontWeight: 700, color: a.tc, letterSpacing: 0.5 }}>{a.tag}</span>
-                <h3 style={{ fontFamily: "'Inter Tight'", fontWeight: 700, fontSize: 16, color: NAVY, margin: '6px 0 8px', lineHeight: 1.3 }}>
+                <h3 style={{ fontFamily: "var(--font-serif)", fontWeight: 700, fontSize: 16, color: NAVY, margin: '6px 0 8px', lineHeight: 1.3 }}>
                   {a.title}
                 </h3>
                 <span style={{ fontSize: 11, color: '#b0b8c4' }}>{a.date}, 2026 · {a.read}</span>
@@ -262,7 +262,7 @@ export default function AutoInsuranceClient() {
       {/* BOTTOM CTA */}
       <section style={{ padding: '56px 32px', background: '#f8fafb', borderTop: '1px solid #e8ecf0' }}>
         <div style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 10px' }}>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 10px' }}>
             Ready to compare?
           </h2>
           <p style={{ fontSize: 15, color: '#6b7b8d', margin: '0 0 24px' }}>
@@ -279,7 +279,7 @@ export default function AutoInsuranceClient() {
                 style={{
                   flex: 1, padding: '11px 16px', borderRadius: 8,
                   border: '1px solid #d0d5db', fontSize: 14,
-                  fontFamily: "'Inter Tight'", outline: 'none',
+                  fontFamily: "var(--font-serif)", outline: 'none',
                 }}
               />
               <button
@@ -287,7 +287,7 @@ export default function AutoInsuranceClient() {
                 style={{
                   background: TEAL, color: '#fff', border: 'none', borderRadius: 8,
                   padding: '11px 22px', fontSize: 14, fontWeight: 700,
-                  fontFamily: "'Inter Tight'", cursor: 'pointer',
+                  fontFamily: "var(--font-serif)", cursor: 'pointer',
                 }}
               >
                 Join Waitlist

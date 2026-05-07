@@ -35,14 +35,14 @@ export default function AboutPage() {
               letterSpacing: 1.5,
               textTransform: 'uppercase',
               marginBottom: 10,
-              fontFamily: "'JetBrains Mono', monospace",
+              fontFamily: "var(--font-sans), -apple-system, sans-serif",
             }}
           >
             INDEPENDENT CANADIAN INSURANCE EDUCATION
           </div>
           <h1
             style={{
-              fontFamily: "'Inter Tight'",
+              fontFamily: "var(--font-serif)",
               fontWeight: 900,
               fontSize: 44,
               color: NAVY,
@@ -55,7 +55,7 @@ export default function AboutPage() {
           </h1>
           <p
             style={{
-              fontFamily: "'Inter Tight', Georgia, serif",
+              fontFamily: "var(--font-serif), 'Newsreader', Georgia, serif",
               fontSize: 19,
               color: '#6b7b8d',
               lineHeight: 1.65,
@@ -72,10 +72,10 @@ export default function AboutPage() {
       {/* WHAT WE ARE */}
       <section style={{ padding: '56px 32px' }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
-          <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 16px' }}>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 16px' }}>
             What we are
           </h2>
-          <div style={{ fontFamily: "'Inter Tight', Georgia, serif", fontSize: 17, lineHeight: 1.8, color: '#374151' }}>
+          <div style={{ fontFamily: "var(--font-serif), 'Newsreader', Georgia, serif", fontSize: 17, lineHeight: 1.8, color: '#374151' }}>
             <p>
               TopRates.ca is operated by <strong><WebhubLink /></strong>, a Canadian financial
               technology company. We publish plain-English Canadian insurance education — auto,
@@ -89,10 +89,10 @@ export default function AboutPage() {
       {/* THE PARTNERSHIP */}
       <section style={{ padding: '56px 32px', background: '#f8fafb' }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
-          <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 16px' }}>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 16px' }}>
             The partnership
           </h2>
-          <div style={{ fontFamily: "'Inter Tight', Georgia, serif", fontSize: 17, lineHeight: 1.8, color: '#374151' }}>
+          <div style={{ fontFamily: "var(--font-serif), 'Newsreader', Georgia, serif", fontSize: 17, lineHeight: 1.8, color: '#374151' }}>
             <p>
               For life insurance content, TopRates.ca partners with{' '}
               <strong>KLC Group Canada Inc.</strong>, an independent Canadian insurance brokerage.
@@ -122,15 +122,15 @@ export default function AboutPage() {
               letterSpacing: 1.5,
               textTransform: 'uppercase',
               marginBottom: 10,
-              fontFamily: "'JetBrains Mono', monospace",
+              fontFamily: "var(--font-sans), -apple-system, sans-serif",
             }}
           >
             Summer 2027
           </div>
-          <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 16px' }}>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 16px' }}>
             What we&rsquo;re building
           </h2>
-          <div style={{ fontFamily: "'Inter Tight', Georgia, serif", fontSize: 17, lineHeight: 1.8, color: '#374151' }}>
+          <div style={{ fontFamily: "var(--font-serif), 'Newsreader', Georgia, serif", fontSize: 17, lineHeight: 1.8, color: '#374151' }}>
             <p>
               Summer 2027, KLC Group Canada Inc. completes registration with the Registered
               Insurance Brokers of Ontario (RIBO) for property &amp; casualty brokerage. At that
@@ -150,10 +150,10 @@ export default function AboutPage() {
       {/* WHY THIS STRUCTURE */}
       <section style={{ padding: '56px 32px', background: '#f8fafb' }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
-          <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 16px' }}>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 16px' }}>
             Why this structure
           </h2>
-          <div style={{ fontFamily: "'Inter Tight', Georgia, serif", fontSize: 17, lineHeight: 1.8, color: '#374151' }}>
+          <div style={{ fontFamily: "var(--font-serif), 'Newsreader', Georgia, serif", fontSize: 17, lineHeight: 1.8, color: '#374151' }}>
             <p>
               Most Canadian insurance comparison sites have a quote engine attached to their
               content — the content exists to feed the funnel. We took a different approach:
@@ -171,12 +171,12 @@ export default function AboutPage() {
       {/* WHAT YOU CAN EXPECT */}
       <section style={{ padding: '56px 32px' }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
-          <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 20px' }}>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 20px' }}>
             What you can expect
           </h2>
           <ul
             style={{
-              fontFamily: "'Inter Tight', Georgia, serif",
+              fontFamily: "var(--font-serif), 'Newsreader', Georgia, serif",
               fontSize: 16,
               lineHeight: 1.85,
               color: '#374151',
@@ -196,7 +196,7 @@ export default function AboutPage() {
       {/* CONTACT */}
       <section style={{ padding: '48px 32px', background: '#f8fafb', borderTop: '1px solid #e8ecf0' }}>
         <div style={{ maxWidth: 680, margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 700, fontSize: 22, color: NAVY, margin: '0 0 8px' }}>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 700, fontSize: 22, color: NAVY, margin: '0 0 8px' }}>
             Get in touch
           </h2>
           <p style={{ fontSize: 15, color: '#6b7b8d', margin: '0 0 20px' }}>
@@ -208,7 +208,7 @@ export default function AboutPage() {
       {/* BOTTOM CTA */}
       <section style={{ padding: '56px 32px', background: '#fff' }}>
         <div style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 10px' }}>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 10px' }}>
             Get the next guide.
           </h2>
           <p style={{ fontSize: 15, color: '#6b7b8d', margin: '0 0 24px' }}>

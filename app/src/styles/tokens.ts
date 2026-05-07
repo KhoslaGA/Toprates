@@ -1,49 +1,72 @@
 /**
- * Design tokens — single source of truth.
+ * Design tokens — single source of truth for inline styles.
  *
- * Use these in inline styles across the app. Keep string values so they drop
- * straight into style={{...}} without interpolation.
+ * Updated per SiteFontpostresearch.md to align with the new editorial
+ * register. Components that import from here pick up the new typography
+ * automatically without per-file edits:
+ *
+ *   fonts.heading / display / serif  →  Source Serif 4 via next/font
+ *   fonts.body                        →  Source Serif 4 (editorial body)
+ *   fonts.sans                        →  Inter (UI / forms / commerce body)
+ *   fonts.mono                        →  Inter (was JetBrains Mono — eyebrows
+ *                                         use Inter caps now, not code font)
+ *   colors.gold                       →  amber #B45309 (backward-compat alias;
+ *                                         was muddy gold #B8960C in Phase 1)
+ *
+ * Use these in inline styles across the app. Keep string values so they
+ * drop straight into style={{...}} without interpolation.
  */
 
 export const colors = {
-  paper: '#ffffff',
-  surface: '#fbf8f0',
-  cream: '#f6efe0',
+  paper: '#FBF7EE',          // editorial canvas (was #ffffff)
+  surface: '#FBF7EE',        // alias
+  cream: '#FBF7EE',          // alias (was #f6efe0 — slightly warmer now)
+  white: '#FFFFFF',          // commerce canvas
+  ink: '#1F2024',            // warm near-black body text
+  inkStrong: '#121214',      // headings
+  inkMuted: '#5C5C66',       // eyebrows / metadata
   teal: '#0A7E8C',
   tealHover: '#0d9aa8',
   tealDark: '#086874',
   navy: '#1B2A4A',
   navyDark: '#0f1e38',
-  gold: '#B8960C',
-  border: '#e8ecf0',
-  borderSoft: 'rgba(27,42,74,0.1)',
-  borderFaint: 'rgba(27,42,74,0.06)',
+  amber: '#B45309',          // disclosure callouts + site eyebrow
+  // gold remains as an alias pointing at amber — components that still
+  // import colors.gold render in amber. Migrate to colors.amber over time.
+  gold: '#B45309',
+  border: 'rgba(31,32,36,0.10)',
+  borderSoft: 'rgba(31,32,36,0.10)',
+  borderFaint: 'rgba(31,32,36,0.06)',
   subtleBg: '#f8fafb',
-  muted: '#6b7b8d',
-  mutedAlt: 'rgba(27,42,74,0.6)',
-  text: '#2D2D2D',
+  muted: '#5C5C66',          // mapped to ink-muted
+  mutedAlt: '#5C5C66',
+  text: '#1F2024',           // mapped to ink
   red: '#CC3333',
   green: '#0D8050',
+  canadaRed: '#C8102E',
 } as const;
 
-// One headline + body font. One mono. That's it.
+// Font tokens — point at next/font CSS variables loaded in layout.tsx.
+// System fallbacks ensure SSR + first paint render with sensible substitutes.
 export const fonts = {
-  display: "'Inter Tight', system-ui, sans-serif",
-  body: "'Inter Tight', system-ui, sans-serif",
-  mono: "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
-  // Aliases kept so existing call-sites don't break during migration.
-  heading: "'Inter Tight', system-ui, sans-serif",
-  serif: "'Inter Tight', system-ui, sans-serif",
+  display: "var(--font-serif), 'Newsreader', Georgia, serif",
+  body: "var(--font-serif), 'Newsreader', Georgia, serif",
+  serif: "var(--font-serif), 'Newsreader', Georgia, serif",
+  heading: "var(--font-serif), 'Newsreader', Georgia, serif",
+  sans: "var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+  // mono is now Inter (per the editorial brief — eyebrows/captions use
+  // sans caps, not a code typeface). Backward-compat alias only.
+  mono: "var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
 } as const;
 
 export const layout = {
   maxWidth: 1080,
-  maxWidthWide: 1200, // hero/footer per mockup
+  maxWidthWide: 1200,
   navHeight: 64,
   navHeightMobile: 56,
 } as const;
 
-// Shorthand for places that still read TEAL/NAVY/GOLD the way mockups do.
+// Shorthand exports for places that still read TEAL/NAVY/GOLD the way mockups did.
 export const TEAL = colors.teal;
 export const NAVY = colors.navy;
-export const GOLD = colors.gold;
+export const GOLD = colors.gold; // now resolves to amber #B45309

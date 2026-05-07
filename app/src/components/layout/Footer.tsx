@@ -73,7 +73,7 @@ export default function Footer() {
           <div>
             <div
               style={{
-                fontFamily: "'Inter Tight'",
+                fontFamily: "var(--font-serif)",
                 fontWeight: 900,
                 fontSize: 22,
                 color: '#0A7E8C',
@@ -84,7 +84,7 @@ export default function Footer() {
             </div>
             <div
               style={{
-                fontFamily: "'JetBrains Mono', monospace",
+                fontFamily: "var(--font-sans), -apple-system, sans-serif",
                 fontSize: 11,
                 letterSpacing: 1.5,
                 color: '#B8960C',
@@ -97,7 +97,7 @@ export default function Footer() {
             </div>
             <p
               style={{
-                fontFamily: "'Inter Tight'",
+                fontFamily: "var(--font-serif)",
                 fontSize: 18,
                 fontWeight: 700,
                 color: 'rgba(255,255,255,0.85)',

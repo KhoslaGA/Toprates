@@ -26,7 +26,7 @@ export default function WaitlistForm() {
         style={{
           flex: 1, padding: '11px 16px', borderRadius: 8,
           border: '1px solid #d0d5db', fontSize: 14,
-          fontFamily: "'Inter Tight'", outline: 'none',
+          fontFamily: "var(--font-serif)", outline: 'none',
         }}
       />
       <button
@@ -34,7 +34,7 @@ export default function WaitlistForm() {
         style={{
           background: TEAL, color: '#fff', border: 'none', borderRadius: 8,
           padding: '11px 22px', fontSize: 14, fontWeight: 700,
-          fontFamily: "'Inter Tight'", cursor: 'pointer',
+          fontFamily: "var(--font-serif)", cursor: 'pointer',
         }}
       >
         Join Waitlist

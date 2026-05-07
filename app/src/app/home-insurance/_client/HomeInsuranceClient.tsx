@@ -38,7 +38,7 @@ export default function HomeInsuranceClient() {
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 48, flexWrap: 'wrap' }}>
             <div style={{ flex: 1, minWidth: 300 }}>
-              <h1 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 38, lineHeight: 1.15, color: '#fff', margin: '0 0 14px' }}>
+              <h1 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 38, lineHeight: 1.15, color: '#fff', margin: '0 0 14px' }}>
                 Compare Home Insurance<br />in Ontario
               </h1>
               <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.5)', lineHeight: 1.6, margin: '0 0 28px', maxWidth: 460 }}>
@@ -54,7 +54,7 @@ export default function HomeInsuranceClient() {
                       onClick={() => setPropertyType(t)}
                       style={{
                         padding: '10px 18px', borderRadius: 8, cursor: 'pointer',
-                        fontSize: 13, fontWeight: 600, fontFamily: "'Inter Tight'",
+                        fontSize: 13, fontWeight: 600, fontFamily: "var(--font-serif)",
                         background: on ? 'rgba(10,126,140,0.15)' : 'rgba(255,255,255,0.05)',
                         border: on ? `2px solid ${TEAL}` : '2px solid rgba(255,255,255,0.08)',
                         color: on ? '#12b8ca' : 'rgba(255,255,255,0.5)',
@@ -78,7 +78,7 @@ export default function HomeInsuranceClient() {
                     style={{
                       flex: 1, padding: '13px 16px', borderRadius: 10,
                       border: '2px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.07)',
-                      color: '#fff', fontSize: 14, fontFamily: "'Inter Tight'", outline: 'none',
+                      color: '#fff', fontSize: 14, fontFamily: "var(--font-serif)", outline: 'none',
                     }}
                   />
                   <button
@@ -87,7 +87,7 @@ export default function HomeInsuranceClient() {
                       background: `linear-gradient(135deg, ${TEAL}, #0d9aa8)`,
                       color: '#fff', border: 'none', borderRadius: 10,
                       padding: '13px 24px', fontSize: 14, fontWeight: 700,
-                      fontFamily: "'Inter Tight'", cursor: 'pointer', whiteSpace: 'nowrap',
+                      fontFamily: "var(--font-serif)", cursor: 'pointer', whiteSpace: 'nowrap',
                     }}
                   >
                     Join Waitlist
@@ -115,7 +115,7 @@ export default function HomeInsuranceClient() {
               ].map((s, i, arr) => (
                 <div key={i} style={{ padding: '16px 0', borderBottom: i < arr.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none' }}>
                   <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', marginBottom: 4 }}>{s.label}</div>
-                  <div style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 26, color: i === 1 ? '#12b8ca' : '#fff' }}>{s.value}</div>
+                  <div style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 26, color: i === 1 ? '#12b8ca' : '#fff' }}>{s.value}</div>
                   <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.25)' }}>{s.sub}</div>
                 </div>
               ))}
@@ -127,7 +127,7 @@ export default function HomeInsuranceClient() {
       {/* WHAT'S COVERED */}
       <section style={{ padding: '64px 32px', background: '#fff' }}>
         <div style={{ maxWidth: 1080, margin: '0 auto' }}>
-          <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 8px' }}>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 8px' }}>
             What does home insurance cover in Ontario?
           </h2>
           <p style={{ fontSize: 15, color: '#6b7b8d', marginBottom: 28, maxWidth: 600 }}>
@@ -146,7 +146,7 @@ export default function HomeInsuranceClient() {
               <div key={c.title} style={{ padding: '22px 24px', borderRadius: 10, border: '1px solid #e8ecf0', display: 'flex', gap: 14 }}>
                 <span style={{ fontSize: 24, flexShrink: 0, marginTop: 2 }}>{c.icon}</span>
                 <div>
-                  <h3 style={{ fontFamily: "'Inter Tight'", fontWeight: 700, fontSize: 16, color: NAVY, margin: '0 0 4px' }}>{c.title}</h3>
+                  <h3 style={{ fontFamily: "var(--font-serif)", fontWeight: 700, fontSize: 16, color: NAVY, margin: '0 0 4px' }}>{c.title}</h3>
                   <p style={{ fontSize: 13, color: '#6b7b8d', lineHeight: 1.55, margin: 0 }}>{c.desc}</p>
                 </div>
               </div>
@@ -158,7 +158,7 @@ export default function HomeInsuranceClient() {
       {/* WHAT AFFECTS RATE */}
       <section style={{ padding: '64px 32px', background: '#f8fafb' }}>
         <div style={{ maxWidth: 1080, margin: '0 auto' }}>
-          <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 8px' }}>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 8px' }}>
             What affects your home insurance rate?
           </h2>
           <p style={{ fontSize: 15, color: '#6b7b8d', marginBottom: 28, maxWidth: 600 }}>
@@ -175,7 +175,7 @@ export default function HomeInsuranceClient() {
               { f: 'Credit score', d: 'Many Ontario insurers offer better rates with a soft credit check. Good credit = lower premiums.' },
             ].map((f) => (
               <div key={f.f} style={{ padding: '20px 22px', background: '#fff', borderRadius: 10, border: '1px solid #e8ecf0' }}>
-                <h4 style={{ fontFamily: "'Inter Tight'", fontWeight: 700, fontSize: 15, color: NAVY, margin: '0 0 6px' }}>{f.f}</h4>
+                <h4 style={{ fontFamily: "var(--font-serif)", fontWeight: 700, fontSize: 15, color: NAVY, margin: '0 0 6px' }}>{f.f}</h4>
                 <p style={{ fontSize: 13, color: '#6b7b8d', lineHeight: 1.5, margin: 0 }}>{f.d}</p>
               </div>
             ))}
@@ -196,7 +196,7 @@ export default function HomeInsuranceClient() {
             }}
           >
             <div>
-              <h3 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 22, color: NAVY, margin: '0 0 6px' }}>
+              <h3 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 22, color: NAVY, margin: '0 0 6px' }}>
                 Bundle home + auto and save 15–20%
               </h3>
               <p style={{ fontSize: 14, color: '#6b7b8d', margin: 0, maxWidth: 480 }}>
@@ -204,7 +204,7 @@ export default function HomeInsuranceClient() {
               </p>
             </div>
             <div style={{ textAlign: 'center', flexShrink: 0 }}>
-              <div style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 36, color: TEAL }}>20%</div>
+              <div style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 36, color: TEAL }}>20%</div>
               <div style={{ fontSize: 12, color: '#6b7b8d' }}>average bundle savings</div>
             </div>
           </div>
@@ -215,7 +215,7 @@ export default function HomeInsuranceClient() {
       <section style={{ padding: '64px 32px', background: '#f8fafb' }}>
         <div style={{ maxWidth: 1080, margin: '0 auto' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24, flexWrap: 'wrap', gap: 12 }}>
-            <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 24, color: NAVY, margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 24, color: NAVY, margin: 0 }}>
               Home insurance guides
             </h2>
             <Link href="/blog" style={{ fontSize: 13, fontWeight: 600, color: TEAL, textDecoration: 'none' }}>
@@ -239,7 +239,7 @@ export default function HomeInsuranceClient() {
                 }}
               >
                 <span style={{ fontSize: 10, fontWeight: 700, color: a.tc, letterSpacing: 0.5 }}>{a.tag}</span>
-                <h3 style={{ fontFamily: "'Inter Tight'", fontWeight: 700, fontSize: 16, color: NAVY, margin: '6px 0 8px', lineHeight: 1.3 }}>
+                <h3 style={{ fontFamily: "var(--font-serif)", fontWeight: 700, fontSize: 16, color: NAVY, margin: '6px 0 8px', lineHeight: 1.3 }}>
                   {a.title}
                 </h3>
                 <span style={{ fontSize: 11, color: '#b0b8c4' }}>{a.date}, 2026</span>
@@ -252,7 +252,7 @@ export default function HomeInsuranceClient() {
       {/* BOTTOM CTA */}
       <section style={{ padding: '56px 32px', background: '#fff', borderTop: '1px solid #e8ecf0' }}>
         <div style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontFamily: "'Inter Tight'", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 10px' }}>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontWeight: 800, fontSize: 26, color: NAVY, margin: '0 0 10px' }}>
             Be first when home insurance comparison launches
           </h2>
           <p style={{ fontSize: 15, color: '#6b7b8d', margin: '0 0 24px' }}>
@@ -269,7 +269,7 @@ export default function HomeInsuranceClient() {
                 style={{
                   flex: 1, padding: '11px 16px', borderRadius: 8,
                   border: '1px solid #d0d5db', fontSize: 14,
-                  fontFamily: "'Inter Tight'", outline: 'none',
+                  fontFamily: "var(--font-serif)", outline: 'none',
                 }}
               />
               <button
@@ -277,7 +277,7 @@ export default function HomeInsuranceClient() {
                 style={{
                   background: TEAL, color: '#fff', border: 'none', borderRadius: 8,
                   padding: '11px 22px', fontSize: 14, fontWeight: 700,
-                  fontFamily: "'Inter Tight'", cursor: 'pointer',
+                  fontFamily: "var(--font-serif)", cursor: 'pointer',
                 }}
               >
                 Join Waitlist
